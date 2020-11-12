@@ -1,0 +1,147 @@
+\documentclass[11pt]{report}
+
+\usepackage{geometry}  
+\geometry{letterpaper} 
+\usepackage{graphicx}
+%\usepackage[backend=bibtex]{biblatex}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip} 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage[noend]{algpseudocode}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[super]{nth}
+\usepackage{pstricks}
+
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\footskip}{50pt}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{definition}
+\newtheorem{ex}[thm]{Example}
+\theoremstyle{definition}
+\newtheorem{conj}[thm]{Conjecture}
+
+\newcommand{\Rom}[1]
+    {\MakeUppercase{\romannumeral #1}}
+\newcommand{\C}[1]{(\mathbb{C}^*)^#1}
+\newcommand{\ldp}{log del pezzo }
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\Hi}{Hirzebruch surface }
+\newcommand{\minres}{minimal resolution }
+\newcommand{\LJ}{Looijenga pair }
+\newcommand{\ra}{\rightarrow}
+
+\graphicspath{ {images/} }
+
+\begin{document} 
+
+%We wish to show that given $(S, C) \rightarrow X$ a log terminal cyclic extraction on a normal affine toric surface then this admits a toric degeneration such that the contraction extends over the total space. This map can be constructed via the minimal resolution. If you take the minimal resolution $\widetilde{X}$ then there exists an exceptional curve $E$ such that the blowup of a general point on $E$ is the minimal resolution of $S$.%
+\begin{thm}
+Let $S$ be a cyclic quotient singularity. Let $\widetilde{S}$ be \minres. Let $E$ be an exceptional divisor. Let $\widetilde{X}$ be the variety obtained by blowing up a general point on $E$. Then $X$ is obtained as the blowdown of the strict transform of the $E_i$. Then we can extend this contraction to the deformation family and its associated toric degenerations.
+\end{thm}
+\vspace{0.1cm}
+Given the assumptions above we can assume that $S$ is a $\frac{1}{r}(1,s)$ singularity and has a fan $\Sigma$ with rays $(a,b)$ and $(c-d,-d)$ with $a,b,c,d  > 0$. We can also assume that the ray $(1,0)$ corresponds to $E$ in the minimal resolution. We also note that $r$ is equal to the determinant of the rays, $ad - b(c-d)$. 
+\\
+\\
+We note that $X$ has a torus acting on it. This means that it can be written as a polyhedral divisor $\mathcal{S}$.
+\begin{figure}[htbp]
+\psset{unit=0.95cm}
+\begin{pspicture}(0,-6)(12,0)
+%\psgrid(0,0)(0,-8)(12,0)
+\psframe[linecolor=white](0.5,-4.5)(3.5,-1.5)
+
+
+\psline{<-|}(6,-3)(7.5,-3)
+\psline{|->}(7.5,-3)(10,-3)
+%\uput*[270](8,-3){$0$}
+\rput[bl]{0}(11,-3){$\mathcal{S}_1$}
+\uput*[270](7.6,-3.1){${\tiny \frac{a}{b}}$}
+
+\psline{<-|}(6,-1.8)(7.25,-1.8)
+\psline{-|}(7.25,-1.8)(8,-1.8)
+\psline{->}(8,-1.8)(10,-1.8)
+\uput*[270](7.2,-1.9){${\tiny {0}}$}
+\uput*[270](8,-1.9){${\tiny{ 1}}$}
+\rput[bl]{0}(11,-1.8){$\mathcal{S}_0$}
+\rput[bl]{0}(9,-1.6){$\mathcal{D}_{\sigma_0}$}
+\rput[bl]{0}(7.3,-1.6){$\mathcal{D}_{\sigma_1}$}
+
+
+\psline{<-|}(6,-4.2)(9,-4.2)
+\psline{|->}(9,-4.2)(10,-4.2)
+\uput*[270](8.9,-4.3){${\tiny \frac{c-d}{d}}$}
+\rput[bl]{0}(11,-4.2){$\mathcal{S}_{\infty}$}
+\rput[bl]{0}(9,-4){$\mathcal{D}_{\sigma_0}$}
+\rput[bl]{0}(8,-5.5){$\mathcal{S}$}
+
+\psline{|->}(5,-3)(5,-1)
+\psline{|->}(5,-3)(5,-5)
+%\qdisk(5,-1.8){1pt}
+%\qdisk(5,-4.2){1pt}
+%\qdisk(5,-3){1.5pt}
+\rput[bl]{0}(4.5,-5.5){$Y=\mathbb{P}^1$}
+
+
+\end{pspicture}
+\caption{Divisorial fan associated to $X$.}
+\end{figure}
+
+Here the tail fan is $\mathbb{Z}_{\geq 0}$. When constructing the equivariant toric degeneration, we take the Minkowski sum of $\frac{c-d}{d}$ and the cone $\left[0, 1\right]$. After summation this is the toric variety with rays $(a,b)$, $(c,-d)$, $(c-d,-d)$. Call this $X_\Sigma$. The cone $(c,-d)$, $(c-d,-d)$ is a $T$-singularity. The cone  $(a,b)$, $(c,-d)$ is a $\frac{1}{t}(1, u)$ singularity with once again $t = bc + ad$. Labeling these three rays $v_1, v_2, v_3$ we get the relation $d^2 v_1 - r v_2 + t v_3 = 0$. This implies that the Cox Ring  $\mathcal{R}(X_\Sigma)$ is $\mathbb{A}^3_{<x,y,z>}$ with a quotient of $\mathbb{C}^*$ with weights $(d^2, -r, t)$ and a finite group action $\mathbb{\mu}$. It is easy to show that $|\mathbb{\mu}| = \text{hcf(b,d)} = e$ as $(x, ey)$ is clearly a sub lattice which contains all the vertices and $(1,0)$ is in the lattice as $b$ and $d$ are coprime. This is a well defined quotient except along $x = z= 0$. To construct the deformation, we take the $d$-fold veronese embedding getting
+\[
+\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{y_2^d -y_3 y_4} \text{  with weights } (d, b, -r, t)
+\]
+
+Here the $b$ occurs as $t-r = db$. We can now construct the deformation family by the following equation
+
+\[
+\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{\lambda y_1^b  + \mu y_2^d - y_3 y_4} \text{  with weights } (d, b, -r, t)
+\]
+
+At $\lambda = 0$ this is our original variety. At $\mu = 0$ we get the variety corresponding to the Minkowski sum of the cones $\frac{a}{b}$ and the cone $\left[ 0, 1 \right]$. This is the toric variety with rays $(c-d,-d), \, (a+b, b), \, (a,b)$. Note that the index of the sublattice generated by these rays is still equal to hcf$(b, d)$. All that remains is to show that this is the desired complexity one variety. From the above polyhedral divisor we get that $\mathcal{R}(X) =\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{\lambda y_1^b  + \mu y_2^d - y_3 y_4}$. We now have to calculate the weights of the torus action on it. The Weil divisors on $X$ satisfy the relations given by the rows of the following matrix. 
+\[
+ \left(
+ \begin{array}{cccc}
+b & 0 & -1 & -1  \\
+0 & c & -1 & -1 \\
+a & d & 0  & 1 \\
+\end{array}
+\right) 
+\]
+To calculate the grading is equivalent to finding a relation between the columns of the matrix. It is easy to verify that the weights $d,b,-r,t$ give the corresponding column sum of 0. To verify that the same finite group acts on the fiber we see that if we do Gaussian elimination. We get a row $(d, -b, 0 ,0)$ if these two numbers are not coprime this means that we have torsion in the class of size hcf$(b,d)$. So $\mathbb{\mu}$ action extends across the family. 
+\\
+\\
+A brief remark on other log terminal cyclic extractions. The only cyclic extractions $f: \, X \rightarrow S$ from a cyclic quotient singularity result from blowing up infinitely near points of $E$.
+\end{document}
