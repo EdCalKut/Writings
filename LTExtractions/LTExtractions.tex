@@ -70,10 +70,10 @@
 
 %We wish to show that given $(S, C) \rightarrow X$ a log terminal cyclic extraction on a normal affine toric surface then this admits a toric degeneration such that the contraction extends over the total space. This map can be constructed via the minimal resolution. If you take the minimal resolution $\widetilde{X}$ then there exists an exceptional curve $E$ such that the blowup of a general point on $E$ is the minimal resolution of $S$.%
 \begin{thm}
-Let $S$ be a cyclic quotient singularity. Let $\widetilde{S}$ be \minres. Let $E$ be an exceptional divisor. Let $\widetilde{X}$ be the variety obtained by blowing up a general point on $E$. Then $X$ is obtained as the blowdown of the strict transform of the $E_i$. Then we can extend this contraction to the deformation family and its associated toric degenerations.
+Let $S$ be a cyclic quotient singularity. Let $\widetilde{S}$ be \minres. Let $E$ be an exceptional divisor. Let $\widetilde{X}$ be the variety obtained by blowing up a general point $k$ times on $E$. Then $X$ is obtained as the blowdown of the strict transform of the $E_i$. Then we can extend this contraction to the deformation family and its associated toric degenerations.
 \end{thm}
 \vspace{0.1cm}
-Given the assumptions above we can assume that $S$ is a $\frac{1}{r}(1,s)$ singularity and has a fan $\Sigma$ with rays $(a,b)$ and $(c-d,-d)$ with $a,b,c,d  > 0$. We can also assume that the ray $(1,0)$ corresponds to $E$ in the minimal resolution. We also note that $r$ is equal to the determinant of the rays, $ad - b(c-d)$. 
+Given the assumptions above we can assume that $S$ is a $\frac{1}{r}(1,s)$ singularity and has a fan $\Sigma$ with rays $(a,b)$ and $(c-kd,-d)$ with $a,b,c,d  > 0$. We can also assume that the ray $(1,0)$ corresponds to $E$ in the minimal resolution. We also note that $r$ is equal to the determinant of the rays, $ad - b(c-kd)$. 
 \\
 \\
 We note that $X$ has a torus acting on it. This means that it can be written as a polyhedral divisor $\mathcal{S}$.
@@ -94,7 +94,7 @@ We note that $X$ has a torus acting on it. This means that it can be written as 
 \psline{-|}(7.25,-1.8)(8,-1.8)
 \psline{->}(8,-1.8)(10,-1.8)
 \uput*[270](7.2,-1.9){${\tiny {0}}$}
-\uput*[270](8,-1.9){${\tiny{ 1}}$}
+\uput*[270](8,-1.9){${\tiny{k}}$}
 \rput[bl]{0}(11,-1.8){$\mathcal{S}_0$}
 \rput[bl]{0}(9,-1.6){$\mathcal{D}_{\sigma_0}$}
 \rput[bl]{0}(7.3,-1.6){$\mathcal{D}_{\sigma_1}$}
@@ -102,7 +102,7 @@ We note that $X$ has a torus acting on it. This means that it can be written as 
 
 \psline{<-|}(6,-4.2)(9,-4.2)
 \psline{|->}(9,-4.2)(10,-4.2)
-\uput*[270](8.9,-4.3){${\tiny \frac{c-d}{d}}$}
+\uput*[270](8.9,-4.3){${\tiny \frac{c-kd}{d}}$}
 \rput[bl]{0}(11,-4.2){$\mathcal{S}_{\infty}$}
 \rput[bl]{0}(9,-4){$\mathcal{D}_{\sigma_0}$}
 \rput[bl]{0}(8,-5.5){$\mathcal{S}$}
@@ -119,15 +119,15 @@ We note that $X$ has a torus acting on it. This means that it can be written as 
 \caption{Divisorial fan associated to $X$.}
 \end{figure}
 
-Here the tail fan is $\mathbb{Z}_{\geq 0}$. When constructing the equivariant toric degeneration, we take the Minkowski sum of $\frac{c-d}{d}$ and the cone $\left[0, 1\right]$. After summation this is the toric variety with rays $(a,b)$, $(c,-d)$, $(c-d,-d)$. Call this $X_\Sigma$. The cone $(c,-d)$, $(c-d,-d)$ is a $T$-singularity. The cone  $(a,b)$, $(c,-d)$ is a $\frac{1}{t}(1, u)$ singularity with once again $t = bc + ad$. Labeling these three rays $v_1, v_2, v_3$ we get the relation $d^2 v_1 - r v_2 + t v_3 = 0$. This implies that the Cox Ring  $\mathcal{R}(X_\Sigma)$ is $\mathbb{A}^3_{<x,y,z>}$ with a quotient of $\mathbb{C}^*$ with weights $(d^2, -r, t)$ and a finite group action $\mathbb{\mu}$. It is easy to show that $|\mathbb{\mu}| = \text{hcf(b,d)} = e$ as $(x, ey)$ is clearly a sub lattice which contains all the vertices and $(1,0)$ is in the lattice as $b$ and $d$ are coprime. This is a well defined quotient except along $x = z= 0$. To construct the deformation, we take the $d$-fold veronese embedding getting
+Here the tail fan is $\mathbb{Z}_{\geq 0}$. When constructing the equivariant toric degeneration, we take the Minkowski sum of $\frac{c-kd}{d}$ and the cone $\left[0, k\right]$. After summation this is the toric variety with rays $(a,b)$, $(c,-d)$, $(c-kd,-d)$. Call this $X_\Sigma$. The cone $(c,-d)$, $(c-kd,-d)$ is a $T$-singularity. The cone  $(a,b)$, $(c,-d)$ is a $\frac{1}{t}(1, u)$ singularity with once again $t = bc + ad$. Labeling these three rays $v_1, v_2, v_3$ we get the relation $kd^2 v_1 - r v_2 + t v_3 = 0$. This implies that the Cox Ring  $\mathcal{R}(X_\Sigma)$ is $\mathbb{A}^3_{<x,y,z>}$ with a quotient of $\mathbb{C}^*$ with weights $(kd^2, -r, t)$ and a finite group action $\mathbb{\mu}$. It is easy to show that $|\mathbb{\mu}| = \text{hcf(b,d)} = e$ as $(x, ey)$ is clearly a sub lattice which contains all the vertices and $(1,0)$ is in the lattice as $b$ and $d$ are coprime. This is a well defined quotient except along $x = z= 0$. To construct the deformation, we take the $d$-fold veronese embedding getting
 \[
-\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{y_2^d -y_3 y_4} \text{  with weights } (d, b, -r, t)
+\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{y_2^d -y_3 y_4} \text{  with weights } (kd, kb, -r, t)
 \]
 
-Here the $b$ occurs as $t-r = db$. We can now construct the deformation family by the following equation
+Here the $b$ occurs as $t-r = kdb$. We can now construct the deformation family by the following equation
 
 \[
-\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{\lambda y_1^b  + \mu y_2^d - y_3 y_4} \text{  with weights } (d, b, -r, t)
+\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{\lambda y_1^b  + \mu y_2^d - y_3 y_4} \text{  with weights } (kd, kb, -r, t)
 \]
 
 At $\lambda = 0$ this is our original variety. At $\mu = 0$ we get the variety corresponding to the Minkowski sum of the cones $\frac{a}{b}$ and the cone $\left[ 0, 1 \right]$. This is the toric variety with rays $(c-d,-d), \, (a+b, b), \, (a,b)$. Note that the index of the sublattice generated by these rays is still equal to hcf$(b, d)$. All that remains is to show that this is the desired complexity one variety. From the above polyhedral divisor we get that $\mathcal{R}(X) =\frac{\mathbb{C}[y_1, y_2, y_3,  y_4]}{\lambda y_1^b  + \mu y_2^d - y_3 y_4}$. We now have to calculate the weights of the torus action on it. The Weil divisors on $X$ satisfy the relations given by the rows of the following matrix. 
@@ -136,12 +136,15 @@ At $\lambda = 0$ this is our original variety. At $\mu = 0$ we get the variety c
  \begin{array}{cccc}
 b & 0 & -1 & -1  \\
 0 & c & -1 & -1 \\
-a & d & 0  & 1 \\
+a & d & 0  & k \\
 \end{array}
 \right) 
 \]
-To calculate the grading is equivalent to finding a relation between the columns of the matrix. It is easy to verify that the weights $d,b,-r,t$ give the corresponding column sum of 0. To verify that the same finite group acts on the fiber we see that if we do Gaussian elimination. We get a row $(d, -b, 0 ,0)$ if these two numbers are not coprime this means that we have torsion in the class of size hcf$(b,d)$. So $\mathbb{\mu}$ action extends across the family. 
+To calculate the grading is equivalent to finding a relation between the columns of the matrix. It is easy to verify that the weights $kd,kb,-r,t$ give the corresponding column sum of 0. To verify that the same finite group acts on the fiber we see that if we do Gaussian elimination. We get a row $(d, -b, 0 ,0)$ if these two numbers are not coprime this means that we have torsion in the class of size hcf$(b,d)$. So $\mathbb{\mu}$ action extends across the family. 
 \\
 \\
-A brief remark on other log terminal cyclic extractions. The only cyclic extractions $f: \, X \rightarrow S$ from a cyclic quotient singularity result from blowing up infinitely near points of $E$.
+We now classify cyclic log fano extractions on surfaces.
+\begin{lem}
+Let $f: \, X \rightarrow S$ be a cyclic log fano extarction. Then $S$ has to be a cyclic singularity and $f$ has to be the map as described above. This results in potentially two cyclic quotient singularities. One of them is a general $\frac{1}{r} (1, a)$ and the other is of type $A_n$.
+\end{lem}
 \end{document}
