@@ -82,20 +82,20 @@ a = \left(
 \begin{array}{cc}
 \zeta_{m} & 0  \\
 0 & \zeta_{m} \\
-\end{array} \right) &
+\end{array} \right), &
 b = \left(
 \begin{array}{cc}
 0 & 1  \\
 -1 & 0 \\
-\end{array} \right) &c_m =
+\end{array} \right), &c_m =
 \left( \begin{array}{cc}
-\sigma_{n} & 0 \\
-0 & \sigma^{-1}_n
+\sigma_{2n} & 0 \\
+0 & \sigma^{-1}_{2n}
 \end{array} \right) 
 \end{array}
 \]
 
-We split this into two cases the case where $m$ is odd or even. In the odd case $G = \langle a, \, b, \, c_m \rangle$, otherwise it it is $\langle a, \, b \circ c_{2m} \rangle$.
+Here $\zeta$ We split this into two cases the case where $m$ is odd or even. In the odd case $G = \langle a, \, b, \, c_m \rangle$, otherwise it it is $\langle c, \, b \circ a_{2m} \rangle$.
 Similar analysis can be done for the groups $E_7$ and $E_8$. We now discuss when their $\mathbb{Q}$g smoothings.
 \\
 \textbf{Case 1}
@@ -111,6 +111,24 @@ $\frac{1}{2m'}(2n+m', 2n, 4)$, so to be rigid once again we need the $y$ term no
  \\
  \\
  It is easy to see that if a partial smoothing exists then it either stay non cyclic quotient or, if you can deform equivariantly by $y$, it becomes a cyclic quotient singularity which is of the form $\frac{1}{m}(n+1, 2)$ or $\frac{1}{2m'}(2n_m, 4)$. From this it is easy to classify the $\mathbb{Q}g$ smoothable singularities. We note for a given $n$ there exists only a finite amount of $\mathbb{Q}g$ smoothable singularities with the $D_n$ singularity as its index one cover. This is in contrast to the $A_n$ case.
+ 
+ \section{The $E_i$ Singularity}
+ 
+ We start with the $E_6$ singularity as this behaves differently more similarly to the $D_n$ singularities. Once again we aim to classify the $\mathbb{Q}$G rigid singularities. We split it into two cases again. 
+ \\
+ \\
+ \textbf{Case 1}
+ \\
+ This is a $\mathbb{Z}_n$ action with $n$ coprime to 6. This will act with weights $(6,4,3)$ on the equation $x^2 + y^3 + z^4$. This lies in the eigenspace of degree 12. Once again by computing partial derivatives we get that the smoothing parameters are $1, y, z, z^2$. We wish for none of these two be invariant. This means that $12 \not\cong_n 0, \, 4, \, 3, \, 6$. This implies that $n \neq  2, \, 3, \, 4, \, 9, \, 12$. However none of these cases can occur via the coprimality condition stated at the beginning.
+ \\
+ \\
+ \textbf{Case 2}
+ \\
+ This is a $\mathbb{Z}_n$ action with $(n, 6) = 3$. Writing $n = 3n'$ we have the action with weights $(6 + n', 4, 3 + n')$. Once again this is non rigid if $n \neq  2, \, 3, \, 4, \, 9, \, 12$. Via the coprimality condition we get this is non rigid if $n=3$ or $n=9$.
+ \\
+ \\
+ The $E_7$ and $E_8$ cases are not divide by case. The $E_7$ has a single possibility of $\mathbb{Z}_n$ with $(n,6) = 1$. This acts on $x^2 + y^3 + yz^3$ with the weights $(9,6,4)$. The partials give us a basis for the deformations of $1, y, y^2, z, z^2$. This means that $18 \not\cong_n 0, \, 6, \, 12, \, 4, \, 8$. All of these would correspond to $n$ being even so there are no non rigid singularities. 
+ 
  
  \section{Singularity content}
  
