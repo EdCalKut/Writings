@@ -1,0 +1,95 @@
+\documentclass[11pt]{report}
+
+\usepackage{geometry}  
+\geometry{letterpaper} 
+\usepackage{graphicx}
+%\usepackage[backend=bibtex]{biblatex}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip} 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage[noend]{algpseudocode}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[super]{nth}
+\usepackage{pstricks}
+
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\footskip}{50pt}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{definition}
+\newtheorem{ex}[thm]{Example}
+\theoremstyle{definition}
+\newtheorem{conj}[thm]{Conjecture}
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+\newcommand{\Rom}[1]
+    {\MakeUppercase{\romannumeral #1}}
+\newcommand{\C}[1]{(\mathbb{C}^*)^#1}
+\newcommand{\ldp}{log del pezzo }
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\Hi}{Hirzebruch surface }
+\newcommand{\minres}{minimal resolution }
+\newcommand{\LJ}{Looijenga pair }
+\newcommand{\ra}{\rightarrow}
+\newcommand{\spl}{\text{SL}_2 (\mathbb{C})}
+\newcommand{\gl}{\text{GL}_2 (\mathbb{C})}
+\newcommand{\pgl}{\text{PGL}_2 (\mathbb{C})}
+
+\graphicspath{ {images/} }
+
+\begin{document} 
+
+A Fano variety is a variety $-K_X$ being ample. In classical times the smooth log del Pezzo's were classified. Much work has been done extending this classification to higher dimensions and to extend it to singular surfaces. In particular recent approaches have been interested in toric degenerations 
+\vspace{0.3cm}
+\begin{conj}
+\textbf{Corti et al}
+Every \ldp $X$ with $h^0(-k_X) \neq 0$ admits a qG toric degeneration.
+\end{conj}
+\\
+\\
+In the case of surfaces it is interesting to study the log del Pezzos with log terminal singularities. In the full generality, this is a group quotient of a subgroup of $\gl$, although there is particular interest in the case where the subgroup is cyclic. In the case of cyclic quotient singularities it has been conjectured that these admit toric degeneration. In chapter 1 we introduce the notion of singularities with small discrepancy and prove the following theorem
+\vspace{0.3cm}
+\begin{thm}
+Let $X$ be a surface with only cyclic quotient singularities with small discrepancy, then $X$ has at most two singularities and occurs as a blowup in a general point of another log del Pezzo surface which admits a toric degeneration.
+\end{thm}
+This is a generalisation of results of \textbf{CP and CH}. We also make some comments about the shape of the cascade and provide several examples.
+\\ \\
+In chapter 2 we study \ldp surfaces with a $\mathbb{C}^*$ action. These are called complexity one \ldp surfaces. In \textbf{Suss, Huggeneberger} they classify complexity \ldp's, we show how our algorithm can repeat their classification and extend it two surface of higher index. We make some comments about equivariant toric degenerations, and when they exists based of the combinatorics. 
+\\
+In chapter 3 we study the local version 
+
+\end{document}
