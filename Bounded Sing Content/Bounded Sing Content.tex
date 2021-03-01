@@ -12,6 +12,7 @@
 \usepackage[parfill]{parskip} 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{enumerate}
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage[noend]{algpseudocode}
@@ -68,6 +69,7 @@
 \newcommand{\spl}{\text{SL}_2 (\mathbb{C})}
 \newcommand{\gl}{\text{GL}_2 (\mathbb{C})}
 \newcommand{\pgl}{\text{PGL}_2 (\mathbb{C})}
+\newcommand{\wt}[1]{\widetilde #1}
 
 \graphicspath{ {images/} }
 
@@ -78,30 +80,60 @@
 
 \section{Result}
 
-Throughout the rest of this chapter we limit ourselves to cyclic quotient singularities $S$ with the following property - let $C_1, \dots C_n$ be the minimal resolution of $S$, let the values $a_1 \dots a_n$ be the respective discrepancies, we insist that $a_i \leq \frac{1}{2}$. We call this a singularity with small discrepancy. This can be compared to other peoples work, in the following lemma
+Throughout the rest of this chapter we limit ourselves to cyclic quotient singularities $S$ with the following property: let $C_1, \dots ,C_n$ be the minimal resolution of $S$, let the values $a_1, \dots ,a_n$ be the respective discrepancies, we insist that $a_i \leq -\frac{1}{2}$. We call this a singularity with small discrepancy. This can be compared to other people's work, in the following lemma.
 \begin{lem}
-Let $S$ be a cyclic quotient singularity, $C_1 \dots C_n$ the minimal resolution. If $C_i^2 \leq -4$ then $S$ has small discrepancy.
+Let $S$ be a cyclic quotient singularity, $C_1, \dots ,C_n$ the minimal resolution. If $C_i^2 \leq -4$ forall $i$ then $S$ has small discrepancy.
 \end{lem}
 \begin{proof}
-This is easy to see as $S$ can be described as a toric singularity with rays $(u_0, v_0), \, (u_{n+1},v_{n+1})$. Where $v_0 = v_{n+1} = h$ is the gorenstein index of $S$. A given curve  $C_i$ in the minimal resolution corresponds to a ray $(u_i,v_i)$ inside the above cone, so $v_i \leq h \forall i$. Now $(u_i, v_i) = \frac{(u_{i-1}, v_{n-1}) + (u_{i+1}, v_{i+1})}{C_i^2}$. So $v_i \leq \frac{\max(v_{i-1}, v_{i+1})}{2} \leq \frac{h}{2}$. The discrepancy of the curve $C_i$ is equal to $\frac{v_i-h}{h}$ which is clearly less than $\frac{-1}{2}$.
+We know that $S$ can be described as a toric singularity with rays $(u_0, v_0), \, (u_{n+1},v_{n+1})$. Where $v_0 = v_{n+1} = h$ is the gorenstein index of $S$. A given curve  $C_i$ in the minimal resolution corresponds to a ray $(u_i,v_i)$ inside the above cone, so $v_i \leq h$ for all $i$. Now $(u_i, v_i) = \frac{(u_{i-1}, v_{n-1}) + (u_{i+1}, v_{i+1})}{C_i^2}$. So $v_i \leq \frac{\max(v_{i-1}, v_{i+1})}{2} \leq \frac{h}{2}$. The discrepancy of the curve $C_i$ is equal to $\frac{v_i-h}{h}$ which is less than $\frac{-1}{2}$.
 \end{proof}
-We no explain why this makes classification so easy 
+We now explain why this makes classification so easy.
 \begin{lem}
-Let $X$ be a surface and  $f \: : Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a curve that such that $C$ intersects two singularities (potentially the same) with small discrepancy. Consider the curve $\widetilde C \subset Y$ the strict transform. Then if $C^2 = -1$ then $-K_X \cdot C \leq = 0$.
+Let $X$ be a surface and  $f \: : Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a curve that such that $C$ intersects two singularities (potentially the same) with small discrepancy. Consider the curve $\widetilde C \subset Y$ the strict transform. Then if $\widetilde C^2 = -1$ then $-K_X \cdot C \leq 0$.
 \end{lem}
 \begin{proof}
-Let $f \: : Y \rightarrow X$ be the minimal resolution of $X$, $\widetilde C \subset Y$ the strict transform of $C$. As $C$ is a smooth curve on a smooth surface $-K_Y \cdot \widetilde C = 1$. We know that $C$ intersects at least two exceptional curve $E_i, \, E_j$, with discrepancy $a, \, b$. Via ??? we see that $-K_X \cdot C = f^*(-K_X) \cdot \widetilde C \leq 1 - a - b  \leq 0$. 
+Let $f \: : Y \rightarrow X$ be the minimal resolution of $X$, $\widetilde C \subset Y$ the strict transform of $C$. As $\widetilde C$ is a smooth curve on a smooth surface $K_Y \cdot \widetilde C = -1$. We know that $C$ intersects at least two exceptional curves $E_i, \, E_j$, with discrepancy $a, \, b$. Hence we see that $K_X \cdot C = f^*(K_X) \cdot \widetilde C \geq -1 + a + b  \geq 0$. 
 \end{proof}
-Hence this curve configuration cannot lie on a \ldp. We also make the quick remark that in the case where the length $n$ of the singularity is 1 or 2, this remark follows via easy toric geometry as any curve joining two singularities is a locally toric configuration. This corresponds to the asscoiated fan being non convex. 
+Hence this curve configuration cannot lie on a \ldp. We also make the quick remark that in the case where the length, $n$, of the singularity is 1 or 2, this lemma follows via easy toric geometry as any curve joining two singularities is a locally toric configuration. This corresponds to the asscoiated fan being non convex. 
 \begin{lem}
-Let $X$ be a \ldp with only singularities of small discrepancy. As above let $f \: : Y \rightarrow X$ be the \minres then we consider the map $\pi \: : Y \rightarrow \mathbb{F}_l$. Consider $E$ exceptional curves in the minimal resolution. Then $\pi_* E$ is one of the following 
-\begin{itemize}
-\item A smooth curve with positive self intersection
-\item A smooth curve with negative self intersection
-\item A point
-\end{itemize}
+Let $X$ be a \ldp with only singularities of small discrepancy. As above let $f \: : Y \rightarrow X$ be the \minres then we consider the map $\pi \: : Y \rightarrow \mathbb{F}_l$. Consider the curves $E_i^S \subset Y$ which are the excpetional curves arising from the resolution of a singularity $S$. Then $\pi_* E_i^S$ is a smooth rational curve with self intersection $-l, \,0, \, l, \, l+2$ or a point. In addition for all singularities $S$ in $X$, there exists a curve $E_j^S$ such that $\pi_* E_j^S$ is not a point.
+
 \end{lem}
 \begin{proof}
-This just amounts to it being impossible for $\pi_* E$ to be a non smooth curve. Hence assume that it has a singular point $P$. In order for us to get a cyclic quotient singularity, $E$ needs to be smooth. Hence there is a collection of curves $C_i \subset Y$ which blowdown to $P$. As all these curves are contracted $C_i^2 \leq = 0$ and $E^2 \leq 0$, and there is a curve $C_j$ with $C_j^2 = -1$. Clearly $C_j$ intersects either two curves with self intersection less than $-1$, or it could intersect $E$ twice. By the above lemma neither case could appear on the \minres of a \ldp.
+We first show that it is impossible for $\pi_* E$ to be a non smooth curve. Hence assume that it has a singular point $P$. In order for us to get a cyclic quotient singularity, $E$ needs to be smooth. Hence there is a collection of curves $C_i \subset Y$ which blowdown to $P$. As all these curves are contracted $C_i^2 \leq  -1$ and $E^2 \leq 0$, and there is a curve $C_j$ with $C_j^2 = -1$. Clearly $C_j$ intersects either two curves with self intersection less than $-1$, or it could intersect $E$ twice. By the above lemma neither case could appear on the \minres of a \ldp.
+\\
+\\
+To show that not all the curves $E_j^S$ can be contracted to a point, we go for a proof by contradiction. Assume they are all contracted to a point $P \in \mb{F}_l$. Then $P$ lies on a fiber $F$ which intersects the curve $B$. We have to blow up $P$ to get hence we get the following curve configuration. 
+\[
+B, -1, -1
+\]
+This configuration is locally toric. To recover the curve $E_i^S$ we  start with the toric blowups. Assuming we have done at least one blowup this results in a curve configuration with at least one $-1$ curve joining together two curves with self intersection less than $-1$. If this curve stayed a $-1$ curve after the non toric blowups then we would have a $-1$ curve joining together two singularities. This contradicts the previous lemma. Hence the $-1$ curve has to be blown up in a non toric way. This would result in it being a $-a$ curve with $a>1$. Hence it is exceptional and contracted. This results in our curves all being connected to via a chain of curves  with self intersection less than $-1$ to $B$. This means there exists $i$ such that $B = E_i^S$ contadicitng our assumptions.
 \end{proof}
+Now we can classify these log del Pezzos in a straightforwards way. 
+\begin{thm}
+Let $X$ be a \ldp with only singularities of small discrepancy. Then $X$ has either one singularity or two $\frac{1}{p}(1,1)$ singularities. If $X$ admits no floating $-1$ curves then $X$ admits a toric degeneration.
+\end{thm}
+\begin{proof}
+Given a \ldp $X_0$ we start by contracting all floating $-1$ curves. This gives rise to a \ldp $X_1$, let $Y$ be the minimal resolution of $X_1$. We know that there is a map $\pi : \: Y \rightarrow \mathbb{F}_l$. We start by considering the case $l > 1$. There is a curve $B \subset \mathbb{F}_l$ with $B^2 = -l$. Assume there is no  $l' >l$ such that $Y \rightarrow \mb{F}_{l'}$. Then $B$ has to be the image of an exceptional curve $E_i$ inside $Y$. Assume our map $\pi$ involves blowing up a point on $B$. Without loss of generality we can assume that this is the first blowup, so we have curves $C_1, \, C_2$ which are both $-1$ curve, with $C_2$ being the strict transform of $0$ fiber. We could then instead contract $C_2$ and get a larger value of $l$. Hence this does not occur. 
+
+We will deal with the case of $l = 0$ and $l = 1$ after this. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is a $B$, hence $E_{j\pm 1}^S$ is a $0$ curve or a $l+2$ curve, as we are assuming $l$ is the largest possible value of $l$ and hence $B$ could not be blown up. Denote these two curves by $C_1$ and $C_2$. Assume there was another singularity giving rise to exceptional curves $\{ E_i^{S'} \}_{0}^{m_{S'}} $. Then by the previous lemma there would be a curve $E_j^{S'}$ such that $\pi_* E_j^{S'}$ is a curve with self intersection $0, \,  l,\,  l+2$. However these curves would intersect $C_1$ and $C_2$ contradicting this being a disting singularity. Hence there is only one singularity. If $S$ is a $\frac{1}{p}(1,1)$ singularity. Thetn consider the possibility of there being another singularity $S'$. There is a curve $E_j^{S'}$ such that $\pi_* E_j^{S'}$ has self intersection $l$, not $0$ or $l+2$ too avoid it meeting $B$. Denote this image by $A$. If $S'$ is not a $\frac{1}{p}(1,1)$ then we would have to blow up this curve several times. However each blowup introduces a $-1$ which is joined to curve $B$ by another $-1$ curve. Hence this curve cannot be blown up further, by the argument in the above lemma. If there was a third $\frac{1}{p}(1,1)$ singularity, then its exceptional curve would have to be sent to a $0, \, l, \, l+2$, however all of these would intersect the curve $A$ or intersect the curves introduced by blowing up points on $A$. In the first case it contradicts it being a new singularity and in the second it contradicts the singularities not being joined by a $-1$ curve.
+\\
+\\
+Dealing with the case of $l = 0$ first. Assume that $Y$ is such that $Y$ only admits a map down to $\mb{F}_0$. However a blow up of any point of $\mb{F}_0$ results in a map to $\mb{F}_1$. So the only possibily is $\mb{F}_0$ itself. For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$ curve we get a map to $\mb{F}_2$. So the only option is ablowup at a smooth point. This results in three adjacent $-1$ curves. If we blowup a point on either of the two end curves we could get a map to $\mb{F}_2$. So the only option is blowing up the middle curve arbitrarily many times. This results in an infinite family of \ldp's with a single $\frac{1}{p}(1,1)$ singualrity.
+\end{proof}
+We note that this proof extends to any basket of singularities where no two of them can be joined by a $-1$ curve.
+\begin{thm}
+Let $S_1, \dots , S_n$ be singularitoies such that no two of them can be joined by a $-1$ curve on a \ldp , and no $-1$ curve can intersect the same singularity on a \ldp. Then we can classify the \ldp's with these singularities.
+\end{thm}
+ This leads to the following corrollary.
+\begin{cor}
+Let $X$ be a surface such that the basket is  $\{ \{ \frac{1}{p_1}(1,1), \, \dots \, \frac{1}{p_n}(1,1) \}, \, n \}$ , with the condition that either $p_i \geq 5$ or $p_i \geq 6$ and there is a $\frac{1}{3}(1,1)$ singularity. Then there are at most two singularities. The case of one singularity was classified by CP. In the case of two singularities there is no cascade. 
+\end{cor}
+\begin{proof}
+With these constrictions on singularities, it fits the criterion for the above theorem. The explicit classification was done in the case fo the theorem. We note that the cascade is of length 3 and all the surfaces admit toric degenerations. Let $X$ be the surface with no floating curves. Then $X$ admits a toric degeneration to $(-p_1, -1), \, (0, 1), \, (p_2, 1)$. Here the smoothing is equivariant with respect to the torus action. We have $-K_X^2 = \frac{4}{p_1} + \frac{4}{p_2}$. Even in cases where $-K_X^2 > 1$ we see that $X$ cannot be blown up while preserving $-K_X$ ample. If $X$ admitted a blow up at a general point $P$ then there is a fiber $F$ such that $P \in F$. Then $\widetilde F$ is a $-1$ curve on the minimal resolution connecting the $-p_1$ curve with the $-p_2$ curve. This is a contradiction.
+\\
+\\
+We note that by taking the global approach to the work set out in chpater 3 we can easily obtain a smoothing. Let $p$ be the highest common factor of $p_1, \, p_2$ and $ap_1 - bp_2 = p$. We see that $X$ can be described as $\C{3}_{x, \,y, \, z}$ quotiented out by $\mb{C}^*$ with weights $\frac{p_2 + p_1}{p}, \, \frac{p_2}{p}, \, \frac{p_1}{p}$ and finite group $\mu_p$ acting with weights $a+b, \, a, \, b $. Taking a subring of the $\frac{p_2 + p_1}{p}$ veronese embedding we get $x, y^\frac{p_2 + p_1}{p}, z ^\frac{p_2 + p_1}{p}, yz$, denoting these variables $x, \, u, \, v, \, w$. These have weights $1, \, \frac{p_2}{p}, \, \frac{p_1}{p}, \, 1$ we have the equation $uv = w^\frac{p_2 + p_1}{p}$ and this admits a smoothing by $uv = f_\frac{p_2 + p_1}{p} ( x,w)$. To see that that this is the uniques $\mb{Q}$g smoothing we note that this partial smoothing is still intersecting all the other singularities of the total space other than at the point $y = z = 0$. Hence it sitll has the $\frac{1}{p_1}(1,1)$ singularity and the $\frac{1}{p_2}(1,1)$ singularity.
+\end{proof}
+We now do a
 \end{document}

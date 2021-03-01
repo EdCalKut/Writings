@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  22 FEB 2021 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  1 MAR 2021 05:45
 entering extended mode
 **"./Bounded Sing Content.tex"
 ("Bounded Sing Content.tex"
@@ -249,6 +249,11 @@ f")
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumerate.sty
+"
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks31
+)
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\t
 ikz.sty"
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.
@@ -257,7 +262,7 @@ sty"
 s.sty"
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 util-common.tex"
-\pgfutil@everybye=\toks31
+\pgfutil@everybye=\toks32
 \pgfutil@tempdima=\dimen125
 \pgfutil@tempdimb=\dimen126
 
@@ -286,12 +291,12 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 keys.code.tex"
-\pgfkeys@pathtoks=\toks32
-\pgfkeys@temptoks=\toks33
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 keysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks34
+\pgfkeys@tmptoks=\toks35
 ))
 \pgf@x=\dimen127
 \pgf@y=\dimen128
@@ -307,9 +312,9 @@ keysfiltered.code.tex"
 \c@pgf@countb=\count108
 \c@pgf@countc=\count109
 \c@pgf@countd=\count110
-\t@pgf@toka=\toks35
-\t@pgf@tokb=\toks36
-\t@pgf@tokc=\toks37
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gf.cfg"
@@ -368,9 +373,9 @@ arser.code.tex"
 \pgfmath@dimen=\dimen135
 \pgfmath@count=\count113
 \pgfmath@box=\box31
-\pgfmath@toks=\toks38
-\pgfmath@stack@operand=\toks39
-\pgfmath@stack@operation=\toks40
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
 unctions.code.tex"
@@ -525,8 +530,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 code.tex")
 \pgffor@iter=\dimen162
 \pgffor@skip=\dimen163
-\pgffor@stack=\toks41
-\pgffor@toks=\toks42
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
 ))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
 \tikz\tikz.code.tex"
@@ -657,7 +662,7 @@ ty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip63
 \enit@outerparindent=\dimen182
-\enit@toks=\toks43
+\enit@toks=\toks44
 \enit@inbox=\box41
 \enitdp@description=\count137
 )
@@ -687,8 +692,8 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 ex"
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.
 tex"
-\XKV@toks=\toks44
-\XKV@tempa@toks=\toks45
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
 )
 \XKV@depth=\count138
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -709,7 +714,7 @@ ex" `pst-fp' v0.05, 2010/01/17 (hv)
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 util-common.tex"
-\pgfutil@everybye=\toks46
+\pgfutil@everybye=\toks47
 \pgfutil@tempdima=\dimen183
 \pgfutil@tempdimb=\dimen184
 
@@ -723,8 +728,8 @@ for.code.tex"
 code.tex")
 \pgffor@iter=\dimen185
 \pgffor@skip=\dimen186
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
 )
 \psLoopIndex=\count148
 
@@ -753,7 +758,7 @@ code.tex")
 \pst@cnto=\count157
 \pst@cntp=\count158
 \@zero=\count159
-\pst@toks=\toks49
+\pst@toks=\toks50
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\pstricks
 .con")
@@ -764,12 +769,12 @@ code.tex")
 \pslinewidth=\dimen256
 \psk@startLW=\dimen257
 \psk@endLW=\dimen258
-\pst@customdefs=\toks50
+\pst@customdefs=\toks51
 \pslinearc=\dimen259
 \pst@symbolStep=\dimen260
 \pst@symbolWidth=\dimen261
 \pst@symbolLinewidth=\dimen262
-\everypsbox=\toks51
+\everypsbox=\toks52
 \psframesep=\dimen263
 \pslabelsep=\dimen264
 \sh@wgridXunit=\dimen265
@@ -896,20 +901,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
  ("Bounded Sing Content.aux")
 \openout1 = `"Bounded Sing Content.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -954,12 +959,12 @@ i"
 \scratchbox=\box45
 \nofMPsegments=\count173
 \nofMParguments=\count174
-\everyMPshowfont=\toks52
+\everyMPshowfont=\toks53
 \MPscratchCnt=\count175
 \MPscratchDim=\dimen273
 \MPnumerator=\count176
 \makeMPintoPDFobject=\count177
-\everyMPtoPDFconversion=\toks53
+\everyMPtoPDFconversion=\toks54
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
 ase.sty"
@@ -980,7 +985,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring ON on input line 74.
+Package hyperref Info: Link coloring ON on input line 76.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -992,36 +997,29 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count178
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 76.
+LaTeX Info: Redefining \pageref on input line 76.
+LaTeX Info: Redefining \nameref on input line 76.
  ("Bounded Sing Content.out") ("Bounded Sing Content.out")
 \@outlinefile=\write4
 \openout4 = `"Bounded Sing Content.out"'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (36.6226pt too wide) in paragraph at lines 86--87
-[]\OT1/cmr/m/n/10.95 This is easy to see as $\OML/cmm/m/it/10.95 S$ \OT1/cmr/m/
-n/10.95 can be de-scribed as a toric sin-gu-lar-ity with rays $(\OML/cmm/m/it/1
-0.95 u[]; v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 (\OM
-L/cmm/m/it/10.95 u[]; v[]\OT1/cmr/m/n/10.95 )$.
+Overfull \hbox (6.81424pt too wide) in paragraph at lines 88--89
+[]\OT1/cmr/m/n/10.95 We know that $\OML/cmm/m/it/10.95 S$ \OT1/cmr/m/n/10.95 ca
+n be de-scribed as a toric sin-gu-lar-ity with rays $(\OML/cmm/m/it/10.95 u[]; 
+v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it
+/10.95 u[]; v[]\OT1/cmr/m/n/10.95 )$.
  []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
 
 [1
 Non-PDF special ignored!
@@ -1039,25 +1037,39 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
-{C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
+{C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 103--107
 
-("Bounded Sing Content.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--123
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 133--137
+
+ []
+
+[3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
+ ("Bounded Sing Content.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
 Package rerunfilecheck Info: File `"Bounded Sing Content".out' has not changed.
 
 (rerunfilecheck)             Checksum: EA430966CAACF81925800A71BB08C68A;89.
  ) 
 Here is how much of TeX's memory you used:
- 21721 strings out of 492970
- 407917 string characters out of 3127037
- 516497 words of memory out of 3000000
- 25175 multiletter control sequences out of 15000+200000
+ 21728 strings out of 492970
+ 407912 string characters out of 3127037
+ 522928 words of memory out of 3000000
+ 25178 multiletter control sequences out of 15000+200000
  9547 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,11n,84p,838b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,11n,84p,1775b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
@@ -1075,9 +1087,9 @@ grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/user/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
 /user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb>
-Output written on "Bounded Sing Content.pdf" (2 pages, 144090 bytes).
+Output written on "Bounded Sing Content.pdf" (4 pages, 166576 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
+ 100 PDF objects out of 1000 (max. 8388607)
+ 13 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
