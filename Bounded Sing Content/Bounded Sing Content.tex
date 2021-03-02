@@ -22,6 +22,7 @@
 \usepackage{enumitem}
 \usepackage[super]{nth}
 \usepackage{pstricks}
+\usepackage{xstring}
 
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
@@ -70,6 +71,34 @@
 \newcommand{\gl}{\text{GL}_2 (\mathbb{C})}
 \newcommand{\pgl}{\text{PGL}_2 (\mathbb{C})}
 \newcommand{\wt}[1]{\widetilde #1}
+
+
+% This works both with inline lists and with macros containing lists
+\newcommand*{\GetListMember}[2]{%
+    \edef\dotheloop{%
+    \noexpand\foreach \noexpand\a [count=\noexpand\i] in {#1} {%
+        \noexpand\IfEq{\noexpand\i}{#2}{\noexpand\a\noexpand\breakforeach}{}%
+    }}%
+    \dotheloop
+    \par%
+}%
+
+
+%4 variables #1 is xshift, #2 = #sides, #3 values, #4 num of curves, #5 is visible
+\newcommand{\polygon}[5][xshift=0cm]{
+  \pgfmathsetmacro{\angle}{360/#2}
+  \pgfmathsetmacro{\startangle}{-90 + \angle/2}
+  \pgfmathsetmacro{\y}{cos(\angle/2)}
+  \begin{scope}[#1]
+    \foreach \i in {1,2,...,#2} {
+      \pgfmathsetmacro{\x}{\startangle + \angle*\i}
+      \draw  (\x:2 cm) -- (\x + \angle:2 cm)  node [ fill=white] {5};
+
+    }
+  \end{scope}
+}
+
+
 
 \graphicspath{ {images/} }
 
@@ -135,7 +164,14 @@ With these constrictions on singularities, it fits the criterion for the above t
 \\
 We note that by taking the global approach to the work set out in chpater 3 we can easily obtain a smoothing. Let $p$ be the highest common factor of $p_1, \, p_2$ and $ap_1 - bp_2 = p$. We see that $X$ can be described as $\C{3}_{x, \,y, \, z}$ quotiented out by $\mb{C}^*$ with weights $\frac{p_2 + p_1}{p}, \, \frac{p_2}{p}, \, \frac{p_1}{p}$ and finite group $\mu_p$ acting with weights $a+b, \, a, \, b $. Taking a subring of the $\frac{p_2 + p_1}{p}$ veronese embedding we get $x, y^\frac{p_2 + p_1}{p}, z ^\frac{p_2 + p_1}{p}, yz$, denoting these variables $x, \, u, \, v, \, w$. These have weights $1, \, \frac{p_2}{p}, \, \frac{p_1}{p}, \, 1$ we have the equation $uv = w^\frac{p_2 + p_1}{p}$ and this admits a smoothing by $uv = f_\frac{p_2 + p_1}{p} ( x,w)$. To see that that this is the uniques $\mb{Q}$g smoothing we note that this partial smoothing is still intersecting all the other singularities of the total space other than at the point $y = z = 0$. Hence it sitll has the $\frac{1}{p_1}(1,1)$ singularity and the $\frac{1}{p_2}(1,1)$ singularity.
 \end{proof}
-We now do a more difficult example by classifying the \ldp's with $\frac{1}{19}(1,5)$ singularities. This is a more complicated example of how the above theorem can be used.
+We now do a more difficult example by classifying the \ldp's with singularities $S_{a,b}$ with resolution $E_1, \, E_2$ with $E_1^2 = -a,\, E_2^2 = -b$. To make sure that this obeys they conditions on the theorem we insist $a, \, b \neq 2$. We note that the case of $S_{3,3}$ does not satisfy the conditions for the theorem. However we are interested in $\mb{Q}$g smoothings and $S_{3,3}$ is not $\mb{Q}$g rigid and admits admits a partial smoothing to $\frac{1}{6}(1,1)$ singularity. These were classified above. This is a more complicated example of how the above theorem can be used.
+\\
+\\
+There are four heads of the cascade given by the following four surfaces.
+\\
+\begin{tikzpicture}
+\polygon{6}{6}{1,2,3,4,5,6}{1,2,3,4,5,6}
+\end{tikzpicture}
 \begin{cor}
 Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp with only singularities of type $S$.
 \end{cor}
