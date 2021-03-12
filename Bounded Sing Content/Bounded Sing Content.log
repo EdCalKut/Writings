@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  12 MAR 2021 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  12 MAR 2021 15:37
 entering extended mode
 **"./Bounded Sing Content.tex"
 ("Bounded Sing Content.tex"
@@ -1013,25 +1013,17 @@ LaTeX Info: Redefining \nameref on input line 105.
 \@outlinefile=\write4
 \openout4 = `"Bounded Sing Content.out"'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 112.
+LaTeX Font Info:    Try loading font information for U+msa on input line 114.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 112.
+LaTeX Font Info:    Try loading font information for U+msb on input line 114.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (6.81424pt too wide) in paragraph at lines 117--121
-[]\OT1/cmr/m/n/10.95 We know that $\OML/cmm/m/it/10.95 S$ \OT1/cmr/m/n/10.95 ca
-n be de-scribed as a toric sin-gu-lar-ity with rays $(\OML/cmm/m/it/10.95 u[]; 
-v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it
-/10.95 u[]; v[]\OT1/cmr/m/n/10.95 )$.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--121
+Underfull \hbox (badness 10000) in paragraph at lines 135--139
 
  []
 
@@ -1052,26 +1044,21 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 {C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 135--139
+Underfull \hbox (badness 10000) in paragraph at lines 151--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--158
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 151--158
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--158
-
- []
-
-[3]
 Underfull \hbox (badness 10000) in paragraph at lines 166--170
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 171--175
 
  []
@@ -1082,18 +1069,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
  ("Bounded Sing Content.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
-Package rerunfilecheck Info: File `"Bounded Sing Content".out' has not changed.
 
-(rerunfilecheck)             Checksum: EA430966CAACF81925800A71BB08C68A;89.
+
+Package rerunfilecheck Warning: File `"Bounded Sing Content".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Bounded Sing Content".out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  EA430966CAACF81925800A71BB08C68A;89.
  ) 
 Here is how much of TeX's memory you used:
- 22007 strings out of 492970
- 411934 string characters out of 3127037
- 525734 words of memory out of 3000000
- 25449 multiletter control sequences out of 15000+200000
+ 22005 strings out of 492970
+ 411915 string characters out of 3127037
+ 530630 words of memory out of 3000000
+ 25446 multiletter control sequences out of 15000+200000
  9547 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,11n,84p,1775b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,84p,1775b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
@@ -1111,9 +1104,9 @@ grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/user/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
 /user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb>
-Output written on "Bounded Sing Content.pdf" (5 pages, 171919 bytes).
+Output written on "Bounded Sing Content.pdf" (5 pages, 167970 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

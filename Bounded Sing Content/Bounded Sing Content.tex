@@ -109,17 +109,17 @@
 
 \section{Result}
 
-Throughout the rest of this chapter we limit ourselves to cyclic quotient singularities $S$ with the following property: let $C_1, \dots ,C_n$ be the minimal resolution of $S$, let the values $a_1, \dots ,a_n$ be the respective discrepancies, we insist that $a_i \leq -\frac{1}{2}$. We call this a singularity with small discrepancy. This can be compared to other people's work, in the following lemma.
-\begin{lem}
-Let $S$ be a cyclic quotient singularity, $C_1, \dots ,C_n$ the minimal resolution. If $C_i^2 \leq -4$ forall $i$ then $S$ has small discrepancy.
-\end{lem}
+
+\begin{dfn}
+Let $S$ be a cyclic quotient singularity, throughout the rest of this chapter we limit ourselves to cyclic quotient singularities $S$ with the following property: let $C_1, \dots ,C_n$ be the minimal resolution of $S$, let the values $a_1, \dots ,a_n$ be the respective discrepancies, we insist that $a_i \leq -\frac{1}{2}$. We call this a singularity with small discrepancy
+\end{dfn}
+This can be compared to other people's work, in the following lemma.
+\begin{prop}
+A singularity $S$ has small discrepancy if and only if $C_1^2 \neq 2$ and $C_n^2 \neq 2$.
+\end{prop}
 \begin{proof}
-We know that $S$ can be described as a toric singularity with rays $(u_0, v_0), \, (u_{n+1},v_{n+1})$. Where $v_0 = v_{n+1} = h$ is the gorenstein index of $S$. A given curve  $C_i$ in the minimal resolution corresponds to a ray $(u_i,v_i)$ inside the above cone, so $v_i \leq h$ for all $i$. Now $(u_i, v_i) = \frac{(u_{i-1}, v_{n-1}) + (u_{i+1}, v_{i+1})}{C_i^2}$. So $v_i \leq \frac{\max(v_{i-1}, v_{i+1})}{2} \leq \frac{h}{2}$. The discrepancy of the curve $C_i$ is equal to $\frac{v_i-h}{h}$ which is less than $\frac{-1}{2}$.
-\\
-\\
-Simpler proof - the discrepancy $d_i$ of a curve $C_i$ is equal to $-1 - \frac{2 + d_{i-1} + d_{i+1}}{C_i^2} \leq -1 - \frac{2}{C_{i^2}} \leq \frac{-1}{2}$ as $C_i^2 < -1$.
-\end{proof}
-We note that this can be extended to a slightly less clean statement. Let $S$ be a singularity such that $C_1^2 \neq 2$ and $C_n \neq 2$ and $S \neq \frac{1}{3}(1,1)$. Then $S$ has small discrepancy. We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$. We only care about the case of where the square is $3$. Without loss of generality we can assume $d_1 \geq d_2$ so $ d_2 \leq -1 - \frac{2 + d_2}{-3}$ rearranges to $2d_2 + 1 < 0$. Substituting this back into the equation for $d_1$ we get $d_1 \leq  \frac{-1}{-2}$.
+ We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$. We only care about the case of where the square is $3$. Without loss of generality we can assume $d_1 \geq d_2$ so $ d_2 \leq -1 - \frac{2 + d_2}{-3}$ rearranges to $2d_2 + 1 < 0$. Substituting this back into the equation for $d_1$ we get $d_1 \leq  \frac{-1}{2}$. 
+ \end{proof}
 \begin{lem}
 Let $X$ be a surface and  $f \colon : Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a curve that such that $C$ intersects two singularities (potentially the same) with small discrepancy. Consider the curve $\widetilde C \subset Y$ the strict transform. Then if $\widetilde C^2 = -1$ then $-K_X \cdot C \leq 0$.
 \end{lem}
@@ -143,7 +143,7 @@ This configuration is locally toric. To recover the curve $E_i^S$ we  start with
 \end{proof}
 Now we can classify these log del Pezzos in a straightforwards way. 
 \begin{thm}
-Let $X$ be a \ldp with only singularities of small discrepancy. Then $X$ has either one singularity or two $\frac{1}{p}(1,1)$ singularities. If $X$ admits no floating $-1$ curves then $X$ admits a toric degeneration.
+Let $X$ be a \ldp with only singularities of small discrepancy. Then $X$ has either one singularity or two $\frac{1}{p}(1,1)$ singularities or it does not occur. If $X$ admits no floating $-1$ curves then $X$ admits a toric degeneration.
 \end{thm}
 \begin{proof}
 Given a \ldp $X_0$ we start by contracting all floating $-1$ curves. This gives rise to a \ldp $X_1$, let $Y$ be the minimal resolution of $X_1$. We know that there is a map $\pi : \colon Y \rightarrow \mathbb{F}_l$. We start by considering the case $l > 1$. There is a curve $B \subset \mathbb{F}_l$ with $B^2 = -l$. Assume there is no  $l' >l$ such that $Y \rightarrow \mb{F}_{l'}$. Then $B$ has to be the image of an exceptional curve $E_i$ inside $Y$. Assume our map $\pi$ involves blowing up a point on $B$. Without loss of generality we can assume that this is the first blowup, so we have curves $C_1, \, C_2$ which are both $-1$ curve, with $C_2$ being the strict transform of $0$ fiber. We could then instead contract $C_2$ and get a larger value of $l$. Hence this does not occur. 
@@ -173,10 +173,10 @@ We now do a more difficult example by classifying the \ldp's with singularities 
 \\
 There are two heads of the cascade given by the following four surfaces. These correspond to surfaces constructed by blowing up $\mb{F}_a$ in $b$ points and $\mb{F}_b$ in $a$ points, then contracting the negative curves. We call these surfaces $X_a$ and $X_b$ respectively. These admits a toric degeneration to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We only consider the case of $X_a$ as $X_b$ is completely symmetric. We see that the we can smooth it by taking the $b$'th veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lies as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. This gives us $-K_X^2 = \frac{a^2(b+1)^2}{b(ab-1)}$. We note that this admits a cascade of length $a+2$. The first $a$ terms are easy to describe as we see that these admit a toric degeneration to $X_\Sigma$ with $\Sigma$ being the fan with rays $(-1, b), \, (-1, 0), \, (a, -1), \, (a-u, -1)$, where $u$ is the number of blowups. The $(a+1)$'st blowup admits a toric degeneration to $(-1, b), \, (-1, -1), \, (a, -1)$. The toric degeneration of the $a+2$'nd blowup is a bit more finicky and goes on a case by case analysis. However we see it admits a degeneration as it is a \LJ. We note that there is a birational relationship between $X_a$ and $X_b$ in that the $a$'th blowup of $X_a$ is isomorphic to the $b$'th blowup of $X_b$.  This generalises, in the following way. 
 \begin{thm}
-Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, this has at most $n$ basic surfaces form the previous theorem, possibly less via symmetry. Let $X_i$ be the surface constructed from $X_{a_i}$, if $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$.  After $a_i$ blowups $X_{i}$ is isomorphic to $X_j$ blownup $j$ times.
+Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, this has at most $n$ basic surfaces form the previous theorem, possibly less via symmetry. Let $X_i$ be the surface constructed from $X_{a_i}$, if $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$.  After $a_i$ blowups $X_{i}$ is isomorphic to $X_j$ blownup $a_j$ times.
 \end{thm}
 \begin{proof}
-Assume $n \neq 1$ then there exists a nodal curve $C \in |-K_{X_i}|$ such that on the minimal resolution $\widetilde{C}^2 = a_i + 4 - n$. This 
+Assume the length of the singularity is not one. We start by noting that $Y_i$ the minimal resolution of $X_i$ a cycle $-K_{Y_i}$ with intersections $-a_1, \dots -a_n, a_i+4-n$. If $a_i+4 -n \leq -2$ then this is clearly not the minimal resolution of a \ldp with cyclic quotients. If $a_i+4-n = -1$ then we have a $-1$ curve intersecting the singularity twice. 
 \end{proof}
 \begin{cor}
 Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp with only singularities of type $S$.
