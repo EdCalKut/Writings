@@ -23,6 +23,7 @@
 \usepackage[super]{nth}
 \usepackage{pstricks}
 \usepackage{xstring}
+\usepackage{comment}
 
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
@@ -57,20 +58,25 @@
 \newtheorem{conj}[thm]{Conjecture}
 \theoremstyle{definition}
 \newtheorem*{rem}{Remark}
+\newtheorem{assumption}[thm]{Assumption}
 
 \newcommand{\Rom}[1]
     {\MakeUppercase{\romannumeral #1}}
 \newcommand{\C}[1]{(\mathbb{C}^*)^#1}
-\newcommand{\ldp}{log del pezzo }
+\newcommand{\ldp}{log del pezzo}
 \newcommand{\mb}[1]{\mathbb{#1}}
 \newcommand{\Hi}{Hirzebruch surface }
-\newcommand{\minres}{minimal resolution }
+\newcommand{\minres}{minimal resolution}
 \newcommand{\LJ}{Looijenga pair }
 \newcommand{\ra}{\rightarrow}
 \newcommand{\spl}{\text{SL}_2 (\mathbb{C})}
 \newcommand{\gl}{\text{GL}_2 (\mathbb{C})}
 \newcommand{\pgl}{\text{PGL}_2 (\mathbb{C})}
 \newcommand{\wt}[1]{\widetilde #1}
+\newcommand{\Q}{\mathrm{Q}}
+\newcommand{\Z}{\mathrm{Z}}
+\newcommand{\F}{\mathrm{F}}
+\renewcommand{\P}{\mathrm{P}}
 
 
 % This works both with inline lists and with macros containing lists
@@ -107,32 +113,181 @@
 \section{context}
 \textbf{This is a first draft, context will be inserted}
 
+\section{Standard notions and notation for quotient singularities}
+\label{sec!notation}
+
 \section{Result}
 
-
+Recall from Section~\ref{sec!notation} our standard notation for quotient singularities.
+We consider the germ $S$ of a cyclic quotient singularity appearing at a point $P$ on a 
+projective surface $X$.
+The minimal resolution of $X$ is denoted $f\colon Y \longrightarrow X$. It contains a chain of
+exceptional (smooth, rational)
+curves $C_1,\dots,C_n$, entirely determined by $S$ itself, which are ordered so
+that the only intersections between these curves are
+$C_i\cap C_{i+1}$ which is a single transverse intersection for each $i=1,\dots,n-1$; 
+in other words,
+$C_1$ and $C_n$ are the two `ends' of the chain.
+We also denote the discrepancies of each $C_i$ (as curves in $Y$) by $d_i\in\Q$: thus
+\[
+K_Y = f^*(K_X) + \sum_{i=1}^n d_i C_i.
+\]
+We introduce a property of cyclic quotient singularities that is central to the rest of the chapter.
 \begin{dfn}
-Let $S$ be a cyclic quotient singularity, throughout the rest of this chapter we limit ourselves to cyclic quotient singularities $S$ with the following property: let $C_1, \dots ,C_n$ be the minimal resolution of $S$, let the values $a_1, \dots ,a_n$ be the respective discrepancies, we insist that $a_i \leq -\frac{1}{2}$. We call this a singularity with small discrepancy
+Let $S$ be a cyclic quotient singularity, and $C_1, \dots ,C_n$ the exceptional curves of the minimal resolution of $S$ and $d_1, \dots,d_n$ their discrepancies, as above.
+We say that $S$ is a {\bf singularity with small discrepancy} if $d_i \leq -\frac{1}{2}$ for
+all $i=1,\dots,n$.
 \end{dfn}
-This can be compared to other people's work, in the following lemma.
+
 \begin{prop}
-A singularity $S$ has small discrepancy if and only if $C_1^2 \neq 2$ and $C_n^2 \neq 2$.
+In the notation above,
+a singularity $S$ has small discrepancy if and only if $C_1^2 \neq -2$ and $C_n^2 \neq -2$.
 \end{prop}
 \begin{proof}
  We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$. We only care about the case of where the square is $3$. Without loss of generality we can assume $d_1 \geq d_2$ so $ d_2 \leq -1 - \frac{2 + d_2}{-3}$ rearranges to $2d_2 + 1 < 0$. Substituting this back into the equation for $d_1$ we get $d_1 \leq  \frac{-1}{2}$. 
  \end{proof}
-\begin{lem}
-Let $X$ be a surface and  $f \colon : Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a curve that such that $C$ intersects two singularities (potentially the same) with small discrepancy. Consider the curve $\widetilde C \subset Y$ the strict transform. Then if $\widetilde C^2 = -1$ then $-K_X \cdot C \leq 0$.
+
+
+Throughout the rest of this chapter we restrict the class of singularities we consider as follows:
+
+\begin{assumption}
+Any singularity germ $S$ that appears in this chapter is assumed to be a cyclic
+quotient singularity with small discrepancy.
+\end{assumption}
+
+\begin{lem}\label{lem!badcurve}
+Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
+strict transform $\widetilde C \subset Y$ is smooth. Suppose in addition that 
+$\widetilde C$ meets the exceptional locus of $f$ with intersection multiplicity at least~2.
+Then if $\widetilde C^2 = -1$ then $-K_X \cdot C \leq 0$.
+
+In particular, $\widetilde C$ is smooth and
+$C$ either meets at least two singularities of $X$ or meets one singularity
+with at least branches or has a singular point of $C$ at a singularity of $X$,
+then the hypotheses on $C$ are satisfied.
 \end{lem}
 \begin{proof}
-Let $f \colon : Y \rightarrow X$ be the minimal resolution of $X$, $\widetilde C \subset Y$ the strict transform of $C$. As $\widetilde C$ is a smooth curve on a smooth surface $K_Y \cdot \widetilde C = -1$. We know that $C$ intersects at least two exceptional curves $E_i, \, E_j$, with discrepancy $a, \, b$. Hence we see that $K_X \cdot C = f^*(K_X) \cdot \widetilde C \geq -1 + a + b  \geq 0$. 
+%Let $f \colon : Y \rightarrow X$ be the minimal resolution of $X$, $\widetilde C \subset Y$ the strict transform of $C$. 
+By the genus formula for $\widetilde C\subset Y$, as $\widetilde C$ and $Y$ are both smooth,
+$K_Y \cdot \widetilde C = -1$. If $\wt C$ intersects two distinct exceptional curves $E_i$, $E_j$,
+with discrepancy $d_i$, $d_j$ respectively, then
+ $K_X \cdot C = f^*(K_X) \cdot \widetilde C \geq -1 - d_i - d_j  \geq 0$,
+ as $X$ has only singularities with small discrepancy. 
+ If, on the other hand, $\wt C$ meets only one exceptional curve $E_i$, but with intersection
+multiplicity $m_i$, then $K_X \cdot C = f^*(K_X) \cdot \widetilde C \geq -1 - m_id_i  \geq 0$.
 \end{proof}
-Hence this curve configuration cannot lie on a \ldp. We also make the quick remark that in the case where the length, $n$, of the singularity is 1 or 2, this lemma follows via easy toric geometry as any curve joining two singularities is a locally toric configuration. This corresponds to the associated fan being non convex. 
+
+We show next that in fact such rational curves cannot lie on a \ldp.
+We need a preliminary lemma.
+\begin{lem}\label{lem!minus2curve}
+Let $X$ be a \ldp\ and $f \colon Y \rightarrow X$ be the \minres.
+Let $C\subset Y$ be a smooth rational curve. If $C^2\le-2$ then $C$ is contracted by $f$
+to a point of~$X$.
+\end{lem}
+
+\begin{proof}
+We proof this by contradiction. Assume there is a curve $C$ that is not contracted, the $K_X \cdot f(C) = f^*(K_X) \cdot \wt{C} \geq K_Y \cdot \wt{C} \geq 0$, with the inequality following as there are no terminal surface singularities.
+\end{proof}
+
 \begin{lem}
-Let $X$ be a \ldp with only singularities of small discrepancy. As above let $f \colon : Y \rightarrow X$ be the \minres then we consider the map $\pi \colon : Y \rightarrow \mathbb{F}_l$. Consider the curves $E_i^S \subset Y$ which are the excpetional curves arising from the resolution of a singularity $S$. Then $\pi_* E_i^S$ is a smooth rational curve with self intersection $-l, \,0, \, l, \, l+2$ or a point. In addition for all singularities $S$ in $X$, there exists a curve $E_j^S$ such that $\pi_* E_j^S$ is not a point.
+Let $X$ is a \ldp\ with singularities of small discrepancy and 
+consider the following diagram
+\[
+\begin{array}{ccccc}
+&&Y\\
+&\swarrow f && g\searrow \\
+X&&&&Z
+\end{array}
+\]
+$f$ is the minimal resolution of $X$ and $g$ is a birational
+morphism to a smooth surface $Z$.
+Let $E\subset Y$ be an $f$-exceptional curve. Then $E$ is contracted to a point
+of $Z$ by $g$, or $g(E)$ is a smooth curve and $g_E$ is an isomorphism.
+\end{lem}
+
+\begin{proof}
+THINK: TO DO
+\end{proof}
+
+\begin{lem}
+Let $X$ be a \ldp\ with only singularities of small discrepancy, and
+let $f \colon Y \rightarrow X$ be the \minres. We suppose $X\not=\P^2$, so that $\rho_Y\ge2$.
+The resolution $Y$ admits a morphism $\pi \colon Y \rightarrow \mathbb{F}_l$ for some $l\ge0$:
+this is the minimal model of~$Y$, unless that minimal model
+is $\P^2$, in which case there is a factorisation
+$Y\rightarrow \F_1\rightarrow\P^2$.
+
+For a germ $S$ of a singularity of~$X$, denote by
+$E_i^S \subset Y$ the exceptional curves in the resolution of $S$.
+For each singularity $S$ on $X$:
+\begin{enumerate}
+\item
+Every exceptional curve $E_i^S$ is either contracted to a point of $\F_l$ by $\pi$,
+or the pushdown
+$\pi_* E_i^S\subset\F_l$ is a smooth rational curve with self intersection one of $-l, \,0, \, l, \, l+2$.
+\item
+In the case $l\ge2$, there is always some curve $E_j^S$ not contracted by $\pi$.
+\end{enumerate}
 
 \end{lem}
 \begin{proof}
-We first show that it is impossible for $\pi_* E$ to be a non smooth curve. Hence assume that it has a singular point $P$. In order for us to get a cyclic quotient singularity, $E$ needs to be smooth. Hence there is a collection of curves $C_i \subset Y$ which blowdown to $P$. As all these curves are contracted $C_i^2 \leq  -1$ and $E^2 \leq 0$, and there is a curve $C_j$ with $C_j^2 = -1$. Clearly $C_j$ intersects either two curves with self intersection less than $-1$, or it could intersect $E$ twice. By the above lemma neither case could appear on the \minres of a \ldp.
+Let $E\subset Y$ be any one of the exceptional curves $E_i^S$; in particular, $E$ is
+a smooth rational curve with $E^2 \le-2$.
+We first show that if $\pi_* E\subset\F_l$ is a curve, then it must be a smooth curve. 
+
+For contradiction, suppose $\pi_*E$ is a curve with a singular point $P$.
+Let $C_1,\dots,C_s\subset Y$ be the curves that contract to $P$ under~$\pi$.
+As these curves are contracted, $C_i^2 \leq  -1$.
+Notice that if $C_i^2\le-2$, then $f(C_i)$ is a point of~$X$
+by Lemma~\ref{lem!minus2curve}.
+There are two cases to consider: set-theoretically, either
+$\pi^{-1}(P)$ meets $E$ in a single point or in more than one point.
+
+
+In the case of more than one intersection point, since $\pi^{-1}(\pi_*(E))$ is connected,
+among the curves $C_i$ there must be a shortest chain $C_1\cup\cdots\cup C_r$
+with $C_k\cdot E=0$ for $k=2,\dots,r-1$, and $\left(\sum_{i=1}^r C_i\right)\cdot E = 2$.
+At least one of the curves $A=C_k$ of the cycle must have $A^2=-1$, otherwise the
+whole cycle is contracted to a point $R$ of $X$, but then $R\in X$ would not be
+a rational singularity, and so in particular not a cyclic quotient singularity.
+And of course $A$ cannot meet another $-1$-curve $C_j$ with $\pi(C_j)=P$.
+Thus $A$ must lie in one of the following configurations:
+\begin{enumerate}
+\item
+$A$ meets two distinct $\pi$-exceptional curves, $C_j$ and $C_{j'}$,
+both of which have self-intersection $\le-2$.
+\item
+$A$ meets $E$ in one point and a distinct $\pi$-exceptional curves $C_j$
+with $C_j^2\le-2$.
+\item
+$A$ meets $E$ in two distinct points.
+\end{enumerate}
+In each of these situations, $C = f_*(A)\subset X$ would be a curve
+on which $K_X$ is nef, by Lemma~\ref{lem!badcurve}, which contracts
+$X$ being \ldp. Indeed $A = \wt C$ meets the $f$-exceptional locus with multiplicity
+at least~2 in each case.
+
+The argument in the nodal case follows similarly, up to the case division of configurations
+at which there is an additional case:
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item
+$A$ meets $E$ in one point with intersection multiplicity $\ge2$.
+\end{enumerate}
+
+
+In the case that $\pi^{-1}(P)\cap E$ is supported on a single point $Q\in E$, we claim
+there is a unique $C_j\subset Y$ with $C_j^2=-1$ and $Q\in C_j\cap E$. In particular,
+the local intersection number $I_Q(C_j,E)\ge 2$.   THINK: TO DO
+
+
+ and there is some $1\le j\le s$ for which
+ $C_j^2 = -1$. Moreover, among such $-1$-curves, at least one of them either
+ meets two distinct other $C_i$ (that is to say, it lies within a chain of exceptional curves),
+or 
+ 
+ 
+ Clearly $C_j$ intersects either two curves with self intersection less than $-1$, or it could intersect $E$ twice. By the above lemma neither case could appear on the \minres of a \ldp.
 \\
 \\
 To show that not all the curves $E_j^S$ can be contracted to a point, we go for a proof by contradiction. Assume they are all contracted to a point $P \in \mb{F}_l$. Then $P$ lies on a fiber $F$ which intersects the curve $B$. We have to blow up $P$ to get hence we get the following curve configuration. 
@@ -141,6 +296,11 @@ B, -1, -1
 \]
 This configuration is locally toric. To recover the curve $E_i^S$ we  start with the toric blowups. Assuming we have done at least one blowup this results in a curve configuration with at least one $-1$ curve joining together two curves with self intersection less than $-1$. If this curve stayed a $-1$ curve after the non toric blowups then we would have a $-1$ curve joining together two singularities. This contradicts the previous lemma. Hence the $-1$ curve has to be blown up in a non toric way. This would result in it being a $-a$ curve with $a>1$. Hence it is exceptional and contracted. This results in our curves all being connected to via a chain of curves  with self intersection less than $-1$ to $B$. This means there exists $i$ such that $B = E_i^S$ contradicting our assumptions.
 \end{proof}
+
+\begin{rem}
+In the case where the length, $n$, of the singularity is 1 or 2, this lemma follows via easy toric geometry as any curve joining two singularities is a locally toric configuration. This corresponds to the associated fan being non convex. 
+\end{rem}
+
 Now we can classify these log del Pezzos in a straightforwards way. 
 \begin{thm}
 Let $X$ be a \ldp with only singularities of small discrepancy. Then $X$ has either one singularity or two $\frac{1}{p}(1,1)$ singularities or it does not occur. If $X$ admits no floating $-1$ curves then $X$ admits a toric degeneration.
@@ -179,7 +339,7 @@ Given a singularity with small discrepancy such that the minimal resolution is $
 Assume the length of the singularity is not of length one. We start by noting that $Y_i$, the minimal resolution of $X_i$, has a cycle $C_1 \dots C_n \in -K_{Y_i}$ with intersections $-a_1, \dots -a_n, a_i+4-n$. If $a_i+4 -n \leq -2$ then this is clearly not the minimal resolution of a \ldp with cyclic quotients. If $a_i+4-n = -1$ then we have a $-1$ curve intersecting the singularity twice. 
 \\
 \\
-So now assume $a_i + 4-n > -1$, then if we blowup the surface $a_i + 4 -n $ times we can assume that all the points lie on this curve. Clearly if we blow up $a_i + 5 - n$ times we have $-1-$ curve intersecting the singularity twice. If we blowup point $P_1, \dots, P_k$, with $k \leq a_i + 4 - n$, we wish to show $-K_X$
+So now assume $a_i + 4-n > -1$, then if we blowup the surface $a_i + 4 -n $ times we can assume that all the points lie on this curve. Clearly if we blow up $a_i + 5 - n$ times we have $-1-$ curve intersecting the singularity twice. If we blowup point $P_1, \dots, P_k$, with $k \leq a_i + 4 - n$, to obtain a surface $x'$. We wish to show $-K_{X'}$ is ample, note $-K_{X'}\cdot C = -K_{X} - \sum{E_i} \cdot C$. We note that the Weil group of $X$ is generated by the toric boundary and the curves which are occurring as blowups on the boundary. In the latter case clearly our product is unchanged and hence it is still greater than zero. As our singularity has length greater than 2, there are at most only two components to the toric boundary. The first is the strict transform of the $l$ curve. 
 \end{proof}
 \begin{cor}
 Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp with only singularities of type $S$.
