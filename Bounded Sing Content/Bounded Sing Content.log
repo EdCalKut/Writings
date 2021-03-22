@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  22 MAR 2021 02:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  22 MAR 2021 13:38
 entering extended mode
 **"./Bounded Sing Content.tex"
 ("Bounded Sing Content.tex"
@@ -938,6 +938,24 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 libraryplotmarks.code.tex"
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 )))
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\blkarray\blkarray.s
+ty"
+Package: blkarray 2015/02/27 v0.07 Block array (dpc)
+\c@BAenumi=\count171
+\BA@col=\count172
+\BA@block@cnt=\count173
+\BA@final@box=\box47
+\BA@first@box=\box48
+\BA@colsep=\dimen285
+\BA@ftn=\toks56
+\BAextrarowheight=\dimen286
+\BAextraheightafterhline=\dimen287
+\BAarrayrulewidth=\dimen288
+\BAdoublerulesep=\dimen289
+\BAfootskip=\dimen290
+\BA@dashbox=\box49
+\BA@ddashbox=\box50
+)
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.s
 ty"
 Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
@@ -985,9 +1003,9 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 y"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen285
-\Hy@linkcounter=\count171
-\Hy@pagecounter=\count172
+\@linkdim=\dimen291
+\Hy@linkcounter=\count174
+\Hy@pagecounter=\count175
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
 "
@@ -995,7 +1013,7 @@ File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count173
+\Hy@SavedSpaceFactor=\count176
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.c
 fg"
@@ -1009,16 +1027,16 @@ Package hyperref Info: Plain pages OFF on input line 4550.
 Package hyperref Info: Backreferencing OFF on input line 4555.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4788.
-\c@Hy@tempcnt=\count174
+\c@Hy@tempcnt=\count177
  ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5141.
-\XeTeXLinkMargin=\dimen286
-\Fld@menulength=\count175
-\Field@Width=\dimen287
-\Fld@charsize=\dimen288
+\XeTeXLinkMargin=\dimen292
+\Fld@menulength=\count178
+\Field@Width=\dimen293
+\Fld@charsize=\dimen294
 Package hyperref Info: Hyper figures OFF on input line 6396.
 Package hyperref Info: Link nesting OFF on input line 6401.
 Package hyperref Info: Hyper index ON on input line 6404.
@@ -1028,17 +1046,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6421.
 Package hyperref Info: PDF/A mode OFF on input line 6426.
 LaTeX Info: Redefining \ref on input line 6466.
 LaTeX Info: Redefining \pageref on input line 6470.
-\Hy@abspage=\count176
-\c@Item=\count177
-\c@Hfootnote=\count178
+\Hy@abspage=\count179
+\c@Item=\count180
+\c@Hfootnote=\count181
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.de
 f"
 File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
-\Fld@listcount=\count179
-\c@bookmark@seq@number=\count180
+\Fld@listcount=\count182
+\c@bookmark@seq@number=\count183
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilec
 heck.sty"
@@ -1048,30 +1066,30 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip66
 )
-\c@thm=\count181
+\c@thm=\count184
  ("Bounded Sing Content.aux")
 \openout1 = `"Bounded Sing Content.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Try loading font information for U+msa on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Try loading font information for U+msa on input line 90.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 89.
+LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1114,17 +1132,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count182
-\scratchdimen=\dimen289
-\scratchbox=\box47
-\nofMPsegments=\count183
-\nofMParguments=\count184
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count185
-\MPscratchDim=\dimen290
-\MPnumerator=\count186
-\makeMPintoPDFobject=\count187
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count185
+\scratchdimen=\dimen295
+\scratchbox=\box51
+\nofMPsegments=\count186
+\nofMParguments=\count187
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen296
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
+\everyMPtoPDFconversion=\toks58
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
 ase.sty"
@@ -1149,10 +1167,10 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 89.
+ on input line 90.
 
-\AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring ON on input line 89.
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring ON on input line 90.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -1162,11 +1180,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 string.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count188
+\c@section@level=\count191
 )
-LaTeX Info: Redefining \ref on input line 89.
-LaTeX Info: Redefining \pageref on input line 89.
-LaTeX Info: Redefining \nameref on input line 89.
+LaTeX Info: Redefining \ref on input line 90.
+LaTeX Info: Redefining \pageref on input line 90.
+LaTeX Info: Redefining \nameref on input line 90.
  ("Bounded Sing Content.out") ("Bounded Sing Content.out")
 \@outlinefile=\write5
 \openout5 = `"Bounded Sing Content.out"'.
@@ -1201,20 +1219,20 @@ Underfull \vbox (badness 5189) has occurred while \output is active []
 [6]
 Missing character: There is no s in font nullfont!
  [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 462.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 462.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 470.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 470.
  ("Bounded Sing Content.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 462.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 462.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 470.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 470.
 Package rerunfilecheck Info: File `"Bounded Sing Content".out' has not changed.
 
 (rerunfilecheck)             Checksum: 64D878CEE8B1A1DC4A2ABEE044E697BC;192.
  ) 
 Here is how much of TeX's memory you used:
- 32761 strings out of 492970
- 763381 string characters out of 3127037
- 970648 words of memory out of 3000000
- 35881 multiletter control sequences out of 15000+200000
+ 33034 strings out of 492970
+ 766761 string characters out of 3127037
+ 974836 words of memory out of 3000000
+ 36150 multiletter control sequences out of 15000+200000
  11433 words of font info for 44 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  62i,15n,96p,1987b,1030s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1236,7 +1254,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
 s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb>
-Output written on "Bounded Sing Content.pdf" (9 pages, 215062 bytes).
+Output written on "Bounded Sing Content.pdf" (9 pages, 215970 bytes).
 PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  32 named destinations out of 1000 (max. 500000)

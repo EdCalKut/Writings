@@ -25,6 +25,7 @@
 \usepackage{xstring}
 \usepackage{comment}
 \usepackage{pgfplots}
+\usepackage{blkarray} %This is for labelled matrices
 
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
@@ -256,14 +257,14 @@ For each singularity $S$ on $X$:
 \item
 Every exceptional curve $E_i^S$ is either contracted to a point of $\mb{F}_l$ by $\pi$,
 or the pushdown
-$\pi_* E_i^S\subset\F_l$ is a smooth rational curve with self intersection one of $-l, \,0, \, l, \, l+2$ and if $l<2$ it can additionally be $l+4$.
+$\pi_* E_i^S\subset\F_l$ is a smooth rational curve with self intersection one of $-l, \,0, \, l, \, l+2, \, 4l $ and if $l<2$ it can additionally be $l+4$.
 \item
 In the case $l\ge2$, there is always some curve $E_j^S$ not contracted by $\pi$.
 \end{enumerate}
 
 \end{lem}
 \begin{proof}
-To prove the first statement note that $\pi_* E_i^S$ cannot be a singular curve via Prop~\ref{MainProp}, hence it is a smooth rational curve. The only smooth rational curves on a Hirzebruch Surface $\mb{F}_l$ are the curves $B$, with $B^2 = -l$, $F$ with $F^2 = 0$ and the curves lieing inside the linear systems $|lF + B|$, $|(l+1)F + B|$ and finally $|(l+2)F + B|$. We note that the final case could not arise on $\mb{F}_l$ when $l \ge 2$.  In this case the curve $B$ is also the image of an exceptional curve from a singularity. Hence any curve in $|(l+2)F + B$ would intersect $B$, when counting multiplicities, $2$ times. This would be a contradiction to Lemma~\ref{lem!badcurve}.
+To prove the first statement note that $\pi_* E_i^S$ cannot be a singular curve via Prop~\ref{MainProp}, hence it is a smooth rational curve. The only smooth rational curves on a Hirzebruch Surface $\mb{F}_l$ are the curves $B$, with $B^2 = -l$, $F$ with $F^2 = 0$ and the curves lieing inside the linear systems $|lF + B|$,  $|(l+1)F + B|$, $|2F|$, $|2(lF+B)|$  and finally $|(l+2)F + B|$ . We note that the final case could not arise on $\mb{F}_l$ when $l \ge 2$.  In this case the curve $B$ is also the image of an exceptional curve from a singularity. Hence any curve in $|(l+2)F + B$ would intersect $B$, when counting multiplicities, $2$ times. This would be a contradiction to Lemma~\ref{lem!badcurve}.
 
 
 
@@ -406,24 +407,31 @@ Once again by Theorem~\ref{ThmOnSing} there are two heads of the cascade given b
 }
 \]
 
- These admits a toric degeneration to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We only consider the case of $X_a$ as $X_b$ is completely symmetric. We see that the we can smooth it by taking the $b$'th veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lies as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. This gives us $-K_X^2 = \frac{a^2(b+1)^2}{b(ab-1)}$. We note that this admits a cascade of length $a+2$. The first $a$ terms are easy to describe as we see that these admit a toric degeneration to $X_\Sigma$ with $\Sigma$ being the fan with rays $(-1, b), \, (-1, 0), \, (a, -1), \, (a-u, -1)$, where $u$ is the number of blowups. 
+ These admits a toric degeneration to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We only consider the case of $X_a$ as $X_b$ is completely symmetric. We see that the we can smooth it by taking the $b$'th veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lies as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. This gives us $-K_X^2 = \frac{a^2(b+1)^2}{b(ab-1)}$. We note that this admits a cascade of length $a+2$. The first $a$ terms are easy to describe as we see that these admit a toric degeneration to $X_\Sigma$ with $\Sigma$ being the fan with rays $(-1, b), \, (-1, 0), \, (a, -1), \, (a-u, -1)$, where $u$ is the number of blowups. This has an $A_{b-1}$ singularity and an $A_{u-1}$ singularity.
 Via Cox rings this can be viewed as $\mb{C}^4_\{x, y,z,t\}$ with a quotient 
 \[
-\left(
-\begin{matrix}
-u & 0 & bu - (ab-1) & ab-1 \\
-1 & ab-1 & b & 0 \\
-\end{matrix}
-\right)
+\begin{blockarray}{cccc}
+	x & y & z & t \\
+      \begin{block}{(cccc)}
+		u & 0 & bu - (ab-1) & ab-1 \\
+		1 & ab-1 & b & 0 \\
+      \end{block}
+\end{blockarray}
 \]
-Taking the forms which are divisible by $\left( \begin{matrix}u \\ b \end{matrix} \right)$ we get the following equations 
-\[
-\left(
-\begin{matrix}
+Taking the veronese embedding of degree $u$ in the variables $x, \, z,\,t$ gets us the coordinates $z^u, \, t^u, \, zt$. And to smooth the $A_{b-1}$ singularity we take the $b$ veronese embedding of the variables $x^b, \, y^b, \, xy$. Once again we can smooth this out. This gives us the surface as complete intersection with weights 
+$\begin{matrix} b & b^2u \\ ab & u \end{matrix}$
+inside the toric variety with weights
 
-\end{matrix}
-\right)
+\[
+\begin{blockarray}{ccc ccc}
+	x^b & y^b & z^u & xy & t^u & t^{bu}z \\
+      \begin{block}{(ccc ccc)}
+		b & 0 & b(bu - (ab-1) ) & 1 & ab-1 & b^2\\
+		1 & ab-1 & u & a & 0 & 1\\
+      \end{block}
+\end{blockarray}
 \]
+
  The $(a+1)$'st blowup admits a toric degeneration to $(-1, b), \, (-1, -1), \, (a, -1)$. The toric degeneration of the $a+2$'nd blowup is a bit more finicky and goes on a case by case analysis. However we see it admits a degeneration as it is a \LJ. We note that there is a birational relationship between $X_a$ and $X_b$ in that the $a$'th blowup of $X_a$ is isomorphic to the $b$'th blowup of $X_b$.  This generalises, in the following way. 
 \end{proof}
 
