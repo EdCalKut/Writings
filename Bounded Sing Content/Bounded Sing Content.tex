@@ -177,11 +177,11 @@ We proof this by contradiction. Assume there is a curve $C$ that is not contract
 Let $X$ is a \ldp\ with singularities of small discrepancy and 
 consider the following diagram
 \[
-\begin{array}{ccccc}
-&&Y\\
-&\swarrow f && g\searrow \\
-X&&&&Z
-\end{array}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkQANEAX1PU1z5CKAEyli1Ok1bsAmjz4gM2PASLlxkhizaIQALR6SYUAObwioAGYAnCAFskGkDghIyUnewA63uAGMbLDQcOBwAT0YYYFNuEBpGegAjGEYABQFVYRAg0wALHAVrO0dEZ1ckMU8ZPV8AoJCwyOirOO5KbiA
+\begin{tikzcd}
+  & X \arrow[rd, "\scriptstyle{g}"'] \arrow[ld, "\scriptstyle{f}"] &   \\
+Z &                                                                & Y
+\end{tikzcd}
 \]
 $f$ is the minimal resolution of $X$ and $g$ is a birational
 morphism to a smooth surface $Z$.
