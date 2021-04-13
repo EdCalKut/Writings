@@ -612,29 +612,17 @@ In addition we can describe the shape of the cascade. In the case when the singu
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0B9YARgF8AesRB9S6TLnyEUPclVqMWbLr0E8RYkBmx4CRAExzq9Zq0QgAOhagQcCUeJ1SiAZiMLTy7vwHA6nHgBafg1HST0UNx55EyVzLn1ff30+UK0JXWkSUn0YxTMObhShNO1wrNlc43yvYGL1B3SnCORDKo84y2tbe00yzNccvM94osE-Tn1g1Mb+5xQAViHqkcKGvoz55AA2ZY6ChNLNlrIAFmHOlRdBYVnjitJzlcvua4F1sIGUQyf9tisbHYjs0sm5frEDmMkpwXNNgeUiAB2PYQrwuETyGBQADm8CIoAAZgAnCAAWyQshAOAgSDIf3MVjQAAssAF3iBqAw6AAjGAMAAK9zYRKw2KZODSxLJSEMVJpiEpqIZFmZrJ4An0HJAXN5AqF5hFYoljSl5MQbjlMueBUZLLZEyCKS1Or5gpBwtF4slJLNp2o1KQAA5rf8VXbEhMpiFOTzXfrtTACcbNKakLtLYglvSuqrJuyY7q3QiDZ7k4SfUhkRn00qc+GNc7Y3r3SWjd7pYhgxmq7XbayI8k4QW4y2QIavSaK53-fKAJwh5UAFSZMBwdEbhfjDETZZAqcQ84zFt7YbV0KC0e1TaLXzHpfbZsPAYVfuzfZh0Nhl5dzeLCaTD4UnSz6Hie-J2uow6-re467vuPCys+PCKjUyq5sAbyQVem6jrBgEKhaSGyie6FvJqUE3vMd5tpOHY8K+SHHqhdashh4z+LCToUfGeG0WaPBZkhdJgeGG4jn+vEUHwQA
 \begin{tikzcd}
 X_{1}^0 & X_{1}^1 \arrow[l, "\phi_1^1"']   & \cdots \arrow[l, "\phi_1^2"']   & X_{1}^{a_1-1} \arrow[l, "\phi_1^{a_1-2}"']                      &  &                                                                    &                          &                          \\
-        &                                  &                                & X_2^{a_2} \arrow[d, "\phi_2^{a_2-1}"]                           &  &                                                                    &                          &                          \\
-X_{2}^0 & X_{2}^1 \arrow[l, "\phi_2^1"']   & \dots \arrow[l, "\phi_2^2"']   & X_{2}^{a_2-1} \arrow[l, "\phi_2^{a_2-1}"'] \arrow[rr, "\Theta"] &  & X_1 \arrow[lluu, "\phi_1^{a_1-1}"'] \arrow[lldd, "\phi_3^{a_3-1}"] & X_2 \arrow[l, "\Phi_1"'] & X_3 \arrow[l, "\Phi_2"'] \\
+        &                                  &                                & &  &                                                                    &                          &                          \\
+X_{2}^0 & X_{2}^1 \arrow[l, "\phi_2^1"']   & \dots \arrow[l, "\phi_2^2"']   & X_{2}^{a_2-1} \arrow[l, "\phi_2^{a_2-1}"']  &  &\arrow[ll, "\phi_2^{a_2}"]  X_1 \arrow[lluu, "\phi_1^{a_1-1}"'] \arrow[lldd, "\phi_3^{a_3-1}"] & X_2 \arrow[l, "\Phi_1"'] & X_3 \arrow[l, "\Phi_2"'] \\
         &                                  &                                &                                                                 &  &                                                                    &                          &                          \\
 X_{3}^0 & X_{3}^1 \arrow[l, "\phi_{3}^1"'] & \dots \arrow[l, "\phi_{3}^2"'] & X_{2}^{a_3-1} \arrow[l, "\phi_{3}^{a_3-2}"']                    &  &                                                                    &                          &                         
 \end{tikzcd}
 \]
-If the singularity is length 4 we get two cascades with length $a_i + 3 - n$ for $ i = 2, \, 3$. These do not intersect at all, and no two surfaces in these cascades are isomorphic. In the case of $i = 1, \, 4$ you have 
-\[
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0B9YARgF8AesRB9S6TLnyEUPclVqMWbLr0E8RYkBmx4CRAExzq9Zq0QgAOhYDGUCDgSjxOqUQDMRhaeWceA4HScWAC0-BrOknooACykPPImSubs4VoSutIkpPoJimYcnNEC6k5pLlHIsjnGeT5F+qnakZmG1V5JljZ2Do3prigebYn5XEUBhaF8IvIwUADm8ESgAGYAThAAtkhkIDgQSLLt+VZoABZYvkKpa5sH1HtIhkdsJ+eXJZo3W4hPD4gez3MrwufnGPGC+impS+SABf1igM6ZxB-kCITC0PW3wArPd9ogAGw1bxAizIwpXTG3Ql4pAAdmJHWBFI+KyxSAAHLTEAiGHQAEYwBgABT6URADBgyxwIEZxzJbzGgWik2u7MQDN2+K5iOZSomkOmfCAA
-\begin{tikzcd}
-X_{1}^0 \arrow[r, "\phi_1^0"] & X_{1}^1 \arrow[r, "\phi_1^1"] & \cdots \arrow[r, "\phi_1^{a_1-2}"] & X_1^{a_i-1} \arrow[rd, "\phi_1^{a_i-1}"] &   \\
-                              &                               &                                    &                                          & X \\
-X_4^1 \arrow[r, "\phi_4^0"]   & X_4^2 \arrow[r, "\phi_4^1"]   & \cdots \arrow[r, "\phi_4^{a_4-2}"] & X_4^{a_4-1} \arrow[ru, "\phi_4^{a_4-1}"] &  
-\end{tikzcd}
-\]
-If the length of the singularity is greater than 4 every surface constructed by Theorem~\ref{ThmOnSing} will have their cascades never intersecting, unless the whole cascades are isomorphic to each other.
+For any singularity of length greater than 3, then a basic surface either falls into a cascade of the above form or it lies in a straight series.
+
 \end{thm}
 \begin{proof}
-Assume the length of the singularity is not of length one. We start by noting that $Y_i$, the minimal resolution of $X_i$, has a cycle $C_1 \dots C_n \in -K_{Y_i}$ with intersections $-a_1, \dots -a_n, a_i+4-n$. If $a_i+4 -n \leq -2$ then this is clearly not the minimal resolution of a \ldp\ with cyclic quotients. If $a_i+4-n = -1$ then we have a $-1$-curve intersecting the singularity twice. 
-
-
-
-So now assume $a_i + 4-n > -1$, then if we blowup the surface $a_i + 4 -n $ times we can assume that all the points lie on this curve. Clearly if we blow up $a_i + 5 - n$ times we have $-1-$ curve intersecting the singularity twice. If we blowup point $P_1, \dots, P_k$, with $k \leq a_i + 4 - n$, to obtain a surface $X'$. We wish to show $-K_{X'}$ is ample, note $-K_{X'}\cdot C = -K_{X} - \sum{E_i} \cdot C$. We note that the Weil group of $X$ is generated by the toric boundary and the curves which are occurring as blowups on the boundary. In the latter case clearly our product is unchanged and hence it is still greater than zero. As our singularity has length greater than 2, there are at most only two components to the toric boundary. The first is the strict transform of the $l$ curve. 
+Given a singularity $S$ which is not a $\frac{1}{p}(1,1)$. Then to a basic surface $X$ this has to be constructed by a series of blowups at two point. We are blowing up this point finitely many times. Denote these multiplicities by $k_1$, $k_2$. This is an invariant of the surface $X$. On $X$ we have two sets of curves which are mapped to fibers on the Hirzebruch surface. Denote these by $A_1 \dots A_n$ and by $B_1, \dots B_m$. We have three rational curves $U, \, V, \, W$. We now assume that both $A_1, \, A_n$ and $B_1, \, B_m$ have been blown up non torically giving rise to curves $C_1^A, \, C_n^A, \, C_1^B, \, C_m^B$.
 \end{proof}
 \begin{cor}
 Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.

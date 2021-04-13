@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  25 MAR 2021 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  13 APR 2021 15:59
 entering extended mode
 **"./Bounded Sing Content.tex"
 ("Bounded Sing Content.tex"
@@ -1241,30 +1241,25 @@ Missing character: There is no s in font nullfont!
 
 LaTeX Warning: Citation `CP' on page 10 undefined on input line 610.
 
-[10] [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 646.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 646.
+[10] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 634.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 634.
  ("Bounded Sing Content.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 646.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 646.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 634.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 634.
+Package rerunfilecheck Info: File `"Bounded Sing Content".out' has not changed.
 
+(rerunfilecheck)             Checksum: 592BA0309A44719170476AB0124CB426;231.
 
-Package rerunfilecheck Warning: File `"Bounded Sing Content".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Bounded Sing Content".out':
-(rerunfilecheck)             Before: CAD4EED65D60B601EA4F0363A652D1B0;231
-(rerunfilecheck)             After:  592BA0309A44719170476AB0124CB426;231.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 33455 strings out of 492970
- 774080 string characters out of 3127037
- 972018 words of memory out of 3000000
- 36563 multiletter control sequences out of 15000+200000
+ 33361 strings out of 492970
+ 771771 string characters out of 3127037
+ 971018 words of memory out of 3000000
+ 36470 multiletter control sequences out of 15000+200000
  11433 words of font info for 44 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  62i,15n,96p,1736b,1032s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1286,9 +1281,9 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
 s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb>
-Output written on "Bounded Sing Content.pdf" (12 pages, 236444 bytes).
+Output written on "Bounded Sing Content.pdf" (11 pages, 234115 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
