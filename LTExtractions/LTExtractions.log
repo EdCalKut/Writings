@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840 64-bit) (preloaded format=xelatex 2018.11.26)  19 MAR 2021 14:08
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840 64-bit) (preloaded format=xelatex 2018.11.26)  13 APR 2021 17:04
 entering extended mode
 **./LTExtractions.tex
 (LTExtractions.tex
@@ -1031,16 +1031,20 @@ LaTeX Info: Redefining \nameref on input line 71.
 \openout4 = `LTExtractions.out'.
 
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\se-ascii
 -print.def"
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! Undefined control sequence.
+<recently read> \wt 
+                    
+l.79 ...singularity $S$ with toric resolution $\wt
+                                                  {S}$ with self intersectio...
+
+? 
+
+Underfull \vbox (badness 4429) has occurred while \output is active []
 
  [1]
 Underfull \hbox (badness 10000) in paragraph at lines 144--146
@@ -1081,26 +1085,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (LTExtractions.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 224.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
-
-
-Package rerunfilecheck Warning: File `LTExtractions.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `LTExtractions.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E
-(rerunfilecheck)             After:  52A95DE14400DB55F72297FEBB2A29B1.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `LTExtractions.out' has not changed.
+(rerunfilecheck)             Checksum: 52A95DE14400DB55F72297FEBB2A29B1.
  ) 
 Here is how much of TeX's memory you used:
- 25354 strings out of 427796
- 441900 string characters out of 3147988
+ 25356 strings out of 427796
+ 441907 string characters out of 3147988
  556974 words of memory out of 3000000
- 28806 multiletter control sequences out of 15000+200000
+ 28808 multiletter control sequences out of 15000+200000
  10910 words of font info for 51 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 56i,14n,82p,1153b,932s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,14n,82p,1154b,932s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on LTExtractions.pdf (4 pages).

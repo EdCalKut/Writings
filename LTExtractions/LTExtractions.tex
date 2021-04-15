@@ -46,7 +46,7 @@
 \theoremstyle{definition}
 \newtheorem{prop}[thm]{Proposition}
 \theoremstyle{definition}
-\newtheorem{dfn}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition}
 \theoremstyle{definition}
 \newtheorem{lem}[thm]{Lemma}
 \theoremstyle{definition}
@@ -73,10 +73,10 @@
 
 \section{Log extremal cyclic extractions}
 
-We wish to classify the log extremal cyclis of a given log terminal singularity. We start with the case of a cyclic quotient singularity. Given a cyclic quotient singularity $S$ with resolution $a_1, \dots a_n$. Here we allow we separate the case $n=0$ which corresponds to $\mathbb{A}^2$. Let $\widetilde{S}$ be the minimal resolution of $S$.
+We wish to classify the log extremal cyclic extractions of a given log terminal singularity. We start with the case of a cyclic quotient singularity. Given a cyclic quotient singularity $S$ with resolution $a_1, \dots a_n$. Here we allow we separate the case $n=0$ which corresponds to $\mathbb{A}^2$. Let $\widetilde{S}$ be the minimal resolution of $S$.
 
 \begin{lem}
-Given a cyclic quotient singularity $S \neq \mathbb{A}^2$ with resolution $a_1, \dots a_n$. Then any cyclic extraction has curve configuration 
+Given a cyclic quotient singularity $S$ with toric resolution $\wt{S}$ with self intersections $-a_1, \dots -a_n$ on curves $C_i$ respectively. Then fix curves $\{C_i \}_{i \in \mathcal{I}}$ for some indexing set $\mathcal{I}$. We blow these curve up $k_i$ times in the same point. This gives a variety $X$ with a map to $S$. Then $X$ is a cyclic extraction if and only if $|\mathcal{I}| = 1$ and there is at most one $a_i = 1$ and if this occurs $i \in \mathcal{I}$.
 
 \begin{tikzpicture}
 \matrix[matrix of math nodes,row sep ={1cm,between origins},column sep={1.5cm,between origins}] (m) {
@@ -95,7 +95,7 @@ a_1' & a_2' & \dots & a_i' + k & \dots & a_{n'}' \\
 \end{lem}
 
 \begin{proof}
-Let $\widetilde{S}$ be the minimal resolution of $S$. Let $\pi : X \rightarrow S$ be the log extraction, with $\widetilde{X}$ being the minimal resolution. Then $\widetilde{X}$ is constructed as a sequence of blowups of $\widetilde{S}$. As $\rho(X) = 1 = \rho(S) + 1$. This means that $\widetilde{X}$ has one $-1$ curve. Hence every blowup, except the first, is at a point on the $-1$ curve. Our sequence of blowups can be split into the ones that keep all the torus actions and the ones that don't. After the toric blowups we are are left with a configuration $a_1' \dots a_{n'}'$. Assuming the first blowup non toric is centered on a point  lieing on one of the negative curves, call this the $a_i$ curve. If our next blowup is not the intersection of the $-1$ curve and one of the$a_i$ curve then the $a_i$ curve is trivalent, and our resulting singularity will clearly not be cyclic quotient. Hence there is only one choice of point we can blowup leading to the above curve configuration. Note that there are no non toric blowups the choice of curve is  upon which the non toric blowups are centred is fixed .
+Let $\widetilde{S}$ be the minimal resolution of $S$. Let $\pi : X \rightarrow S$ be the log extraction, with $\widetilde{X}$ being the minimal resolution. Then $\widetilde{X}$ is constructed as a sequence of blowups of $\widetilde{S}$. As $\rho(X) = 1 = \rho(S) + 1$. This means that $\widetilde{X}$ has one $-1$ curve. Hence every blowup, except the first, is at a point on the $-1$ curve. Our sequence of blowups can be split into the ones that keep all the torus actions and the ones that don't. After the toric blowups we are are left with a configuration $a_1' \dots a_{n'}'$. Assuming the first blowup non toric is centered on a point  lieing on one of the negative curves, call this the $a_i$ curve. If our next blowup is not the intersection of the $-1$ curve and one of the $a_i$ curve then the $a_i$ curve is trivalent, and our resulting singularity will clearly not be cyclic quotient. Hence there is only one choice of point we can blowup leading to the above curve configuration. Note that there are no non toric blowups the choice of curve is  upon which the non toric blowups are centred is fixed .
 \end{proof}
 
 \begin{rem}
