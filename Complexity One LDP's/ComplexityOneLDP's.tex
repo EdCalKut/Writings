@@ -21,6 +21,7 @@
 \usepackage{enumitem}
 \usepackage[super]{nth}
 \usepackage{pstricks}
+\usepackage{comment}
 
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
@@ -64,19 +65,11 @@
 
 \section{Introduction}
 
-For the purpose of the report we work over $\mathbb{C}$, however this should generalise to any algebraically closed field of abitary charecteristic. All varieties we consider are normal and projective. Here we propse an algorithm to classify Log Del Pezzos admitting a $\mathbb{C}^*$ action with only log terminal singularities. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is just toric varieties, and complexity $n$ are the general case, this provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before, in \cite{Suss} he classifies log del Pezzoes admitting said action with picard rank one and index less than 3. In \cite{Huggenberger} she classifies the anticanonical complex of the Cox ring of log del Pezzoes with index 1, this classification was later finished in \cite{IMT} who achieve this by looking at polarised copmplexity one log del Pezzos. We will show their work fits into our algorithm. 
-\\
-\\
-In other works \cite{ZDQ} by looking at the minimal resolution of a log del Pezzos, and showing that this forms a $\mathbb{P}^1$ fibration over $\mathbb{P}^1$ by a map down to a Hirzebruch surface, studied their contractible boundaries. This method was used prominently in the papers by Dongseon Hwang, \cite{H1}, \cite{H2} combined with a lemma of \cite{Sakai} and the author owes a huge debt to professor Hwang for his many helpful comments and extreme patience. This method was used by \cite{CH} in the classification of log del Pezzo's with $\frac{1}{3} (1,1) $ singularities. It was also used in \cite{CP} when they classified log del Pezzo's with one $\frac{1}{p} (1,1)$ singularity, however the analysis proves to be very simple in the cases they consider. This work was substantially inspired by both of the above as in all cases, in both case we have 
-\[
-h^0 ( X, -K_X) > 0 \iff X \text{ admits a toric degeneration}
-\]
-
-However constructing cases where there does not exist a section of the anticanonical divisor still provides some difficulty, this fits into part of the conjectures of the imperial group. It was also conjectured by other people, in unpublished work, that a log del Pezzo can only have at most $2$ singularities which are not cyclic singularities. This fits very nicely with the language shown below.
+For the purpose of the report we work over $\mathbb{C}$, this generalises to any algebraically closed field of arbitrary characteristic. All varieties we consider are normal and projective. Here we give an algorithm to classify Log Del Pezzos admitting a $\mathbb{C}^\times$ action with only log terminal singularities. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is just toric varieties, and complexity $n$ is the general case, this provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} he classifies log del Pezzo surfaces admitting said action with picard rank one and index less than 3. Huggenberger \cite{Huggenberger} she classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
 \\
 \\
 \section{Polyhedral divisors}
-In \cite{Altmann} they give a guide to varieties with $\mathbb{C}^*$ actions. They make particular use of the notion of a polyhedral divisor to try and recover some of the geometry that the fan encodes in the toric case. In general this applies for any complexity, however things are most pleasant in the toric case, then complexity one and then the theory becomes fairly intractable. 
+In Altman et.al \cite{Altmann} they give a guide to varieties with $\mathbb{C}^*$ actions. They make particular use of the notion of a polyhedral divisor to try and recover some of the geometry that the fan encodes in the toric case. In general this applies for any complexity, however things are most pleasant in the toric case, then complexity one and then the theory becomes fairly intractable. 
 \\
 \\
 Given $X$ a variety with dimension $n$ admitting a $(\mathbb{C}^*)^{n-1}$ action, we can take a Chow quoitent, essentially a GIT quotient followed by normalisation. We see that we will be left with a curve $Y$, we can resolve this map to $\tilde{X}$ getting the following diagram
@@ -202,9 +195,9 @@ A divisorial support function $h$ on a divisorial fan $\mathcal{S}$ is a piecewi
 \item if $\mathcal{D}_1$ and $\mathcal{D}_2$ have the same tail cone, then the linear part of $h$ restricted to them is equal
 \end{itemize}
 \end{dfn}
-We call a support function principal if it is of the form $h(v) = \langle u, v \rangle + D$, this corresponds to a principal Cartier divisor. We call a support function Cartier, if on every component with complete locus the support funciton is principal. In the case of Fansy divisors, this just correspond to the edge with a marking. We denote $h$ restricted to a componet by $h_P$. 
+We call a support function principal if it is of the form $h(v) = \langle u, v \rangle + D$, this corresponds to a principal Cartier divisor. We call a support function Cartier, if on every component with complete locus the support function is principal. In the case of Fansy divisors, this just correspond to the edge with a marking. We denote $h$ restricted to a component by $h_P$.  We refer to a piecewise linear function with rational slope and rational translation as a $\mathbb{Q}$ support function.
 \begin{thm}[\cite{PS}]
-There exists a one to correspondence between support functions quotiented by principal support functions and Cartier divisors on the complexity one log del Pezzo.
+There exists a one to correspondence between support functions/ $\mathbb{Q}$ support function quotiented by principal support functions and Cartier/ $\mathbb{Q}$-Cartier divisors on the complexity one log del Pezzo.
 \end{thm}
 Using the above languages we represent the canonical divisor as a Weil divisor, it has the following form
 \begin{thm}[\cite{PS}]
@@ -240,7 +233,8 @@ You can also draw out the graph of divisors on the minimal resolution. For examp
 \[
 \left\{-2, 0 \right\} \otimes P_0 + \left\{-\frac{1}{2} \right\} \otimes P_1 + \left\{ -\frac{1}{2} \right\} \otimes P_2 
 \]
-gives us the following resolution, here dashed lines are -1 curves and solid lines -2.
+gives us the following resolution:
+
 \begin{figure}[htbp]
 \psset{unit=0.95cm}
 \begin{pspicture}(0,-8)(12,0)
@@ -263,92 +257,30 @@ gives us the following resolution, here dashed lines are -1 curves and solid lin
 
 \psline{-}(4,-6)(10.5, -6)
 \end{pspicture}
-\caption{The minimal resolution of the above log del Pezzo.}
+
+\caption{The minimal resolution of the above log del Pezzo. Here the dark lines indicate -2 curves and the dotted lines indicate -1 curves.}
+
 \end{figure}
-\section{Cascades}
-Cascades are essentially a way of splitting up the MMP on the lod del Pezzo, into smaller parts. 
-\begin{dfn}[\cite{H2}]
-Let $X$ be a log del Pezzo surface. We say that $X$ admits a cascade if there exists a diagram as follows:
+
+\section{Algorithms}
+We propose two different algorithms for the classification. These both rely on several key facts
+
+\begin{lem}{\cite{S}}
+Let $S$ be a non cyclic complexity one log terminal surface singularity. Then $S$ has, upto isomorphism, a fan over $\mathbb{P}^1$ with coefficients
 \[
-\begin{tikzcd}
-Y_n \arrow{d}{\pi_n}   \arrow{r}{\phi_n} & Y_{n-1} \arrow{d}{\pi_{n-1}} \arrow{r}{\phi_{n-1}} & \dots  & \arrow{r}{\phi_1} &Y_0 \arrow{d}{\pi_0}  \\
-X_n & X_{n-1}& & & X_0
-\end{tikzcd}
+\left[\frac{p_1}{q_1}, \infty \right) \otimes P_1 + \left[ \frac{p_2}{q_2}, \infty \right) \otimes P_2 + \left[ \frac{p_3}{q_3}, \infty \right) \otimes P_3
 \]
-where for all $k$ we have 
-\begin{enumerate}
-\item $\phi_k$ is a blow down
-\item $\pi_k$ is the minimal resolution
-\item $X_k$ is a log del Pezzo surface with $\rho (X_k) = \rho(X_{k-1})$ or it has decreased by one
-\item $X_0$ is either Gorenstein or standard, standard will be defined later.
-\end{enumerate}
-\end{dfn}
-If the above conditions hold we say that $X$ admits a cascade to $X_0$.  We say one of the contractions is 
-\begin{itemize}
-\item type \Rom{1} if the picard rank is preserved
-\item type \Rom{2} if the picard rank decreases by one
-\end{itemize}
-Note that an extremal contraction can be broken into $k$ type \Rom{2} contractions followed by a type \Rom{1} contraction. Every complexity one log del Pezzo lies in a cascade, by inverting the cascade we can obtain every complexity one log del Pezzo. We put a few restrictions on, namely that we are only blowing up the intersection of two rational curves with negative self intersection, which are not both $(-1)$ curves. This restriction, makes it obvious that type \Rom{1} preseverse the number of singular points, while type \Rom{2} decreases this number by one.
-\\
-\\
-In addition to bounding them by index, this allows us to generalise the following theorem by Dais, which was generalised to higher number of singularities in \cite{H2}
-\\
-\begin{thm}[\cite{Dais}]
-Let $S$ be a toric log del Pezzo with one singular point. Then $S$ is $\mathbb{P}(1,1,n)$ blown up at at most two smooth points.
-\end{thm}
+with $(q_1, q_2, q_3)$ satisfying $\sum(1 - \frac{1}{q_i}) < 2$.
+\end{lem}
+\begin{proof}
+This is brute force upon the polyhedral divisor and the resolution map. Using th efact the slopes are all equal and can calculate the value of the intersection.
+\end{proof}
 
-In \cite{H2} the author manages to classify smooth projective toric surfaces (and hence all toric surfaces), in terms of blowups with no care as to the log del Pezzo condition. He achieves this by using the fact that the anticanonical divisor is big, as the surface is of Fano type, and the image of the anticanonical map is a log del Pezzo. He then uses methods developed in \cite{Sakai} and the following theorem in \cite{HP} 
-\begin{thm} 
-If $T$ is a smooth Fano type surface, then the anticanonical model is a log del Pezzo $S$ and the map decomposes into the minimal resosulution and a series of redundant blowups. Convervesly if $S$ is a log del Pezzo, $T$ the minimal resolution, then the anticanonical model is isomorphic to $S$.
-\end{thm}
-While we cannot use the first part of the theorem, as in general a complexity one variety is not of Fano type. Even if we take our polyhedral divisors over $\mathbb{P}^1$ it is unclear. Using this language they split these blowups into two types, a redundant blowup is one that preserves the anticanonical model, these can be described bvy looking at the Zariski decomposition of the anticanonical divisor. This language is used in the classification of picard rank one log del Pezzo's, however for our use, as a fano condition exists independent of this, it is unnecessary.
-\\
-\\
-To finally show what blowdowns are allowed in our cascade, we use the following theorems 
-\begin{thm}
-Let $Y$ be the minimal resolution of a log del Pezzo $X$, let $C$ be a rational $(-1)$ curve such that C does not intersect two $(-1)$ curves, then we can contract $C$ getting $Y'$ which is the minimal resolution of $X'$, this will be a log del Pezzo.
-\end{thm}
-Note to be a log del Pezzo $X$ has to be defined over $\mathbb{P}^1$ so there is no ambiguity over notation here.
-This can be derived, i believe, from \cite{CH}-proposition 33, it is also contained in \cite{ZDQ} and \cite{H1},\cite{H2}. Also in \cite{ZDQ} we use the following theorem 
-\begin{thm} \label{T:ZDQ}
-Let $C$ be a rational zero curve, then the only way that $C$ can be modified by blowups at the intersection points to have every $(-1)$ curve adjacent to 2 minus two curves is show in the following figure, once again dashed is -1 curves, solid -2
-\end{thm}
+We now calculate the gorenstein index of a given singularity 
+\begin{lem}
 
-Using this and the fact that the minimal resolution admits a map down to a Hirzebruch surface, (here with exception of $\mathbb{P}^2$), the reasons for this are stated in \cite{CP}, although it is implicitly used in papers like \cite{CH}. In the case of complexity one these maps exist in a canonical form
-\begin{figure}[htbp]
-\psset{unit=0.95cm}
-\begin{pspicture}(0,-6)(18,0)
-%\psgrid(0,0)(0,-8)(12,0)
-\psframe[linecolor=white](0.5,-6)(16,-1.5)
+\end{lem}
 
-\psline{-}(0.5, -4.5)(2.5, -2.5)
-\psline[linestyle = dashed]{-}(1.5, -2.75)(4, -2.75)
-\psline{-}(3, -2.5)(5, -4.5) 
-
-
-\psline[linestyle = dashed]{-}(6.5, -4.5)(8.5, -2.5)
-\psline{-}(8, -2.5)(10, -4.5)
-\psline{-}(9.5, -4.5)(11.5, -2.5)
-\psline[linestyle = dotted]{-}(11, -3.5)(13, -3.5)
-\psline{-}(12.5, -4.5)(14.5, -2.5)
-\psline[linestyle = dashed]{-}(14, -2.5)(16, -4.5)
-\end{pspicture}
-\caption{The possible fibers in the theorem.}
-\end{figure}
-\begin{enumerate}
-\item If the minimal resolution has two parabolic lines, then it admits a map to $\mathbb{P}^1$ by quoitenting the torus structure. In the toric case, you can always find a subtorus such that this occurs.
-\item Else there has to be a least one elliptic point leaving the diagram as having the general curves connecting two elliptic points or an elliptic point and a parbaolic line. In which case you can pick a set of edges originating at one of the elliptic points, and ending eiher at the other elliptic point or a parabolic line, this can be contracted to a curve with positive self intersection. Note that there may exist one curve that is not contractible. 
-The only major principle is that if you can contrct the parabolic line, you have to do at soon as possible.
-\end{enumerate}
-We can now define our basic surfaces 
-\begin{dfn} 
-Let $X$ be a log del Pezzo with only klt singularities, consider $Y$ the minimal resolution of a log del Pezzo, then $X$ is basic if any $(-1)$ curve on $Y$ being adjacent to 2 or more $(-2)$ curves.
-\end{dfn}
- We do not consider toric surfaces as these have infinitely many representations in the language of polyhedral divisors. There are conditions on the polyhedral divisor to make sure it only has klt singularities \cite{Suss} , however they are trivial to derive. Alternatively you can purely work on the minimal resolution, and then use \cite{Ishii}, \cite{Br}.
-\\
-We for now ignore the condition on being the minimal resolution of a log del Pezzo. This is not for any mathematical reason, but because its a conditions that is easier to sort out with all the code having been written, the code is currently around 50\% done, my hope is that when I am finished it will be accepted into SAGE. I have already talked with Al Kasprzyk about getting the outputs contained in the graded ring database. In addition there are multiple other things I wish this to code to be compatible with in later projects, so to safe me time in the long term, this code has taken a bit longer to write than expected.
-\\
-\\
 With the above disclaimer we carry on. We know that our standard admit a canonical map to a Hirzebruch surface, so we instead work backwards, take a Hirzebruch surface, look at a subtorus action on it and consider all the ways we can make a basic surface out of it.
 \\
 From here on out our fan for a Hirzebruch surface $\mathbb{F}_n$ will be $(0,1), \, (1,0), \, (0,-1), \, (-1, n)$. There are 4 possible ways the diagram of the Weil divisors on a Hirzebruch surface with a given $\mathbb{C}^*$ action can look
