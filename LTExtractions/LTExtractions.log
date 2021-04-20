@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840 64-bit) (preloaded format=xelatex 2018.11.26)  13 APR 2021 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  20 APR 2021 16:02
 entering extended mode
 **./LTExtractions.tex
 (LTExtractions.tex
@@ -140,8 +140,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks26
 
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\xelatex\xetexconfig\geome
-try.cfg"))
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.c
+fg"))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.s
 ty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -157,11 +157,11 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 cs.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\xetex.
-def"
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex
+.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen122
 \Gin@req@width=\dimen123
@@ -225,15 +225,11 @@ Couldn't patch \@starttoc
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks28
 \inpenc@posthook=\toks29
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
 ) ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
 "
 Package: babel 2018/09/26 3.24 The Babel package
- ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
-"
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def"
 File: switch.def 2018/09/26 3.24 Babel switching mechanism
 )
 *************************************
@@ -252,10 +248,8 @@ File: babel.def 2018/09/26 3.24 Babel common definitions
 \babel@savecnt=\count104
 \U@D=\dimen126
 
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\xebabel.def
-"
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.de
-f"))
+f")
 \bbl@dirlevel=\count105
 )
 \l@canadian = a dialect from \language\l@american 
@@ -328,27 +322,21 @@ keysfiltered.code.tex"
 gf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-xetex.def
+Driver file for pgf: pgfsys-pdftex.def
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gfsys-xetex.def"
-File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
-
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gfsys-dvipdfmx.def"
-File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
+gfsys-pdftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gfsys-common-pdf.def"
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)
-\pgfsys@objnum=\count110
 )))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count111
-\pgfsyssoftpath@bigbuffer@items=\count112
+\pgfsyssoftpath@smallbuffer@items=\count110
+\pgfsyssoftpath@bigbuffer@items=\count111
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gfsysprotocol.code.tex"
@@ -361,8 +349,9 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -384,7 +373,7 @@ til.code.tex")
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathp
 arser.code.tex"
 \pgfmath@dimen=\dimen137
-\pgfmath@count=\count113
+\pgfmath@count=\count112
 \pgfmath@box=\box32
 \pgfmath@toks=\toks37
 \pgfmath@stack@operand=\toks38
@@ -410,7 +399,7 @@ unctions.misc.code.tex")
 unctions.integerarithmetics.code.tex")))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
 loat.code.tex"
-\c@pgfmathroundto@lastzeros=\count114
+\c@pgfmathroundto@lastzeros=\count113
 ))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcorepoints.code.tex"
@@ -448,7 +437,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box33
 \pgf@hbox=\box34
 \pgf@layerbox@main=\box35
-\pgf@picture@serial@count=\count115
+\pgf@picture@serial@count=\count114
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcoregraphicstate.code.tex"
@@ -483,7 +472,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 fcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen161
-\pgf@sys@shading@range@num=\count116
+\pgf@sys@shading@range@num=\count115
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcoreimage.code.tex"
@@ -553,7 +542,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgf
 libraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count117
+\pgf@plot@mark@count=\count116
 \pgfplotmarksize=\dimen166
 )
 \tikz@lastx=\dimen167
@@ -566,19 +555,19 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box39
 \tikz@tempbox=\box40
 \tikz@tempbox@bg=\box41
-\tikztreelevel=\count118
-\tikznumberofchildren=\count119
-\tikznumberofcurrentchild=\count120
-\tikz@fig@count=\count121
+\tikztreelevel=\count117
+\tikznumberofchildren=\count118
+\tikznumberofcurrentchild=\count119
+\tikz@fig@count=\count120
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
 dulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count122
-\pgfmatrixcurrentcolumn=\count123
-\pgf@matrix@numberofcolumns=\count124
+\pgfmatrixcurrentrow=\count121
+\pgfmatrixcurrentcolumn=\count122
+\pgf@matrix@numberofcolumns=\count123
 )
-\tikz@expandcount=\count125
+\tikz@expandcount=\count124
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
 \tikz\libraries\tikzlibrarytopaths.code.tex"
@@ -618,15 +607,15 @@ thmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count126
-\c@ALG@rem=\count127
-\c@ALG@nested=\count128
+\c@ALG@line=\count125
+\c@ALG@rem=\count126
+\c@ALG@nested=\count127
 \ALG@tlm=\skip53
 \ALG@thistlm=\skip54
-\c@ALG@Lnr=\count129
-\c@ALG@blocknr=\count130
-\c@ALG@storecount=\count131
-\c@ALG@tmpcounter=\count132
+\c@ALG@Lnr=\count128
+\c@ALG@blocknr=\count129
+\c@ALG@storecount=\count130
+\c@ALG@tmpcounter=\count131
 \ALG@tmplength=\skip55
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
@@ -648,14 +637,14 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@hangindent=\dimen183
 )
 Package caption Info: AMS or SMF document class.
-\c@caption@flags=\count133
-\c@ContinuedFloat=\count134
+\c@caption@flags=\count132
+\c@ContinuedFloat=\count133
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.
 sty"
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
-\c@subfigure=\count135
-\c@subtable=\count136
+\c@subfigure=\count134
+\c@subtable=\count135
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.s
 ty"
@@ -678,7 +667,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen184
 \enit@toks=\toks42
 \enit@inbox=\box42
-\enitdp@description=\count137
+\enitdp@description=\count136
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
 Package: nth 2002/02/27
@@ -709,22 +698,22 @@ tex"
 \XKV@toks=\toks43
 \XKV@tempa@toks=\toks44
 )
-\XKV@depth=\count138
+\XKV@depth=\count137
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\pstricks
 .tex"
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\pst-fp.t
 ex" `pst-fp' v0.05, 2010/01/17 (hv)
-\pstFP@xs=\count139
-\pstFP@xia=\count140
-\pstFP@xib=\count141
-\pstFP@xfa=\count142
-\pstFP@xfb=\count143
-\pstFP@rega=\count144
-\pstFP@regb=\count145
-\pstFP@regs=\count146
-\pstFP@times=\count147
+\pstFP@xs=\count138
+\pstFP@xia=\count139
+\pstFP@xib=\count140
+\pstFP@xfa=\count141
+\pstFP@xfb=\count142
+\pstFP@rega=\count143
+\pstFP@regb=\count144
+\pstFP@regs=\count145
+\pstFP@times=\count146
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 util-common.tex"
@@ -745,7 +734,7 @@ code.tex")
 \pgffor@stack=\toks46
 \pgffor@toks=\toks47
 )
-\psLoopIndex=\count148
+\psLoopIndex=\count147
 
 `PSTricks' v2.86  <2018/08/23> (tvz,hv)
 \pst@dima=\dimen189
@@ -761,27 +750,25 @@ code.tex")
 \pst@hbox=\box43
 \pst@ibox=\box44
 \pst@boxg=\box45
-\pst@cnta=\count149
-\pst@cntb=\count150
-\pst@cntc=\count151
-\pst@cntd=\count152
-\pst@cntg=\count153
-\pst@cnth=\count154
-\pst@cntm=\count155
-\pst@cntn=\count156
-\pst@cnto=\count157
-\pst@cntp=\count158
-\@zero=\count159
+\pst@cnta=\count148
+\pst@cntb=\count149
+\pst@cntc=\count150
+\pst@cntd=\count151
+\pst@cntg=\count152
+\pst@cnth=\count153
+\pst@cntm=\count154
+\pst@cntn=\count155
+\pst@cnto=\count156
+\pst@cntp=\count157
+\@zero=\count158
 \pst@toks=\toks48
 
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\xelatex\xetex-pstricks\ps
-tricks.con"
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\xdvipdfm
-x.cfg"))
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\pstricks
+.con")
 \psunit=\dimen256
 \psxunit=\dimen257
 \psyunit=\dimen258
-\pst@C@@rType=\count160
+\pst@C@@rType=\count159
 \pslinewidth=\dimen259
 \psk@startLW=\dimen260
 \psk@endLW=\dimen261
@@ -796,19 +783,17 @@ x.cfg"))
 \sh@wgridXunit=\dimen268
 \sh@wgridYunit=\dimen269
 \pst@shift=\dimen270
-
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\xelatex\xetex-pstricks\ps
-tricks.con"
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\xdvipdfm
-x.cfg"
-Using PSTricks configuration for XeTeX+xdvipdfmx
-)))
+)
 File: pstricks.tex 2018/08/23 v2.86 `PSTricks' (tvz,hv)
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\pst-fp.t
 ex")
 File: pst-fp.tex 2018/08/23 v2.86 `PST-fp' (hv)
 )
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\comment\comment.sty
+"
+\CommentStream=\write4
+ Excluding comment 'comment')
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.s
 ty"
 Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
@@ -834,10 +819,9 @@ Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -858,14 +842,16 @@ y"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen271
-\Hy@linkcounter=\count161
-\Hy@pagecounter=\count162
+\Hy@linkcounter=\count160
+\Hy@pagecounter=\count161
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
 "
 File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count163
+\Hy@SavedSpaceFactor=\count162
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.c
 fg"
@@ -879,14 +865,14 @@ Package hyperref Info: Plain pages OFF on input line 4550.
 Package hyperref Info: Backreferencing OFF on input line 4555.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4788.
-\c@Hy@tempcnt=\count164
+\c@Hy@tempcnt=\count163
  ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5141.
 \XeTeXLinkMargin=\dimen272
-\Fld@menulength=\count165
+\Fld@menulength=\count164
 \Field@Width=\dimen273
 \Fld@charsize=\dimen274
 Package hyperref Info: Hyper figures OFF on input line 6396.
@@ -898,28 +884,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6421.
 Package hyperref Info: PDF/A mode OFF on input line 6426.
 LaTeX Info: Redefining \ref on input line 6466.
 LaTeX Info: Redefining \pageref on input line 6470.
-\Hy@abspage=\count166
-\c@Item=\count167
-\c@Hfootnote=\count168
+\Hy@abspage=\count165
+\c@Item=\count166
+\c@Hfootnote=\count167
 )
-Package hyperref Info: Driver (autodetected): hxetex.
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hxetex.def
-"
-File: hxetex.def 2018/09/30 v6.88a Hyperref driver for XeTeX
- ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\puenc.def
-"
-File: puenc.def 2018/09/30 v6.88a Hyperref: PDF Unicode definition (HO)
-)
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\stringen
-c.sty"
-Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
-)
-)
-\pdfm@box=\box46
-\c@Hy@AnnotLevel=\count169
-\HyField@AnnotCount=\count170
-\Fld@listcount=\count171
-\c@bookmark@seq@number=\count172
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.de
+f"
+File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
+\Fld@listcount=\count168
+\c@bookmark@seq@number=\count169
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilec
 heck.sty"
@@ -929,50 +904,35 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip66
 )
-\c@thm=\count173
-
-
-! LaTeX Error: Command \C already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 \newcommand{\C}[1]{(\mathbb{C}^*)^#1}
-                                          
-? 
-(LTExtractions.aux)
+\c@thm=\count170
+ (LTExtractions.aux)
 \openout1 = `LTExtractions.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+*geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -1006,12 +966,42 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-ABD: EveryShipout initializing macros
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
+i"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count171
+\scratchdimen=\dimen275
+\scratchbox=\box46
+\nofMPsegments=\count172
+\nofMParguments=\count173
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count174
+\MPscratchDim=\dimen276
+\MPnumerator=\count175
+\makeMPintoPDFobject=\count176
+\everyMPtoPDFconversion=\toks52
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
+ase.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+) ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring ON on input line 71.
+Package hyperref Info: Link coloring ON on input line 73.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -1021,52 +1011,33 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 string.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count174
+\c@section@level=\count177
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
  (LTExtractions.out) (LTExtractions.out)
-\@outlinefile=\write4
-\openout4 = `LTExtractions.out'.
+\@outlinefile=\write5
+\openout5 = `LTExtractions.out'.
 
+ [1
+Non-PDF special ignored!
+<special> header=pstricks.pro
+Non-PDF special ignored!
+<special> header=pst-algparser.pro
+Non-PDF special ignored!
+<special> header=pst-tools.pro
+Non-PDF special ignored!
+<special> header=pst-dots.pro
+Non-PDF special ignored!
+<special> ps: /pssetRGBcolor /setrgbcolor load def /pssetCMYKcolor /setcmyk...
+Non-PDF special ignored!
+<special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
+Non-PDF special ignored!
+<special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
+{C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\se-ascii
--print.def"
-File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
-
-)
-! Undefined control sequence.
-<recently read> \wt 
-                    
-l.79 ...singularity $S$ with toric resolution $\wt
-                                                  {S}$ with self intersectio...
-
-? 
-
-Underfull \vbox (badness 4429) has occurred while \output is active []
-
- [1]
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
-
- []
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 165.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 170.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 171.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 179.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--195
-
- []
+LaTeX Warning: Citation `Br' on page 2 undefined on input line 135.
 
 
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
@@ -1074,27 +1045,63 @@ Package Fancyhdr Warning: \headheight is too small (8.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 216--221
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+
+ []
+
+Excluding 'comment' comment.
+Underfull \hbox (badness 10000) in paragraph at lines 161--208
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 229--234
 
  []
 
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
  (LTExtractions.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
 Package rerunfilecheck Info: File `LTExtractions.out' has not changed.
-(rerunfilecheck)             Checksum: 52A95DE14400DB55F72297FEBB2A29B1.
+(rerunfilecheck)             Checksum: C9ABA23AB39207F7482595ECA4025A20;70.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 25356 strings out of 427796
- 441907 string characters out of 3147988
- 556974 words of memory out of 3000000
- 28808 multiletter control sequences out of 15000+200000
- 10910 words of font info for 51 fonts, out of 3000000 for 9000
- 1489 hyphenation exceptions out of 8191
- 56i,14n,82p,1154b,932s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 22371 strings out of 492970
+ 417987 string characters out of 3127037
+ 529147 words of memory out of 3000000
+ 25660 multiletter control sequences out of 15000+200000
+ 11433 words of font info for 44 fonts, out of 3000000 for 9000
+ 1302 hyphenation exceptions out of 8191
+ 56i,15n,82p,1081b,1016s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/user/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Us
+ers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/user/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/user/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
+s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb>
+Output written on LTExtractions.pdf (4 pages, 175793 bytes).
+PDF statistics:
+ 99 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on LTExtractions.pdf (4 pages).

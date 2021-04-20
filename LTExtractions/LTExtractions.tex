@@ -21,6 +21,7 @@
 \usepackage{enumitem}
 \usepackage[super]{nth}
 \usepackage{pstricks}
+\usepackage{comment}
 
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
@@ -46,7 +47,7 @@
 \theoremstyle{definition}
 \newtheorem{prop}[thm]{Proposition}
 \theoremstyle{definition}
-\newtheorem{defn}[thm]{Definition}
+\newtheorem{dfn}[thm]{Definition}
 \theoremstyle{definition}
 \newtheorem{lem}[thm]{Lemma}
 \theoremstyle{definition}
@@ -65,6 +66,7 @@
 \newcommand{\minres}{minimal resolution }
 \newcommand{\LJ}{Looijenga pair }
 \newcommand{\ra}{\rightarrow}
+\newcommand{\wt}[1]{\widetilde{#1}}
 
 \graphicspath{ {images/} }
 
@@ -73,55 +75,64 @@
 
 \section{Log extremal cyclic extractions}
 
-We wish to classify the log extremal cyclic extractions of a given log terminal singularity. We start with the case of a cyclic quotient singularity. Given a cyclic quotient singularity $S$ with resolution $a_1, \dots a_n$. Here we allow we separate the case $n=0$ which corresponds to $\mathbb{A}^2$. Let $\widetilde{S}$ be the minimal resolution of $S$.
 
+We wish to classify the extremal cyclic extractions of a given log terminal singularity. We start with the case of a cyclic quotient singularity. Given a cyclic quotient singularity $S$ with minimal resolution $\wt{S}$ with exceptional curve $E_1 \dots E_n$ with $E_i^2 = -a_i$. Here we allow we separate the case $n=0$ which corresponds to $\mathbb{A}^2$. Let $\widetilde{S}$ be the minimal resolution of $S$.
+
+\begin{dfn}
+An \emph{extremal cyclic extraction} is a proper birational morphism $\phi : \: X \ra S$ where
+\begin{itemize}
+
+\item $S$ is the germ of a log terminal singularity
+\item $\rho(X) = \rho(S) + 1$
+\item The map $\phi$ is $-K_X$ ample
+\item $X$ has at worst cyclic quotient singularities
+\end{itemize}
+\end{dfn}
+ 
+ We are primarily interested in the case of surfaces, where this involves contracting a smooth curve $C$ isomorphic $\mb{P}^1$ going through at least one cyclic quotient singularity. Let $\wt{S}$, $\wt{X}$ be the minimal resolutions of $S$ and $X$ respectively. By the property of $\phi$ being $-K_X$ ample we note that the strict transform of $C \subset \wt{X}$ is a $-1$ curve. This follows from the map being $-K_X$ ample. 
+ 
+ 
+ We also note that in dimension two we have a map $\wt{\phi} : \: \wt{X} \ra \wt{S}$ this follows via stein factorisation.
+ 
+\begin{lem}\label{onecurve}
+Using the previous notation, the $\wt{X}$ has exactly one $-1$ curve.
+\end{lem}
+\begin{proof}
+We note that the map fits into the following diagram:
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0B9YgAgF4eAHUEB3HMHYBfEJNLpMufIRQBGclVqMWbLiplyQGbHgJEATOur1mrRCGEBjKBBwJZ840qIBmS5ps6nGD8QqLiAMrS7oYKJsrIvioa1tp24foeiqYoZElWWrYcMhowUADm8ESgAGYAThAAtkhkIDgQSGr+qfaCaAAWWJx60XWNHdRtSGYj9U2IFq3tiL5dhcL9g4QzY8sTSwAs23MArHtI+-kBdusDGSCjcy2TiMeSFJJAA
+\begin{tikzcd}
+\wt{X}  = X_0 \arrow[r, "\phi_1"] \arrow[d] & X_1 \arrow[r, "\phi_2"] & \cdots \arrow[r, "\phi_n"] & X_n = \wt{S} \arrow[d] \\
+X \arrow[rrr, "\phi"]                      &               &                            & S                     
+\end{tikzcd}
+\]
+Here the maps $\phi_i$ are the contraction of a $-1$ curve. Then if $X_0$ has more than one $-1$ curve then as $S$ has none there will be an $i$ such that $X_i$ has two $-1$ curves and $X_{i+1}$ has one $-1$ curve. This indicates the two minus one curves on $X_i$ must be adjacent. Hence when we contract one we must have a $0$ curve. This being a projective curve means that in $\wt{S}$ that it is either a negative curve or has been contracted to a point. This is a contradiction. The fact that there has to be at least one $-1$ curve follows as it is constructed by a series of blowups.
+\end{proof}
+ 
 \begin{lem}
-Given a cyclic quotient singularity $S$ with toric resolution $\wt{S}$ with self intersections $-a_1, \dots -a_n$ on curves $C_i$ respectively. Then fix curves $\{C_i \}_{i \in \mathcal{I}}$ for some indexing set $\mathcal{I}$. We blow these curve up $k_i$ times in the same point. This gives a variety $X$ with a map to $S$. Then $X$ is a cyclic extraction if and only if $|\mathcal{I}| = 1$ and there is at most one $a_i = 1$ and if this occurs $i \in \mathcal{I}$.
-
-\begin{tikzpicture}
-\matrix[matrix of math nodes,row sep ={1cm,between origins},column sep={1.5cm,between origins}] (m) {
-a_1' & a_2' & \dots & a_i' + k & \dots & a_{n'}' \\
-& & & 1 & & \\
-& & & 2 & & \\
-& & & \vdots & & \\
-& & & 2 & & \\
-};
-  \path[thick]
-(m-1-4) edge (m-2-4)
-(m-1-1) edge (m-1-2)
-(m-2-4) edge (m-3-4);
-    
-\end{tikzpicture}
+Given a cyclic quotient singularity $S$ with toric resolution $\wt{S}$ then every cyclic log extraction $X$ has minimal resolution $\wt{X}$ with intersections with the following form:
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRDoH0BGEAX1PSZc+Qii7kqtRizacATHwEgM2PASJyJ1es1aIQAHQMBjKBBwJ+g1SKIBmLVN2yOWAAQBqNwGtF14eooACyOOjL6RqbmcG5+ykJqosgArKHSeuwcwFgAtFy8cSoBSQBsac76nFiFCbYoDlySYRk8VvE2gcgOck3pbAptRYn2pHa9FYYGNGYWNR1JDkHj4SADkjBQAObwRKAAZgBOEAC2SGQgOBBI4iAAFjB0UGyQYKxthyfX1JdImncPT30LzeSg+p0Qfx+iAc-0ezwIIP2R3BMKhIVhgPACLiYKQ6KhqQx8NeOORSEJULKRKB2PeZOh3yuiAA7NR7nCaSS6Z9EABORnXc7szHA0k8-kXJkADjZAOJiJAuMQMslSFZ1KxXIovCAA
+\begin{tikzcd}
+a_1' \arrow[r, no head] & a_2' \arrow[r, no head] & \cdots \arrow[r, no head] & a_i' + k \arrow[r, no head] \arrow[d, no head] & \cdots  \arrow[r, no head] & a_{n-1}' \arrow[r, no head] & a_n' \\
+                       &                        &                           & 1                                             &                            &                            &     \\
+                       &                        &                           & 2 \arrow[u, no head]                          &                            &                            &     \\
+                       &                        &                           & \vdots \arrow[d, no head] \arrow[u, no head]  &                            &                            &     \\
+                       &                        &                           & 2                                             &                            &                            &    
+\end{tikzcd}
+\]
+Here the number of $-2$ curves is $k-1$. We note that $k$ can be equal to zero.
 \end{lem}
 
 \begin{proof}
-Let $\widetilde{S}$ be the minimal resolution of $S$. Let $\pi : X \rightarrow S$ be the log extraction, with $\widetilde{X}$ being the minimal resolution. Then $\widetilde{X}$ is constructed as a sequence of blowups of $\widetilde{S}$. As $\rho(X) = 1 = \rho(S) + 1$. This means that $\widetilde{X}$ has one $-1$ curve. Hence every blowup, except the first, is at a point on the $-1$ curve. Our sequence of blowups can be split into the ones that keep all the torus actions and the ones that don't. After the toric blowups we are are left with a configuration $a_1' \dots a_{n'}'$. Assuming the first blowup non toric is centered on a point  lieing on one of the negative curves, call this the $a_i$ curve. If our next blowup is not the intersection of the $-1$ curve and one of the $a_i$ curve then the $a_i$ curve is trivalent, and our resulting singularity will clearly not be cyclic quotient. Hence there is only one choice of point we can blowup leading to the above curve configuration. Note that there are no non toric blowups the choice of curve is  upon which the non toric blowups are centred is fixed .
+Let $\widetilde{S}$ be the minimal resolution of $S$. Let $\pi : X \rightarrow S$ be the log extraction, with $\widetilde{X}$ being the minimal resolution. By lemma ~\ref{onecurve} every  blowup, except the first, is at a point on the unique $-1$ curve. Our sequence of blowups can be split into the ones that keep all the torus actions and the ones that don't. After the toric blowups we are are left with a configuration $a_1' \dots a_{n'}'$. The first non toric blowup is centered on a point lieing on one of the negative curves, call this the $E_i$ curve. We note that if we have done any toric blowups of $\wt{S}$ then there is only choice of curve $E_i$ and $a_i' = 1$. If our next blowup is not the intersection of the $-1$ curve and one of the $E_i$ curve then the $E_i$ curve is trivalent, and our resulting singularity will clearly not be cyclic quotient. Hence there is only one choice of point we can blowup, by repeating this logic repeatedly we end up with the above curve configuration.
 \end{proof}
 
 \begin{rem}
-In the case of $\mathbb{A}^2$ a similar process occurs. Once again there is a toric part, which leaves us with 
-$a_1, \dots a_n, 1, b_1, \dots b_m$. The same process as above happens obtaining the curve configuration
-
-\begin{tikzpicture}
-\matrix[matrix of math nodes,row sep ={1cm,between origins},column sep={1.5cm,between origins}] (m) {
-a_1' & a_2' & \dots & a_n & 1 + k & b_1 & \dots & b_m \\
-& & & & 1 & & & \\
-& & & & 2 & & & \\
-& & & & \vdots & & & \\
-& & & & 2 & & & \\
-};
-  \path[thick]
-(m-1-5) edge (m-2-5)
-(m-1-1) edge (m-1-2)
-(m-2-5) edge (m-3-5)
-(m-1-4) edge (m-1-5)
-(m-1-5) edge (m-1-6);
-    
-\end{tikzpicture}
-
+We note in the language of toric varieties our cyclic quotient singularity can be described as cone $\sigma \subset N$ with $N$ the standard toric lattice. Then every cyclic extraction can be denoted by $(v, \, k)$ where $v \in N$ and $k \in \mathbb{Z}_{\geq 0}$ by the following process. The choice of $v$ determines a weighted blowup, giving rise to an exceptional curve $C$, the number $k$ then determines how many times you blow up this curve. After these blowups, to guarantee $-K_X$ being ample, we need to contract all the negative curves except the $-1$ curve.
 \end{rem}
 
-Now given a non cyclic quotient singularity a similar process occurs. However rather than a Du Val singularity trailing out you have a singularity of higher index. This implies that these do not have equivariant toric degenerations. We can write all of these extractions down as complexity one varieties. In the cyclic case they are formed by the glueing of two polyhedral divisors 
+Now given a non cyclic quotient singularity $S$ a similar process occurs. By \cite{Br} we have a unique trivalent curve, to guarantee a cyclic quotient, one these three points must be blown up at least once. From this rather than a Du Val singularity arising you have a singularity of higher index. This will implie that these extractions do not have equivariant toric degenerations. We can write all of these extractions down as complexity one varieties. In the cyclic case they are formed by the glueing of two polyhedral divisors 
 \[
 \begin{array}{l}
 \mathcal{D}_1 = [\frac{a}{b}, \infty) \otimes P_1 + [\frac{c}{d}, \infty) \otimes P_3 \\
@@ -151,6 +162,7 @@ Given the assumptions above we can assume that $S$ is a $\frac{1}{r}(1,s)$ singu
 \\
 \\
 We note that $X$ has a torus acting on it. This means that it can be written as a polyhedral divisor $\mathcal{S}$.
+\begin{comment}
 \begin{figure}[htbp]
 \psset{unit=0.95cm}
 \begin{pspicture}(0,-6)(12,0)
@@ -192,6 +204,7 @@ We note that $X$ has a torus acting on it. This means that it can be written as 
 \end{pspicture}
 \caption{Divisorial fan associated to $X$.}
 \end{figure}
+\end{comment}
 
 Here the tail fan is $\mathbb{Z}_{\geq 0}$. When constructing the equivariant toric degeneration, we take the Minkowski sum of $\frac{c-kd}{d}$ and the cone $\left[0, k\right]$. After summation this is the toric variety with rays $(a,b)$, $(c,-d)$, $(c-kd,-d)$. Call this $X_\Sigma$. The cone $(c,-d)$, $(c-kd,-d)$ is a $T$-singularity. The cone  $(a,b)$, $(c,-d)$ is a $\frac{1}{t}(1, u)$ singularity with once again $t = bc + ad$. Labeling these three rays $v_1, v_2, v_3$ we get the relation $kd^2 v_1 - r v_2 + t v_3 = 0$. This implies that the Cox Ring  $\mathcal{R}(X_\Sigma)$ is $\mathbb{A}^3_{<x,y,z>}$ with a quotient of $\mathbb{C}^*$ with weights $(kd^2, -r, t)$ and a finite group action $\mathbb{\mu}$. It is easy to show that $|\mathbb{\mu}| = \text{hcf(b,d)} = e$ as $(x, ey)$ is clearly a sub lattice which contains all the vertices and $(1,0)$ is in the lattice as $b$ and $d$ are coprime. This is a well defined quotient except along $x = z= 0$. To construct the deformation, we take the $d$-fold veronese embedding getting
 \[
