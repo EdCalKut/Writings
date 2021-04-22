@@ -76,7 +76,7 @@
 \section{Log extremal cyclic extractions}
 
 
-We wish to classify the extremal cyclic extractions of a given log terminal singularity. We start with the case of a cyclic quotient singularity. Given a cyclic quotient singularity $S$ with minimal resolution $\wt{S}$ with exceptional curve $E_1 \dots E_n$ with $E_i^2 = -a_i$. Here we allow we separate the case $n=0$ which corresponds to $\mathbb{A}^2$. Let $\widetilde{S}$ be the minimal resolution of $S$.
+We wish to classify the extremal cyclic extractions of a given log terminal singularity. We start with the case of a cyclic quotient singularity. Given a cyclic quotient singularity $S$ with minimal resolution $\wt{S}$. The consider the exceptional curves $E_1, \,  \dots E_n \subset \wt{S}$ with $E_i^2 = -a_i$. Here we allow the case $n=0$ which corresponds to $\mathbb{A}^2$. Let $\widetilde{S}$ be the minimal resolution of $S$.
 
 \begin{dfn}
 An \emph{extremal cyclic extraction} is a proper birational morphism $\phi : \: X \ra S$ where
@@ -89,16 +89,14 @@ An \emph{extremal cyclic extraction} is a proper birational morphism $\phi : \: 
 \end{itemize}
 \end{dfn}
  
- We are primarily interested in the case of surfaces, where this involves contracting a smooth curve $C$ isomorphic $\mb{P}^1$ going through at least one cyclic quotient singularity. Let $\wt{S}$, $\wt{X}$ be the minimal resolutions of $S$ and $X$ respectively. By the property of $\phi$ being $-K_X$ ample we note that the strict transform of $C \subset \wt{X}$ is a $-1$ curve. This follows from the map being $-K_X$ ample. 
+ \subsection{Surfaces}
+ 
+In the case of surfaces an extremal cyclic extraction involves contracting a smooth curve $C$ isomorphic $\mb{P}^1$ going through at least one cyclic quotient singularity. Let $\wt{S}$, $\wt{X}$ be the minimal resolutions of $S$ and $X$ respectively. We also note that in dimension two we have a map $\wt{\phi} : \: \wt{X} \ra \wt{S}$ as this map has to factor through the minimal resolution. By the property of $\phi$ being $-K_X$ ample we note that the strict transform of $C \subset \wt{X}$ is a $-1$ curve. If $\wt{C}^2 = k \le -1$ then let $P_1, \cdots P_n$ be the singularities of $X$ with $P_i \in C$ then $K_X \cdot C  = 2 + k + \sum_{P_i} A_{P_i} $. As there are no non smooth terminal surface singularities we have $K_X \cdot C \le 2+ k \leq 0$. We note that if $C^2 \geq 0$ then it could not be contracted in the map $\wt{\phi}$ hence the $C^2 = -1$.
  
  
- We also note that in dimension two we have a map $\wt{\phi} : \: \wt{X} \ra \wt{S}$ this follows via stein factorisation.
  
 \begin{lem}\label{onecurve}
-Using the previous notation, the $\wt{X}$ has exactly one $-1$ curve.
-\end{lem}
-\begin{proof}
-We note that the map fits into the following diagram:
+Using the previous notation, then we have the following diagram:
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0B9YgAgF4eAHUEB3HMHYBfEJNLpMufIRQBGclVqMWbLiplyQGbHgJEATOur1mrRCGEBjKBBwJZ840qIBmS5ps6nGD8QqLiAMrS7oYKJsrIvioa1tp24foeiqYoZElWWrYcMhowUADm8ESgAGYAThAAtkhkIDgQSGr+qfaCaAAWWJx60XWNHdRtSGYj9U2IFq3tiL5dhcL9g4QzY8sTSwAs23MArHtI+-kBdusDGSCjcy2TiMeSFJJAA
 \begin{tikzcd}
@@ -106,11 +104,16 @@ We note that the map fits into the following diagram:
 X \arrow[rrr, "\phi"]                      &               &                            & S                     
 \end{tikzcd}
 \]
-Here the maps $\phi_i$ are the contraction of a $-1$ curve. Then if $X_0$ has more than one $-1$ curve then as $S$ has none there will be an $i$ such that $X_i$ has two $-1$ curves and $X_{i+1}$ has one $-1$ curve. This indicates the two minus one curves on $X_i$ must be adjacent. Hence when we contract one we must have a $0$ curve. This being a projective curve means that in $\wt{S}$ that it is either a negative curve or has been contracted to a point. This is a contradiction. The fact that there has to be at least one $-1$ curve follows as it is constructed by a series of blowups.
+Then each $X_i$ has only one $-1$ curve apart from $X_n$ which has zero.
+\end{lem}
+\begin{proof}
+
+
+Here the maps $\phi_i$ are the contraction of a $-1$ curve. Then if $X_0$ has more than one $-1$ curve then as $\wt{S}$ has none there will be an $i$ such that $X_i$ has two $-1$ curves and $X_{i-1}$ has one $-1$ curve. This indicates the two minus one curves on $X_i$ must be adjacent. Hence when we contract one we must have a $0$ curve. This being a projective curve means that in $\wt{S}$ that it is either a negative curve or has been contracted to a point. This is a contradiction. The fact that there has to be at least one $-1$ curve follows as it is constructed by a series of blowups.
 \end{proof}
  
 \begin{lem}
-Given a cyclic quotient singularity $S$ with toric resolution $\wt{S}$ then every cyclic log extraction $X$ has minimal resolution $\wt{X}$ with intersections with the following form:
+Given a cyclic quotient singularity $S$ then every cyclic log extraction $X$ has minimal resolution $\wt{X}$ with intersections with the following form:
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRDoH0BGEAX1PSZc+Qii7kqtRizacATHwEgM2PASJyJ1es1aIQAHQMBjKBBwJ+g1SKIBmLVN2yOWAAQBqNwGtF14eooACyOOjL6RqbmcG5+ykJqosgArKHSeuwcwFgAtFy8cSoBSQBsac76nFiFCbYoDlySYRk8VvE2gcgOck3pbAptRYn2pHa9FYYGNGYWNR1JDkHj4SADkjBQAObwRKAAZgBOEAC2SGQgOBBI4iAAFjB0UGyQYKxthyfX1JdImncPT30LzeSg+p0Qfx+iAc-0ezwIIP2R3BMKhIVhgPACLiYKQ6KhqQx8NeOORSEJULKRKB2PeZOh3yuiAA7NR7nCaSS6Z9EABORnXc7szHA0k8-kXJkADjZAOJiJAuMQMslSFZ1KxXIovCAA
 \begin{tikzcd}
@@ -121,7 +124,7 @@ a_1' \arrow[r, no head] & a_2' \arrow[r, no head] & \cdots \arrow[r, no head] & 
                        &                        &                           & 2                                             &                            &                            &    
 \end{tikzcd}
 \]
-Here the number of $-2$ curves is $k-1$. We note that $k$ can be equal to zero.
+For some $a_i$ greater the two. Here the number of $-2$ curves is $k-1$. We note that $k$ can be equal to zero.
 \end{lem}
 
 \begin{proof}
@@ -132,7 +135,7 @@ Let $\widetilde{S}$ be the minimal resolution of $S$. Let $\pi : X \rightarrow S
 We note in the language of toric varieties our cyclic quotient singularity can be described as cone $\sigma \subset N$ with $N$ the standard toric lattice. Then every cyclic extraction can be denoted by $(v, \, k)$ where $v \in N$ and $k \in \mathbb{Z}_{\geq 0}$ by the following process. The choice of $v$ determines a weighted blowup, giving rise to an exceptional curve $C$, the number $k$ then determines how many times you blow up this curve. After these blowups, to guarantee $-K_X$ being ample, we need to contract all the negative curves except the $-1$ curve.
 \end{rem}
 
-Now given a non cyclic quotient singularity $S$ a similar process occurs. By \cite{Br} we have a unique trivalent curve, to guarantee a cyclic quotient, one these three points must be blown up at least once. From this rather than a Du Val singularity arising you have a singularity of higher index. This will implie that these extractions do not have equivariant toric degenerations. We can write all of these extractions down as complexity one varieties. In the cyclic case they are formed by the glueing of two polyhedral divisors 
+We now consider the case of a non cyclic quotient singularity $S$, we will show a similar process occurs. We now construct all extremal cyclic extractions $X \ra S$. By \cite{Br} there is a unique trivalent curve $E$ in the minimal resolution $\wt{S} \ra S$. Then there are three curve $E_1^1, \, E_2^1, \, E_3^1$  in $\wt{S}$. To guarantee that $X$ has only cyclic quotient singularities, one these three intersections $E_i^1 \cap E$ must be blown up at least once in the process of $\wt{X} \ra \wt{S}$. From this rather than a Du Val singularity arising you have a singularity of higher index. This will imply that these extractions do not have equivariant toric degenerations. We can write all of these extractions down as complexity one varieties. In the cyclic case they are formed by the following two polyhedral divisors 
 \[
 \begin{array}{l}
 \mathcal{D}_1 = [\frac{a}{b}, \infty) \otimes P_1 + [\frac{c}{d}, \infty) \otimes P_3 \\
@@ -146,7 +149,9 @@ and in the non cyclic case
 \mathcal{D}_2 =  \emptyset \otimes P_1 + [\frac{e}{f}, n] \otimes P_2 + \emptyset \otimes P_3
 \end{array}
 \]
-All polyhedral divisors are over a base curve of $\mathbb{P}^1$. We see that if it admitted an equivariant toric degeneration there would be a way of combining two of the $P_i$. However the condition for it to be a valid deformation is that at least one of the two ends of the intervl are integers, and this cannot happen in the non cyclic quotient case. In the case arising from a cyclic quotient singularity we can take the minkowski sum of the polyhedral divisors $\frac{a}{b} \otimes P_1$ with $[0, n] \otimes P_2$. This leads us to the toric configuration 
+\begin{prop}
+All polyhedral divisors are over a base curve of $\mathbb{P}^1$. We see that if it admitted an equivariant toric degeneration there would be a way of combining two of the $P_i$. However the condition for it to be a valid deformation is that at least one of the two ends of the interval are integers, and this cannot happen in the non cyclic quotient case. In the case arising from a cyclic quotient singularity we can take the minkowski sum of the polyhedral divisors $\frac{a}{b} \otimes P_1$ with $[0, n] \otimes P_2$. This leads us to the toric configuration 
+\end{prop}
 \[
 \begin{array}{l}
 \mathcal{D}_1 = [ n + \frac{a}{b}, \infty) \otimes P_1 + [\frac{c}{d}, \infty) \otimes P_3 \\
@@ -155,7 +160,7 @@ All polyhedral divisors are over a base curve of $\mathbb{P}^1$. We see that if 
 \]
 \newline
 \begin{thm}
-When it exists, given the above toric degeneration of a log terminal extraction then the map extends to a map of 3-folds. With $\mathcal{X} \rightarrow \mathbb{P}^1 \times S$.
+Let $S$ be a cyclic quotient singularity and $X \ra S$ an extremal cyclic log extraction. Then there is a total family $\mathcal{X} \ra \mb{P}^1$, with $X_0$ and $X_\infty$ being the two toric degenerations. Then we have a map $\mathcal{X} \ra S \times \mb{P}^1$.
 \end{thm}
 \vspace{0.1cm}
 Given the assumptions above we can assume that $S$ is a $\frac{1}{r}(1,s)$ singularity and has a fan $\Sigma$ with rays $(a,b)$ and $(c-kd,-d)$ with $a,b,c,d  > 0$. We can also assume that the ray $(1,0)$ corresponds to $E$ in the minimal resolution. We also note that $r$ is equal to the determinant of the rays, $ad - b(c-kd)$. 
@@ -232,6 +237,11 @@ To calculate the grading is equivalent to finding a relation between the columns
 \\
 We now classify cyclic log fano extractions on surfaces.
 \begin{lem}
-Let $f: \, X \rightarrow S$ be a cyclic log fano extarction. Then $S$ has to be a cyclic singularity and $f$ has to be the map as described above. This results in potentially two cyclic quotient singularities. One of them is a general $\frac{1}{r} (1, a)$ and the other is of type $A_n$.
+Let $f: \, X \rightarrow S$ be a cyclic log fano extraction. Then $S$ has to be a cyclic singularity and $f$ has to be the map as described above. This results in potentially two cyclic quotient singularities. One of them is a general $\frac{1}{r} (1, a)$ and the other is of type $A_n$.
 \end{lem}
+
+\subsection{Global}
+\subsection{Higher dim}
+
+
 \end{document}

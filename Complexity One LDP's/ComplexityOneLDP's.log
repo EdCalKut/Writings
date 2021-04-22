@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  19 APR 2021 09:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  20 APR 2021 16:50
 entering extended mode
 **./ComplexityOneLDP's.tex
 (ComplexityOneLDP's.tex
@@ -790,6 +790,10 @@ File: pstricks.tex 2018/08/23 v2.86 `PSTricks' (tvz,hv)
 ex")
 File: pst-fp.tex 2018/08/23 v2.86 `PST-fp' (hv)
 )
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\comment\comment.sty
+"
+\CommentStream=\write4
+ Excluding comment 'comment')
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.s
 ty"
 Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
@@ -904,26 +908,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
  (ComplexityOneLDP's.aux)
 \openout1 = `ComplexityOneLDP's.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+LaTeX Font Info:    Try loading font information for U+msb on input line 63.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -997,7 +1001,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring ON on input line 62.
+Package hyperref Info: Link coloring ON on input line 63.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -1009,34 +1013,32 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count177
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 63.
+LaTeX Info: Redefining \pageref on input line 63.
+LaTeX Info: Redefining \nameref on input line 63.
  (ComplexityOneLDP's.out) (ComplexityOneLDP's.out)
-\@outlinefile=\write4
-\openout4 = `ComplexityOneLDP's.out'.
+\@outlinefile=\write5
+\openout5 = `ComplexityOneLDP's.out'.
 
 
 
-LaTeX Warning: Citation `Suss' on page 1 undefined on input line 67.
+LaTeX Warning: Citation `Suss' on page 1 undefined on input line 68.
 
 
-LaTeX Warning: Citation `Huggenberger' on page 1 undefined on input line 67.
+LaTeX Warning: Citation `Huggenberger' on page 1 undefined on input line 68.
 
 
-LaTeX Warning: Citation `IMT' on page 1 undefined on input line 67.
+LaTeX Warning: Citation `IMT' on page 1 undefined on input line 68.
 
 
-LaTeX Warning: Citation `ZDQ' on page 1 undefined on input line 70.
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
+
+ []
 
 
-LaTeX Warning: Citation `H1' on page 1 undefined on input line 70.
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
+
+ []
 
 
-LaTeX Warning: Citation `H2' on page 1 undefined on input line 70.
-
-
-LaTeX Warning: Citation `Sakai' on page 1 undefined on input line 70.
-
-
-LaTeX Warning: Ci
+LaTeX Warning: Citation `A

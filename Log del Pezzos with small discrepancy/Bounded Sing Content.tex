@@ -46,21 +46,21 @@
 \def\BState{\State\hskip-\ALG@thistlm}
 \makeatother
 
-\theoremstyle{definition}
+
 \newtheorem{thm}{Theorem}[section]
-\theoremstyle{definition}
+
 \newtheorem{cor}[thm]{Corollary}
-\theoremstyle{definition}
+
 \newtheorem{prop}[thm]{Proposition}
-\theoremstyle{definition}
+
 \newtheorem{dfn}[thm]{Definition}
-\theoremstyle{definition}
-\newtheorem{lem}[thm]{Lemma}
-\theoremstyle{definition}
+
+\newtheorem{lem}[thm]{Lemma}f
+
 \newtheorem{ex}[thm]{Example}
-\theoremstyle{definition}
+
 \newtheorem{conj}[thm]{Conjecture}
-\theoremstyle{definition}
+
 \newtheorem*{rem}{Remark}
 \newtheorem{assumption}[thm]{Assumption}
 
@@ -143,7 +143,7 @@ quotient singularity with small discrepancy.
 Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
 strict transform $\widetilde C \subset Y$ is smooth. Suppose in addition that 
 $\widetilde C$ meets the exceptional locus of $f$ with intersection multiplicity at least~2.
-Then if $\widetilde C^2 = -1$ then $-K_X \cdot C \leq 0$.
+Then if $\widetilde C^2 = -1$ implies $-K_X \cdot C \leq 0$.
 
 In particular, $\widetilde C$ is smooth and
 $C$ either meets at least two singularities of $X$ or meets one singularity
@@ -229,7 +229,7 @@ at least~2 in each case.
 The argument in the nodal case follows similarly, up to the case division of configurations
 at which there is an additional case:
 
-We note that if $\pi^{-1}{P}$ contains two curve $C_i$, $C_j$ with $I_Q (C_i, \, C_j) \ge 2$ then either one of them is a $-1$-curve or it cannot occur on the minimal resolution of a \ldp\ surface. This is because every curve in $\pi^{-1}{P}$ has negative self intersection, if its intersection is less than $-1$ then it would have to be contracted on the map down to $X$, resulting in a non cyclic quotient singularity. Hence one of them is $-1$ curve, and this cannot occur as it would contradict Lemma~\ref{lem!badcurve}. Hence this cannot occur, so we have to blow up the point $P$ enough times such that all the intersections are transverse. At this point we have a curve $A$ such that $A$ intersects transversely at least three other curves, $E, \, C_1, \, C_2 \dots $ with $C_i \in \pi^{-1} {P}$. In addition $C$ is the only $-1$ curve in $\pi^{-1}{P}$. As $Y$ is constrcuted from further blowups we split into configurations 
+We note that if $\pi^{-1}{P}$ contains two curve $C_i$, $C_j$ with $I_Q (C_i, \, C_j) \ge 2$ then either one of them is a $-1$-curve or it cannot occur on the minimal resolution of a \ldp\ surface. This is because every curve in $\pi^{-1}{P}$ has negative self intersection, if its intersection is less than $-1$ then it would have to be contracted on the map down to $X$, resulting in a noncyclic quotient singularity. Hence one of them is $-1$ curve, and this cannot occur as it would contradict Lemma~\ref{lem!badcurve}. Hence this cannot occur, so we have to blow up the point $P$ enough times such that all the intersections are transverse. At this point we have a curve $A$ such that $A$ intersects transversely at least three other curves, $E, \, C_1, \, C_2 \dots $ with $C_i \in \pi^{-1} {P}$. In addition $C$ is the only $-1$ curve in $\pi^{-1}{P}$. As $Y$ is constructed from further blowups we split into configurations 
 
 \begin{enumerate}
 \item
@@ -238,7 +238,7 @@ The strict transform of $A$, denoted $\widetilde{A}$ has $\wt{A}^2 = -1$.
 The strict transform of $A$, denoted $\widetilde{A}$ has $\wt{A}^2 \leq -2$.
 \end{enumerate}
 
-In the first case Lemma~\ref{lem!badcurve} this cannot occur on the minimal resolution of a \ldp\ surface due to the curves $\wt{E}, \, \wt{C_1},\, \wt{C_2}$. In the second case, if none of the intersection points $A\cap E, \, A \cap C_1, \, A \cap C_2$ have been blown up then we are left with a non cyclic quotient singularity. Hence one of these points has to be blown up. This results in a $-1$-curve intersecting $\wt{A}$ and another negative curve hence we have a contradiction to Lemma~\ref{lem!badcurve}.
+In the first case Lemma~\ref{lem!badcurve} this cannot occur on the minimal resolution of a \ldp\ surface due to the curves $\wt{E}, \, \wt{C_1},\, \wt{C_2}$. In the second case, if none of the intersection points $A\cap E, \, A \cap C_1, \, A \cap C_2$ have been blown up then we are left with a noncyclic quotient singularity. Hence one of these points has to be blown up. This results in a $-1$-curve intersecting $\wt{A}$ and another negative curve hence we have a contradiction to Lemma~\ref{lem!badcurve}.
 
 
 For a completely general curve singularity it follows by a combination of the above arguments. 
