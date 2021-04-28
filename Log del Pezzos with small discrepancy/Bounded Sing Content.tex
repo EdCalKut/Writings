@@ -46,7 +46,7 @@
 \def\BState{\State\hskip-\ALG@thistlm}
 \makeatother
 
-
+\theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
 
 \newtheorem{cor}[thm]{Corollary}
@@ -55,7 +55,7 @@
 
 \newtheorem{dfn}[thm]{Definition}
 
-\newtheorem{lem}[thm]{Lemma}f
+\newtheorem{lem}[thm]{Lemma}
 
 \newtheorem{ex}[thm]{Example}
 
@@ -125,10 +125,10 @@ all $i=1,\dots,n$.
 
 \begin{prop}
 In the notation above,
-a singularity $S$ has small discrepancy if and only if $C_1^2 \neq -2$ and $C_n^2 \neq -2$.
+a singularity $S$ has small discrepancy if and only if $C_1^2 \neq -2$ and $C_n^2 \neq -2$ and $ S \not\cong \frac{1}{3}(1,1)$.
 \end{prop}
 \begin{proof}
- We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$. We only care about the case of where the square is $3$. Without loss of generality we can assume $d_1 \geq d_2$ so $ d_2 \leq -1 - \frac{2 + d_2}{-3}$ rearranges to $2d_2 + 1 < 0$. Substituting this back into the equation for $d_1$ we get $d_1 \leq  \frac{-1}{2}$. 
+ We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$ and then apply this to show it for the intermediate values. We use the following formula for the discrepancy $d_i =  -1 - \frac{2 + d_{i-1}+d_{i+1}}{C_i^2}$. We note that if $C_1^2 \leq -4$, then as $d_0 = 0$ and $d_2 \leq 0$ we have $d_1 \leq -1 - \frac{2}{-4}$. This implies the inequality for small discrepancy. In the case where $C_1^2 = -3$ this results in the following, as $d_1 \geq d_2$ by substituting $d_2$ into $d_1 = -1 - \frac{2 + d_2}{-3}$ we get  $ d_2 \leq -1 - \frac{2 + d_2}{-3}$ rearranges to $2d_2 + 1 < 0$. Substituting this back into the equation for $d_1$ we get $d_1 \leq  \frac{-1}{2}$. 
  \end{proof}
 
 
@@ -184,6 +184,7 @@ Z &                                                                & Y
 \end{tikzcd}
 \]
 $f$ is the minimal resolution of $X$ and $g$ is a birational
+
 morphism to a smooth surface $Z$.
 Let $E\subset Y$ be an $f$-exceptional curve. Then $E$ is contracted to a point
 of $Z$ by $g$, or $g(E)$ is a smooth curve and $g_E$ is an isomorphism.
@@ -622,7 +623,7 @@ For any singularity of length greater than 3, then a basic surface either falls 
 
 \end{thm}
 \begin{proof}
-Given a singularity $S$ which is not a $\frac{1}{p}(1,1)$. Then to a basic surface $X$ this has to be constructed by a series of blowups at two point. We are blowing up this point finitely many times. Denote these multiplicities by $k_1$, $k_2$. This is an invariant of the surface $X$. On $X$ we have two sets of curves which are mapped to fibers on the Hirzebruch surface. Denote these by $A_1 \dots A_n$ and by $B_1, \dots B_m$. We have three rational curves $U, \, V, \, W$. We now assume that both $A_1, \, A_n$ and $B_1, \, B_m$ have been blown up non torically giving rise to curves $C_1^A, \, C_n^A, \, C_1^B, \, C_m^B$. The curve $U$ intersects with $C_
+Given a singularity $S$ which is not a $\frac{1}{p}(1,1)$. Then to a basic surface $X$ this has to be constructed by a series of blowups at two point. We are blowing up this point finitely many times. Denote these multiplicities by $k_1$, $k_2$. This is an invariant of the surface $X$. On $X$ we have two sets of curves which are mapped to fibers on the Hirzebruch surface. Denote these by $A_1 \dots A_n$ and by $B_1, \dots B_m$. We have three rational curves $U, \, V, \, W$. We now assume that both $A_1, \, A_n$ and $B_1, \, B_m$ have been blown up non torically giving rise to curves $C_1^A, \, C_n^A, \, C_1^B, \, C_m^B$. The curve $U$ intersects with $C_i$.
 \end{proof}
 \begin{cor}
 Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.
