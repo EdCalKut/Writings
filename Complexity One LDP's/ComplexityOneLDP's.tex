@@ -60,43 +60,65 @@
 
 \graphicspath{ {images/} }
 
+\newcommand{\C}[1]{(\mathbb{C}^*)^#1}
+
 \begin{document} 
 
 
 \section{Introduction}
 
-For the purpose of the report we work over $\mathbb{C}$, this generalises to any algebraically closed field of arbitrary characteristic. All varieties we consider are normal and projective. Here we give an algorithm to classify Log Del Pezzos admitting a $\mathbb{C}^\times$ action with only log terminal singularities. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is just toric varieties, and complexity $n$ is the general case, this provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} he classifies log del Pezzo surfaces admitting said action with picard rank one and index less than 3. Huggenberger \cite{Huggenberger} she classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
+For the purpose of the report we work over $\mathbb{C}$, this generalises to any algebraically closed field of arbitrary characteristic. All varieties we consider are normal and projective. Here we give an algorithm to classify Log Del Pezzos admitting a $\mathbb{C}^\times$ action with only log terminal singularities. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is the study of purely toric varieties, and complexity $n$ is the study of varities with no possible torus action. This provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} he classifies log del Pezzo surfaces admitting said action with picard rank one and index less than 3. Huggenberger \cite{Huggenberger} she classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
 \\
 \\
 \section{Polyhedral divisors}
-In Altman et.al \cite{Altmann} they give a guide to varieties with $\mathbb{C}^*$ actions. They make particular use of the notion of a polyhedral divisor to try and recover some of the geometry that the fan encodes in the toric case. In general this applies for any complexity, however things are most pleasant in the toric case, then complexity one and then the theory becomes fairly intractable. 
-\\
-\\
-Given $X$ a variety with dimension $n$ admitting a $(\mathbb{C}^*)^{n-1}$ action, we can take a Chow quoitent, essentially a GIT quotient followed by normalisation. We see that we will be left with a curve $Y$, we can resolve this map to $\tilde{X}$ getting the following diagram
-\\
+Given a toric variety (a  normal variety of dimension $n$ containing a dense torus $\C{n}$ with the natural action extending to the variety) there is a one to one correspondence between these varieties and fans inside a lattice $N$. \cite{Cox} 
+In Altman et.al \cite{Altmann} they establish a similar correspondence for varieties with $\C{k}$ actions where $k \leq n$. They introduce the notion of a polyhedral divisor to try and recover some of the geometry that a fan encodes in the toric case. In general this applies for any complexity, however the behaviour is easiest to describe in the toric case, then complexity one and so on.
+
+
+Given $X$ a variety with dimension $n$ admitting a $(\mathbb{C}^*)^{n-1}$ action, we can take a Chow quotient, essentially a GIT quotient followed by normalisation. We see that we will be left with a curve $Y$, we can resolve this map to $\tilde{X}$ getting the following diagram
+
+\[
 \begin{tikzcd}
 X \arrow[rd, dotted] & \tilde{X} \arrow[l] \arrow[d]\\
 & Y
 \end{tikzcd}
-\\
-\\
-We call $(\mathcal{D} = \sum_{i = 1}^n F_i \otimes P_i$, $\delta)$ a polyhedral divisor where $P_i \in Y$, $F_i$ is a cone in $N_\mathbb{Q} \cong \mathbb{Z}^{(n-1)}$ and all $F_i$ have tail cone $\delta \subset M$, i.e  $\forall u \in F_i$, $ \forall v \in \delta$ then $u+v \in F_i$. Here $F_i$ can equal $\varnothing$. Given an element $v \in M$ we say 
+\]
+
+Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$.
+
+We call $(\mathcal{D} = \sum_{i = 1}^n F_i \otimes P_i$, $\delta)$ a polyhedral divisor where $P_i \in C$ are divisors on $C$. Then $F_i$ is a cone in $N_\mathbb{Q} \cong \mathbb{Z}^{(n-1)}$ and all $F_i$ have tail cone $\delta \subset M$, i.e  $\forall u \in F_i$, $ \forall v \in \delta$ then $u+v \in F_i$. Here $F_i$ can equal $\varnothing$. Given an element $v \in M$ we say 
 \[
 \mathcal{D}(v) = \sum \min_{u \in F_i} \langle u, v \rangle P_i
 \]
-If a coefficient is $\varnothing$ you ignore it in this calculation.
-This defines a divisor on $Y$. To define an $n$-dimensional variety, and certain nice properties on the glueings we need the following conditions \cite{PS}
+This is defined as a divisor on 
+\[
+C - \{P_j\}_{j \text{ where } F_j = \varnothing}
+\]
+This defines a divisor on a subset of $C$. To define an $n$-dimensional variety, and to ensure that it is separated we need the following conditions \cite{PS}
 \begin{itemize} 
 \item $\mathcal{D}(u)$ is Cartier for all $u \in \delta^\vee $
 \item $\mathcal{D}(u)$ is semiample for all $u \in \delta^\vee$
 \item $\mathcal{D}(u)$ is big for all $u$ in the relative interior of $\delta^\vee$
 \end{itemize}
-We can now calculate the associated affine variety in both $X$ and $\tilde{X}$ by taking respectively Spec/ RelSpec${_{\mathbb{P}^1}}$ of the graded ring
+We can now calculate the associated affine variety in both $X$ and $\tilde{X}$ by taking respectively Spec/ RelSpec${_C}$ of the graded ring
 \[
 \bigoplus_{v \in \delta^\vee} \mathcal{O}( \mathcal{D}(v), Y) 
 \]
-This gives us an affine variety with the desired torus action, glueings are done as in the toric case, by glueing along faces. For example using the example in \cite{PS}
+This gives us an affine variety with the desired torus action. Analogous to the toric case is $F_i \subset F_j$ is a face then we have
+\[
+\bigoplus_{v \in \delta^\vee} \mathcal{O}( \mathcal{D}_{F_j}(v), Y) \subset \bigoplus_{v \in \delta^\vee} \mathcal{O}( \mathcal{D}_{F_i}(v), Y) 
+\]
+This corresponds to an inclusion of schemes. For example using the example in \cite{PS}. We make the following short observation that taking a divisor 
+\[ 
+\mathcal{D} = \sum_{i = 1}^n F_i \otimes P_i + \varnothing \otimes P_{n+1}
+\]
+is the same as taking the divisors 
+\[
+D_i = F_i \otimes P_i  + \sum_{j=1, \, j \neq i} \varnothing P_j
+\]
+and then glueing these affine varieties together along the affine patch defined by 
 
+\begin{comment}
 \begin{figure}[htbp]
 \psset{unit=0.95cm}
 \begin{pspicture}(0,-6)(12,0)
@@ -127,7 +149,7 @@ This gives us an affine variety with the desired torus action, glueings are done
 
 \psline{<-|}(6,-1.8)(7.25,-1.8)
 \psline{-|}(7.25,-1.8)(8,-1.8)
-\psline{->}(8,-1.8)(10,-1.8)
+\psline{->}(8,-1.8)(10,-1.8)]
 \uput*[270](7.1,-1.8){${\tiny -\frac{1}{a}}$}
 \rput[bl]{0}(11,-1.8){$\mathcal{S}_0$}
 \rput[bl]{0}(9,-1.6){$\mathcal{D}_{\sigma_0}$}
@@ -153,10 +175,11 @@ This gives us an affine variety with the desired torus action, glueings are done
 \end{pspicture}
 \caption{Divisorial fan associated to $\mathbb{F}_a$.}
 \end{figure}
+\end{comment}
 
 
 
-In the case of surfaces we often use the notation of fansy divisors as set out in \cite{Suss}, we have $n$ subdivisions of $N \cong \mathbb{Z}$, these should be viewed as the polyhedral divisors over these $n$ points. Note that if we have a closed interval in any of subdivisions, these give rise to a cyclic quotient singularity, with a nice torus quotient, i.e the map to $\tilde{X}$ is a contraction to a point. It is the intervals $[a_1, \infty )$ which provide difficulty, if as polyhedral divisors these are all of the form 
+In the case of surfaces we often use the notation of fansy divisors as set out in \cite{Suss}. This follows the key notion that in the case of $n=2$ and $k=1$ we have that every tail fan is either $0$, $\mathbb{Z}_{\geq 0 }$ or $\mathbb{X}_{\leq 0}$.  we have $n$ subdivisions of $N \cong \mathbb{Z}$, these should be viewed as the polyhedral divisors over these $n$ points. Note that if we have a closed interval in any of subdivisions, these give rise to a cyclic quotient singularity, with a nice torus quotient, i.e the map to $\tilde{X}$ is a contraction to a point. It is the intervals $[a_1, \infty )$ which provide difficulty, if as polyhedral divisors these are all of the form 
 \[
 \mathcal{D}_i = [a_i, \infty) \otimes P_i + \sum_{\substack{j = 1 \\ j \neq i}}^n \varnothing \otimes P_j
 \]
@@ -235,6 +258,8 @@ You can also draw out the graph of divisors on the minimal resolution. For examp
 \]
 gives us the following resolution:
 
+
+\begin{comment}
 \begin{figure}[htbp]
 \psset{unit=0.95cm}
 \begin{pspicture}(0,-8)(12,0)
@@ -261,6 +286,7 @@ gives us the following resolution:
 \caption{The minimal resolution of the above log del Pezzo. Here the dark lines indicate -2 curves and the dotted lines indicate -1 curves.}
 
 \end{figure}
+\end{comment}
 
 \section{Algorithms}
 We propose two different algorithms for the classification. These both rely on several key facts
@@ -290,6 +316,8 @@ From here on out our fan for a Hirzebruch surface $\mathbb{F}_n$ will be $(0,1),
 \item - Two elliptic points, connected by a line, this corresponds the sublattice generated by a point lieing inbetween $(-1,0)$ and $(-1, n)$.
 \item - Two elliptic points, not connected by a line, this corresponds to any other point.
 \end{enumerate} 
+
+\begin{comment}
 \begin{figure}[htbp]
 \psset{unit=0.8cm}
 \begin{pspicture}(0,-6)(18,0)
@@ -325,6 +353,8 @@ From here on out our fan for a Hirzebruch surface $\mathbb{F}_n$ will be $(0,1),
 \end{pspicture}
 \caption{The possible fibers in the theorem.}
 \end{figure}
+\end{comment}
+
 In the above pictures we have the $n$ curve on the top and the $(-n)$ curve on the bottom, with the two vertical lines being the 0 fibers. The blue lines are parabolic lines, and the red points represent elliptic points.
 \\
 \\
@@ -342,7 +372,7 @@ We now split things into a case by case analysis. In case A, we have 0 fibers so
 In the case of $n=1$ we cannot blowup the elliptic point, the only other difference is not being able to use the klt argument, however the $(-1)$ curve being next to the 0 curve guarantees that it still cannot be less than $(-2)$, and if we modify the $(-1)$ curve in any other way it would arise from a different configuration and hence has already been classified. In the case $n = 2$ it also falls under the previous classifaction as we are only allowed one blowup and in this case the two $(-1)$ curves intersect.
 \\
 \\
-In case C we see there is a symettry between the two elliptic points, so it does not matter which we resolve. When we resolve it we will have $(-1)$ curve adjacent to at most two sets of negative curves. To make a non toric example, we need to blow up one of the lines connecting the parabolic line to the elliptic point. This curve has self intersection greater than 0, using the same argument as before, we can only blow up one point on the parabolic line. As our curve has positive self intersection we know, that we have to have, by the previous argument again, the following set of curves connecting to our parabolic line $[-2, \, -1, \,  -2, \dots -2 ]$. In particular the number of $-2$ curves is greater than two. Using [Ishii, Brieskhorn] classification of singularities, we see that to be klt, you have to have at most 3 negative meeting in a point and one of those has to be just $-2$ curve. Because of this the possible points generating the torus action, up to symettry, are 
+In case C we see there is a symmetry between the two elliptic points, so it does not matter which we resolve. When we resolve it we will have $(-1)$ curve adjacent to at most two sets of negative curves. To make a non toric example, we need to blow up one of the lines connecting the parabolic line to the elliptic point. This curve has self intersection greater than 0, using the same argument as before, we can only blow up one point on the parabolic line. As our curve has positive self intersection we know, that we have to have, by the previous argument again, the following set of curves connecting to our parabolic line $[-2, \, -1, \,  -2, \dots -2 ]$. In particular the number of $-2$ curves is greater than two. Using [Ishii, Brieskhorn] classification of singularities, we see that to be klt, you have to have at most 3 negative meeting in a point and one of those has to be just $-2$ curve. Because of this the possible points generating the torus action, up to symmetry, are 
 \\
 \begin{itemize}
 \item $(n, -1)$ or $(1, -n)$, here this is a $\mathbb{P}(1, n)$ blowup. One component is smooth.
@@ -351,7 +381,7 @@ In case C we see there is a symettry between the two elliptic points, so it does
 Note that different values of $n$ give different singularities in the other chart. In the first case, they are clearly just $A_n$ singularities. In the second case, you just get $[-3, \, -2, \dots -2]$, here the chain has $n-1$ of the $(-2)$ curves. We also need both case of the these torus actions as the vary which side the singularities appear. Of course the Brieskhorn classification is much more comprehensive than this, and once the code is written I will start a more comprehensive check as to which or these give klt log del Pezzos. 
 \\
 \\
-In case D, it proceeds almost exactly the same as case C. However you do not have the pleasantness of the symettry. However it is still straight forward what will happen, the elliptic point next to $0$ curve and the $n$ curve will have the same possible choices of torus actions as in Case C. For the one on the intersection on the $(-n)$ curve and the 0 curve, 2 of the expected 4 options will not occur due to the presence of the $(-n)$ curve. The Brieskhorn classification in this situation gives us $n \leq 5$.
+In case D, it proceeds almost exactly the same as case C. However you do not have the pleasantness of the symmetry. However it is still straight forward what will happen, the elliptic point next to $0$ curve and the $n$ curve will have the same possible choices of torus actions as in Case C. For the one on the intersection on the $(-n)$ curve and the 0 curve, 2 of the expected 4 options will not occur due to the presence of the $(-n)$ curve. The Brieskhorn classification in this situation gives us $n \leq 5$.
 
 
 
