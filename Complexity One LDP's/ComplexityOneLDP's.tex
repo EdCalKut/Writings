@@ -179,7 +179,7 @@ and then glueing these affine varieties together along the affine patch defined 
 
 
 
-In the case of surfaces we often use the notation of fansy divisors as set out in \cite{Suss}. This follows the key notion that in the case of $n=2$ and $k=1$ we have that every tail fan is either $0$, $\mathbb{Z}_{\geq 0 }$ or $\mathbb{X}_{\leq 0}$.  we have $n$ subdivisions of $N \cong \mathbb{Z}$, these should be viewed as the polyhedral divisors over these $n$ points. Note that if we have a closed interval in any of subdivisions, these give rise to a cyclic quotient singularity, with a nice torus quotient, i.e the map to $\tilde{X}$ is a contraction to a point. It is the intervals $[a_1, \infty )$ which provide difficulty, if as polyhedral divisors these are all of the form 
+In the case of surfaces we often use the notation of fansy divisors as set out in \cite{Suss}. This follows the key notion that in the case of $n=2$ and $k=1$ we have that every tail fan is either $0$, $\mathbb{Z}_{\geq 0 }$ or $\mathbb{Z}_{\leq 0}$.  we have $n$ subdivisions of $N \cong \mathbb{Z}$, these should be viewed as the polyhedral divisors over these $n$ points. Note that if we have a closed interval in any of subdivisions, these give rise to a cyclic quotient singularity, with a nice torus quotient, i.e the map to $\tilde{X}$ is a contraction to a point. It is the intervals $[a_1, \infty )$ which provide difficulty, if as polyhedral divisors these are all of the form 
 \[
 \mathcal{D}_i = [a_i, \infty) \otimes P_i + \sum_{\substack{j = 1 \\ j \neq i}}^n \varnothing \otimes P_j
 \]
@@ -245,7 +245,7 @@ Let $h = \sum_P h_P$ be a cartier divisor on $\mathcal{D}$ then he corresponding
 - \sum_\rho h_t ( n_\rho) D_\rho - \sum_{(P, v)} \mu(v) h_P(v) D_{(P,v)}
 \]
 \end{thm}
-Here $n_\rho$ is the generator of the edge going to infinity and $\mu(v)$ is as before. Note that is easy to see why we need this $\mu$ function. If you start with a closed subinterval $[a, b]$ and try to work out what the corresponding affine variety is, we see that it just the toric variety defined by the cone $(a,1), \, (b,1)$, and then all you calculations can be done in the realm of toric varieties, however there you use the generator of your rays in the lattice, so you need the $\mu$ function.
+Here $n_\rho$ is the generator of the ray inside the tail fan and $\mu(v)$ is as before. Note that is easy to see why we need this $\mu$ function. If you start with a closed subinterval $[a, b]$ and try to work out what the corresponding affine variety is, we see that it just the toric variety defined by the cone $(a,1), \, (b,1)$, and then all you calculations can be done in the realm of toric varieties, however there you use the generator of your rays in the lattice, so you need the $\mu$ function.
 \\
 \\
 We use the above note to easily calulate the minimal resolution of a complexity one surface. Note that we can split this across affine charts, in the first case if we have the affine chart corresponding to the polyhedral divisor $[a,b]$ then using the above point we can can calculate this by the toric methods. In case two where we have a non marked edge going to infinity, we can split this into affine charts $[a_i, \infty)$ this is also a toric chart corresponding to the cone $(a,1), \, (1,0)$, so once again the resolution is toric. The final case is with a marked edge, however we can take a weighted blowup to resolve the ellitic point, then resolve the resulting singularities by the above methods. To calculate the intersection numbers on the resolution you can either use [Tim], \cite{PS} or you can note that the only part that is not toric is the parbolic line, this is defined by glueing together charts coming from $[a_i', \infty)$, here by smootheness $a_i' \in \mathbb{Z}$, this is isomorphic to the charts defined by $[\sum(a_i'), \infty)$ at $P_1$ and $[0, \infty)$ for all other $P_i$. Hence we see that the parabolic line is define torically as the fan  
@@ -291,7 +291,7 @@ gives us the following resolution:
 \section{Algorithms}
 We propose two different algorithms for the classification. These both rely on several key facts
 
-\begin{lem}{\cite{S}}
+\begin{lem}{\cite{Suss}}
 Let $S$ be a non cyclic complexity one log terminal surface singularity. Then $S$ has, upto isomorphism, a fan over $\mathbb{P}^1$ with coefficients
 \[
 \left[\frac{p_1}{q_1}, \infty \right) \otimes P_1 + \left[ \frac{p_2}{q_2}, \infty \right) \otimes P_2 + \left[ \frac{p_3}{q_3}, \infty \right) \otimes P_3
@@ -299,13 +299,9 @@ Let $S$ be a non cyclic complexity one log terminal surface singularity. Then $S
 with $(q_1, q_2, q_3)$ satisfying $\sum(1 - \frac{1}{q_i}) < 2$.
 \end{lem}
 \begin{proof}
-This is brute force upon the polyhedral divisor and the resolution map. Using th efact the slopes are all equal and can calculate the value of the intersection.
+See \cite{Suss}
 \end{proof}
-
-We now calculate the gorenstein index of a given singularity 
-\begin{lem}
-
-\end{lem}
+This results in a non toric singularity having the restriction $(q_1, q_2, q_3)$ is one of $(2,2,m)$, $(2,3,3)$, $(2,3,4)$ or $(2,3,5)$. We now note that if the singularity is of index $l$ then we have the following bound $\sum \frac{p_i}{q_i} < 2l $\cite{Suss}[Section on classification]. From the easy toric observation EXPAND we get the central curve has of the minimal resolution has self intersection $\sum \lceil \frac{p_i}{q_i} \rceil $. By taking the partial resolution formed by just obtaining the trigonal curve we see  the remaining three cyclic quotient singularities have to have index dividing $l$. Via combining this information we get the bound that any curve $C$ in the minimal resolution of a log terminal singularity of index $l$ has to satisfy $C^2 \geq -2l$.
 
 With the above disclaimer we carry on. We know that our standard admit a canonical map to a Hirzebruch surface, so we instead work backwards, take a Hirzebruch surface, look at a subtorus action on it and consider all the ways we can make a basic surface out of it.
 \\
