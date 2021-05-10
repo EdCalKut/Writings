@@ -74,113 +74,136 @@
 \begin{document} 
 
 A Fano variety is a variety $-K_X$ being ample. A two dimensional Fano variety is called a \ldp\ surface In classical times the smooth log del Pezzo's were classified. These are $\mb{P}^2$ blown up in $k$ points where $k <9 $ and $\mb{P}^1 \times \mb{P}^1$. However there is not as elegant a classification in the case of \ldp\ surfaces with singularities. A lot of work has been done on extending this classification to singular surfaces. In particular recent approaches have been interested in toric degeneration. This involves constructing a family $\mathcal{X}$ over $\mb{A}^1$ such that the fiber over $0$ is normal, contains $\C{2}$ as a dense subvariety and the natural action of the torus extends to the variety.  
+
+
+
  Work of \cite{CH} and \cite{AC} have established a one to one correspondence of \ldp\ surfaces with $h^0(-K_X) \neq 0$ and toric degenerations underneath assumptions on what singularities the surface has. It has been conjectured that this one to one correspondence extends to other singularities. There has also been work by a variety of authors, \emph{Cavey et.al} \cite {CSasd}, trying to bound what singularities can occur on such toric degenerations. 
  
  
 We discuss these results in the following way, 
  
 
+In the case of surfaces it is interesting to study the log del Pezzos with log terminal singularities. In the full generality, this is a group quotient of a subgroup of $\gl$, although there is particular interest in the case where the subgroup is cyclic. In the case of cyclic quotient singularities it has been conjectured that these admit toric degeneration.
 
-In the case of surfaces it is interesting to study the log del Pezzos with log terminal singularities. In the full generality, this is a group quotient of a subgroup of $\gl$, although there is particular interest in the case where the subgroup is cyclic. In the case of cyclic quotient singularities it has been conjectured that these admit toric degeneration. In chapter 1 we introduce the notion of singularities with small discrepancy and prove the following theorem
-\begin{thm}
-Let $X$ be a surface with only cyclic quotient singularities with small discrepancy, then $X$ has at most two singularities and occurs as a blowup in a general point of another log del Pezzo surface which admits a toric degeneration.
+
+This thesis is about log del Pezzo surfaces.
+
+PRELIMINARY DEF (see main def)
+
+The basic aim is the classification of such surfaces.
+This is an absolutely hopeless task in full generality.
+Nevertheless, it divides naturally into finite subtasks as follows.
+
+\subsection{Log del Pezzo surfaces of complexity 1}
+The (Gorenstein) index is .. (see Def~\ref{}).
+For any given picard rank $\rho \in \mathbb{N}$ and index $i \in \mathbb{N}$, the set of deformation
+families of log del Pezzo surfaces $X$ with $\rho_X=\rho$ and $i_X=i$
+is finite \cite{f}.
+In this thesis, we present an algorithm that, for given $\rho$ and $i$,
+lists certain types of degenerate fibre in each such family, thereby
+providing a classification of all families.
+
+It is worth noting that the number of families increases enormously as
+picard rank and index increase. For example, only in the toric case, 
+the start of the classiciation is
+\[
+TABLE OF INCREASING NUMBERS FROM GRDB
+\]
+
+We consider them from three different and related points of view.
+
+In particular, we classify log del Pezzo surfaces that admit a $\mathbb{C}^\times$ action.
+In this thesis we give an algorithm to classify log del Pezzo surfaces that admit a $\mathbb{C}^\times$ action and which have only log terminal singularities. 
+
+
+A variety $X$ of dimension $n$ equipped with an action of a torus of dimension $n-k$ is referred to as a variety of complexity $k$; see Definition~\ref{forwardref} for the precise definition. To illustrate the notion, note first that a toric variety $X$ has an action of its $n$-dimensional `big torus' $T\subset X$, and equipped with this action $X$ is a variety of complexity~0.
+One could also give consider $X$ equipped with the natural action of a $k$-dimensional
+subtorus $T'\subset T$, and then $X$ is a variety of complexity~$k$. (See \S\ref{asdf}.)
+
+However, there are many varieties of complexity $k<n$ whose torus action does not extend to a toric variety. In fact, there is a nice combinatorial way of determining whether or not such an action can be extended to a higher-dimensional torus. This is one of the main themes of this thesis: we study
+and classify surfaces of complexity~1 that are not toric.
+
+In this way, complexity provides a way of grading the difficulty of a classification problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting a $\mathbb{C}^\times$ action which have picard rank one and Gorenstein index less than~3. Huggenberger \cite{Huggenberger} classifies log del Pezzo surfaces of complexity~1 that have index 1 and arbitrary picard rank. Ilten, Mishna and Trainor \cite{IMT} recover the same classification and extend it into higher dimension. The methods and language used are broadly the same (though, in the language of toric geometry, it varies whether papers work in the lattice $N$ or its dual lattice $M$), though Huggenberger exploits Hausen's anticanonical complex technology to describe the Cox ring in detail. 
+
+We extend these existing results by presenting an algorithm that classifies
+log del Pezzo surfaces of complexity 1 with given picard rank and index.
+The algorithm works and terminates {\em for any} picard rank and index, 
+though since the index is an unbounded invariant, there is no hope of 
+a closed-form classification of all such del Pezzo surfaces.
+In Section~\ref{asdf}, we show the previous fits into our results and algorithm. 
+
+
+===
+
+\subsection{Bounded singularity content of log del Pezzo surfaces}
+
+Another feature of log del Pezzo surfaces is the type of singularities
+that they have. It follows from the definition (Def \ref{}) that the singularities
+are all finite quotient singularities, but this itself is an infinite set.
+
+The {\em discrepancies} associated to a singularity (see Def~\ref{}) form a measure of
+its complexity expressed as a collection of rational numbers, one for each curve in a resolution. 
+When these numbers are small, the singularity may be regarded as `more complicated'.
+However, in exactly this case, the surfaces can be explicitly classified: informally,
+the basic reason is that it is hard to impose many of these singularities onto a single surface.
+
+These conditions naturally arise as soon as you start to consider singularities in families. The first place this was considered was in \cite{CP} where they considered the case of $\frac{1}{p}(1,1)$ singularities, where $p \geq 5$. We extend this by
+
+
+\begin{thm}[= Theorem~\ref{ref to main appearance in text}]
+Let $X$ be a surface with singularities of only small discrepancy then $X$ has at most one singularity except for one sporadic family. All fo these log del Pezzo surfaces admit a toric degeneration.
 \end{thm}
-This is a generalisation of results of \textbf{CP and CH}. We also make some comments about the shape of the cascade and provide several examples.
-\\ \\
-In chapter 2 we study \ldp surfaces with a $\mathbb{C}^*$ action. These are called complexity one \ldp surfaces. In \textbf{Suss, Huggeneberger} they classify complexity \ldp's, we show how our algorithm can repeat their classification and extend it two surface of higher index. We make some comments about equivariant toric degenerations, and when they exists based of the combinatorics. 
-\\
-In chapter 3 we study the local version 
 
-\bibliographystyle{plain}
-\begin{thebibliography}{10}
-
-\bibitem{ZDQ}
-Z. DeQi:
-\newblock{ Logarithmic del Pezzo surfaces of rank one with contractible boundaries}
-\newblock{Osaka Journal of Mathematics 25 (1988), 461-497}
-
-\bibitem{Suss} 
-H. S{\"u}ss:
-\newblock Canonical Divisors on T-Varieties
-\newblock{arxiv:0811.0626}
-
-\bibitem{Huggenberger}
-E. Huggenberger:
-\newblock{ Fano Varieties with Torus Action of Complexity One}
-\newblock{Thesis at Universität Tübingen, 2013.}
+This reproves the results of \cite{CP} and proves bounds on the singularities established in \cite{CH} case where the log del Pezzo surface admits a toric degeneration.
 
 
-\bibitem{IMT}
-N. Ilten, M. Mishna and C. Trainor:
-\newblock{ Classifying Fano Complexity-One T-Varieties via Divisorial Polytopes}
-\newblock{To appear in Manuscripta Mathematica}
-\newblock{arXiv:1710.04146}
+We also consider how the cascade of these surfaces behaves. This notion was introduced in \cite{RS} and is essentially asking for the birational relations between the surfaces. We proof that once our singularity is sufficiently complicated then you get the folllowing series of birational relations
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0B9YARgF8AesRB9S6TLnyEUPclVqMWbLr0E8RYkBmx4CRAExzq9Zq0QgAOhagQcCUeJ1SiAZiMLTy7vwHA6nHgBafg1HST0UNx55EyVzLn1ff30+UK0JXWkSUn0YxTMObhShNO1wrNlc43yvYGL1B3SnCORDKo84y2tbe00yzNccvM94osE-Tn1g1Mb+5xQAViHqkcKGvoz55AA2ZY6ChNLNlrIAFmHOlRdBYVnjitJzlcvua4F1sIGUQyf9tisbHYjs0sm5frEDmMkpwXNNgeUiAB2PYQrwuETyGBQADm8CIoAAZgAnCAAWyQshAOAgSDIf3MVjQAAssAF3iBqAw6AAjGAMAAK9zYRKw2KZODSxLJSEMVJpiEpqIZFmZrJ4An0HJAXN5AqF5hFYoljSl5MQbjlMueBUZLLZEyCKS1Or5gpBwtF4slJLNp2o1KQAA5rf8VXbEhMpiFOTzXfrtTACcbNKakLtLYglvSuqrJuyY7q3QiDZ7k4SfUhkRn00qc+GNc7Y3r3SWjd7pYhgxmq7XbayI8k4QW4y2QIavSaK53-fKAJwh5UAFSZMBwdEbhfjDETZZAqcQ84zFt7YbV0KC0e1TaLXzHpfbZsPAYVfuzfZh0Nhl5dzeLCaTD4UnSz6Hie-J2uow6-re467vuPCys+PCKjUyq5sAbyQVem6jrBgEKhaSGyie6FvJqUE3vMd5tpOHY8K+SHHqhdashh4z+LCToUfGeG0WaPBZkhdJgeGG4jn+vEUHwQA
+\begin{tikzcd}
+X_{1}^0 & X_{1}^1 \arrow[l, "\phi_1^1"']   & \cdots \arrow[l, "\phi_1^2"']   & X_{1}^{a_1-1} \arrow[l, "\phi_1^{a_1-2}"']                      &  &                                                                    &                          &                          \\
+        &                                  &                                & &  &                                                                    &                          &                          \\
+X_{2}^0 & X_{2}^1 \arrow[l, "\phi_2^1"']   & \cdots \arrow[l, "\phi_2^2"']   & X_{2}^{a_2-1} \arrow[l, "\phi_2^{a_2-1}"']  &  &\arrow[ll, "\phi_2^{a_2}"]  X_1 \arrow[lluu, "\phi_1^{a_1-1}"'] \arrow[lldd, "\phi_3^{a_3-1}"] & X_2 \arrow[l, "\Phi_1"'] & X_3 \arrow[l, "\Phi_2"'] \\
+        &                                  &                                &                                                                 &  &                                                                    &                          &                          \\
+X_{3}^0 & X_{3}^1 \arrow[l, "\phi_{3}^1"'] & \cdots \arrow[l, "\phi_{3}^2"'] & X_{2}^{a_3-1} \arrow[l, "\phi_{3}^{a_3-2}"']                    &  &                                                                    &                          &                         
+\end{tikzcd}
+\]
 
 
-\bibitem{CH}
-A. Corti and L. Heuberger:
-\newblock{ Del Pezzo surfaces with $\frac{1}{3}(1,1)$ points}
-\newblock{ Manuscripta Mathematica, May 2017, Volume 152}
-\newblock{arXiv:1505.02092}
+\subsection{Smoothings of log extemal extractions}
 
-\bibitem{CP}
-D. Cavey and T.Prince:
-\newblock{Del Pezzo surfaces with a single 1/k(1,1) singularity,}
-\newblock{arXiv:1707.09213}
+To fit with the ongoing interest in toric degenerations, we study the case of a log terminal cyclic extractions from a given singularity. These are maps $f: \: Y \rightarrow X$ with relative Picard rank one, such that both $X$ and $Y$ only have cyclic quotient singularities along with other technical conditions. We proof the following:
 
-\bibitem{Altmann}
-K. Altmann, N. Ilten, L. Petersen, H. S{\"u}ss and R. Vollmert:
-\newblock{ The Geometry of T-Varieties}
-\newblock{ 	IMPANGA Lecture Notes, Contributions to Algebraic Geometry, 2012, 17-69}
-\newblock{ 	arXiv:1102.5760}
-
-\bibitem{PS}
-H. S{\"u}ss:
-\newblock{Torus incavriant divisors, }
-\newblock{Israel Journal of Mathematics Volume 182 (2011), No. 1, 481-504, }
-\newblock{  	arXiv:0811.0517 }
-
-\bibitem{Tim}
-A. Timashev:
-\newblock{Cartier divisors and geometry of normal G-varieties.}
-\newblock{Transform. Groups, 5(2):181–204, 2000.}
-
-\bibitem{Dais}
-D. Dais:
-\newblock{Toric log del Pezzo surfaces with one singularity}
-\newblock{arXiv:1705.06359.}
-
-\bibitem{HP}
-D. Hwang and J. Park:
-\newblock{Charecterization of log del Pezzo pairs via anticanonical models,}
-\newblock{Math. Z. 280 (2015), no 1-2, 211- 229.}
-
-\bibitem{Ishii}
-S. Ishii:
-\newblock{ Introduction to singularities, }
-\newblock{Springer Japan (2014)}
-
-\bibitem{Br}
-E. Brieskorn:  
-\newblock{Rationale  Singularitäten  komplexer  Flächen.}
-\newblock{  Invent.  Math. 4, 336–358 (1968)}
-
-\bibitem{LaurInv}
-T. Coates, A. Kasprzyk and T. Prince:
-\newblock{Laurent Inversion}
-\newblock{ 	arXiv:1707.05842}
-
-\bibitem{Prince}
-T. Prince:
-\newblock{Smoothing Toric Fano Surfaces Using the Gross-Siebert Algorithm}
-\newblock{ Proceedings of the LMS (2018) }
-
-\bibitem{I}
-N. Ilten:
-\newblock{Mutations of Laurent Polynomials and Flat Families with Toric Fibers}
-\newblock{SIGMA, 2012, Tom 8,	047	(Mi sigma724)}
+\begin{thm}
+Let  $f: \: Y \rightarrow X$ be a cyclic extraction in dimension two then both $Y$ admits a toric degeneration which $Y_\Sigma$ which extends map $f$ to $f_\Sigma : \: Y \rightarrow X$
+\end{thm}
+We then charecterise these possible toric degenerations, and extend this in part to higher dimension. We also provide several examples of how this can be applied to the global case. In addition in dimension greater than or equal to three we discuss how this gives explicit equations for every single possible deformation of the toric variety. In addition we show how this relates with notion of focus-focus singularities and the SYZ fibration in dimension 2.
 
 
-\end{thebibliography}
+\section{Map of the thesis}
+
+1 - Intro
+
+2 - Background
+	- Log del Pezzos
+	- Polyhedral divisors
+	- Looijenga pairs
+
+3 - Bounded Sing Content (Corti Heuberger, Reproves(Cavey Prince), Cuzzocolli)
+	- Small Sing
+	- Outside Bounded
+
+4 - LDP complexity One - Redervies and generalises (Huggenberger,  Suss, Ilten..)
+	- Algorithm 1 
+	- Algorithm 2 (Smarter)
+
+5 - Smoothings - Related to Laurent invesrion but strictly weaker
+	- Two dimensional
+	- $n$ dimensional
+	- global example
+	- charecterisation of when smoothing exists (purely combinatorial)
+
+6 - Complexity One Fanos Terminal - Rederives (Kasprzyk 03, Huggenberger-Nicholussi et.al) and then expands.
+
 
 \end{document}
