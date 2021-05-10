@@ -13,6 +13,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{tikz}
+
 \usepackage{tikz-cd}
 \usepackage[noend]{algpseudocode}
 \usepackage{caption}
@@ -62,6 +63,15 @@
     {\MakeUppercase{\romannumeral #1}}
 
 \graphicspath{ {images/} }
+
+\pgfdeclarelayer{edgelayer}
+\pgfdeclarelayer{nodelayer}
+\pgfsetlayers{edgelayer,nodelayer,main}
+
+
+\tikzstyle{Dashed Line}=[-, draw=blue, dashed]
+
+
 
 \newcommand{\C}[1]{(\mathbb{C}^*)^#1}
 \newcommand{\mb}[1]{\mathbb{#1}}
@@ -369,6 +379,50 @@ We note that with the exception of the second case nothing there are finitely ma
 
 Dealing with the case where the vector $v$ does not correspond to a ray of the fan. To do a non toric blowup we need to do a  sequence of blowups that will produce a line of torus invariant points. We note that if we do this twice then there will be a well defined map to $\mb{P}^1$ with the two parabolic lines being sections. This means that there would be a map to a Hirzerbuch surface such that one of these lines is being sent to the negative section and the other to the positive. As both of these would be fixed by the torus action these have been classified in the previous paragraphs.
 
+
+As this blow up needs to be a $(1,n)$ or a $(n,1)$ weighted blowups the only choices are the following
+\[
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 0) {};
+		\node [style=none] (1) at (0, 2) {};
+		\node [style=none] (2) at (2, 0) {};
+		\node [style=none] (3) at (-2, 4) {};
+		\node [style=none] (4) at (-2, 4) {};
+		\node [style=none] (5) at (0, -2) {};
+		\node [style=none] (6) at (3, -3) {};
+		\node [style=none] (7) at (-3, 2.5) {$-v$};
+		\node [style=none] (8) at (-3, 3) {};
+		\node [style=none] (9) at (3, -3.5) {};
+		\node [style=none] (10) at (3, -3.5) {$v$};
+		\node [style=none] (11) at (8, 0) {};
+		\node [style=none] (12) at (8, 2) {};
+		\node [style=none] (13) at (10, 0) {};
+		\node [style=none] (14) at (6, 4) {};
+		\node [style=none] (15) at (6, 4) {};
+		\node [style=none] (16) at (8, -2) {};
+		\node [style=none] (17) at (12, -2) {};
+		\node [style=none] (18) at (4, 1.5) {$-v$};
+		\node [style=none] (19) at (4, 2) {};
+		\node [style=none] (21) at (12, -2.5) {$v$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (4.center) to (0.center);
+		\draw (0.center) to (2.center);
+		\draw (0.center) to (1.center);
+		\draw (0.center) to (5.center);
+		\draw [style=Dashed Line] (0.center) to (6.center);
+		\draw [style=Dashed Line] (0.center) to (8.center);
+		\draw (15.center) to (11.center);
+		\draw (11.center) to (13.center);
+		\draw (11.center) to (12.center);
+		\draw (11.center) to (16.center);
+		\draw [style=Dashed Line] (11.center) to (17.center);
+		\draw [style=Dashed Line] (11.center) to (19.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+
+\]
 \end{ex}
 
 
