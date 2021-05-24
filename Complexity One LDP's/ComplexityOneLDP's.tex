@@ -351,9 +351,21 @@ Taking the minimal resolution of our log del Pezzo, this admits a map to a Hirze
 \begin{rem}
 In the case of index one, we know DuVal singularities only have $-2$ curves in the resolution hence this bound can be refined to four non general fibers.
 \end{rem}
-We now, for the sake of classifying abandon the condition on index, replace it with this condition on self intersections. It is easy to check the index post classification.
-We can now specify how the first algorithm works
 
+Just as in the case of Gorenstein index one, where the singularities are formed of $-2$ curves. There is an explicit way to classify the resolutions of singularities of higher index.
+
+\begin{lem}
+A singularity of index $n$ which is non toric log terminal singularities can be described by one of the following polyhedral divisors
+\begin{itemize}
+\item $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{n}{m}, \infty \right) \otimes P_3$
+
+\item Finite $E_6$, $E_7$, $E_8$ case
+\end{itemize}
+\end{lem}
+
+\begin{proof}
+We note that for the canonical divisor to be Cartier the corresponding slope function has to have integral slope and $h_P(0) \in \mathbb{Z}$ for all $P \in \mb{P}^1$. We note the slope for a polyhedral divisor of the form $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{p}{q}, \infty \right) \otimes P_3$ is $\frac{1}{p-q}$. Hence $p-q$ divides $n$ where $n$ is the index of the singularity.
+\end{proof}
 
 PUT ALGORITHM HERE
 
@@ -392,7 +404,8 @@ In the case we have one parabolic line, this line has to arise as a weighted blo
 
 \end{itemize}
 
-The fibres in the other case go have values ranging from $1$ (the $(1,1)$ blowup) to $3$ (the $(2,1)$ weighted blowup). Our analysis can be simplified by noting that after a suitable number of contractions we reach a smooth toric variety which is the minimal resolution of a Gorenstein del Pezzo surface. There are 16 of these surface. 
+The fibres in the other case go have values ranging from $1$ (the $(1,1)$ blowup) to $3$ (the $(2,1)$ weighted blowup). Our analysis can be simplified by noting that after a suitable number of contractions we reach a smooth toric variety which is the minimal resolution of a Gorenstein del Pezzo surface. This results in a massive amount of surfaces, many of which are isomorphic.
+However every single one is the minimal resolution of a log del Pezzo surface.
 
 \begin{itemize}
 \item Pictures
@@ -400,6 +413,9 @@ The fibres in the other case go have values ranging from $1$ (the $(1,1)$ blowup
 
 \end{ex}
 
+\begin{rem}
+The fact that every surface we produce is the minimal resolution of a log del Pezzo surface in the case that index equals one is unique to this case. This follows from index one singularities having the discrepancy of every curve being equal to zero. In index two it is easy to produce toric surfaces which are not the minimal resolution of a log del Pezzo surface.
+\end{rem}
 
 
 With the above disclaimer we carry on. We know that our standard admit a canonical map to a Hirzebruch surface, so we instead work backwards, take a Hirzebruch surface, look at a subtorus action on it and consider all the ways we can make a basic surface out of it.
