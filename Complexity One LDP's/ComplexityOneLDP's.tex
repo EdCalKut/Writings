@@ -55,6 +55,8 @@
 
 \newtheorem{conj}[thm]{Conjecture}
 
+\newtheorem{algorithm}[thm]{Algorithm}
+
 \newtheorem*{rem}{Remark}
 \newtheorem{assumption}[thm]{Assumption}
 
@@ -354,7 +356,7 @@ In the case of index one, we know DuVal singularities only have $-2$ curves in t
 
 Just as in the case of Gorenstein index one, where the singularities are formed of $-2$ curves. There is an explicit way to classify the resolutions of singularities of higher index.
 
-\begin{lem}
+\begin{lem}[\label{basic bound}]
 A singularity of index $n$ which is non toric log terminal singularities can be described by one of the following polyhedral divisors
 \begin{itemize}
 \item $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{n}{m}, \infty \right) \otimes P_3$
@@ -364,11 +366,21 @@ A singularity of index $n$ which is non toric log terminal singularities can be 
 \end{lem}
 
 \begin{proof}
-We note that for the canonical divisor to be Cartier the corresponding slope function has to have integral slope and $h_P(0) \in \mathbb{Z}$ for all $P \in \mb{P}^1$. We note the slope for a polyhedral divisor of the form $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{p}{q}, \infty \right) \otimes P_3$ is $\frac{1}{p-q}$. Hence $p-q$ divides $n$ where $n$ is the index of the singularity.
+We note that for the canonical divisor to be Cartier the corresponding slope function has to have integral slope and $h_P(0) \in \mathbb{Z}$ for all $P \in \mb{P}^1$. We note the slope for a polyhedral divisor of the form $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{p}{q}, \infty \right) \otimes P_3$ is $\frac{1}{p}$. Hence $p$ divides $n$ where $n$ is the index of the singularity. We now note $h_{P_1} (0) = -\frac{-1}{2} + \frac{1}{2} \frac{1}{p} = \frac{1}{2} (1 + \frac{1}{p})$. Now if $p$ is odd this becomes a fraction $\frac{a}{p}$ and if $p$ is even this becomes $\frac{a}{2p}$. Now $h_0(P_3) = \frac{q-1}{q} + \frac{p}{q} \frac{1}{p}$, this is always just $1$. Hence for every $k h_P(n)$ to be an integer for every $P \in \mb{P}^1$ and $n \in \mb{Z}$ we need $k$ to be a multiple of $p$ if $p$ is odd and a multiple of $p$ if $p$ is even.
+
+
+Do the $E_6, \, E_7,\, E_8$ case.
 \end{proof}
 
-PUT ALGORITHM HERE
+\begin{rem}
+This imposes stricter bounds on the number of non generic fibers a complexity one surface of index $n$ can have than Lemma~\ref{basic bound} and enables you to put bounds on per the singularity. 
+\end{rem}
 
+We can now begin the algorithm
+
+\begin{algorithm}
+\textbf{Step 1}: We bound the possible singularities of index $n$ that can occur on a log del Pezzo. 
+\end{algorithm}
 
 As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one.
 

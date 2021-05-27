@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  18 MAY 2021 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  25 MAY 2021 16:20
 entering extended mode
 **./Intro.tex
 (Intro.tex
@@ -1050,6 +1050,9 @@ LaTeX Info: Redefining \nameref on input line 76.
 
 
 
+LaTeX Warning: Reference `beginnersdef' on page 1 undefined on input line 81.
+
+
 LaTeX Warning: Citation `Reid' on page 1 undefined on input line 81.
 
 
@@ -1137,15 +1140,19 @@ n input line 169.
 LaTeX Warning: Citation `CP' on page 3 undefined on input line 173.
 
 
-LaTeX Warning: Citation `CH' on page 3 undefined on input line 173.
+LaTeX Warning: Citation `Cuzzo' on page 3 undefined on input line 173.
 
 
-LaTeX Warning: Citation `RS' on page 3 undefined on input line 176.
+LaTeX Warning: Citation `RS' on page 3 undefined on input line 175.
 
 
-Underfull \vbox (badness 1838) has occurred while \output is active []
+Underfull \vbox (badness 2932) has occurred while \output is active []
 
  [3]
+
+LaTeX Warning: Reference `Length two sing' on page 4 undefined on input line 18
+7.
+
 [4]
 Overfull \hbox (9.22833pt too wide) in paragraph at lines 222--223
 []\OT1/cmr/m/n/12 6 - Com-plex-ity One Fanos Ter-mi-nal - Red-erives (Kasprzyk 
@@ -1165,20 +1172,23 @@ Package rerunfilecheck Warning: File `Intro.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Intro.out':
-(rerunfilecheck)             Before: 8EE46B15E0EB08CA01A14BC683957C25;322
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
 (rerunfilecheck)             After:  8C2EB5493320948AAEC91523E2D328C5;323.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 22383 strings out of 492970
- 419484 string characters out of 3127037
- 526829 words of memory out of 3000000
- 25632 multiletter control sequences out of 15000+200000
+ 22379 strings out of 492970
+ 419440 string characters out of 3127037
+ 527692 words of memory out of 3000000
+ 25628 multiletter control sequences out of 15000+200000
  11238 words of font info for 44 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,15n,82p,1046b,924s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,15n,82p,1044b,924s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
@@ -1196,9 +1206,9 @@ rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/user/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/
 user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on Intro.pdf (5 pages, 156491 bytes).
+Output written on Intro.pdf (5 pages, 155608 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  13 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

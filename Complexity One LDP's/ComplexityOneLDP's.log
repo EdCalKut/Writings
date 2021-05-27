@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  23 MAY 2021 06:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  25 MAY 2021 16:22
 entering extended mode
 **./ComplexityOneLDP's.tex
 (ComplexityOneLDP's.tex
@@ -940,26 +940,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
  (ComplexityOneLDP's.aux)
 \openout1 = `ComplexityOneLDP's.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Try loading font information for U+msa on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Try loading font information for U+msa on input line 81.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 79.
+LaTeX Font Info:    Try loading font information for U+msb on input line 81.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1033,7 +1033,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring ON on input line 79.
+Package hyperref Info: Link coloring ON on input line 81.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -1049,38 +1049,38 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count177
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
  (ComplexityOneLDP's.out) (ComplexityOneLDP's.out)
 \@outlinefile=\write5
 \openout5 = `ComplexityOneLDP's.out'.
 
 
 
-LaTeX Warning: Citation `Suss' on page 1 undefined on input line 84.
+LaTeX Warning: Citation `Suss' on page 1 undefined on input line 86.
 
 
-LaTeX Warning: Citation `Huggenberger' on page 1 undefined on input line 84.
+LaTeX Warning: Citation `Huggenberger' on page 1 undefined on input line 86.
 
 
-LaTeX Warning: Citation `IMT' on page 1 undefined on input line 84.
+LaTeX Warning: Citation `IMT' on page 1 undefined on input line 86.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 
  []
 
 
-LaTeX Warning: Citation `Cox' on page 1 undefined on input line 88.
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
+
+ []
 
 
-LaTeX Warning: Citation `Altmann' on page 1 undefined on input line 89.
+LaTeX Warning: Citation `Cox' on page 1 undefined on input line 90.
+
+
+LaTeX Warning: Citation `Altmann' on page 1 undefined on input line 91.
 
 [1
 Non-PDF special ignored!
@@ -1099,11 +1099,11 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 {C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Citation `PS' on page 2 undefined on input line 124.
+LaTeX Warning: Citation `PS' on page 2 undefined on input line 126.
 
 Excluding 'comment' comment.
 
-LaTeX Warning: Citation `Suss' on page 2 undefined on input line 206.
+LaTeX Warning: Citation `Suss' on page 2 undefined on input line 208.
 
 
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
@@ -1112,135 +1112,132 @@ Package Fancyhdr Warning: \headheight is too small (8.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 209--213
+Underfull \hbox (badness 10000) in paragraph at lines 211--215
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--213
+Underfull \hbox (badness 10000) in paragraph at lines 211--215
 
  []
 
 
-LaTeX Warning: Reference `Tech' on page 3 undefined on input line 216.
+LaTeX Warning: Reference `Tech' on page 3 undefined on input line 218.
 
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 223.
+d on input line 225.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
 
  []
 
 [3]
 
-LaTeX Warning: Citation `PS' on page 4 undefined on input line 232.
+LaTeX Warning: Citation `PS' on page 4 undefined on input line 234.
 
 
-LaTeX Warning: Citation `PS' on page 4 undefined on input line 250.
+LaTeX Warning: Citation `PS' on page 4 undefined on input line 252.
 
 [4]
 
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 256.
-
-
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 262.
+LaTeX Warning: Citation `PS' on page 5 undefined on input line 258.
 
 
 LaTeX Warning: Citation `PS' on page 5 undefined on input line 264.
 
 
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 272.
+LaTeX Warning: Citation `PS' on page 5 undefined on input line 266.
 
 
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 281.
+LaTeX Warning: Citation `PS' on page 5 undefined on input line 274.
 
 
-LaTeX Warning: Citation `S' on page 5 undefined on input line 285.
+LaTeX Warning: Citation `PS' on page 5 undefined on input line 283.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--286
+LaTeX Warning: Citation `S' on page 5 undefined on input line 287.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--286
+Underfull \hbox (badness 10000) in paragraph at lines 280--288
 
  []
 
 [5] Excluding 'comment' comment.
 
-LaTeX Warning: Citation `Suss' on page 6 undefined on input line 324.
+LaTeX Warning: Citation `Suss' on page 6 undefined on input line 326.
 
 
-LaTeX Warning: Citation `Suss' on page 6 undefined on input line 332.
+LaTeX Warning: Citation `Suss' on page 6 undefined on input line 334.
 
 
-LaTeX Warning: Citation `Br' on page 6 undefined on input line 339.
+LaTeX Warning: Citation `Br' on page 6 undefined on input line 341.
 
-[6]
+[6] [7]
 
-LaTeX Warning: Reference `Theroem on curves' on page 7 undefined on input line 
-379.
+LaTeX Warning: Reference `Theroem on curves' on page 8 undefined on input line 
+391.
 
-[7] [8] Excluding 'comment' comment.
-Underfull \hbox (badness 10000) in paragraph at lines 469--474
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--474
+[8] Excluding 'comment' comment.
+Underfull \hbox (badness 10000) in paragraph at lines 481--486
 
  []
 
 
-LaTeX Warning: Reference `T:ZDQ' on page 9 undefined on input line 477.
-
-
-LaTeX Warning: Citation `IMT' on page 9 undefined on input line 477.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 9 undefined on input line 480.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 9 undefined on input line 480.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--489
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--489
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--489
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--489
+Underfull \hbox (badness 10000) in paragraph at lines 481--486
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 492--496
+
+LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 489.
+
+
+LaTeX Warning: Citation `IMT' on page 10 undefined on input line 489.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 492.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 492.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--501
 
  []
 
 
-Underfull \vbox (badness 3646) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 489--501
 
- [10]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--501
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 504--508
+
+ []
+
 Excluding 'comment' comment. [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 615.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 615.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 627.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 627.
  (ComplexityOneLDP's.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 615.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 615.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 627.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 627.
 Package rerunfilecheck Info: File `ComplexityOneLDP's.out' has not changed.
 (rerunfilecheck)             Checksum: 16CF371E289947E6C84EF40AD21868FF;223.
 
@@ -1249,36 +1246,37 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22315 strings out of 492970
- 417535 string characters out of 3127037
- 525659 words of memory out of 3000000
- 25536 multiletter control sequences out of 15000+200000
- 12755 words of font info for 48 fonts, out of 3000000 for 9000
+ 22322 strings out of 492970
+ 417615 string characters out of 3127037
+ 522711 words of memory out of 3000000
+ 25541 multiletter control sequences out of 15000+200000
+ 13114 words of font info for 49 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,15n,82p,2014b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/user/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/us
-er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+ic/amsfonts/cm/cmbxti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/
+user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/user/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/us
+er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
 C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/user/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
-Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP's.pdf (11 pages, 239580 bytes).
+cmsy8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ComplexityOneLDP's.pdf (11 pages, 250944 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
