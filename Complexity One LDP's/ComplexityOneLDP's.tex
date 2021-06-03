@@ -376,11 +376,39 @@ Do the $E_6, \, E_7,\, E_8$ case.
 This imposes stricter bounds on the number of non generic fibers a complexity one surface of index $n$ can have than Lemma~\ref{basic bound} and enables you to put bounds on per the singularity. 
 \end{rem}
 
-We can now begin the algorithm
+We also need a bound on what possible toric singularities can occur and the possible actions on them.
+
+\begin{lem}
+Let $X$ be a complexity one log del Pezzo surface with the following properties 
+\begin{itemize}
+\item $X$ has two elliptic points $P_1$ and $P_2$
+\item $X$ has only toric singularities
+\end{itemize}
+
+Then at least one of the elliptic points, $P_1$, is a singularity and when describing $P_1$ locally by a cone $\sigma \subset N$ and a ray $v \in N$. Then $v$ corresponds to a ray on the minimal resolution.
+\end{lem}
+
+\begin{proof}
+Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to $\mb{F}_i$ as every $-1$ curve on $Y$ is torus invariant. Hence $Y$ is constructed by a non toric blowup of a toric surface. Considering the first non toric blowup, we are blowing up a point $P$ on a torus invariant curve $C$. Clearly $C$ is in the minimal resolution of $X$. This proofs the above lemma.
+
+%Maybe more details%
+
+\end{proof}
+
+We finish with a convenient way to interface between calculations in complexity one and toric geometry
+\begin{lem}
+Let $X$ be a complexity one surface and let $D$ be an ample divisor. Then $D$ corresponds to a collection of functions $h_{P_i}$ with consistent linear part. Let $P \in \mb{P}^1$ be a point such that the fan over this point corresponds to a decomposition $0, \frac{p_1}{q_1}, \dots \, \frac{p_n}{q_n}$ with $p_i, \, q_i \geq 0$ then as a toric variety we have locally 
+
+\[
+Begin next Picture!!!!!!
+\]
+\end{lem}
 
 \begin{algorithm}
-\textbf{Step 1}: We bound the possible singularities of index $n$ that can occur on a log del Pezzo. 
+
+We start by classifying the possible actions on the Hirzebruch surfaces $\mb{F}_i$. There is only  finite choice. Once we fix a torus action $v$, we are then left trying to classify possible 
 \end{algorithm}
+
 
 As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one.
 
