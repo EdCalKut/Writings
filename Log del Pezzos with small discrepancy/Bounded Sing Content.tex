@@ -29,6 +29,7 @@
 \usetikzlibrary{decorations.pathreplacing} % this is for Ai's drawing
 
 
+
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
 
@@ -83,7 +84,12 @@
 \renewcommand{\P}{\mathrm{P}}
 
 
+\pgfdeclarelayer{edgelayer}
+\pgfdeclarelayer{nodelayer}
 
+\pgfsetlayers{edgelayer,nodelayer,main}
+
+\tikzstyle{none} = []
 
 
 
@@ -140,6 +146,18 @@ Throughout the rest of this chapter we restrict the class of singularities we co
 Any singularity germ $S$ that appears in this chapter is assumed to be a cyclic
 quotient singularity with small discrepancy.
 \end{assumption}
+
+
+\begin{dfn}
+Let $X$ be a surface. A $-1$ cycle $Z = \sum D_i \subset X$ is a rationally connected set of curves such that there is a sequence of maps 
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0BedgfWJAC+pdJlz5CKAIzkqtRiza9Jg4SAzY8BIgCYZ1es1aIQAHRMBjKBBwIhIjeKIBmPXMOKehAbJhQA5vBEoABmAE4QALZIZCA4EEiSdiBhkQnUcUjaSSlRiLqx8YhO3gJAA
+\begin{tikzcd}
+X=X_0 \arrow[r] & X_1 \arrow[r] & \cdots \arrow[r] & X_n
+\end{tikzcd}
+\]
+Such that each map is a blowdown and the image of $Z$ is a smooth point.
+\end{dfn}
 
 \begin{lem}\label{lem!badcurve}
 Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
@@ -279,6 +297,56 @@ To show that not all the curves $E_j^S$ can be contracted to a point if $l \geq 
 In the case where the length, $n$, of the singularity is 1 or 2, Lemma~\ref{lem!badcurve} follows via easy toric geometry as any curve joining two singularities is a locally toric configuration. This corresponds to the associated fan being non convex. 
 \end{rem}
 
+
+\begin{prop}
+There is a unique family of singular log del Pezzo surfaces $S_p$, indexed by $p \in \mb{N}$, such that given the minimal resolution $Y$ of $S_p$, $Y$ does not admit a map to $\mb{F}_i$ with $i \geq 2$. Here $S_p$ has one $\frac{1}{p}(1,1)$ singularity.
+\end{prop}
+
+\begin{proof}
+
+The first case is that $Y$ only admits a map to $\mb{F}_0$. Then $Y$ must be $\F_0$, since a blow up of any point of $\mb{F}_0$ also permits a map to $\mb{F}_1$; but then $X=Y$ is smooth, contradicting the assumption. 
+
+For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$-curve we get a map to $\mb{F}_2$. So the only option is a blowup at a smooth point. At this point you get a toric variety with resolution
+
+\[
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-4, 0.25) {};
+		\node [style=none] (1) at (0, 4) {};
+		\node [style=none] (2) at (-3, 2) {};
+		\node [style=none] (3) at (-3, -3) {};
+		\node [style=none] (4) at (-2, 3) {};
+		\node [style=none] (5) at (3, 3) {};
+		\node [style=none] (6) at (2, -3) {};
+		\node [style=none] (7) at (3, -2) {};
+		\node [style=none] (8) at (-4, -2) {};
+		\node [style=none] (9) at (-4, -2) {};
+		\node [style=none] (10) at (2, 4) {};
+		\node [style=none] (11) at (-1.75, 1.75) {-1};
+		\node [style=none] (12) at (0.25, 2.75) {};
+		\node [style=none] (13) at (0.25, 2.75) {-1};
+		\node [style=none] (14) at (1.5, 0.75) {0};
+		\node [style=none] (15) at (-0.5, -1.75) {0};
+		\node [style=none] (16) at (-2.75, -0.25) {-1};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (3.center) to (2.center);
+		\draw [in=225, out=45] (0.center) to (1.center);
+		\draw (4.center) to (5.center);
+		\draw (10.center) to (6.center);
+		\draw (9.center) to (7.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+
+
+This results in three adjacent $-1$-curves. Blowing up any point on either of the two end curves reveals a map to $\mb{F}_2$, so the only option for further blowups is at points above points of the middle curve.
+% If the point is not in general position then we get a map to $\mb{F}_2$.
+ This results in an infinite family of \ldp's with a single $\frac{1}{p}(1,1)$ singularity. We note that if we blowup two general points on $\mb{F}_1$ we get a surface with the property that for any $-1$-curve there is a map to $\mb{F}_1$ which sends it to the $-1$-curve on $\mb{F}_1$. Hence every surface arising this way would of arisen from our earlier case analysis.
+
+\end{proof}
+
+
 Now we can classify these log del Pezzos in a straightforwards way. 
 \begin{thm}\label{ThmOnSing}
 Let $X$ be a non-smooth \ldp\ with only singularities of small discrepancy. Then 
@@ -315,13 +383,6 @@ Suppose now that there was a third singularity of type $\frac{1}{p}(1,1)$. Once 
 Thus $X$ has exactly one or two singularities of type $\frac{1}p(1,1)$,
 and part~\eqref{thm38i} is complete in the case $l\ge2$.
 
-
-We now deal with the two cases we did not consider earlier $l = 0$ and $l =1$. Dealing with the case of $l = 0$ first, we know that $Y$ has no map to $\F_l$ for $l\ge1$, by maximality of~$l$. Thus $Y$ must be $\F_0$, since a blow up of any point of $\mb{F}_0$ also permits a map to $\mb{F}_1$; but then $X=Y$ is smooth, contradicting the assumption. 
-
-For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$-curve we get a map to $\mb{F}_2$. So the only option is a blowup at a smooth point. Log del Pezzo surfaces do indeed arise in this way; see \cite[Table ??]{CP}.
-This results in three adjacent $-1$-curves. Blowing up any point on either of the two end curves reveals a map to $\mb{F}_2$, so the only option for further blowups is at points above points of the middle curve.
-% If the point is not in general position then we get a map to $\mb{F}_2$.
- This results in an infinite family of \ldp's with a single $\frac{1}{p}(1,1)$ singularity. We note that if we blowup two general points on $\mb{F}_1$ we get a surface with the property that for any $-1$-curve there is a map to $\mb{F}_1$ which sends it to the $-1$-curve on $\mb{F}_1$. Hence every surface arising this way would of arisen from our earlier case analysis.
 
 
 %Hence to each choice of curve $C$ in the minimal resolution with $C^2 = a$ we get a corresponding \ldp\ with a map down to $\mb{F}_a$. It is fully possible that some of these surfaces may not exist, or may not be the minimal resolution of a \ldp. It is also possible that if the singularity has some symmetry, then there may be isomorphisms between these surfaces.
