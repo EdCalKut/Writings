@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  3 JUN 2021 03:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  6 JUN 2021 05:45
 entering extended mode
 **"./Bounded Sing Content.tex"
 ("Bounded Sing Content.tex"
@@ -1102,26 +1102,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
  ("Bounded Sing Content.aux")
 \openout1 = `"Bounded Sing Content.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1199,10 +1199,10 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 98.
+ on input line 99.
 
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring ON on input line 98.
+Package hyperref Info: Link coloring ON on input line 99.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -1218,16 +1218,13 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count191
 )
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
+LaTeX Info: Redefining \nameref on input line 99.
  ("Bounded Sing Content.out") ("Bounded Sing Content.out")
 \@outlinefile=\write5
 \openout5 = `"Bounded Sing Content.out"'.
 
-
-
-LaTeX Warning: Reference `sec!notation' on page 1 undefined on input line 111.
 
 [1
 Non-PDF special ignored!
@@ -1246,118 +1243,58 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 {C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `lem!minus2curve' on page 2 undefined on input line 22
-0.
-
-
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
  Make it at least 13.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
+[2] [3] [4] [5]
 
-LaTeX Warning: Reference `lem!badcurve' on page 3 undefined on input line 244.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 3 undefined on input line 251.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 3 undefined on input line 260.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 3 undefined on input line 260.
-
-[3]
-
-LaTeX Warning: Reference `MainProp' on page 4 undefined on input line 288.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 4 undefined on input line 288.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 4 undefined on input line 292.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 4 undefined on input line 297.
-
-[4] [5]
-
-LaTeX Warning: Reference `introlemmaonFl' on page 6 undefined on input line 373
+LaTeX Warning: Reference `introlemmaonFl' on page 6 undefined on input line 392
 .
 
+[6] [7]
 
-LaTeX Warning: Reference `HSlem' on page 6 undefined on input line 375.
-
-
-LaTeX Warning: Reference `HSlem' on page 6 undefined on input line 377.
+LaTeX Warning: Citation `GHK' on page 8 undefined on input line 522.
 
 
-LaTeX Warning: Reference `lem!badcurve' on page 6 undefined on input line 377.
+Underfull \vbox (badness 1655) has occurred while \output is active []
 
-[6]
+ [8]
 
-LaTeX Warning: Reference `thm38i' on page 7 undefined on input line 384.
-
-
-LaTeX Warning: Reference `thm38ii' on page 7 undefined on input line 392.
+LaTeX Warning: Citation `CP' on page 9 undefined on input line 538.
 
 
-LaTeX Warning: Citation `GHK' on page 7 undefined on input line 503.
+LaTeX Warning: Citation `CP' on page 9 undefined on input line 550.
 
-
-LaTeX Warning: Citation `CP' on page 7 undefined on input line 517.
-
-[7]
-
-LaTeX Warning: Citation `CP' on page 8 undefined on input line 529.
-
-
-LaTeX Warning: Reference `dp11i' on page 8 undefined on input line 530.
-
-[8]
-
-LaTeX Warning: Reference `ThmOnSing' on page 9 undefined on input line 557.
-
+[9]
 Missing character: There is no s in font nullfont!
-[9] [10]
+ [10] [11]
 
-LaTeX Warning: Citation `CP' on page 11 undefined on input line 672.
+LaTeX Warning: Citation `CP' on page 12 undefined on input line 696.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-[12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 696.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 696.
+[12] [13] [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 836.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 836.
  ("Bounded Sing Content.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 696.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 696.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 836.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 836.
+Package rerunfilecheck Info: File `"Bounded Sing Content".out' has not changed.
 
+(rerunfilecheck)             Checksum: 3140BA4AC6001779DFF21F004BA86C14;478.
 
-Package rerunfilecheck Warning: File `"Bounded Sing Content".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Bounded Sing Content".out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  592BA0309A44719170476AB0124CB426;231.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 33450 strings out of 492970
- 775303 string characters out of 3127037
- 978495 words of memory out of 3000000
- 36516 multiletter control sequences out of 15000+200000
+ 33646 strings out of 492970
+ 778506 string characters out of 3127037
+ 975549 words of memory out of 3000000
+ 36706 multiletter control sequences out of 15000+200000
  11433 words of font info for 44 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 62i,15n,96p,1736b,1035s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,15n,96p,1736b,1033s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
@@ -1376,9 +1313,9 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
 s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb>
-Output written on "Bounded Sing Content.pdf" (12 pages, 242591 bytes).
+Output written on "Bounded Sing Content.pdf" (14 pages, 258300 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 212 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
