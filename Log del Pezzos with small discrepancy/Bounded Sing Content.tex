@@ -708,7 +708,18 @@ For any singularity of length greater than 3, then a basic surface either falls 
 
 \end{thm}
 \begin{proof}
-Given a singularity $S$ which is not a $\frac{1}{p}(1,1)$. Then to a basic surface $X$ this has to be constructed by a series of blowups at two point. We are blowing up this point finitely many times. Denote these multiplicities by $k_1$, $k_2$. This is an invariant of the surface $X$. On $X$ we have two sets of curves which are mapped to fibers on the Hirzebruch surface. Denote these by $A_1 \dots A_n$ and by $B_1, \dots B_m$. We have three rational curves $U, \, V, \, W$. We now assume that both $A_1, \, A_n$ and $B_1, \, B_m$ have been blown up non torically giving rise to curves $C_1^A, \, C_n^A, \, C_1^B, \, C_m^B$. The curve $U$ intersects with $C_i$.
+Given a singularity $S$ of small discrepancy with length $m>1$. Then a basic surface $X$ with singularity $S$ has minimal resolution $Y$. The surface $Y$ is constructed by taking a Hirzebruch surface $\mb{F}_{a_i}$ picking two points $P_1$, $P_2$ and blowing them up $k_1$ and $k_2$ times, this gives rise to an intermediate surface $Z$ and then $X$ is constructed by doing further blow ups. We can assume $k_1 \leq k_2$ and this gives the relations that either $k_1 = k_2 = 0$ and $m in \{1, \, 2, \, 3 \}$ or $k_1 = 0$ and $k_1 = m-2$ or $k_1 + k_2 = m-3$. These cases arise by considering the case where the strict transform of both/ one/ none of the fibers are exceptional curves.
+
+
+We note that $k_1$ and $k_2$ should not be viewed as invariant of the surface $X$ but an invariant of given map to $\mb{F}_{a_i}$:
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfU9TXfIRQBGclVqMWbAJrdeIDNjwEiAJjHV6zVohAAdPQFsARsABiXAPrA6lrF27iYUAObwioAGYAnCIaSiIDgQSMQ8Xr7+iIHBSOoS2mwGaFiOXEA
+\begin{tikzcd}
+X & Y \arrow[l] \arrow[r, "\pi"] & \mb{F}_{a_i}
+\end{tikzcd}
+\]
+We now note that by construction on $Y$ with self intersection $a_i - k_1 -k_2$. This implies that cascade of $X$ is of length $L = a_i - k_1-k_2$. If $L < 0$ then this surface is not a \ldp\ surface.
+On $X$ we have two sets of curves which are mapped to fibers on the Hirzebruch surface. Denote these by $A_1 \dots A_n$ and by $B_1, \dots B_m$. We have three rational curves $U, \, V, \, W$. We now assume that both $A_1, \, A_n$ and $B_1, \, B_m$ have been blown up non torically giving rise to curves $C_1^A, \, C_n^A, \, C_1^B, \, C_m^B$. The curve $U$ intersects with $C_i$.
 \end{proof}
 \begin{cor}
 Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.
@@ -720,7 +731,7 @@ It is fully possible for both $X_1$ and $X_2$ to exist but one of the $X_{a_i}^0
 
 \section{Outside of the small discrepancy}
 
-If you consider singularities of the type $\frac{1}{p}(1,1)$ we note that if $p \geq 7$ then a $\frac{1}{p}(1,1)$ singularity cannot be joined to any other $\frac{1}{p}(1,1)$ singularity by a $-1$ curve. Hence a similar analysis to  Theorem~ref{ThmOnSing} gives us the bound that there cannot be a surface $X$ with singularities $\frac{1}{p_1}(1,1), \, \dots, \, \frac{1}{p_n}(1,1)$ and $p_1 \geq 7$, then if $X$ is a \ldp\ surface then $n=2$.
+If you consider singularities of the type $\frac{1}{p}(1,1)$ we note that if $p \geq 7$ then a $\frac{1}{p}(1,1)$ singularity cannot be joined to any other $\frac{1}{p}(1,1)$ singularity by a $-1$ curve. Hence a similar analysis to  Theorem~\ref{ThmOnSing} gives us the bound that there cannot be a surface $X$ with singularities $\frac{1}{p_1}(1,1), \, \dots, \, \frac{1}{p_n}(1,1)$ and $p_1 \geq 7$, then if $X$ is a \ldp\ surface then $n=2$.
 
 However when we enter the case where $p_1 < 7$ you can get surfaces with many more singularities. For instance consider the surface $X$ with the following minimal resolution:
 \[
@@ -755,11 +766,11 @@ However when we enter the case where $p_1 < 7$ you can get surfaces with many mo
 		\node [style=none] (30) at (-1.5, 2) {-1};
 		\node [style=none] (31) at (0.5, 2) {-1};
 		\node [style=none] (32) at (-3.5, -1.5) {-3};
-		\node [style=none] (33) at (-1, -1.5) {-3};
-		\node [style=none] (34) at (0.75, -1.5) {-3};
+		\node [style=none] (33) at (-1.25, -1.5) {-3};
+		\node [style=none] (34) at (0.65, -1.5) {-3};
 		\node [style=none] (35) at (-3.75, -5.25) {-1};
-		\node [style=none] (36) at (-0.75, -5.25) {-1};
-		\node [style=none] (37) at (1, -5.25) {-1};
+		\node [style=none] (36) at (-1.05, -5.25) {-1};
+		\node [style=none] (37) at (0.9, -5.25) {-1};
 		\node [style=none] (38) at (2.25, -5.5) {};
 		\node [style=none] (39) at (0, -11) {};
 		\node [style=none] (40) at (2, -11) {};
@@ -810,7 +821,7 @@ However when we enter the case where $p_1 < 7$ you can get surfaces with many mo
 	\end{pgfonlayer}
 \end{tikzpicture}
 \]
-This has $h^0(-K_X) \neq 0$, $-K_X^2 = \frac{3}{5}$, six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities. In addition it admits no normal toric degeneration, as it is a complexity one surface and hence any degeneration would have to be equivariant. We can construct this as a toric complete intersection via cox rings and we that it lies as a complete intersection in the toric variety given by the GIT quotient
+This has $h^0(-K_X) \neq 0$, $-K_X^2 = \frac{3}{5}$, six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities. In addition it admits no normal toric degeneration, as it is a complexity one surface and hence any degeneration would have to be equivariant. We can construct this as a toric complete intersection via cox rings and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
 \[
 \begin{blockarray}{cc cc cc cc cc c}
 	T_1 & T_2 & T_3 & T_4 & T_5 & T_6 & T_7 & T_8 & T_9 & T_{10} & T_{11} \\[4pt]
