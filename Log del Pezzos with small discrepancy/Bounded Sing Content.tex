@@ -150,22 +150,22 @@ quotient singularity with small discrepancy.
 
 \section{Log del Pezzo surfaces and small discrepancy}
 
-\begin{dfn}
-Let $X$ be a surface. A $-1$ cycle $Z = \sum D_i \subset X$ is a rationally connected set of curves such that there is a sequence of maps 
+\begin{dfn}[\cite{Artin}]
+Let $X$ be a surface. A $-1$ cycle $Z = \sum_{D \in S} D \subset X$ is a rationally connected set of curves such that there is a sequence of maps 
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0BedgfWJAC+pdJlz5CKAIzkqtRiza9Jg4SAzY8BIgCYZ1es1aIQAHRMBjKBBwIhIjeKIBmPXMOKehAbJhQA5vBEoABmAE4QALZIZCA4EEiSdiBhkQnUcUjaSSlRiLqx8YhO3gJAA
 \begin{tikzcd}
 X=X_0 \arrow[r] & X_1 \arrow[r] & \cdots \arrow[r] & X_n
 \end{tikzcd}
 \]
-Such that each map is a blowdown and the image of $Z$ is a smooth point.
+Such that each map is a contraction of a $-1$ curve $D \in S$ and the image of $Z$ is a non singular point.
 \end{dfn}
 
 \begin{lem}\label{lem!badcurve}
 Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
-strict transform $\widetilde C \subset Y$ is smooth. Suppose in addition that 
-$\widetilde C$ meets the exceptional locus of $f$ with intersection multiplicity at least~2.
-Then if $\widetilde C^2 = -1$ then $-K_X \cdot C \leq 0$.
+strict transform $\widetilde C \subset Y$ is smooth. Let $\{ E_i \}$ be the exceptional locus of $f$. Suppose in addition that 
+$\widetilde C \cdot \sum E_i \geq 2$.
+Then if $\widetilde C^2 = -1$ implies $-K_X \cdot C \leq 0$.
 
 In particular, $\widetilde C$ is smooth and
 $C$ either meets at least two singularities of $X$ or meets one singularity
@@ -186,18 +186,22 @@ multiplicity $m_i$, then $K_X \cdot C = f^*(K_X) \cdot \widetilde C \geq -1 - m_
 We show next that in fact such rational curves cannot lie on a \ldp.
 We need a preliminary lemma.
 \begin{lem}\label{lem!minus2curve}
-Let $X$ be a \ldp\ and $f \colon Y \rightarrow X$ be the \minres.
+Let $X$ be a \ldp\ and $f \colon Y \rightarrow X$ its \minres.
 Let $C\subset Y$ be a smooth rational curve. If $C^2\le-2$ then $C$ is contracted by $f$
 to a point of~$X$.
 \end{lem}
 
 \begin{proof}
-We proof this by contradiction. Assume there is a curve $C$ that is not contracted, the $K_X \cdot f(C) = f^*(K_X) \cdot \wt{C} \geq K_Y \cdot \wt{C} \geq 0$, with the inequality following as there are no terminal surface singularities.
+We proof this by contradiction. Assume there is a curve $C$ that is not contracted. Then 
+\[
+K_X \cdot f(C) = f^*(K_X) \cdot \wt{C} \geq K_Y \cdot \wt{C} \geq 0
+\]
+The first inequality follows as $f^*(K_X) - K_Y$ is an effective divisor. The second inequality follows as $K_Y \cdot \wt{C} = -2 - \wt{C}^2$.
 \end{proof}
 
 \begin{prop}\label{MainProp}
-Let $X$ is a \ldp\ with singularities of small discrepancy and 
-consider the following diagram
+Let $X$ be a \ldp\ with singularities of small discrepancy and $f \colon Y \ra X$ its minimal resolution.
+Consider the following diagram
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkQANEAX1PU1z5CKAEyli1Ok1bsAmjz4gM2PASLlxkhizaIQALR6SYUAObwioAGYAnCAFskGkDghIyUnewA63uAGMbLDQcOBwAT0YYYFNuEBpGegAjGEYABQFVYRAg0wALHAVrO0dEZ1ckMU8ZPV8AoJCwyOirOO5KbiA
 \begin{tikzcd}
