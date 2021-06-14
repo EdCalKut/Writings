@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  2 JUN 2021 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  14 JUN 2021 09:23
 entering extended mode
 **./ComplexityOneLDP's.tex
 (ComplexityOneLDP's.tex
@@ -1179,90 +1179,76 @@ LaTeX Warning: Citation `Suss' on page 6 undefined on input line 334.
 
 LaTeX Warning: Citation `Br' on page 6 undefined on input line 341.
 
-[6]
-
-LaTeX Warning: Reference `basic bound' on page 7 undefined on input line 376.
-
-[7]
+[6] [7]
 
 LaTeX Warning: Reference `Theroem on curves' on page 8 undefined on input line 
-403.
+419.
 
-[8] Excluding 'comment' comment.
-Underfull \hbox (badness 10000) in paragraph at lines 493--498
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 493--498
-
- []
-
-[9]
-
-LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 501.
-
-
-LaTeX Warning: Citation `IMT' on page 10 undefined on input line 501.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 504.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 504.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 501--513
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 472--477
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--513
+Underfull \hbox (badness 10000) in paragraph at lines 472--477
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--513
+LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 480.
+
+
+LaTeX Warning: Citation `IMT' on page 10 undefined on input line 480.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 483.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 10 undefined on input line 483.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--513
+Underfull \hbox (badness 10000) in paragraph at lines 480--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--492
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 516--520
+Underfull \hbox (badness 10000) in paragraph at lines 495--499
 
  []
 
-Excluding 'comment' comment. [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 639.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 639.
+[11] Excluding 'comment' comment. [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 618.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 618.
  (ComplexityOneLDP's.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 639.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 639.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 618.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 618.
+Package rerunfilecheck Info: File `ComplexityOneLDP's.out' has not changed.
+(rerunfilecheck)             Checksum: 16CF371E289947E6C84EF40AD21868FF;223.
 
-
-Package rerunfilecheck Warning: File `ComplexityOneLDP's.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ComplexityOneLDP's.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  16CF371E289947E6C84EF40AD21868FF;223.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 22316 strings out of 492970
- 417549 string characters out of 3127037
- 523578 words of memory out of 3000000
- 25535 multiletter control sequences out of 15000+200000
+ 22323 strings out of 492970
+ 417609 string characters out of 3127037
+ 525711 words of memory out of 3000000
+ 25540 multiletter control sequences out of 15000+200000
  12755 words of font info for 48 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,15n,82p,2014b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1286,9 +1272,9 @@ i10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP's.pdf (11 pages, 242068 bytes).
+Output written on ComplexityOneLDP's.pdf (12 pages, 247837 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
