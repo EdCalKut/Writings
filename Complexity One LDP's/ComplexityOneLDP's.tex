@@ -389,7 +389,7 @@ Then at least one of the elliptic points, $P_1$, is a singularity and when descr
 \end{lem}
 
 \begin{proof}
-Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to $\mb{F}_i$ as every $-1$ curve on $Y$ is torus invariant. Hence $Y$ is constructed by a non toric blowup of a toric surface. Considering the first non toric blowup, we are blowing up a point $P$ on a torus invariant curve $C$. Clearly $C$ is in the minimal resolution of $X$. This proofs the above lemma.
+Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to $\mb{F}_i$ as every $-1$ curve on $Y$ is torus invariant. Hence $Y$ is constructed by a non toric blowup of a toric surface. Considering the first non toric blowup, we are blowing up a point $P$ on a torus invariant curve $C$. Clearly $C$ is a torus invariant curve in the minimal resolution of $X$. This proofs the above lemma.
 
 %Maybe more details%
 
@@ -397,12 +397,19 @@ Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to 
 
 We finish with a convenient way to interface between calculations in complexity one and toric geometry
 \begin{lem}
-Let $X$ be a complexity one surface and let $D$ be an ample divisor. Then $D$ corresponds to a collection of functions $h_{P_i}$ with consistent linear part. Let $P \in \mb{P}^1$ be a point such that the fan over this point corresponds to a decomposition $0, \frac{p_1}{q_1}, \dots \, \frac{p_n}{q_n}$ with $p_i, \, q_i \geq 0$ then as a toric variety we have locally 
+Let $X$ be a complexity one surface with $[0, -\infty)$ corresponding to an elliptic fixed point. Let $D$ be an ample divisor. Then $D$ corresponds to a collection of functions $h_{P_i}$ with consistent linear part. Let $P \in \mb{P}^1$ be a point such that the fan over this point corresponds to a decomposition $0, \frac{p_1}{q_1}, \dots \, \frac{p_n}{q_n}$ with $p_i, \, q_i \geq 0$ then as a toric variety we have locally 
 
 \[
 Begin next Picture!!!!!!
 \]
+Assume $h_{P_i}(0) = 0$, s
 \end{lem}
+
+\begin{rem}
+If we are considering a parabolic line instead of a fixed point then you have 
+\end{rem}
+
+As there are a finite number of log del Pezzo surfaces, upto deformation, with Gorenstein index $k$ there can only be a finite number of singularities $S$ which can occur on such a surface. 
 
 \begin{algorithm}
 
@@ -411,6 +418,65 @@ We start by classifying the possible actions on the Hirzebruch surfaces $\mb{F}_
 
 
 As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one.
+
+\begin{ex}
+
+We start with the Gorenstein index $k = 1$, i.e the only singulairties are DuVal. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution, we iterate over these.
+\begin{itemize}
+
+\item  $A_1$
+
+\item $A_2$
+
+\item $A_3$
+
+\item $A_4$
+
+\item $A_5$
+
+This has several possible actions taking the first us the polyhedral divisor 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{5} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, 1\right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
+\end{itemize}
+The only choices for the first row are $[0, \frac{1}{5}]$ and $[\frac{1}{5}]$. We call this case $a$ and case $b$. 
+
+In case $a$ if there is another elliptic point it has to be arising from a toric singularity with coordinates $(0, 1)$ and $(-1, u)$ with $u \leq -4$ and the subtorus once again corresponding to the horizontal line.
+%Rejig the above sentence.
+This cannot happen as every other row can only have denominators equal to $1$. So this case does not occur. Note a non toric singularity cannot occur otherwise the slope on the tailfan $[-\infty , 0)$ would be one and this would not be convex on $P_1$.
+
+For case $b$ we have exactly the same argument that it would have to be connected to a singularity with denominator greater than $1$, hence cannot occur. So this does not occur. 
+
+
+The next case is 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{4} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, \frac{1}{2} \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
+Once again two cases for $P_1$,  $[0, \frac{1}{4}]$ and $[\frac{1}{4}]$. If it is the first case then the denominator has to be greater than $2$ so does not occur. In the second case there is only one possibility: the other elliptic singularity is given by toric coordinates $(1, \, 4),$ $(-1, -2)$. The only way to get a denominator greater than 1 is on $P_2$ and have the arithmetic work out we get
+\[
+[\frac{1}{4}] \otimes P_1 + [\frac{1}{2}] \otimes P_2 + [0, -\, 1] \otimes P_3
+\]
+
+The final case is 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{3} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, \frac{1}{3} \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
+\end{ex}
 
 \begin{ex}
 As a Gorenstein surface singularity are of DuVal type we see that the minimal resolution can only admit maps to $\mb{F}_0$, $\mb{F}_1$ or $\mb{F}_2$. We now ask what possible torus actions can there be on these Hirzebruch surfaces such that we will only have DuVal singularities. For convenience we write the fan of $\mb{F}_n$ having rays generated by $(1,0)$, $(0,1)$, $(-1, n)$, $(0,-1)$. We can then write a subtorus as a vector $v \in N$.
