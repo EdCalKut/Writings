@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  21 JUN 2021 10:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  21 JUN 2021 10:05
 entering extended mode
 **./ComplexityOneLDP.tex
 (ComplexityOneLDP.tex
@@ -1179,7 +1179,11 @@ LaTeX Warning: Citation `Suss' on page 6 undefined on input line 334.
 
 LaTeX Warning: Citation `Br' on page 6 undefined on input line 341.
 
-[6] [7] [8] [9]
+[6]
+
+LaTeX Warning: Reference `basic bound' on page 7 undefined on input line 376.
+
+[7] [8] [9]
 
 LaTeX Warning: Reference `Theroem on curves' on page 10 undefined on input line
  511.
@@ -1240,18 +1244,27 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 710.
  (ComplexityOneLDP.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 710.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 710.
-Package rerunfilecheck Info: File `ComplexityOneLDP.out' has not changed.
-(rerunfilecheck)             Checksum: 16CF371E289947E6C84EF40AD21868FF;223.
 
+
+Package rerunfilecheck Warning: File `ComplexityOneLDP.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ComplexityOneLDP.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  16CF371E289947E6C84EF40AD21868FF;223.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 22326 strings out of 492970
- 417600 string characters out of 3127037
- 526711 words of memory out of 3000000
- 25541 multiletter control sequences out of 15000+200000
+ 22321 strings out of 492970
+ 417554 string characters out of 3127037
+ 526578 words of memory out of 3000000
+ 25536 multiletter control sequences out of 15000+200000
  12755 words of font info for 48 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,15n,82p,2012b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1275,9 +1288,9 @@ i10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP.pdf (14 pages, 257525 bytes).
+Output written on ComplexityOneLDP.pdf (14 pages, 255436 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
+ 172 PDF objects out of 1000 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
