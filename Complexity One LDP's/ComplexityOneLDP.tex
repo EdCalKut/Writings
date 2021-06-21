@@ -385,7 +385,7 @@ Let $X$ be a complexity one log del Pezzo surface with the following properties
 \item $X$ has only toric singularities
 \end{itemize}
 
-Then at least one of the elliptic points, $P_1$, is a singularity and when describing $P_1$ locally by a cone $\sigma \subset N$ and a ray $v \in N$. Then $v$ corresponds to a ray on the minimal resolution.
+Then at least one of the elliptic points, $P_1$, is a singularity and when describing $P_1$ and the torus action locally by a cone $\sigma \subset N$ and a ray $v \in N$. Then $v$ corresponds to a ray on the minimal resolution.
 \end{lem}
 
 \begin{proof}
@@ -395,19 +395,21 @@ Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to 
 
 \end{proof}
 
-We finish with a convenient way to interface between calculations in complexity one and toric geometry
-\begin{lem}
-Let $X$ be a complexity one surface with $[0, -\infty)$ corresponding to an elliptic fixed point. Let $D$ be an ample divisor. Then $D$ corresponds to a collection of functions $h_{P_i}$ with consistent linear part. Let $P \in \mb{P}^1$ be a point such that the fan over this point corresponds to a decomposition $0, \frac{p_1}{q_1}, \dots \, \frac{p_n}{q_n}$ with $p_i, \, q_i \geq 0$ then as a toric variety we have locally 
-
-\[
-Begin next Picture!!!!!!
+We finish with the following observation that helps shorten calculations.
+Let $X$ be a complexity one surface with the following polyhedral fan:
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, \right] \\
+P_4 & \left[d_1, \, \dots, \, d_{p-1}, 0\right]  \\
+\end{array}
 \]
-Assume $h_{P_i}(0) = 0$, s
-\end{lem}
+and a marking $\mb{Q}^+$.
+Also assume that the minimal resolution of $X$ contains a curve $E$ which is pointwise fixed by the action and which is contracted to elliptic point at positive infinity.
 
-\begin{rem}
-If we are considering a parabolic line instead of a fixed point then you have 
-\end{rem}
+Let $h$ be the piecewise linear function corresponding to $-K_X$. Then $h_P|_{[0, \, \infty)}$ is defined by a unique value $u \in \mb{Q}$. If $-K_X$ is ample then the only possible values for $d_{p-1}$ are the values $\frac{p}{q}$, with $q >0$, such that $\frac{q-1}{q} < u\frac{p}{q}$. 
+
 
 As there are a finite number of log del Pezzo surfaces, upto deformation, with Gorenstein index $k$ there can only be a finite number of singularities $S$ which can occur on such a surface. 
 
@@ -421,7 +423,10 @@ As an example we illustrate how this can classify Gorenstein log del Pezzo surfa
 
 \begin{ex}
 
-We start with the Gorenstein index $k = 1$, i.e the only singulairties are DuVal. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution, we iterate over these.
+We start with the Gorenstein index $k = 1$, i.e the only singulairties are DuVal. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution, we iterate over these. We illustrate this in the case that the singularity with which the action corresponds with a ray in the minimal resolution is an $A_n$ singularity. We assume that this singularity has polyhedral divisor with tail fan $[ 0, \, \infty)$. From now on we assume this without stating it.
+
+To make this easier we make two observations. The first is that if a fiber over a point $P_i$ is $[a_1 = \frac{p_1}{q_1} , \dots, a_n = \frac{p_n}{q_n}, \, 0]$ then $q_i = 1$. This follows via the above remarks, first, we know we get an $A_m$ singularity given by $(0, 1), \, (p_n,  \, q_n)$. Then, via the stated properties of our singularity, we have the slope of $h_P|_{[0, \, \infty)}$ is $-1$. So we need $\frac{q_n-1}{q_n} < \frac{-p_n}{q_n}$ which implies $p_n + q_n < 1$, hence if $q_n > 1$ then $p_n < -1$. Now every point on the line connecting $(p_n, \, q_n)$ to $(0, \, 1)$ has to satisfy this inequality. In particular there is a point $(-1, a)$ on this line, with $a  \in \mb{Z}$, satisfying the inequality, hence $ a \leq 1$. As $ a>0$ for $q_n>0$ we have the only possible value of $a$ is one. This corresponds to $q_n = 1$.
+
 \begin{itemize}
 
 \item  $A_1$
@@ -432,7 +437,7 @@ We start with the Gorenstein index $k = 1$, i.e the only singulairties are DuVal
 
 \item $A_4$
 
-\item $A_5$
+\item \begin{bf} $A_5$ Singularity \end{bf}
 
 This has several possible actions taking the first us the polyhedral divisor 
 \[\def\arraystretch{1.2}
@@ -462,9 +467,9 @@ P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
 P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
 \end{array}
 \]
-Once again two cases for $P_1$,  $[0, \frac{1}{4}]$ and $[\frac{1}{4}]$. If it is the first case then the denominator has to be greater than $2$ so does not occur. In the second case there is only one possibility: the other elliptic singularity is given by toric coordinates $(1, \, 4),$ $(-1, -2)$. The only way to get a denominator greater than 1 is on $P_2$ and have the arithmetic work out we get
+Once again two cases for $P_1$,  $[0, \frac{1}{4}]$ and $[\frac{1}{4}]$. If it is the first case then the denominator has to be greater than $2$ so does not occur. In the second case there is only one possibility: the other elliptic singularity is given by toric coordinates $(1, \, 4),$ $(-1, -2)$. The only way to get a denominator greater than 1 is on $P_2$ and  the only choice is if this is the original $\frac{1}{2}$ hence we get
 \[
-[\frac{1}{4}] \otimes P_1 + [\frac{1}{2}] \otimes P_2 + [0, -\, 1] \otimes P_3
+\left[\frac{1}{4} \right] \otimes P_1 + \left[\frac{1}{2} \right] \otimes P_2 + [0, -\, 1] \otimes P_3
 \]
 
 The final case is 
@@ -476,7 +481,24 @@ P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
 P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
 \end{array}
 \]
-This leads to a lot more cases, as follows.
+This leads to a lot more cases, as follows. Once again possible choices for $P_1$ and $P_2$ are $\left[ 0, \, \frac{1}{3} \right]$ or $\left[ \frac{1}{3} \right]$. Once again denoting these by case $a$ and case $b$. In case $a$ it needs to connect to a point with denominator $ u \in \{2, \, 5, \, 8 \dots \}$, however it is impossible to construct any of these denominators, so this does no occur. In the case $b$, we either have the $A_1$ singularity with coordinates $(1, 3),\, (-1, -1)$ or the $A_2$ singularity given by $(1, 3),\, (-2, -3)$, other values result in non compatible denominators. If we had the singularity given by $(1, 3),\, (-1, -1)$, then the polyhedral divisor over $P_2$ would have to be $\left[ 0, \frac{1}{3} \right]$ which we have already shown cannot occur. If we have the $A_2$ singularity then this involves the only way this can be constructed is via 
+\[
+\left[\frac{1}{3} \right] \otimes P_1 + \left[\frac{1}{3} \right] \otimes P_2 + [0, -\, 1] \otimes P_3
+\]
+This finishes the $A_5$ case.
+
+\item \begin{bf} $A_n$ Singularity for $n \geq 6$ \end{bf}
+
+This results in a singularity given by surface given by 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{u} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, \frac{1}{v} \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
+With $u+v = n+1$ and $u \geq v$. Once again the only choices for $P_1$ are $\left[ 0, \, \frac{1}{u} \right]$ or $\left[ \frac{1}{u} \right]$. As always these are denoted by case $a$ and case $b$ respectively. In case $a$ the only way this can be extended to a Gorenstein singularity is attaching it to a value with denominator greater than $1$ and this can only happen if that value is equal to $u$. To be joined to $u$ we need the cone $(0,\, 1)$, $(1 -ku, \, -u)$ to be Gorenstein for some value $k$. In case $b$ exactly the same phenomenon happens and once again the denominator 
 \end{ex}
 
 \begin{ex}

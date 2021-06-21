@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  17 JUN 2021 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  21 JUN 2021 09:47
 entering extended mode
 **./ComplexityOneLDP.tex
 (ComplexityOneLDP.tex
@@ -1179,67 +1179,67 @@ LaTeX Warning: Citation `Suss' on page 6 undefined on input line 334.
 
 LaTeX Warning: Citation `Br' on page 6 undefined on input line 341.
 
-[6] [7] [8]
+[6] [7] [8] [9]
 
-LaTeX Warning: Reference `Theroem on curves' on page 9 undefined on input line 
-486.
+LaTeX Warning: Reference `Theroem on curves' on page 10 undefined on input line
+ 508.
 
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 539--544
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 539--544
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 561--566
 
  []
 
 
-LaTeX Warning: Reference `T:ZDQ' on page 11 undefined on input line 547.
-
-
-LaTeX Warning: Citation `IMT' on page 11 undefined on input line 547.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 11 undefined on input line 550.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 11 undefined on input line 550.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 547--559
+Underfull \hbox (badness 10000) in paragraph at lines 561--566
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--559
+LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 569.
+
+
+LaTeX Warning: Citation `IMT' on page 12 undefined on input line 569.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 572.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 572.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--559
+Underfull \hbox (badness 10000) in paragraph at lines 569--581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--559
+Underfull \hbox (badness 10000) in paragraph at lines 569--581
 
  []
 
-[11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--581
+
+ []
+
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-Underfull \hbox (badness 10000) in paragraph at lines 562--566
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 584--588
 
  []
 
-Excluding 'comment' comment. [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
+Excluding 'comment' comment. [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
  (ComplexityOneLDP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 685.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 707.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
 Package rerunfilecheck Info: File `ComplexityOneLDP.out' has not changed.
 (rerunfilecheck)             Checksum: 16CF371E289947E6C84EF40AD21868FF;223.
 
@@ -1248,10 +1248,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22325 strings out of 492970
- 417596 string characters out of 3127037
+ 22326 strings out of 492970
+ 417600 string characters out of 3127037
  526711 words of memory out of 3000000
- 25540 multiletter control sequences out of 15000+200000
+ 25541 multiletter control sequences out of 15000+200000
  12755 words of font info for 48 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,15n,82p,2012b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1275,9 +1275,9 @@ i10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP.pdf (13 pages, 252691 bytes).
+Output written on ComplexityOneLDP.pdf (14 pages, 257254 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
+ 186 PDF objects out of 1000 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
