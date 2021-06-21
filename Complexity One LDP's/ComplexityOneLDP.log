@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  21 JUN 2021 09:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  21 JUN 2021 10:04
 entering extended mode
 **./ComplexityOneLDP.tex
 (ComplexityOneLDP.tex
@@ -1182,47 +1182,47 @@ LaTeX Warning: Citation `Br' on page 6 undefined on input line 341.
 [6] [7] [8] [9]
 
 LaTeX Warning: Reference `Theroem on curves' on page 10 undefined on input line
- 508.
+ 511.
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 561--566
+Underfull \hbox (badness 10000) in paragraph at lines 564--569
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--566
+Underfull \hbox (badness 10000) in paragraph at lines 564--569
 
  []
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 569.
-
-
-LaTeX Warning: Citation `IMT' on page 12 undefined on input line 569.
 
 
 LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 572.
 
 
-LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 572.
+LaTeX Warning: Citation `IMT' on page 12 undefined on input line 572.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--581
-
- []
+LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 575.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--581
-
- []
+LaTeX Warning: Reference `T:ZDQ' on page 12 undefined on input line 575.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--581
+Underfull \hbox (badness 10000) in paragraph at lines 572--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--581
+Underfull \hbox (badness 10000) in paragraph at lines 572--584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--584
 
  []
 
@@ -1230,16 +1230,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 569--581
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
-Underfull \hbox (badness 10000) in paragraph at lines 584--588
+Underfull \hbox (badness 10000) in paragraph at lines 587--591
 
  []
 
 Excluding 'comment' comment. [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 710.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 710.
  (ComplexityOneLDP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 707.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 710.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 710.
 Package rerunfilecheck Info: File `ComplexityOneLDP.out' has not changed.
 (rerunfilecheck)             Checksum: 16CF371E289947E6C84EF40AD21868FF;223.
 
@@ -1275,7 +1275,7 @@ i10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP.pdf (14 pages, 257254 bytes).
+Output written on ComplexityOneLDP.pdf (14 pages, 257525 bytes).
 PDF statistics:
  186 PDF objects out of 1000 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
