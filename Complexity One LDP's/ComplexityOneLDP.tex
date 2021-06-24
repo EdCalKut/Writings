@@ -100,12 +100,12 @@ X \arrow[rd, dotted] & \tilde{X} \arrow[l] \arrow[d]\\
 \end{tikzcd}
 \]
 
-Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a cone the tail cone $\delta$ is the set of $v \in N$ such that for all $u \in F_i$, $ \forall v \in \delta$ then $u+v \in F_i$.
+Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a polyhedral subdivision such that the tail cone $\delta$ is the set of $v \in N$ such that $F_i$ is invariant under the translation, i.e $\delta = \{ v |\, v(F) subset F \}$.
 \begin{dfn}
 Let $C$ be a nonsingular curve then we define a polyhedral divisor to be the pair $(\mathcal{D} = \sum_{i = 1}^k F_i \otimes P_i$, $\delta)$ where
 \begin{itemize}
 \item $P_i \in C$ are divisors on $C$ 
-\item $F_i$ is a cone in $N_\mathbb{Q} \cong \mathbb{Q}^{n-1}$ and all $F_i$ have tail cone $\delta \subset N$.  We allow the cone $F_i$ to be $\varnothing$.
+\item $F_i$ is a polyhedron contained in $N_\mathbb{Q} \cong \mathbb{Q}^{n-1}$ and all $F_i$ have tail cone $\delta \subset N$.  We allow the cone $F_i$ to be $\varnothing$.
 \end{itemize}
 Given an element $v \in M$, the dual lattice of $N$, and the polyhedral divisor $\mathcal{D}$ we define
 \[
@@ -512,7 +512,7 @@ Every other case is covered by our discussion at the beginning or the example. W
 
 In case a), the only denominators that occur which are less than or equal to $v$ are $\frac{1}{u-2}$ and $\frac{1}{u-1}$ however as $u \geq 3$, as $N \geq 6$ we have neither of these values are equal to $u$ or $1$ so this cannot occur.
 
-In case b). 
+In case b), 
 \end{ex}
 
 \begin{ex}
