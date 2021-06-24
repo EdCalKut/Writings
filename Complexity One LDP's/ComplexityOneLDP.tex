@@ -102,7 +102,7 @@ X \arrow[rd, dotted] & \tilde{X} \arrow[l] \arrow[d]\\
 
 Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a cone the tail cone $\delta$ is the set of $v \in N$ such that for all $u \in F_i$, $ \forall v \in \delta$ then $u+v \in F_i$.
 \begin{dfn}
-Let $C$ be a non singular curve then we define a polyhedral divisor to be the pair $(\mathcal{D} = \sum_{i = 1}^k F_i \otimes P_i$, $\delta)$ where
+Let $C$ be a nonsingular curve then we define a polyhedral divisor to be the pair $(\mathcal{D} = \sum_{i = 1}^k F_i \otimes P_i$, $\delta)$ where
 \begin{itemize}
 \item $P_i \in C$ are divisors on $C$ 
 \item $F_i$ is a cone in $N_\mathbb{Q} \cong \mathbb{Q}^{n-1}$ and all $F_i$ have tail cone $\delta \subset N$.  We allow the cone $F_i$ to be $\varnothing$.
@@ -118,11 +118,11 @@ Y_\mathcal{D} = C - \{P_j\}_{j \text{ where } F_j = \varnothing}
 \end{dfn}
 
 This defines a divisor on a subset of $C$. We insist that $\mathcal{D}$ satisfies the following conditions:
-\begin{itemize} 
+\begin{enumerate} 
 \item $\mathcal{D}(u)$ is Cartier for all $u \in \delta^\vee $
 \item $\mathcal{D}(u)$ is semiample for all $u \in \delta^\vee$
 \item $\mathcal{D}(u)$ is big for all $u$ in the relative interior of $\delta^\vee$
-\end{itemize}
+\end{enumerate}
 This is to ensure that it gives an $n$-dimensional variety, and to ensure that it is separated \cite{PS}.
 
 
@@ -423,12 +423,13 @@ As an example we illustrate how this can classify Gorenstein log del Pezzo surfa
 
 \begin{ex}\rm
 
-We start with the Gorenstein index $k = 1$, i.e the only singulairties are DuVal. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution, we iterate over these. We illustrate this in the case that the singularity with which the action corresponds with a ray in the minimal resolution is an $A_n$ singularity. We assume that this singularity has polyhedral divisor with tail fan $[ 0, \, \infty)$. From now on we assume this without stating it.
+We start with the Gorenstein index $k = 1$, i.e the only singulairties are DuVal. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution. We iterate over all possible singularities and all possible actions until we can show they do not exist. We illustrate this in the case that the singularity with which the action corresponds with a ray in the minimal resolution is an $A_n$ singularity. We assume that this singularity has polyhedral divisor with tail cone $[ 0, \, \infty)$. From now on we assume this without stating it.
 
 To make this easier we make two observations. The first is that if a fiber over a point $P_i$ is $[a_1 = \frac{p_1}{q_1} , \dots, a_n = \frac{p_n}{q_n}, \, 0]$ then $q_i = 1$. This follows via the above remarks, first, we know we get an $A_m$ singularity given by $(0, 1), \, (p_n,  \, q_n)$. Then, via the stated properties of our singularity, we have the slope of $h_P|_{[0, \, \infty)}$ is $-1$. So we need $\frac{q_n-1}{q_n} < \frac{-p_n}{q_n}$ which implies $p_n + q_n < 1$, hence if $q_n > 1$ then $p_n < -1$. Now every point on the line connecting $(p_n, \, q_n)$ to $(0, \, 1)$ has to satisfy this inequality. In particular there is a point $(-1, a)$ on this line, with $a  \in \mb{Z}$, satisfying the inequality, hence $ a \leq 1$. As $ a>0$ for $q_n>0$ we have the only possible value of $a$ is one. This corresponds to $q_n = 1$.
 
 
-The second observation is let $D = [\frac{1}{u} \otimes P_1 + \frac{1}{v} \otimes P_2$. be a polyhedral divisor with tail cone $[ 0 , \, \infty)$. We can assume without loss of generality that $u \geq v$ then if this gives rise 
+The second observation is let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{v} \otimes P_2$. be a polyhedral divisor with tail cone $[ 0 , \, \infty)$. We can assume without loss of generality that $u \geq v$. Then if $u>v+2$ and $v \geq 2$ then there are no complexity one Gorenstein log del Pezzo surfaces which contain $\mathcal{D}$ as a polyhedral cone. We not as $u,  v \geq 2$ we have the only possible poyhedral fans over $P1$ are $[0, \, \frac{1}{u}
+]$ and $[\frac{1}{u}]$, similarly for $P_2$. Viewing this from a toric perspective the only points that can be connected to $(1,u)$ or $(0,1)$ while preserving the necessary convexity are less than $-v$. This implies as a complexity one surface this would need a denominator on another fiber less than $v$, but this cannot happen. 
 
 \begin{itemize}
 
@@ -490,7 +491,7 @@ This leads to a lot more cases, as follows. Once again possible choices for $P_1
 \]
 This finishes the $A_5$ case.
 
-\item \begin{bf} $A_n$ Singularity for $n \geq 6$ \end{bf}
+\item \begin{bf} $A_N$ Singularity for $N \geq 6$ \end{bf}
 
 This results in a singularity given by surface given by 
 \[\def\arraystretch{1.2}
@@ -501,7 +502,17 @@ P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
 P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
 \end{array}
 \]
-With $u+v = n+1$ and $u \geq v$. Once again the only choices for $P_1$ are $\left[ 0, \, \frac{1}{u} \right]$ or $\left[ \frac{1}{u} \right]$. As always these are denoted by case $a$ and case $b$ respectively. In case $a$ the only way this can be extended to a Gorenstein singularity is attaching it to a value with denominator greater than $1$ and this can only happen if that value is equal to $u$. To be joined to $u$ we need the cone $(0,\, 1)$, $(1 -ku, \, -u)$ to be Gorenstein for some value $k$. In case $b$ exactly the same phenomenon happens and once again the denominator 
+We split this into three case 
+\begin{enumerate}[label =\alph*)]
+\item $u = v$
+\item $u = v + 1$
+\item $u = v + 2$
+\end{enumerate}
+Every other case is covered by our discussion at the beginning or the example. We note that which of these cases occur on the value of $N$. We note as $N \geq 6$ this implies $u \geq 4$ and $v \geq 3$.
+
+In case a), the only denominators that occur which are less than or equal to $v$ are $\frac{1}{u-2}$ and $\frac{1}{u-1}$ however as $u \geq 3$, as $N \geq 6$ we have neither of these values are equal to $u$ or $1$ so this cannot occur.
+
+In case b). 
 \end{ex}
 
 \begin{ex}
