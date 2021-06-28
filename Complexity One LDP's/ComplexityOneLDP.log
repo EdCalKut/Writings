@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  24 JUN 2021 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  28 JUN 2021 09:35
 entering extended mode
 **./ComplexityOneLDP.tex
 (ComplexityOneLDP.tex
@@ -573,6 +573,15 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
+\tikz\libraries\tikzlibraryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgf
+libraryarrows.code.tex"
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen173
+))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tikz-cd\tikz-cd.sty
 "
 Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
@@ -590,10 +599,10 @@ File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgf
 libraryarrows.meta.code.tex"
 File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
-\pgfarrowinset=\dimen173
-\pgfarrowlength=\dimen174
-\pgfarrowwidth=\dimen175
-\pgfarrowlinewidth=\dimen176
+\pgfarrowinset=\dimen174
+\pgfarrowlength=\dimen175
+\pgfarrowwidth=\dimen176
+\pgfarrowlinewidth=\dimen177
 )))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx\algpse
 udocode.sty"
@@ -628,13 +637,13 @@ Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 y"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen177
-\captionmargin@=\dimen178
-\captionwidth=\dimen179
-\caption@tempdima=\dimen180
-\caption@indent=\dimen181
-\caption@parindent=\dimen182
-\caption@hangindent=\dimen183
+\captionmargin=\dimen178
+\captionmargin@=\dimen179
+\captionwidth=\dimen180
+\caption@tempdima=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
 )
 Package caption Info: AMS or SMF document class.
 \c@caption@flags=\count132
@@ -664,7 +673,7 @@ s
 ty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip65
-\enit@outerparindent=\dimen184
+\enit@outerparindent=\dimen185
 \enit@toks=\toks42
 \enit@inbox=\box42
 \enitdp@description=\count136
@@ -718,8 +727,8 @@ ex" `pst-fp' v0.05, 2010/01/17 (hv)
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 util-common.tex"
 \pgfutil@everybye=\toks45
-\pgfutil@tempdima=\dimen185
-\pgfutil@tempdimb=\dimen186
+\pgfutil@tempdima=\dimen186
+\pgfutil@tempdimb=\dimen187
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 util-common-lists.tex"))
@@ -729,24 +738,24 @@ keys.code.tex")
 for.code.tex"
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.
 code.tex")
-\pgffor@iter=\dimen187
-\pgffor@skip=\dimen188
+\pgffor@iter=\dimen188
+\pgffor@skip=\dimen189
 \pgffor@stack=\toks46
 \pgffor@toks=\toks47
 )
 \psLoopIndex=\count147
 
 `PSTricks' v2.86  <2018/08/23> (tvz,hv)
-\pst@dima=\dimen189
-\pst@dimb=\dimen190
-\pst@dimc=\dimen191
-\pst@dimd=\dimen192
-\pst@dimg=\dimen193
-\pst@dimh=\dimen194
-\pst@dimm=\dimen195
-\pst@dimn=\dimen196
-\pst@dimo=\dimen197
-\pst@dimp=\dimen198
+\pst@dima=\dimen190
+\pst@dimb=\dimen191
+\pst@dimc=\dimen192
+\pst@dimd=\dimen193
+\pst@dimg=\dimen194
+\pst@dimh=\dimen195
+\pst@dimm=\dimen196
+\pst@dimn=\dimen197
+\pst@dimo=\dimen198
+\pst@dimp=\dimen256
 \pst@hbox=\box43
 \pst@ibox=\box44
 \pst@boxg=\box45
@@ -765,24 +774,24 @@ code.tex")
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pstricks\pstricks
 .con")
-\psunit=\dimen256
-\psxunit=\dimen257
-\psyunit=\dimen258
+\psunit=\dimen257
+\psxunit=\dimen258
+\psyunit=\dimen259
 \pst@C@@rType=\count159
-\pslinewidth=\dimen259
-\psk@startLW=\dimen260
-\psk@endLW=\dimen261
+\pslinewidth=\dimen260
+\psk@startLW=\dimen261
+\psk@endLW=\dimen262
 \pst@customdefs=\toks49
-\pslinearc=\dimen262
-\pst@symbolStep=\dimen263
-\pst@symbolWidth=\dimen264
-\pst@symbolLinewidth=\dimen265
+\pslinearc=\dimen263
+\pst@symbolStep=\dimen264
+\pst@symbolWidth=\dimen265
+\pst@symbolLinewidth=\dimen266
 \everypsbox=\toks50
-\psframesep=\dimen266
-\pslabelsep=\dimen267
-\sh@wgridXunit=\dimen268
-\sh@wgridYunit=\dimen269
-\pst@shift=\dimen270
+\psframesep=\dimen267
+\pslabelsep=\dimen268
+\sh@wgridXunit=\dimen269
+\sh@wgridYunit=\dimen270
+\pst@shift=\dimen271
 )
 File: pstricks.tex 2018/08/23 v2.86 `PSTricks' (tvz,hv)
 
@@ -840,7 +849,7 @@ Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
 y"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen271
+\@linkdim=\dimen272
 \Hy@linkcounter=\count160
 \Hy@pagecounter=\count161
 
@@ -874,7 +883,7 @@ Package hyperref Info: Bookmarks ON on input line 4788.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5141.
-\XeTeXLinkMargin=\dimen272
+\XeTeXLinkMargin=\dimen273
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\bitset.s
 ty"
@@ -886,8 +895,8 @@ Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count164
-\Field@Width=\dimen273
-\Fld@charsize=\dimen274
+\Field@Width=\dimen274
+\Fld@charsize=\dimen275
 Package hyperref Info: Hyper figures OFF on input line 6396.
 Package hyperref Info: Link nesting OFF on input line 6401.
 Package hyperref Info: Hyper index ON on input line 6404.
@@ -940,26 +949,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
  (ComplexityOneLDP.aux)
 \openout1 = `ComplexityOneLDP.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Try loading font information for U+msa on input line 84.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1003,13 +1012,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count171
-\scratchdimen=\dimen275
+\scratchdimen=\dimen276
 \scratchbox=\box50
 \nofMPsegments=\count172
 \nofMParguments=\count173
 \everyMPshowfont=\toks51
 \MPscratchCnt=\count174
-\MPscratchDim=\dimen276
+\MPscratchDim=\dimen277
 \MPnumerator=\count175
 \makeMPintoPDFobject=\count176
 \everyMPtoPDFconversion=\toks52
@@ -1033,7 +1042,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring ON on input line 81.
+Package hyperref Info: Link coloring ON on input line 84.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -1049,38 +1058,38 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count177
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
  (ComplexityOneLDP.out) (ComplexityOneLDP.out)
 \@outlinefile=\write5
 \openout5 = `ComplexityOneLDP.out'.
 
 
 
-LaTeX Warning: Citation `Suss' on page 1 undefined on input line 86.
+LaTeX Warning: Citation `Suss' on page 1 undefined on input line 89.
 
 
-LaTeX Warning: Citation `Huggenberger' on page 1 undefined on input line 86.
+LaTeX Warning: Citation `Huggenberger' on page 1 undefined on input line 89.
 
 
-LaTeX Warning: Citation `IMT' on page 1 undefined on input line 86.
+LaTeX Warning: Citation `IMT' on page 1 undefined on input line 89.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
 
-LaTeX Warning: Citation `Cox' on page 1 undefined on input line 90.
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
 
 
-LaTeX Warning: Citation `Altmann' on page 1 undefined on input line 91.
+LaTeX Warning: Citation `Cox' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Citation `Altmann' on page 1 undefined on input line 94.
 
 [1
 Non-PDF special ignored!
@@ -1099,11 +1108,7 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 {C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Citation `PS' on page 2 undefined on input line 126.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Citation `Suss' on page 2 undefined on input line 208.
+LaTeX Warning: Citation `PS' on page 2 undefined on input line 129.
 
 
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
@@ -1112,147 +1117,168 @@ Package Fancyhdr Warning: \headheight is too small (8.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 211--215
+
+LaTeX Warning: Citation `Suss' on page 3 undefined on input line 159.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--215
+Underfull \hbox (badness 10000) in paragraph at lines 162--167
 
  []
 
 
-LaTeX Warning: Reference `Tech' on page 3 undefined on input line 218.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+[4]
+Overfull \hbox (120.6313pt too wide) detected at line 304
+[]
+ []
+
+
+Underfull \vbox (badness 1163) has occurred while \output is active []
+
+ [5]
+
+LaTeX Warning: Reference `Tech' on page 6 undefined on input line 326.
 
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 225.
+d on input line 333.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-[3]
-
-LaTeX Warning: Citation `PS' on page 4 undefined on input line 234.
-
-
-LaTeX Warning: Citation `PS' on page 4 undefined on input line 252.
-
-[4]
-
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 258.
-
-
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 264.
-
-
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 266.
-
-
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 274.
-
-
-LaTeX Warning: Citation `PS' on page 5 undefined on input line 283.
-
-
-LaTeX Warning: Citation `S' on page 5 undefined on input line 287.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--288
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 340--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--288
+LaTeX Warning: Citation `PS' on page 7 undefined on input line 342.
 
- []
+[7]
 
-[5] Excluding 'comment' comment.
-
-LaTeX Warning: Citation `Suss' on page 6 undefined on input line 326.
+LaTeX Warning: Citation `PS' on page 8 undefined on input line 360.
 
 
-LaTeX Warning: Citation `Suss' on page 6 undefined on input line 334.
+LaTeX Warning: Citation `PS' on page 8 undefined on input line 366.
 
 
-LaTeX Warning: Citation `Br' on page 6 undefined on input line 341.
-
-[6] [7] [8]
-Underfull \vbox (badness 1371) has occurred while \output is active []
-
- [9]
-[10]
-
-LaTeX Warning: Reference `Theroem on curves' on page 11 undefined on input line
- 522.
-
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 575--580
-
- []
+LaTeX Warning: Citation `PS' on page 8 undefined on input line 372.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 575--580
+LaTeX Warning: Citation `PS' on page 8 undefined on input line 374.
+
+
+LaTeX Warning: Citation `PS' on page 8 undefined on input line 382.
+
+
+LaTeX Warning: Citation `PS' on page 8 undefined on input line 391.
+
+
+LaTeX Warning: Citation `S' on page 8 undefined on input line 395.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--396
 
  []
 
 
-LaTeX Warning: Reference `T:ZDQ' on page 13 undefined on input line 583.
-
-
-LaTeX Warning: Citation `IMT' on page 13 undefined on input line 583.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 13 undefined on input line 586.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 13 undefined on input line 586.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 583--595
+Underfull \hbox (badness 10000) in paragraph at lines 388--396
 
  []
 
+[8] Excluding 'comment' comment.
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--595
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 583--595
-
- []
+LaTeX Warning: Citation `Suss' on page 9 undefined on input line 434.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--595
+LaTeX Warning: Citation `Suss' on page 9 undefined on input line 442.
 
- []
+[9]
 
+LaTeX Warning: Citation `Br' on page 10 undefined on input line 449.
+
+[10] [11]
+Underfull \vbox (badness 2443) has occurred while \output is active []
+
+ [12]
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 598--602
+
+LaTeX Warning: Reference `Theroem on curves' on page 14 undefined on input line
+ 630.
+
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 683--688
 
  []
 
-Excluding 'comment' comment. [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 721.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 721.
+
+Underfull \hbox (badness 10000) in paragraph at lines 683--688
+
+ []
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 16 undefined on input line 691.
+
+
+LaTeX Warning: Citation `IMT' on page 16 undefined on input line 691.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 16 undefined on input line 694.
+
+
+LaTeX Warning: Reference `T:ZDQ' on page 16 undefined on input line 694.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--703
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 706--710
+
+ []
+
+
+Underfull \vbox (badness 3646) has occurred while \output is active []
+
+ [17]
+Excluding 'comment' comment. [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 829.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 829.
  (ComplexityOneLDP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 721.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 721.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 829.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 829.
 Package rerunfilecheck Info: File `ComplexityOneLDP.out' has not changed.
-(rerunfilecheck)             Checksum: 16CF371E289947E6C84EF40AD21868FF;223.
+(rerunfilecheck)             Checksum: 366AC65E753F12E69D9BB43C41F320DC;273.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22332 strings out of 492970
- 417637 string characters out of 3127037
- 523711 words of memory out of 3000000
- 25541 multiletter control sequences out of 15000+200000
+ 23163 strings out of 492970
+ 436296 string characters out of 3127037
+ 535239 words of memory out of 3000000
+ 26352 multiletter control sequences out of 15000+200000
  12755 words of font info for 48 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,15n,82p,2012b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1276,9 +1302,9 @@ i10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP.pdf (14 pages, 259194 bytes).
+Output written on ComplexityOneLDP.pdf (18 pages, 280726 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

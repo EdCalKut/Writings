@@ -13,6 +13,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{tikz}
+\usetikzlibrary{arrows}
 \usepackage{tikz-cd}
 \usepackage[noend]{algpseudocode}
 \usepackage{caption}
@@ -72,6 +73,8 @@
 
 \tikzstyle{Dashed Line}=[-, draw=blue, dashed]
 \tikzstyle{none} = []
+\tikzstyle{new edge style 1}=[<->, thick]
+\tikzstyle{new edge style 2}=[{<- left hook}]
 
 
 
@@ -140,68 +143,16 @@ This corresponds to an inclusion of schemes. We make the following comment that 
 \]
 is the same as taking the divisors 
 \[
-\mathcal{D_i} = F_i \otimes P_i  + \sum_{j=1, \, j \neq i} \varnothing \otimes P_j
+\mathcal{D}_i = F_i \otimes P_i  + \sum_{j=1, \, j \neq i} \varnothing \otimes P_j
 \]
-and then glueing these affine varieties together along the affine patch defined by $C-P_i - P_j$ for all $P_i$, $P_j$.
-
-\begin{comment}
-\begin{figure}[htbp]
-\psset{unit=0.95cm}
-\begin{pspicture}(0,-6)(12,0)
-%\psgrid(0,0)(0,-8)(12,0)
-\psframe[linecolor=white](0.5,-4.5)(3.5,-1.5)
+and then glueing these affine varieties together along the affine patch defined by $C-P_i - P_j$ for all $P_i$, $P_j$. We say that if the tail cone of a polyhedral divisor $\mathcal{D}$ is non zero and there is no point $P$ such that $\mathcal{D}|_P = \varnothing$ then $\mathcal{D}$ is marked. The variety $\widetilde{X}$ is defined to be the variety such that the cone is not marked.
 
 
-\psline{->}(2,-3)(4,-3)
-\psline{->}(2,-3)(0,-1)
-\psline{<->}(2,-5)(2,-1)
-\psline[linewidth=0.5pt, linestyle=dotted]{-}(0,-1.8)(4,-1.8)
-\psline[linewidth=0.5pt, linestyle=dotted]{-}(0,-4.2)(4,-4.2)
-
-\qdisk(0.5,-1.5){1pt}
-\rput[bl]{0}(2.7,-2.15){$\sigma_0$}
-\rput[bl]{0}(1.4,-2.15){$\sigma_1$}
-\rput[bl]{0}(0.8,-3.3){$\sigma_2$}
-\rput[bl]{0}(2.7,-4){$\sigma_3$}
-\rput[tr]{0}(1.4,-1.2){\tiny{$(-1,a)$}}
-\rput[bl]{0}(1.8,-5.5){$\mathbb{F}_a$}
+We now introduce the notion of a polyhedral fan. Consider a collection of polyhedral divisors $\mathcal{S} = \{ \mathcal{D}_i \}$ such that the tail cones form a fan in the sense of toric geometry, we call this the tail fan. Given $\mathcal{S} \ni \mathcal{D}_i = \sum \sigma^i_j \otimes P_j$ then  we can make the divisor $\mathcal{D} = \sum \tau_j \otimes P_j$ where $\tau_j$ a face of each cone corresponding to a face of the tail cone. If $\mathcal{D} \in \mathcal{S}$ for all possible faces of all the tail cone, then this is a polyhedral fan. As this is stated above this makes no mention of how this behaves with respect to a divisor $\mathcal{D} = \sum \sigma_i \otimes P_i + \varnothing \otimes P$. 
+To do this we add that if given a face of the tail fan $\delta$ there is associated polyhedral divisor $\mathcal{D} = \sum \sigma_i \otimes P_i$ with $\delta$ as its tail cone. We then insist that if a cone in the tail fan is not marked then every face of the cone is also not marked. If the collection $\mathcal{S}$ satisfies these conditions then we call it a polyhedral fan.
 
 
-\psline{<-|}(6,-3)(8,-3)
-\psline{|->}(8,-3)(10,-3)
-%\uput*[270](8,-3){$0$}
-\rput[bl]{0}(10.7,-3){\textnormal{tailfan}}
-
-
-\psline{<-|}(6,-1.8)(7.25,-1.8)
-\psline{-|}(7.25,-1.8)(8,-1.8)
-\psline{->}(8,-1.8)(10,-1.8)]
-\uput*[270](7.1,-1.8){${\tiny -\frac{1}{a}}$}
-\rput[bl]{0}(11,-1.8){$\mathcal{S}_0$}
-\rput[bl]{0}(9,-1.6){$\mathcal{D}_{\sigma_0}$}
-\rput[bl]{0}(6.5,-1.6){$\mathcal{D}_{\sigma_2}$}
-\rput[bl]{0}(7.3,-1.6){$\mathcal{D}_{\sigma_1}$}
-
-
-\psline{<-|}(6,-4.2)(8,-4.2)
-\psline{|->}(8,-4.2)(10,-4.2)
-\rput[bl]{0}(11,-4.2){$\mathcal{S}_{\infty}$}
-\rput[bl]{0}(9,-4){$\mathcal{D}_{\sigma_3}$}
-\rput[bl]{0}(6.5,-4){$\mathcal{D}_{\sigma_2}$}
-\rput[bl]{0}(8,-5.5){$\mathcal{S}$}
-
-\psline{|->}(5,-3)(5,-1)
-\psline{|->}(5,-3)(5,-5)
-%\qdisk(5,-1.8){1pt}
-%\qdisk(5,-4.2){1pt}
-%\qdisk(5,-3){1.5pt}
-\rput[bl]{0}(4.5,-5.5){$Y=\mathbb{P}^1$}
-
-
-\end{pspicture}
-\caption{Divisorial fan associated to $\mathbb{F}_a$.}
-\end{figure}
-\end{comment}
+Given a complexity one projective variety $X$ over a curve $C$ this corresponds to a polyhedral fan with the tail fan spanning $N$. Analaously to the case in cones, the variety $\widetilde{X}$ is defined to be the complexity one variety with the same tail fan and polyhedral divisors however every cone is not marked. The action of the $(\mb{C}^\times)^{n-1}$ on $\widetilde{X}$ corresponds to a fibration over $C$ with general fiber $X_t$ equal to the toric variety defined by the tail fan. The degenerate fibers are then described by the polyhedral fans. 
 
 
 
@@ -209,9 +160,166 @@ In the case of surfaces of complexity one we often use the notation of fansy div
 \[
 \mathcal{D}_i = [a_i, \infty) \otimes P_i + \sum_{\substack{j = 1 \\ j \neq i}}^n \varnothing \otimes P_j
 \]
-Then this gives rise to a nice quotient map down base curve with respect to the torus action, i.e  the map to $\tilde{X}$ is a local isomorphism. If this is not the case however, then we are left with a bad quotient. These are the only two cases that can occur, in the surface case. In the language of fansy divisors we say if we mean the latter case we denote it with $\mathbb{Q}^+$, if we mean the other the earlier case, we do no denote it at all. In this way fansy divisor uniquely specify polyhedral fans.
+\textbf{Change this paragraph}
+Then this gives rise to a nice quotient map down base curve with respect to the torus action, i.e  the map to $\tilde{X}$ is a local isomorphism. If this is not the case however, then we are left with a bad quotient. In the surface case, there are the only two cases that can occur. In the language of fansy divisors we say if we mean the latter case we denote it with $\mathbb{Q}^+$, if we mean the other the earlier case, we do no denote it at all. In this way fansy divisor uniquely specify polyhedral fans.
 \\
 \\
+\section{ Example}
+
+\begin{ex}\rm
+Consider the following polyhedral fan with marking $\mb{Q}^\pm$
+\[
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-7, 4) {};
+		\node [style=none] (1) at (-7, 4.25) {};
+		\node [style=none] (2) at (-7, 3.75) {};
+		\node [style=none] (3) at (-3, 4) {};
+		\node [style=none] (4) at (-3, 4.25) {};
+		\node [style=none] (5) at (-3, 3.75) {};
+		\node [style=none] (6) at (0, 4) {};
+		\node [style=none] (7) at (-10, 4) {};
+		\node [style=none] (14) at (0, 2) {};
+		\node [style=none] (15) at (-10, 2) {};
+		\node [style=none] (16) at (-4, 1.75) {};
+		\node [style=none] (17) at (-4, 2.25) {};
+		\node [style=none] (18) at (-10, 0) {};
+		\node [style=none] (19) at (-6, 0.25) {};
+		\node [style=none] (20) at (-6, -0.25) {};
+		\node [style=none] (21) at (0, 0) {};
+		\node [style=none] (22) at (-7, 3.25) {};
+		\node [style=none] (23) at (-7, 3.25) {-1};
+		\node [style=none] (24) at (-3, 3.25) {1};
+		\node [style=none] (25) at (-4, 1.25) {};
+		\node [style=none] (26) at (-4, 1.25) {$\frac{1}{2}$};
+		\node [style=none] (27) at (-6, -0.75) {};
+		\node [style=none] (28) at (-6, -0.75) {$-\frac{1}{2}$};
+		\node [style=none] (29) at (-10, -2) {};
+		\node [style=none] (30) at (0, -2) {};
+		\node [style=none] (31) at (-5, -2) {};
+		\node [style=none] (32) at (-5, -2.75) {};
+		\node [style=none] (33) at (-5, -2.75) {0};
+		\node [style=none] (34) at (2, 5) {};
+		\node [style=none] (35) at (2, -3) {};
+		\node [style=none] (36) at (1.5, 1) {$\mathbb{P}^1$};
+		\node [style=none] (37) at (2.5, -2) {};
+		\node [style=none] (38) at (2.5, -2) {$P_{\text{gen}}$};
+		\node [style=none] (39) at (2.5, 0) {$P_\infty$};
+		\node [style=none] (40) at (2.5, 2) {};
+		\node [style=none] (41) at (2.5, 2) {$P_1$};
+		\node [style=none] (42) at (2.5, 4) {$P_0$};
+		\node [style=none] (43) at (-5, -2.25) {};
+		\node [style=none] (44) at (-5, -1.75) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (2.center);
+		\draw (4.center) to (5.center);
+		\draw (17.center) to (16.center);
+		\draw (19.center) to (20.center);
+		\draw [style=new edge style 1] (21.center) to (18.center);
+		\draw [style=new edge style 1] (15.center) to (14.center);
+		\draw [style=new edge style 1] (7.center) to (6.center);
+		\draw [style=new edge style 1] (29.center) to (30.center);
+		\draw [style=new edge style 1] (34.center) to (35.center);
+		\draw (43.center) to (44.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+We now go through each polyhedral divisor and calculate the associated rings. 
+There are three polyhedral divisors contained inside this polyhedral fan which are one dimensional cones. There are three polyhedral divisors which correspond to zero dimensional cones. 
+
+\begin{enumerate}[label =\alph*)]
+\item The unmarked cone $[-1, \, 1]$
+\item The marked cone $1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_2$ with tail cone $[0,\, \infty)$.
+\item The marked cone $1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_2$ with tail cone $(-\infty, \, 0]$.
+\end{enumerate}
+
+In case $a$ the tail cone $\delta$ is equal to $0$. We denote the polyhedral divisor by $\mathcal{D}$. So the dual of the tail cone $\hat{\delta}$ is the lattice $M$ itself. Given an element $ m >0$ of $M$ we have $\mathcal{D}(m) = -mP_0$. If $m <0$ we get $\mathcal{D}(m) = mP_0$ and if $n=0$ we get $\mathcal{D}(m) = 0$ as a divisor on $\mathbb{A}^1$. 
+
+Hence we have the $M$ graded ring
+\[
+\bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-|m|P)
+\]
+In degree 0 the ring is generated by the constant function $x$ and the function $y$ which is zero at the origin. We note that the function $1$ in degree 0 is the multiplicative identity of our ring. In degree one every element is of the form $f ( a_0 x + a_1 y + a_2 y^2 + \dots  a_n y^n)$, here $f$ is the same function as $y$ but now in degree 1. Every element of degree $m>0$ is of the form $f^m ( a_0 x + a_1 y + a_2 y^2 + \dots  a_n y^n)$. Hence this is generated in degree 1. The calculation on the ring graded in negative degree is exactly the same.  Hence we get the ring $\mathbb{C}[f,  \, g, \, y]/ (fg=y^2)$, so an $A_1$ singularity.
+
+
+In case $a$ the tail cone $\delta$ is equal to $[0 ,  \, \infty)$. We denote the polyhedral divisor by $\mathcal{D}$. So the dual of the tail cone $\hat{\delta}$ is $[0 ,  \, \infty) \subset M$. Given an element $ m \geq 0$ of $M$ we have $\mathcal{D}(m) = mP_0 +\frac{m}{2} P_1 + \frac{-m}{2}P_2$. 
+
+Hence we have the $M$ graded ring
+\[
+\bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{\mathbb{P}^1} \left(mP_0 +\frac{m}{2} P_1 + \frac{-m}{2}P_2 \right) \cong \bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{\mathbb{P}^1} \left(\frac{m}{2} P_1 + \frac{m}{2}P_2 \right)
+\]
+Here the isomorphism follows via linear equivalence of divisors on $\mathbb{P}^1$.
+
+In degree 0 we just get the constant function. In degree 1, once again it is only the constant function, denoted this by $x$. In degree 2 we have the function with a pole at $P_1$ and a zero at $P_2$, denote this by $f$ and the function $g = \frac{1}{f}$. This generates the ring hence we have $\mathbb{C}[x, \, f, \, g]/(fg = x^4)$, so an $A_3$ singularity.
+
+
+Case $c$ is exactly the same as case $b$ but with the grading negative instead of positive. So it is also an $A_3$ singularity.
+
+
+We finish by discussing the unmarked polyhedral divisors
+
+\begin{enumerate}[label =\Alph*)]
+\item The unmarked cone $-1 \otimes P_0$
+\item The unmarked cone $1 \otimes P_0$
+\item The unmarked cone $\frac{1}{2} \otimes P_1$
+\item The unmarked cone $-\frac{1}{2} \otimes P_2$
+\end{enumerate}
+
+In all case the tail cone $\delta$ is equal to 0. In case $A$ have the following ring graded by $M$
+
+\[
+\bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-mP) \cong \mathbb{C}[x,\, y, \, z]/(yz = 1)
+\]
+Here $x$ is of degree 0, $y$ is of degree 1 and $z$ is of degree $-1$. Case $B$ is symmetrical to case $A$. 
+
+Cases $C$ and $D$ are also symmetrical, and give rise to the rings $\mathbb{C}[x, y_1, y_2, z_1, z_2]$ with relations induced by the second veronese embedding of $C[x, \, y, \, z]/(yz = 1)$. 
+
+To see all the glueings we have the following 
+\[
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-6, -4) {};
+		\node [style=none] (1) at (0, -4) {$\frac{\mathbb{C}[x,y,z]}{yz-x^2}$};
+		\node [style=none] (2) at (6, -4) {$\frac{\mathbb{C}[y_1, y_2, y_3]}{y_1y_3 - y_1^4}$};
+		\node [style=none] (3) at (-6, -4) {$\frac{\mathbb{C}[z_1, z_2, z_3]}{z_1z_3 - z_1^4}$};
+		\node [style=none] (4) at (-3, 0) {$\nu_2 \left(\frac{\mathbb{C}[x,y,z]}{yz = 1} \right)$};
+		\node [style=none] (5) at (3, 0) {$\nu_2 \left(\frac{\mathbb{C}[x,y,z]}{yz = 1} \right)$};
+		\node [style=none] (6) at (9, 0) {$\frac{\mathbb{C}[x,y,z]}{yz = 1}$};
+		\node [style=none] (7) at (-9, 0) {$\frac{\mathbb{C}[x,y,z]}{yz = 1}$};
+		\node [style=none] (8) at (-8.25, -2) {1)};
+		\node [style=none] (9) at (-1.25, -3) {2)};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=new edge style 2] (3.center) to (7.center);
+		\draw [style=new edge style 2] (3.center) to (4.center);
+		\draw [style=new edge style 2] (3.center) to (5.center);
+		\draw [style=new edge style 2] (1.center) to (7.center);
+		\draw [style=new edge style 2] (1.center) to (6.center);
+		\draw [style=new edge style 2] (2.center) to (4.center);
+		\draw [style=new edge style 2] (2.center) to (5.center);
+		\draw [style=new edge style 2] (2.center) to (6.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+We explicitly describe the maps $1)$ and $2)$. To see map $1)$ the base is 
+\[
+\bigoplus_{m \in M|_{\leq 0}} \mathcal{O}_{\mathbb{P}^1} \left(-mP_0 +\frac{-m}{2} P_1 + \frac{m}{2}P_2 \right) 
+\]
+and the image is 
+\[
+\bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-mP_0)
+\]
+There is clearly an inclusion of rings on each level of the negative grading, and this induces the entire map
+\end{ex}
+
+We also provide a quick example of when a polyhedral divisor is unmarked but has unmarked subcones cones as the boundary. 
+
+\begin{ex}\rm
+Consider the polyhedral divisor defined by $(0,0) \otimes P_0 + (1, 1) \otimes P_1$. With tail cone $\delta = \langle (1,0) , \, (0, 1) \rangle$. We now insist that both rays of the cone are marked but the two dimensional cone is not marked. This can be seen as a toric downgrade of the Atiyah flop, with the quotient corresponding to one of the natural maps to $\mathbb{P}^1$.
+\end{ex}
+
+
 \begin{dfn}
 A fansy divisor a smooth curve $C$ is a collection of $n$ subdivison of $\mathbb{Q}$ with markings $\mathbb{Q}^+$, $\mathbb{Q}^-$, $\mathbb{Q}^\pm$ or no markings at all. 
 \end{dfn}
