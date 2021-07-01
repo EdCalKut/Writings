@@ -130,7 +130,7 @@ This defines a divisor on a subset of $C$. We insist that $\mathcal{D}$ satisfie
 This is to ensure that it gives an $n$-dimensional variety, and to ensure that it is separated \cite{PS}.
 
 
-We can now calculate the associated affine variety in both $X$ and $\tilde{X}$ by taking respectively Spec/ RelSpec${_C}$ of the graded ring
+We can now calculate the associated affine varieties $X$ and $\tilde{X}$ by taking respectively Spec/ RelSpec${_C}$ of the graded ring
 \[
 \bigoplus_{v \in \delta^\vee} \mathcal{O}_{Y_\mathcal{D}} ( \mathcal{D}(v))
 \]
@@ -190,17 +190,17 @@ R_n =
 \right.
 \]
 
-By associating the monomial $z^u \chi^v$ with the lattice point $(u,v)$ inside a two dimensional monomial lattice. This gives rise to a cone $\sigma$. The set of monomials with poles of order at worst $\frac{a}{b}$ gives rise to the vector $(a, -b)$. Similarly the other side of the graded ring gives rise to the vector $(-c, d)$. These are boundaries $\sigma$, this means that as toric variety they can be described as the cone $(a,b)$, $(c,d)$ inside the lattice $N$ with torus action corresponding to $(1,0)$.  Hence we get a toric variety of the form $\frac{1}{ad-bc}(u,v)$.
+We can associate the monomial $z^u \chi^v$ with the lattice point $(u,v)$ inside a two dimensional monomial lattice. This gives rise to a cone $\sigma$. The set of monomials with poles of order at worst $\frac{a}{b}$ gives rise to the vector $(a, -b)$. Similarly the other side of the graded ring gives rise to the vector $(-c, d)$. These are boundaries $\sigma$, this means that as toric variety they can be described as the cone $(a,b)$, $(c,d)$ inside the lattice $N$ with torus action corresponding to $(1,0)$.  Hence we get a toric variety of the form $\frac{1}{ad-bc}(u,v)$.
 
 
 \begin{ex}\rm
-We now show how this behaves in the case of a divisor with tail cone $\delta = [0, \, \infty)$. Consider the divisor $\mathcal{D} = \left[\frac{1}{2}, \, \infty \right) \otimes P_0 + \left[\frac{1}{2}, \, \infty \right) \otimes P_1 + \left[\frac{-1}{2}, \, \infty \right) \otimes P_2$. Here the varieties $X$ and $\widetilde{X}$ are different. To start with, we look at how to construct $X$.
+We now show how this behaves in the case of a divisor with tail cone $\delta = [0, \, \infty)$. Consider the divisor $\mathcal{D} = \left[\frac{1}{2}, \, \infty \right) \otimes P_0 + \left[\frac{1}{2}, \, \infty \right) \otimes P_1 + \left[\frac{-1}{2}, \, \infty \right) \otimes P_2$ over $\mb{P}^1$ with coordinates $x_1, \, x_2$. Here the varieties $X$ and $\widetilde{X}$ are different. To start with, we look at how to construct $X$. For simplicity we assume $P_0 = (1; \, 0)$, $P_1 = (1; \, 1)$ and $P_2 = (0; \, 1)$.
 
 The tail cone is $\delta = [0, \, \infty)$ so $\hat\delta = [0, \, \infty)$. By calculating $\mathcal{D}(m)$ we get the following ring
 \[
 \bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{\mb{P}^1} \left( \frac{m}{2} P_0 + \frac{m}{2} P_1 + \frac{-m}{2} P_2 \right)
 \]
-Once again in degree 0 we get the constant function. In degree one we get no functions. In degree 2 we get 2 functions $\frac{1}{x}$ and $\frac{1}{x-1}$ denote these $f$ and $g$. In degree 3 we get the function $\frac{1}{x(x-1)}$ denote this by $h$. We then have the relations $h^2 = fg(f-g)$. This gives rise to a $D_4$ singularity.  
+Once again in degree 0 we get the constant function. In degree one we get no functions. In degree 2 we get 2 functions $\frac{x_2}{x_1} \chi^2 $ and $\frac{x_2}{x_1-x_2} \chi^2$ denote these $u$ and $v$. In degree 3 we get the function $\frac{x_2^2}{x_1(x_1-x_2)} \chi^3 $ denote this by $w$. We then have the relations $w^2 = uv(v-u)$. This gives rise to a $D_4$ singularity.  
 
 To calculate $\widetilde{X}$ we do all these calculations as relative spec. In particular this means we can our above graded ring with the following three graded rings
 \[
@@ -208,7 +208,7 @@ To calculate $\widetilde{X}$ we do all these calculations as relative spec. In p
 \]
 For all choices of $i$ and $j$. We then glue together on the intersection. Calculating in the case $i=1$ and $j =2$. We have
 \[
-\bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{(\mb{P}^1 - P_1 - P_2)} \left( \frac{m}{2} P_0 + \frac{m}{2} P_1 + \frac{-m}{2} P_2 \right) \cong \bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{(\mb{A}^1 - P)} (\frac{m}{2}P_0)
+\bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{(\mb{P}^1 - P_1 - P_2)} \left( \frac{m}{2} P_0 + \frac{m}{2} P_1 + \frac{-m}{2} P_2 \right) \cong \bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{(\mb{A}^1 - P_1)} (\frac{m}{2}P_0)
 \]
 This gives us the ring $\mb{C}[x, \frac{1}{x+1}, \frac{1}{x}\chi^2, \chi^1] = \mb{C}[u,v,w,t]/[v(u+1) = 1, \, uw = t^2]$. Hence this is an $A_1$ singularity. The calculations on the other 3 patches are the same, so we have taken the partial resolution of the $D_4$ singularity by extracting the trivalent curve. 
 \end{ex}
@@ -277,9 +277,9 @@ We now go through each polyhedral divisor and calculate the associated rings.
 There are three polyhedral divisors contained inside this polyhedral fan which are one dimensional cones. There are three polyhedral divisors which correspond to two dimensional cones. 
 
 \begin{enumerate}[label =\alph*)]
-\item The unmarked cone $[-1, \, 1]$
-\item The marked cone $1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_2$ with tail cone $[0,\, \infty)$.
-\item The marked cone $1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_2$ with tail cone $(-\infty, \, 0]$.
+\item The unmarked polyhedron $[-1, \, 1]$
+\item The marked cone $1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_\infty$ with tail cone $[0,\, \infty)$.
+\item The marked cone $1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_\infty$ with tail cone $(-\infty, \, 0]$.
 \end{enumerate}
 
 In case $a$ the tail cone $\delta$ is equal to $0$. We denote the polyhedral divisor by $\mathcal{D}$. So the dual of the tail cone $\hat{\delta}$ is the lattice $M$ itself. Given an element $ m >0$ of $M$ we have $\mathcal{D}(m) = -mP_0$. If $m <0$ we get $\mathcal{D}(m) = mP_0$ and if $n=0$ we get $\mathcal{D}(m) = 0$ as a divisor on $\mathbb{A}^1$. 
@@ -364,7 +364,7 @@ There is clearly an inclusion of rings on each level of the negative grading, an
 We also provide a quick example of when a polyhedral divisor is unmarked but has unmarked subcones cones as the boundary. 
 
 \begin{ex}\rm
-Consider the polyhedral divisor defined by $(0,0) \otimes P_0 + (1, 1) \otimes P_1$ over $\mathbb{P}^1$. With tail cone $\delta = \langle (1,0) , \, (0, 1) \rangle$. We now insist that two dimensional cone is marked. However if we pick a ray of the tail fan, and calculate the dual we see that this does not satisfy of being semiample on the boundary, if the base curve was non affine.
+Let $N$ be $\mb{Q}^2$. Consider the polyhedral divisor defined by $\delta \otimes P_0 + (1, 1) + \delta \otimes P_1$ over $\mathbb{P}^1$ where $\delta = \langle (1,0) , \, (0, 1) \rangle$. We now insist that two dimensional cone is marked. However if we pick a ray of the tail fan, and calculate the dual we see that this does not satisfy of being semiample on the boundary, if the base curve was non affine.
 
 Upon calculation of the affine ring this can be seen as a toric downgrade of the Atiyah flop, with the quotient corresponding to one of the two natural maps to $\mathbb{P}^1$. To see the two flops the first is by unmarking the two dimensional cone and the other is given by the same polyhedral coefficients but now the tail cone is a tail fan with the ray $(1,1)$ bisecting it. This corresponds to only one of the resolutions resolving the quotient down to the $\mathbb{P}^1$.
 \end{ex}
