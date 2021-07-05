@@ -536,20 +536,20 @@ This imposes stricter bounds on the number of non generic fibers a complexity on
 
 We also need a bound on what possible toric singularities can occur and the possible actions on them.
 
-\begin{lem}
-Let $X$ be a complexity one log del Pezzo surface with the following properties 
+\begin{lem}[\label{Structure}]
+Let $X$ be a non smooth complexity one log del Pezzo surface with the following properties 
 \begin{itemize}
 \item $X$ has two elliptic points $P_1$ and $P_2$
 \item $X$ has only toric singularities
+\item $X$ is non toric
 \end{itemize}
 
-Then at least one of the elliptic points, $P_1$, is a singularity and when describing $P_1$ and the torus action locally by a cone $\sigma \subset N$ and a ray $v \in N$. Then $v$ corresponds to a ray on the minimal resolution.
+Then at least one of the elliptic points, $P_1$, is a singularity.  We can describe $P_1$ locally by a cone $\sigma \subset N \cong \mb{Z}^2$ and a ray $v \in N$. Then $v$ corresponds to a lattice point on the minimal resolution of $\sigma$.
 \end{lem}
 
 \begin{proof}
-Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to $\mb{F}_i$ as every $-1$ curve on $Y$ is torus invariant. Hence $Y$ is constructed by a non toric blowup of a toric surface. Considering the first non toric blowup, we are blowing up a point $P$ on a torus invariant curve $C$. Clearly $C$ is a torus invariant curve in the minimal resolution of $X$. This proofs the above lemma.
+Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to $\mb{F}_i$ as every $-1$ curve on $Y$ is torus invariant. Hence $Y$ is constructed by a non toric blowup of a toric surface. Considering the first non toric blowup, we are blowing up a point $P$ on a torus invariant curve $C$. Clearly $C$ is a torus invariant curve in the minimal resolution of $X$. We note that $C$ cannot be a curve on $X$ as otherwise the surface would not have two elliptic points. This proofs the above lemma.
 
-%Maybe more details%
 
 \end{proof}
 
@@ -573,7 +573,20 @@ As there are a finite number of log del Pezzo surfaces, upto deformation, with G
 
 \begin{algorithm}
 
-We start by classifying the possible actions on the Hirzebruch surfaces $\mb{F}_i$. There is only  finite choice. Once we fix a torus action $v$, we are then left trying to classify possible 
+There are two infinte families of singularities of index $k$ corresponding to $A_n$ and $D_n$ singularities. There are then the sporadic cases corresponding to $E_6, \, E_7, \, E_8$.
+
+We start by dealing with the case of two elliptic points as it is the most involved. We start in the case of the $D_n$ singularity. Given $S$ a singularity of index $k$ arising as a $D_n$ quotient, then there is a unique $\mb{C}^\times$ action. The associated polyhedral is given in Lemma~\ref{basic bound} as $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{k}{n}, \infty \right) \otimes P_3$. Assuming this lies on a log del Pezzo surface we have a polyhedral divisor
+\[\def\arraystretch{1.4}
+\begin{array}{c}
+\left[a_1^1, \, a_2^1,\,  \dots, a_{n_1 - 1}^1, \, \frac{-1}{2} \right] \\
+\left[a_1^2, \, a_2^2,\,  \dots, a_{n_2 - 1}^2, \, \frac{1}{2} \right] \\
+\left[a_1^3, \, a_2^3,\,  \dots, a_{n_3 - 1}^3, \, \frac{k}{n} \right] \\
+\left[a_1^4, \, a_2^4,\,  \dots, a_{n_4}^4 \right] \\
+\vdots \\
+\left[ a_1^{3k}, \, a_2^{3k}, \,  \dots, a_{n_{3k}}^{3k} \right] \\
+\end{array}
+\]
+We now ask what are the possible values for $\frac{k}{n}$.
 \end{algorithm}
 
 
