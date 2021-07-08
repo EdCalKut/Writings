@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  4 JUL 2021 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  8 JUL 2021 09:53
 entering extended mode
 **./ComplexityOneLDP.tex
 (ComplexityOneLDP.tex
@@ -1206,68 +1206,20 @@ LaTeX Warning: Citation `Suss' on page 11 undefined on input line 492.
 
 LaTeX Warning: Citation `Br' on page 11 undefined on input line 499.
 
-[11] [12] [13] [14] [15]
+[11] [12] [13]
 
-LaTeX Warning: Reference `Theroem on curves' on page 16 undefined on input line
- 693.
-
-[16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 746--751
-
- []
+LaTeX Warning: Reference `Trivalent' on page 14 undefined on input line 610.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 746--751
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 18 undefined on input line 754.
-
-
-LaTeX Warning: Citation `IMT' on page 18 undefined on input line 754.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 18 undefined on input line 757.
-
-
-LaTeX Warning: Reference `T:ZDQ' on page 18 undefined on input line 757.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--766
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--766
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--766
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--766
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 769--773
-
- []
-
-Excluding 'comment' comment.
-Underfull \vbox (badness 3568) has occurred while \output is active []
-
- [19]
-[20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 892.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 892.
+ [14]
+[15] [16] Excluding 'comment' comment. [17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 849.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 849.
  (ComplexityOneLDP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 892.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 892.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 849.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 849.
 Package rerunfilecheck Info: File `ComplexityOneLDP.out' has not changed.
 (rerunfilecheck)             Checksum: 366AC65E753F12E69D9BB43C41F320DC;273.
 
@@ -1276,13 +1228,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 23205 strings out of 492970
- 437292 string characters out of 3127037
- 534440 words of memory out of 3000000
+ 23197 strings out of 492970
+ 437227 string characters out of 3127037
+ 533488 words of memory out of 3000000
  26380 multiletter control sequences out of 15000+200000
  13151 words of font info for 51 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,15n,82p,2012b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,15n,82p,1285b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi657\bb
 m10.pk><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
@@ -1304,9 +1256,9 @@ m/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP.pdf (20 pages, 294449 bytes).
+Output written on ComplexityOneLDP.pdf (17 pages, 285348 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
