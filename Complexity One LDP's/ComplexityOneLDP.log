@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  8 JUL 2021 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  8 JUL 2021 10:47
 entering extended mode
 **./ComplexityOneLDP.tex
 (ComplexityOneLDP.tex
@@ -1119,7 +1119,7 @@ LaTeX Warning: Citation `PS' on page 2 undefined on input line 130.
 
 
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
- Make it at least 13.0pt.
+ Make it at least 14.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -1142,14 +1142,14 @@ LaTeX Font Info:    Try loading font information for U+bbm on input line 179.
  ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-[4] [5] [6]
-Overfull \hbox (120.6313pt too wide) detected at line 355
+[4] [5] [6] [7]
+Overfull \hbox (121.16447pt too wide) detected at line 355
 []
  []
 
-[7]
+[8]
 
-LaTeX Warning: Reference `Tech' on page 8 undefined on input line 379.
+LaTeX Warning: Reference `Tech' on page 9 undefined on input line 379.
 
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
@@ -1160,31 +1160,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--395
 
  []
 
-
-LaTeX Warning: Citation `PS' on page 8 undefined on input line 395.
-
-[8]
-
-LaTeX Warning: Citation `PS' on page 9 undefined on input line 413.
-
-
-LaTeX Warning: Citation `PS' on page 9 undefined on input line 419.
-
-
-LaTeX Warning: Citation `PS' on page 9 undefined on input line 425.
-
 [9]
 
-LaTeX Warning: Citation `PS' on page 10 undefined on input line 427.
+LaTeX Warning: Citation `PS' on page 10 undefined on input line 395.
 
 
-LaTeX Warning: Citation `PS' on page 10 undefined on input line 435.
+LaTeX Warning: Citation `PS' on page 10 undefined on input line 413.
 
 
-LaTeX Warning: Citation `PS' on page 10 undefined on input line 444.
+LaTeX Warning: Citation `PS' on page 10 undefined on input line 419.
+
+[10]
+
+LaTeX Warning: Citation `PS' on page 11 undefined on input line 425.
 
 
-LaTeX Warning: Citation `S' on page 10 undefined on input line 448.
+LaTeX Warning: Citation `PS' on page 11 undefined on input line 427.
+
+
+LaTeX Warning: Citation `PS' on page 11 undefined on input line 435.
+
+
+LaTeX Warning: Citation `PS' on page 11 undefined on input line 444.
+
+
+LaTeX Warning: Citation `S' on page 11 undefined on input line 448.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 441--449
@@ -1196,25 +1196,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 441--449
 
  []
 
-[10] Excluding 'comment' comment.
+[11] Excluding 'comment' comment.
 
-LaTeX Warning: Citation `Suss' on page 11 undefined on input line 487.
-
-
-LaTeX Warning: Citation `Suss' on page 11 undefined on input line 495.
+LaTeX Warning: Citation `Suss' on page 12 undefined on input line 487.
 
 
-LaTeX Warning: Citation `Br' on page 11 undefined on input line 502.
-
-[11] [12] [13]
-
-LaTeX Warning: Reference `Trivalent' on page 14 undefined on input line 613.
+LaTeX Warning: Citation `Suss' on page 12 undefined on input line 495.
 
 
-Underfull \vbox (badness 7925) has occurred while \output is active []
+LaTeX Warning: Citation `Br' on page 12 undefined on input line 502.
 
- [14]
-[15] [16] Excluding 'comment' comment. [17]
+[12] [13] [14]
+
+LaTeX Warning: Reference `Trivalent' on page 15 undefined on input line 613.
+
+[15] [16] [17] [18] Excluding 'comment' comment. [19]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 855.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 855.
  (ComplexityOneLDP.aux)
@@ -1226,39 +1222,43 @@ Package rerunfilecheck Info: File `ComplexityOneLDP.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 23197 strings out of 492970
- 437227 string characters out of 3127037
- 534488 words of memory out of 3000000
+ 23198 strings out of 492970
+ 437204 string characters out of 3127037
+ 533488 words of memory out of 3000000
  26380 multiletter control sequences out of 15000+200000
- 13151 words of font info for 51 fonts, out of 3000000 for 9000
+ 12955 words of font info for 51 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,15n,82p,1285b,928s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi657\bb
-m10.pk><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+ <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bb
+m12.pk><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/user/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Use
 rs/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.
 pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmmi8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
+lic/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/
-user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP.pdf (17 pages, 287014 bytes).
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/u
+ser/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmti12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ComplexityOneLDP.pdf (19 pages, 292091 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
