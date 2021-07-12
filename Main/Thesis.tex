@@ -186,6 +186,7 @@
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage{blkarray} %This is for labelled matrices
 \usetikzlibrary{decorations.pathreplacing} % this is for Ai's drawing
+\usepackage{bbm}
 
 
 %
@@ -226,6 +227,27 @@
 \newcommand{\Rom}[1]
     {\MakeUppercase{\romannumeral #1}}
 
+\pgfdeclarelayer{edgelayer}
+\pgfdeclarelayer{nodelayer}
+
+\pgfsetlayers{edgelayer,nodelayer,main}
+
+% Node styles
+\tikzstyle{none} = []
+\tikzstyle{Filled Basic}=[fill=black, draw=black, shape=circle]
+
+% Edge styles
+\tikzstyle{Dashed Line}=[-, draw=blue, dashed]
+\tikzstyle{Filled Blue}=[-, draw=blue]
+\tikzstyle{Dashed Black}=[-, draw=black, dashed]
+\tikzstyle{Red}=[-, draw={rgb,255: red,191; green,0; blue,64}]
+\tikzstyle{new edge style 0}=[-, dashed, draw={rgb,255: red,191; green,0; blue,64}]
+
+\tikzstyle{Dashed Line}=[-, draw=blue, dashed]
+\tikzstyle{none} = []
+\tikzstyle{new edge style 1}=[<->, thick]
+\tikzstyle{new edge style 2}=[{<- left hook}]
+
 \graphicspath{ {images/} }
 
 
@@ -245,6 +267,7 @@
 \newcommand{\Z}{\mathrm{Z}}
 \newcommand{\F}{\mathrm{F}}
 \renewcommand{\P}{\mathrm{P}}
+
 
 
 \begin{document}
@@ -451,14 +474,24 @@ We then charecterise these possible toric degenerations, and extend this in part
 \chapter{Technical details}
 
 \chapter{Small Discrepancy}
-\section{Context}
 
+\section{Context}
+The main result of this chapter is 
+\begin{thm}\label{ThmOnSing}
+Let $X$ be a non-smooth \ldp\ with only singularities of small discrepancy. Then 
+\begin{enumerate}
+\item\label{thm38i}
+$X$ has either one singularity or two singularities, and if there are two each of them are of type $\frac{1}p(1,1)$ for some, possibly different,~$p$.
+\item\label{thm38ii}
+If $X$ admits no floating $-1$-curves then $X$ admits a toric degeneration. %In particular given a singularity $S$ we have at most $m$ basic surfaces, where $m$ is the number of exceptional curves in the resolution of $S$.
+\end{enumerate}
+\end{thm}
 \textbf{This is a first draft, context will be inserted}
 
 \section{Standard notions and notation for quotient singularities}
 \label{sec!notation}
 
-\section{Log del Pezzo surfaces with small discrepancy}
+\section{Singularities with small discrepancy}
 
 Recall from Section~\ref{sec!notation} our standard notation for quotient singularities.
 We consider the germ $S$ of a cyclic quotient singularity appearing at a point $P$ on a 
@@ -481,12 +514,14 @@ We say that $S$ is a \emph{singularity with small discrepancy} if $d_i \leq -\fr
 all $i=1,\dots,n$.
 \end{dfn}
 
+To simplify our calculations we introduce to the notation $e_i = d_i + 1$. 
+
 \begin{prop}
 In the notation above,
 a singularity $S$ has small discrepancy if and only if $C_1^2 \neq -2$ and $C_n^2 \neq -2$ and $ S \not\cong \frac{1}{3}(1,1)$.
 \end{prop}
 \begin{proof}
- We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$ and then apply this to show it for the intermediate values. We use the following formula for the discrepancy $d_i =  -1 - \frac{2 + d_{i-1}+d_{i+1}}{C_i^2}$. We note that if $C_1^2 \leq -4$, then as $d_0 = 0$ and $d_2 \leq 0$ we have $d_1 \leq -1 - \frac{2}{-4}$. This implies the inequality for small discrepancy. In the case where $C_1^2 = -3$ this results in the following, as $d_1 \geq d_2$ by substituting $d_2$ into $d_1 = -1 - \frac{2 + d_2}{-3}$ we get  $ d_2 \leq -1 - \frac{2 + d_2}{-3}$ rearranges to $2d_2 + 1 < 0$. Substituting this back into the equation for $d_1$ we get $d_1 \leq  \frac{-1}{2}$. 
+ We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$ and then apply this to show it for the intermediate values. We use the following formula for the discrepancy $e_i =  \frac{e_{i-1}+e_{i+1}}{a_i}$. We note that if $a_1 \geq 4$, then as $e_0 = 1$ and $e_2 \leq 1$ we have $e_1 \leq \frac{2}{-4}$. This implies the inequality for small discrepancy. In the case where $a_1 = 3$ this results in the following, as $e_1 \geq e_2$ by substituting $e_2$ into $e_1 = \frac{1 + e_2}{-3}$ we get  $ e_2 \leq \frac{1 + e_2}{3}$ rearranges to $2e_2 - 1 < 0$. Hence $e_2 \leq \frac{1}{2}$. Substituting this back into the equation for $e_1$ we get $e_1 \leq  \frac{1+ \frac{1}{2}}{3} =  \frac{1}{2}$. 
  \end{proof}
 
 
@@ -497,10 +532,23 @@ Any singularity germ $S$ that appears in this chapter is assumed to be a cyclic
 quotient singularity with small discrepancy.
 \end{assumption}
 
+\section{Log del Pezzo surfaces and small discrepancy}
+
+\begin{dfn}[\cite{Artin}]
+Let $X$ be a surface. A $-1$ cycle $Z = \sum_{D \in S} D \subset X$ is a rationally connected set of curves such that there is a sequence of maps 
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0BedgfWJAC+pdJlz5CKAIzkqtRiza9Jg4SAzY8BIgCYZ1es1aIQAHRMBjKBBwIhIjeKIBmPXMOKehAbJhQA5vBEoABmAE4QALZIZCA4EEiSdiBhkQnUcUjaSSlRiLqx8YhO3gJAA
+\begin{tikzcd}
+X=X_0 \arrow[r] & X_1 \arrow[r] & \cdots \arrow[r] & X_n
+\end{tikzcd}
+\]
+Such that each map is a contraction of a $-1$ curve $D \in S$ and the image of $Z$ is a nonsingular point.
+\end{dfn}
+
 \begin{lem}\label{lem!badcurve}
 Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
-strict transform $\widetilde C \subset Y$ is smooth. Suppose in addition that 
-$\widetilde C$ meets the exceptional locus of $f$ with intersection multiplicity at least~2.
+strict transform $\widetilde C \subset Y$ is smooth. Let $\{ E_i \}$ be the exceptional locus of $f$. Suppose in addition that 
+$\widetilde C \cdot \sum E_i \geq 2$.
 Then if $\widetilde C^2 = -1$ implies $-K_X \cdot C \leq 0$.
 
 In particular, $\widetilde C$ is smooth and
@@ -508,7 +556,6 @@ $C$ either meets at least two singularities of $X$ or meets one singularity
 with at least branches or has a singular point of $C$ at a singularity of $X$,
 then the hypotheses on $C$ are satisfied.
 \end{lem}
-
 \begin{proof}
 %Let $f \colon : Y \rightarrow X$ be the minimal resolution of $X$, $\widetilde C \subset Y$ the strict transform of $C$. 
 By the genus formula for $\widetilde C\subset Y$, as $\widetilde C$ and $Y$ are both smooth,
@@ -523,51 +570,55 @@ multiplicity $m_i$, then $K_X \cdot C = f^*(K_X) \cdot \widetilde C \geq -1 - m_
 We show next that in fact such rational curves cannot lie on a \ldp.
 We need a preliminary lemma.
 \begin{lem}\label{lem!minus2curve}
-Let $X$ be a \ldp\ and $f \colon Y \rightarrow X$ be the \minres.
+Let $X$ be a \ldp\ and $f \colon Y \rightarrow X$ its \minres.
 Let $C\subset Y$ be a smooth rational curve. If $C^2\le-2$ then $C$ is contracted by $f$
 to a point of~$X$.
 \end{lem}
 
 \begin{proof}
-We proof this by contradiction. Assume there is a curve $C$ that is not contracted, the $K_X \cdot f(C) = f^*(K_X) \cdot \wt{C} \geq K_Y \cdot \wt{C} \geq 0$, with the inequality following as there are no terminal surface singularities.
+We proof this by contradiction. Assume there is a curve $C$ that is not contracted. Then 
+\[
+K_X \cdot f(C) = f^*(K_X) \cdot \wt{C} \geq K_Y \cdot \wt{C} \geq 0
+\]
+The first inequality follows as $f^*(K_X) - K_Y$ is an effective divisor. The second inequality follows as $K_Y \cdot \wt{C} = -2 - \wt{C}^2$.
 \end{proof}
 
 \begin{prop}\label{MainProp}
-Let $X$ is a \ldp\ with singularities of small discrepancy and 
-consider the following diagram
+Let $X$ be a \ldp\ with singularities of small discrepancy and $f \colon Y \ra X$ its minimal resolution.
+Consider the following diagram
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkQANEAX1PU1z5CKAEyli1Ok1bsAmjz4gM2PASLlxkhizaIQALR6SYUAObwioAGYAnCAFskGkDghIyUnewA63uAGMbLDQcOBwAT0YYYFNuEBpGegAjGEYABQFVYRAg0wALHAVrO0dEZ1ckMU8ZPV8AoJCwyOirOO5KbiA
 \begin{tikzcd}
-  & X \arrow[rd, "\scriptstyle{g}"'] \arrow[ld, "\scriptstyle{f}"] &   \\
-Z &                                                                & Y
+  & Y \arrow[rd, "\scriptstyle{g}"'] \arrow[ld, "\scriptstyle{f}"] &   \\
+X &                                                                & Z
 \end{tikzcd}
 \]
 $f$ is the minimal resolution of $X$ and $g$ is a birational morphism to a smooth surface $Z$.
-Let $E\subset Y$ be an $f$-exceptional curve. Then $E$ is contracted to a point
+Let $E\subset Y$ be an $f$-exceptional curve. Then either $E$ is contracted to a smooth point
 of $Z$ by $g$, or $g(E)$ is a smooth curve and $g_E$ is an isomorphism.
 \end{prop}
 
 \begin{proof}
-Let $E\subset Y$ be any one of the exceptional curves $E_i^S$; in particular, $E$ is
+Let $E\subset Y$ be any one of the exceptional curves $E_i^S$ over a singularity $S$ of $X$; in particular, $E$ is
 a smooth rational curve with $E^2 \le-2$.
-We first show that if $f_* E\subset Z$ is a curve, then it must be a smooth curve. 
+We first show that if $g_* E\subset Z$ is a curve, then it must be a smooth curve. 
 
-For contradiction, suppose $f_*E$ is a curve with a singular point $P$.
-Let $C_1,\dots,C_s\subset Y$ be the curves that contract to $P$ under~$f$.
+For contradiction, suppose $g_*E$ is a curve with a singular point $P$.
+Let $C_1,\dots,C_s\subset Y$ be the curves that contract to $P$ under~$g$.
 As these curves are contracted, $C_i^2 \leq  -1$.
 Notice that if $C_i^2\le-2$, then $f(C_i)$ is a point of~$X$
 by Lemma~\ref{lem!minus2curve}.
 There are two cases to consider: set-theoretically, either
-$\pi^{-1}(P)$ meets $E$ in a single point or in more than one point.
+$g^{-1}(P)$ meets $E$ in a single point or in more than one point.
 
 
-In the case of more than one intersection point, since $\pi^{-1}(\pi_*(E))$ is connected,
+In the case of more than one intersection point, since $g^{-1}(g_*(E))$ is connected,
 among the curves $C_i$ there must be a shortest chain $C_1\cup\cdots\cup C_r$
 with $C_k\cdot E=0$ for $k=2,\dots,r-1$, and $\left(\sum_{i=1}^r C_i\right)\cdot E = 2$.
 At least one of the curves $A=C_k$ of the cycle must have $A^2=-1$, otherwise the
 whole cycle is contracted to a point $R$ of $X$, but then $R\in X$ would not be
 a rational singularity, and so in particular not a cyclic quotient singularity.
-And of course $A$ cannot meet another $-1$-curve $C_j$ with $\pi(C_j)=P$.
+And of course $A$ cannot meet another $-1$-curve $C_j$ with $g(C_j)=P$.
 Thus $A$ must lie in one of the following configurations:
 \begin{enumerate}
 \item
@@ -580,14 +631,14 @@ with $C_j^2\le-2$.
 $A$ meets $E$ in two distinct points.
 \end{enumerate}
 In each of these situations, $C = f_*(A)\subset X$ would be a curve
-on which $K_X$ is nef, by Lemma~\ref{lem!badcurve}, which contracts
-$X$ being \ldp. Indeed $A = \wt C$ meets the $f$-exceptional locus with multiplicity
+on which $K_X$ is nef, by Lemma~\ref{lem!badcurve}, which contradicts
+$X$ being a \ldp surface. Indeed $A = \wt C$ meets the $f$-exceptional locus with multiplicity
 at least~2 in each case.
 
 The argument in the nodal case follows similarly, up to the case division of configurations
 at which there is an additional case:
 
-We note that if $\pi^{-1}{P}$ contains two curve $C_i$, $C_j$ with $I_Q (C_i, \, C_j) \ge 2$ then either one of them is a $-1$-curve or it cannot occur on the minimal resolution of a \ldp\ surface. This is because every curve in $\pi^{-1}{P}$ has negative self intersection, if its intersection is less than $-1$ then it would have to be contracted on the map down to $X$, resulting in a noncyclic quotient singularity. Hence one of them is $-1$ curve, and this cannot occur as it would contradict Lemma~\ref{lem!badcurve}. Hence this cannot occur, so we have to blow up the point $P$ enough times such that all the intersections are transverse. At this point we have a curve $A$ such that $A$ intersects transversely at least three other curves, $E, \, C_1, \, C_2 \dots $ with $C_i \in \pi^{-1} {P}$. In addition $C$ is the only $-1$ curve in $\pi^{-1}{P}$. As $Y$ is constructed from further blowups we split into configurations 
+We note that if $g^{-1}{P}$ contains two curve $C_i$, $C_j$ with $I_Q (C_i, \, C_j) \ge 2$ then either one of them is a $-1$-curve or it cannot occur on the minimal resolution of a \ldp\ surface. This is because every curve in $\pi^{-1}{P}$ has negative self-intersection, if its intersection is less than $-1$ then it would have to be contracted on the map down to $X$, resulting in a noncyclic quotient singularity. Hence one of them is $-1$ curve, and this cannot occur as it would contradict Lemma~\ref{lem!badcurve}. Hence this cannot occur, so we have to blow up the point $P$ enough times such that all the intersections are transverse. At this point we have a curve $A$ such that $A$ intersects transversely at least three other curves, $E, \, C_1, \, C_2 \dots $ with $C_i \in \pi^{-1} {P}$. In addition $C$ is the only $-1$ curve in $\pi^{-1}{P}$. As $Y$ is constructed from further blowups we split into configurations 
 
 \begin{enumerate}
 \item
@@ -602,13 +653,77 @@ In the first case Lemma~\ref{lem!badcurve} this cannot occur on the minimal reso
 For a completely general curve singularity it follows by a combination of the above arguments. 
 \end{proof}
 
+
+\begin{prop}\label{Surfaces to F_1}
+There is a unique family of non smooth log del Pezzo surfaces $S_p$, indexed by $p \in \mb{N}$, such that given the minimal resolution $Y$ of $S_p$, $Y$ does not admit a map to $\mb{F}_i$ with $i \geq 2$. Here $S_p$ has one $\frac{1}{p}(1,1)$ singularity.
+\end{prop}
+
+\begin{proof}
+
+The first case is that $Y$ only admits a map to $\mb{F}_0$. Then $Y$ must be $\F_0$, since a blow up of any point of $\mb{F}_0$ also permits a map to $\mb{F}_1$; but then $X=Y$ is smooth, contradicting the assumption. 
+
+For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$-curve we get a map to $\mb{F}_2$. So the only option is a blowup at a smooth point. At this point you get the following toric variety 
+
+\[
+\begin{tikzpicture}[scale=0.5]
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-4, 0.25) {};
+		\node [style=none] (1) at (0, 4) {};
+		\node [style=none] (2) at (-3, 2) {};
+		\node [style=none] (3) at (-3, -3) {};
+		\node [style=none] (4) at (-2, 3) {};
+		\node [style=none] (5) at (3, 3) {};
+		\node [style=none] (6) at (2, -3) {};
+		\node [style=none] (7) at (3, -2) {};
+		\node [style=none] (8) at (-4, -2) {};
+		\node [style=none] (9) at (-4, -2) {};
+		\node [style=none] (10) at (2, 4) {};
+		\node [style=none] (11) at (-1.75, 1.75) {-1};
+		\node [style=none] (12) at (0.25, 2.75) {};
+		\node [style=none] (13) at (0.25, 2.55) {-1};
+		\node [style=none] (14) at (1.5, 0.75) {0};
+		\node [style=none] (15) at (-0.5, -1.5) {0};
+		\node [style=none] (16) at (-2.5, -0.25) {-1};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (3.center) to (2.center);
+		\draw [in=225, out=45] (0.center) to (1.center);
+		\draw (4.center) to (5.center);
+		\draw (10.center) to (6.center);
+		\draw (9.center) to (7.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+
+
+This results in three adjacent $-1$-curves. 
+We now split into cases;
+
+\textbf{Case 1}: Our next blow up is a blow up at a smooth point. This results in $DP_6$. We note that on any surface $Z$ which occurs as a blowup at general points of $DP_6$ has the property that for every $-1$ curve $C$ there is a map $\pi_C \colon Z \ra \mb{F}_1$ sending $C$ to the negative section $B$. Hence, in order for $X$ to be nonsingular this involves blowing up a point on a $-1$ curve. Hence we get the following diagram:
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoBGAXVJADcBDAGwFcYkQAVEAX1PU1z5CKcqQAM1Ok1bsAWjz4gM2PASJkJNBizaIQsgOQL+KoUVFUt03SAA6tgLYAjYADEA+uW7GlA1cJJSYkltGT17Zzd3Ym9eE0E1FDEKEOt2ACEfZQSA5M0pHXYAYR5JGCgAc3giUAAzACcIByQyEBwIJFECsLtbNCxPHwamlpp2pDE4kGHmxC7xxABmKZmJsY6lq0LwvoHiIcbZ5LaNgBYVw6QANnWkAFZuSm4gA
+\begin{tikzcd}
+C  \subset  Z \arrow[d] & Z' \arrow[l, "\pi_1"] \arrow[d] \\
+B          \subset \mb{F}_1    & T \arrow[l, "\pi_2"] \arrow[d]  \\
+                        & \mb{F}_2                       
+\end{tikzcd}
+\]
+Where the $\pi_i$ are blow ups of a point on a $-1$ curve. Hence this case cannot occur.
+
+
+\textbf{Case 2}: Blowing up a point on the curve which is the pullback of the section $B$ of $\mb{F}_1$. Once again this results in an obvious map to $\mb{F}_2$. We note that our surface admits two maps to $\mb{F}_1$ via the symmetry of the surface.
+% If the point is not in general position then we get a map to $\mb{F}_2$.
+
+
+\textbf{Case 3}:
+Blowing up a general point of the $-1 $ curve which occurred as the strict transform of the fiber. By blowing up $p-1$ distinct points. This results in an infinite family of \ldp's with a single $\frac{1}{p}(1,1)$ singularity and potentially $A_n$ singularities.
+Via the previous arguments any subsequent blowups not on this curve would induce a map to $\mb{F}_2$.
+\end{proof}
+
+
 \begin{lem}\label{HSlem}
 Let $X$ be a \ldp\ with only singularities of small discrepancy, and
-let $f \colon Y \rightarrow X$ be the \minres. We suppose $X\not=\P^2$, so that $\rho_Y\ge2$.
-The resolution $Y$ admits a morphism $\pi \colon Y \rightarrow \mathbb{F}_l$ for some $l\ge0$:
-this is the minimal model of~$Y$, unless that minimal model
-is $\P^2$, in which case there is a factorisation
-$Y\rightarrow \F_1\rightarrow\P^2$.
+let $f \colon Y \rightarrow X$ be the \minres. We suppose that $Y$ admits a map $\pi$ to $\mb{F}_l$ where $l \geq 2$.
 
 For a germ $S$ of a singularity of~$X$, denote by
 $E_i^S \subset Y$ the exceptional curves in the resolution of $S$.
@@ -617,13 +732,13 @@ For each singularity $S$ on $X$:
 \item
 Every exceptional curve $E_i^S$ is either contracted to a point of $\mb{F}_l$ by $\pi$,
 or the pushdown
-$\pi_* E_i^S\subset\F_l$ is a smooth rational curve with self intersection one of $-l, \,0, \, l, \, l+2, \, l+4,\ 4l $, where $l+4$ can only occur for $l<2$.
+$\pi_* E_i^S\subset\F_l$ is a smooth rational curve with self-intersection one of $-l, \,0, \, l, \, l+2, 4l $.
 \item
-In the case $l\ge2$, there is always some curve $E_j^S$ not contracted by $\pi$.
+In addition there is always a curve $E_j^S$ not contracted by $\pi$ for all singularities $S$.
 \end{enumerate}
 
 \end{lem}
-\begin{proof}
+\begin{proof} 
 To prove the first statement note that $\pi_* E_i^S$ cannot be a singular curve by Proposition~\ref{MainProp}, hence it is a smooth rational curve. The only smooth rational curves on a Hirzebruch Surface $\mb{F}_l$ are the curves $B$, with $B^2 = -l$, $F$ with $F^2 = 0$ and the curves lieing inside the linear systems $|lF + B|$,  $|(l+1)F + B|$, $|2F|$, $|2(lF+B)|$  and finally $|(l+2)F + B|$. We note that the final case could not arise on $\mb{F}_l$ when $l \ge 2$.  In this case the curve $B$ is also the image of an exceptional curve from a singularity. Hence any curve in $|(l+2)F + B$ would intersect $B$, when counting multiplicities, $2$ times. This would be a contradiction to Lemma~\ref{lem!badcurve}. A similar argument occurs with $2F$ which is meeting the curve $B$ at a single point with multiplicity 2.
 
 
@@ -636,12 +751,15 @@ To show that not all the curves $E_j^S$ can be contracted to a point if $l \geq 
 In the case where the length, $n$, of the singularity is 1 or 2, Lemma~\ref{lem!badcurve} follows via easy toric geometry as any curve joining two singularities is a locally toric configuration. This corresponds to the associated fan being non convex. 
 \end{rem}
 
+
+
+
 Now we can classify these log del Pezzos in a straightforwards way. 
 \begin{thm}\label{ThmOnSing}
 Let $X$ be a non-smooth \ldp\ with only singularities of small discrepancy. Then 
 \begin{enumerate}
 \item\label{thm38i}
-$X$ has either one singularity or two singularities, each of type $\frac{1}p(1,1)$ for some, possibly different,~$p$.
+$X$ has either one singularity or two singularities, and if there are two one of the singularities is a $\frac{1}{r_1}(1,1)$ and the other singularity is a $\frac{1}{r_2}(1,1)$.
 \item\label{thm38ii}
 If $X$ admits no floating $-1$-curves then $X$ admits a toric degeneration. %In particular given a singularity $S$ we have at most $m$ basic surfaces, where $m$ is the number of exceptional curves in the resolution of $S$.
 \end{enumerate}
@@ -659,11 +777,11 @@ without loss of generality we may assume that it is the exceptional curve of the
 Hence $\pi$ is indeed an isomorphism in a neighbourhood of~$B$.
 
 
-We first consider $l\geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves cannot be contracted (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$ in Lemma~\ref{introlemmaonFl}).
+We note that  $l \leq 1$ has been classified in Proposition~\ref{Surfaces to F_1}. So we restrict to $l \geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves cannot be contracted (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$ in Lemma~\ref{introlemmaonFl}).
 %, as we are assuming $l$ is the largest possible value of $l$ and hence $B$ could not be blown up. 
-Denote these two adjacent curves by $C_1$ and $C_2$ respectively. Assume there was another singularity with exceptional curves $\{ E_i^{S'} \}_{i=0}^{m_{S'}} $ on $Y$. Then by Lemma~\ref{HSlem} there would be a curve $E_j^{S'}$ such that $\pi_* E_j^{S'}$ is a curve with self intersection $0, \,  l,\,  l+2$. However these curves would necessarily intersect $C_1$ and $C_2$ meaning either $S'$ is not distinct from $S$ or there is a $-1$-curve in $Y$ connecting two of their curves in the minimal resolution. Hence $X$ has precisely one singularity. 
+Denote these two adjacent curves by $C_1$ and $C_2$ respectively. Assume there was another singularity with exceptional curves $\{ E_i^{S'} \}_{i=0}^{m_{S'}} $ on $Y$. Then by Lemma~\ref{HSlem} there would be a curve $E_j^{S'}$ such that $\pi_* E_j^{S'}$ is a curve with self-intersection $0, \,  l,\,  l+2$. However these curves would necessarily intersect $C_1$ and $C_2$ meaning either $S'$ is not distinct from $S$ or there is a $-1$-curve in $Y$ connecting two of their curves in the minimal resolution. Hence $X$ has precisely one singularity. 
 
-To complete the analysis of this step, suppose $S$ is a $\frac{1}{p}(1,1)$ singularity and that its unique exceptional curve is mapped to the negative section~$B$. Then consider the possibility of there being another singularity $S'$ on~$X$. By Lemma~\ref{HSlem}, there is a curve $E_j^{S'}$ such that $A=\pi_* E_j^{S'}$ has self intersection $l$ or $4l$; it cannot be $0$ or $l+2$ as it must not meet~$B$. If $S'$ is not a $\frac{1}{p}(1,1)$ then there is at least one exceptional curve among the $E_k^{S'}$ that is contracted to a point on $A\subset\F_l$. However each blowup of a point $Q\in A$ introduces a $-1$-curve $D$ which is joined to curve $B$ by another $-1$-curve, the birational transform of the fiber through~$Q$. Hence none of these curves $E_k^{S'}$ can be mapped to $D$, as otherwise it would be adjoined to $B$ by a $-1$-curve, contradicting Lemma~\ref{lem!badcurve}.
+To complete the analysis of this step, suppose $S$ is a $\frac{1}{p}(1,1)$ singularity and that its unique exceptional curve is mapped to the negative section~$B$. Then consider the possibility of there being another singularity $S'$ on~$X$. By Lemma~\ref{HSlem}, there is a curve $E_j^{S'}$ such that $A=\pi_* E_j^{S'}$ has self-intersection $l$ or $4l$; it cannot be $0$ or $l+2$ as it must not meet~$B$. If $S'$ is not a $\frac{1}{p}(1,1)$ then there is at least one exceptional curve among the $E_k^{S'}$ that is contracted to a point on $A\subset\F_l$. However each blowup of a point $Q\in A$ introduces a $-1$-curve $D$ which is joined to curve $B$ by another $-1$-curve, the birational transform of the fiber through~$Q$. Hence none of these curves $E_k^{S'}$ can be mapped to $D$, as otherwise it would be adjoined to $B$ by a $-1$-curve, contradicting Lemma~\ref{lem!badcurve}.
 Thus any other singularity on $X$ is also of type $\frac{1}{p}(1,1)$ (though possibly for a different~$p$).
 
 Suppose now that there was a third singularity of type $\frac{1}{p}(1,1)$. Once again, its exceptional curve would have to be sent to a $0, \, l, \, l+2$. Any smooth rational curve on $\F_l$ with one of these intersection numbers intersects the curve $A$. Thus on $Y$ it must either meet the birational transform of $A$ or meet some curve that contacts to~$A$. Once again in the second case it will result in two singularities connected by a $-1$-curve. This is a contradiction to small discrepancy.
@@ -672,13 +790,6 @@ Suppose now that there was a third singularity of type $\frac{1}{p}(1,1)$. Once 
 Thus $X$ has exactly one or two singularities of type $\frac{1}p(1,1)$,
 and part~\eqref{thm38i} is complete in the case $l\ge2$.
 
-
-We now deal with the two cases we did not consider earlier $l = 0$ and $l =1$. Dealing with the case of $l = 0$ first, we know that $Y$ has no map to $\F_l$ for $l\ge1$, by maximality of~$l$. Thus $Y$ must be $\F_0$, since a blow up of any point of $\mb{F}_0$ also permits a map to $\mb{F}_1$; but then $X=Y$ is smooth, contradicting the assumption. 
-
-For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$-curve we get a map to $\mb{F}_2$. So the only option is a blowup at a smooth point. Log del Pezzo surfaces do indeed arise in this way; see \cite[Table ??]{CP}.
-This results in three adjacent $-1$-curves. Blowing up any point on either of the two end curves reveals a map to $\mb{F}_2$, so the only option for further blowups is at points above points of the middle curve.
-% If the point is not in general position then we get a map to $\mb{F}_2$.
- This results in an infinite family of \ldp's with a single $\frac{1}{p}(1,1)$ singularity. We note that if we blowup two general points on $\mb{F}_1$ we get a surface with the property that for any $-1$-curve there is a map to $\mb{F}_1$ which sends it to the $-1$-curve on $\mb{F}_1$. Hence every surface arising this way would of arisen from our earlier case analysis.
 
 
 %Hence to each choice of curve $C$ in the minimal resolution with $C^2 = a$ we get a corresponding \ldp\ with a map down to $\mb{F}_a$. It is fully possible that some of these surfaces may not exist, or may not be the minimal resolution of a \ldp. It is also possible that if the singularity has some symmetry, then there may be isomorphisms between these surfaces.
@@ -793,7 +904,7 @@ We can then proceed to construct the configuration of all exceptional curves ind
 \end{center}
 \caption{Example of surface.\label{fig!logdp}}
 \end{figure}
-This is the picture where the map to the Hirzebruch surface is an isomorphism on an exceptional curve $E_i$, where $1<i<n$. Here the red curve s indicate $-1$-curves and the blue curves indicate curves with positive self intersection. The blue curve has self intersection $a_i+ 3 - n$. This value is dependent on $n \ge 3$ and the map to the Hirzebruch surface being an isomorphism on a curve $E_i$ with $1<i<n$. This is because on the Hirzebruch surface $\mb{F}_{a_i}$ this curve had self intersection $a_i$. The $n-3$ of our exceptional curves are mapped to points and hence it has self intersection $a_i-(n-3)$. In the case that our map is an isomorphism on the curve $E_1$ or $E_n$ then we have a similar looking configuration except with positive curve now having self intersection $a_i + 4 - n$ as there is an extra point being blown up however the image of the curve in the Hirzebruch surface now is in the linear system $|(l+1)F + B|$. Hence its self intersection is now $l -(n - 3) -1 = l - n + 4$.
+This is the picture where the map to the Hirzebruch surface is an isomorphism on an exceptional curve $E_i$, where $1<i<n$. Here the red curve s indicate $-1$-curves and the blue curves indicate curves with positive self-intersection. The blue curve has self-intersection $a_i+ 3 - n$. This value is dependent on $n \ge 3$ and the map to the Hirzebruch surface being an isomorphism on a curve $E_i$ with $1<i<n$. This is because on the Hirzebruch surface $\mb{F}_{a_i}$ this curve had self-intersection $a_i$. The $n-3$ of our exceptional curves are mapped to points and hence it has self-intersection $a_i-(n-3)$. In the case that our map is an isomorphism on the curve $E_1$ or $E_n$ then we have a similar looking configuration except with positive curve now having self-intersection $a_i + 4 - n$ as there is an extra point being blown up however the image of the curve in the Hirzebruch surface now is in the linear system $|(l+1)F + B|$. Hence its self-intersection is now $l -(n - 3) -1 = l - n + 4$.
 
 The toric degeneration property now follows. By construction all these surfaces $X$ are \LJ s,
 and so admit a toric degeneration by \cite[Theorem ??]{GHK}.
@@ -802,6 +913,8 @@ and so admit a toric degeneration by \cite[Theorem ??]{GHK}.
 
 
 This leads to the following corollary in which we classify all log del Pezzo surfaces with singularities of small discrepancy, each of which is resolved by a single exceptional curve.
+ 
+\section{Examples}
  
 \begin{cor}
 Let $X$ be a log del Pezzo surface with small discrepancy and
@@ -812,9 +925,9 @@ for $n\ge0$ and $m\ge0$. Then $n\le2$ and moreover
 if $n\le1$ then either $X$ is a smooth del Pezzo surface or 
 lies in a cascade over $\P(1,1,k)$ (see \cite[Table ??]{CP});
 \item\label{dp11ii}
-if $n=2$ then $X$
+if $n=2$ then let $c$ be the highest common factor of $p$ and $q$ and $a = \frac{p}{c}$, $b = \frac{q}{c}$. Then $X$
 is isomorphic to a quasismooth weighted hypersurface
-$X_{p+q}\subset \mb{P}(1,\,1,\,p,\,q)$. Conversely any such hypersurface with $p,q\ge4$ is
+$X_{a+b}\subset \mb{P}(1,\,1,\,a,\,b)$ quotiented out by $\mu_c$ acting with weights $(1,1,0,1)$. Conversely any such hypersurface with $p,q\ge4$ is
 a log del Pezzo surface with small discrepancy.
 \end{enumerate}
 In particular, in the case of two singularities there is no cascade.
@@ -823,10 +936,10 @@ In particular, in the case of two singularities there is no cascade.
 The small discrepancy condition is equivalent to the condition that
 $p_i \geq 4$ for each $i=1,\dots,n$. 
 For the sake of completeness, we outline the classification result of \cite{CP} that
-describes part~\ref{dp11i}, which also follows independently from MY PROOF ? LEMMA ??
+describes part~\ref{dp11i}, which also follows independently from Propostion~\ref{ } and Theorem~\ref{ThmOnSing}.
 
 \begin{proof}
-With these constrictions on singularities, it fits the criterion for the above theorem. The explicit classification was done in the proof of the theorem. The case of one singularity was done in CP. The only examples of these surfaces with more than one singularity are constructed by blowing up a Hirzebruch surface in several points along a line and then contracting the two curves. Denote this surface by $X$. Then $X$ admits a toric degeneration to $(-p_1, -1), \, (0, 1), \, (p_2, 1)$. Note $X$ admits a $\mb{C}^*$ action and the degeneration is equivariant with respect to the torus action. We have $-K_X^2 = \frac{4}{p_1} + \frac{4}{p_2}$. Even in cases where $-K_X^2 > 1$ we see that $X$ cannot be blown up while preserving $-K_X$ ample. If $X$ admitted a blow up at a general point $P$ then there is a fiber $F$ such that $P \in F$. Then $\widetilde F$ is a $-1$-curve on the minimal resolution connecting the $-p_1$ curve with the $-p_2$ curve. This is a contradiction. Hence there is only one element in the cascade.
+With these restrictions on singularities, it fits the criterion for the above theorem. The explicit classification was done in the proof of Theorem~\ref{ThmOnSing}. The case of one singularity was done in \cite{CaveyPrince}. The only examples of these surfaces with more than one singularity are constructed by blowing up a Hirzebruch surface in several points along a line and then contracting the two curves. Denote this surface by $X$. Then $X$ admits a toric degeneration to $(-p_1, -1), \, (0, 1), \, (p_2, 1)$. This is $\mb{P}(a+b, a, b)$ quotiented out by $\mu_c$ acting with weights $(1,1,0,1)$. Taking the $v_{a+b}$ gives us the desired embedding. Note $X$ admits a $\mb{C}^*$ action and the degeneration is equivariant with respect to the torus action. We have $-K_X^2 = \frac{4}{p_1} + \frac{4}{p_2}$. Even in cases where $-K_X^2 > 1$ we see that $X$ cannot be blown up while preserving $-K_X$ ample. If $X$ admitted a blow up at a general point $P$ then there is a fiber $F$ such that $P \in F$. Then $\widetilde F$ is a $-1$-curve on the minimal resolution connecting the $-p_1$ curve with the $-p_2$ curve. This is a contradiction. Hence there is only one element in the cascade.
 
 
 
@@ -954,16 +1067,19 @@ inside the toric variety with weights
 \end{blockarray}
 \]
 
- The $(a+1)$st blowup admits a toric degeneration to $(-1, b), \, (-1, -1), \, (a, -1)$. The toric degeneration of the $a+2$'nd blowup is a bit more finicky and goes on a case by case analysis. We note that this surface still has a boundary of a curve  $C \in -K_X$. This strict transform $\wt{C} \subset Y$ has self intersection $0$ as it started of as an $a+2$ curve and has been blown up $a+2$ times. Hence $X$ admits a degeneration as it is a \LJ. To see the cascade result we note that if you blow up the surface $X_a$ times at points $P_1 \dots P_a$. To each of these points there is a unique fiber going through it $F_i$. The strict transform of these fibers after blowing up is a $-1$-curve going through the $-a$ curve. Hence after blowing $X_a$ and $X_b$ respectively $a$ and $b$ times we get a surface which has as a boundary three curves with self intersection $0, -a, -b$ and in both cases you have your $a$ and your $b$ curves have $a$ and $b$ minus one curves intersecting them respectively. Hence they are isomorphic. 
+ The $(a+1)$st blowup admits a toric degeneration to $(-1, b), \, (-1, -1), \, (a, -1)$. The toric degeneration of the $a+2$'nd blowup is $(-1,0)$, $(-a, -1-a)$, $(-1, -1-a)$, $(b, ab-1)$.
+ We note that this surface still has a boundary of a curve  $C \in -K_X$. This strict transform $\wt{C} \subset Y$ has self-intersection $0$ as it started of as an $a+2$ curve and has been blown up $a+2$ times. Hence $X$ admits a degeneration as it is a \LJ. To see the cascade result we note that if you blow up the surface $X_a$ times at points $P_1 \dots P_a$. To each of these points there is a unique fiber going through it $F_i$. The strict transform of these fibers after blowing up is a $-1$-curve going through the $-a$ curve. Hence after blowing $X_a$ and $X_b$ respectively $a$ and $b$ times we get a surface which has as a boundary three curves with self-intersection $0, -a, -b$ and in both cases you have your $a$ and your $b$ curves have $a$ and $b$ minus one curves intersecting them respectively. Hence they are isomorphic. 
  
  
- We note that we have made in the above calculations no effort to show that the elements in the cascade are \ldp\ surfaces. However it is not hard to show assume we are blowing up $a+2$ points giving surface $X_3$. This has minimal resolution $Y_3$. The class group of $Y_3$ is generated by the curves $D_1, \, D_2, \, D_3, \, D_4, \, E_1^0, \dots E_b^0, \, E_1^1, \dots E_{a+2}^1$. Here the $D_i$ for a cycle such that $\sum D_i \in |-K_{Y_3}|$. These have self intersections $-a, \, -b, \, -1, \, -1$ respectively. Here $D_3$ was a curve of degree $a$  on $\mb{F}_a$ blown up $a+1$ times and $D_4$ was a fiber on which a point has been blown up. The $E_i^0$ are $-1$-curves intersecting the $-b$ curve. The $E_i^1$ are floating $-1$-curves. We wish to show $-K_{X_3}$ is ample. We note that showing $-K_{X_3} \cdot C > 0$ for all $C$ generating the class group would suffice. We note that the curves $D_1, \, D_2$ are contracted when sent to $X_3$. We note that $-K_{X_3} \cdot E_i^0 = -K_{X_a} \cdot E_i^0$ as we are blowing up points not on these curves. Then $-K_{X_3} \cdot E_i^0 = 1$ as these are floating $-1$-curves. Finally to see that $-K_{X_3} \cdot D_3 > 0$ we note that, when pushed forwards to $X_3$, it only goes through the one singularity on $X_3$ with multiplicity $-1$. This is because on $Y_3$ it is only intersecting the $-a$ curve transversely. Hence $-K_{X_3} \cdot D_3 = 1 + d_a$ where $d_a$ is the discrepancy of the $-a$ curve. Via log terminality we have $d_a > -1$. Hence the product is greater than 0. The argument for the curve is exactly the same with $d_a$ replaced with $d_b$. From this we see $X_3$ is a \ldp, hence every surface in the cascade is a \ldp\ surface.
+ We note that we have made in the above calculations no effort to show that the elements in the cascade are \ldp\ surfaces. However it is not hard to show, assume we are blowing up $a+2$ points giving surface $X_3$. This has minimal resolution $Y_3$. The class group of $Y_3$ is generated by the curves $D_1, \, D_2, \, D_3, \, D_4, \, E_1^0, \dots E_b^0, \, E_1^1, \dots E_{a+2}^1$. Here the $D_i$ for a cycle such that $\sum D_i \in |-K_{Y_3}|$. These have self-intersections $-a, \, -b, \, -1, \, -1$ respectively. Here $D_3$ was a curve of degree $a$  on $\mb{F}_a$ blown up $a+1$ times and $D_4$ was a fiber on which a point has been blown up. The $E_i^0$ are $-1$-curves intersecting the $-b$ curve. The $E_i^1$ are floating $-1$-curves. We wish to show $-K_{X_3}$ is ample. We note that showing $-K_{X_3} \cdot C > 0$ for all $C$ generating the class group would suffice. We note that the curves $D_1, \, D_2$ are contracted when sent to $X_3$. We note that $-K_{X_3} \cdot E_i^0 = -K_{X_a} \cdot E_i^0$ as we are blowing up points not on these curves. Then $-K_{X_3} \cdot E_i^0 = 1$ as these are floating $-1$-curves. Finally to see that $-K_{X_3} \cdot D_3 > 0$ we note that, when pushed forwards to $X_3$, it only goes through the one singularity on $X_3$ with multiplicity $-1$. This is because on $Y_3$ it is only intersecting the $-a$ curve transversely. Hence $-K_{X_3} \cdot D_3 = 1 + d_a$ where $d_a$ is the discrepancy of the $-a$ curve. Via log terminality we have $d_a > -1$. Hence the product is greater than 0. The argument for the curve is exactly the same with $d_a$ replaced with $d_b$. From this we see $X_3$ is a \ldp, hence every surface in the cascade is a \ldp\ surface.
 \end{proof}
 
 This structure of the cascade can be put in more general terms. 
 
+\section{Cascades}
+
 \begin{thm}
-Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, this has at most $n$ basic surfaces from the previous theorem, possibly less via symmetry. Let $X_i$ be the surface constructed from $X_{a_i}$. If $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$. 
+Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in the previous theorem. Let $X_i$ be the surface constructed from $X_{a_i}$. If $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$. 
 
 In addition we can describe the shape of the cascade. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. We explained the case of the singularity of length 2 above. In the case of the singularity having length 3, then the cascade looks like:
 \[
@@ -980,27 +1096,301 @@ For any singularity of length greater than 3, then a basic surface either falls 
 
 \end{thm}
 \begin{proof}
-Given a singularity $S$ which is not a $\frac{1}{p}(1,1)$. Then to a basic surface $X$ this has to be constructed by a series of blowups at two point. We are blowing up this point finitely many times. Denote these multiplicities by $k_1$, $k_2$. This is an invariant of the surface $X$. On $X$ we have two sets of curves which are mapped to fibers on the Hirzebruch surface. Denote these by $A_1 \dots A_n$ and by $B_1, \dots B_m$. We have three rational curves $U, \, V, \, W$. We now assume that both $A_1, \, A_n$ and $B_1, \, B_m$ have been blown up non torically giving rise to curves $C_1^A, \, C_n^A, \, C_1^B, \, C_m^B$. The curve $U$ intersects with $C_i$.
-\end{proof}
-\begin{cor}
-Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.
-\end{cor}
+Given a singularity $S$ of small discrepancy with length $m>1$. Then a basic surface $X$ with singularity $S$ has minimal resolution $Y$. The surface $Y$ is constructed by taking a Hirzebruch surface $\mb{F}_{a_i}$ picking two points $P_1$, $P_2$ and blowing them up $k_1$ and $k_2$ times, this gives rise to an intermediate surface $Z$ and then $X$ is constructed by doing further blow ups. We can assume $k_1 \leq k_2$ and this gives the relations that either $k_1 = k_2 = 0$ and $m \in \{1, \, 2, \, 3 \}$ or $k_1 = 0$ and $k_1 = m-2$ or $k_1 + k_2 = m-3$. These cases arise by considering the case where the strict transform of both/ one/ none of the fibers are exceptional curves. The case where no fiber becomes an exceptional curve has been classified in Example~\ref{1/p(1,1)} and we will note mention it further.
 
+
+We note that $k_1$ and $k_2$ should not be viewed as invariant of the surface $X$ but an invariant of the given map to $\mb{F}_{a_i}$:
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0QBfU9TXfIRQBGclVqMWbAJrdeIDNjwEiAJjHV6zVohAAdPQFsARsABiXAPrA6lrF27iYUAObwioAGYAnCIaSiIDgQSMQ8Xr7+iIHBSOoS2mwGaFiOXEA
+\begin{tikzcd}
+X & Y \arrow[l, "f"] \arrow[r, "\pi"] & \mb{F}_{a_i}
+\end{tikzcd}
+\]
+We now note that by construction in the case where the strict transform of both fibers are exceptional curves we get a curve $C$ on $Y$ with self-intersection $a_i - k_1 -k_2$. Via construction $C$ was a toric curve and $f_*(C) \in |-K_X|$. We have that the class group of $X$ is generated by $C$ and $D_i$ where $D_i$ are the curves arising from the non toric blowups of $Y$. This implies that the cascade of $X$ is of length $L = a_i - k_1-k_2$  as blowups in general position do not affect the $-K_X \cdot D_i$ and when we blow up $a_i - k_1 -k_2 +1$ times $K_X^2 \leq 0$ via the small discrepancy condition. If $L < 0$ then this surface is not a \ldp\ surface.
+
+
+In the case where one of the fibers is not exceptional, so $k_2  = 0$,  we have that the class group is generated by the same $D_i$, the fiber class $F$ and a final curve $C$. Here $-K_X = C + F$ and $F^2 = 0$, $C^2 =  a_i - k_1$. This surface admits a cascade of length $L = a_i - k_1 + 2$. This is because, we only need to calculate the intersections on the subgroup generated by $C$ and $F$. If we blowup $L$ times we can assume that we blew up one point on the fiber $F$ and $a_i-k_1+1$ points on the curve $C$. After this process the strict transform of both these curves would have self-intersection $-1$. As these are both on through a singularity with multiplicity one we see that $-K_X$ has positive intersection with these curves. If we blow up one more time we can assume all $L+1$ points lie on a curve in the class $|C+F|$ this has self-intersection $L$ and hence after all these blowups would be a $-1$ curve intersecting the singularity twice. This would not be a \ldp\ surface via small discrepancy.
+
+
+We now wish to explore the birational relationships between these surfaces. The first stage is to show that the only possible $-1$ curves on any surface in the cascade arise from the class $|B+ a_i F|$ on the Hirzebruch surface $\mb{F}_{a_i}$. To show this we note that it is impossible for any curve that intersects $|B|$ to end up being a floating curve as it will always intersect the curve $B$. So any floating curve $C$ lies in the class $n|B+a_i F|$. To show that $n=1$ we compute the self intersection of these curves. If $n=2$ then the smallest possible self intersection of a curve not going through the singularity  is $4a_i - k_1 - k_2 - 4$ if there is two exceptional fibers and $4a_i - k_1 -2$ if there is only one. As in the first case $L = a_i- k_1-k_2$ as $a_i \geq 2 $  we have $4a_i -k_1-k_2 - 4 > L$ so we cannot blow up enough to make this a $-1$ curve. In the second case $L = a_i -k_1+2$ so once again as $a_i \geq 2$  we cannot blow up enough to make it a $-1$ curve. As $n$ increases the size of the self intersection increases and hence they can never occur as floating $-1$ curves.
+
+
+Now we explicitly state how the cascade structure occurs. We note that out of the exceptional curves $E_i \subset Y$ only the curves that arose as part of the original $k_1$ and $k_2$ blowups can be intersected by curves in the class $|B + a_i F|$ as otherwise they would have to intersect the fiber with multiplicity greater than $1$. Label these curves $S_1, \dots ,S_{k_1}$ and $T_1, \dots , T_{k_2}$ with $S_{1}$ and $T_{1}$ being the strict transforms of the fibers. Hence any potential floating curve intersects a $-1$ curve coming out of a curve $S_i$ and a $-1$ curve coming out of $T_j$. We now denote by $C_{i,\, j}$ the curve intersecting a $-1$ curve coming from $S_i$ and a $-1$ curve coming from $T_j$. Then in the case of both fibers becoming exceptional curves $C_{i, \, j}^2 = L- 4 + i + j$ so in order for it to become a $-1$ curve it needs to be blown up in $L - 3 + i + j$ points. However as the length of the cascade is $L$ this implies $i+j \leq 3$. So $\{ (i, \, j) \} = \{(1,1), (1,2), (2,1) \} $. We now go on a case by case analysis:
+
+
+\textbf{Case 1}: We start with $(i, \, j)  = (1,\, 1)$. It takes $L - 1$ blowups for this to become a $-1$ curve. Denoting the number of $-1$ curves intersecting $S_1$ and $T_1$ by $s, \, t$, we label these curves $D_u^S$ and $D_v^T$ respectively. We have $st$ possible curves which would give rise to a $-1$ curve after $L-1$ blowups. We denote by $C_{u, \, v}$ the curve intersecting $D_u^S$ and $D_v^T$. These curves originally lay in $|B+ a_i F|$ so on the Hirzebruch surface they intersected $b$ times. By repeating the same calculation on  this on$Y$ blown up $L-1$ times, we see that $C_{u,\, v}$ intersects $C_{u' , \, v'}$ if and only if $u \neq u'$ and $v \neq v'$. So fixing $C_{u, \, v}$ we get the following curve configuration
+
+\begin{figure}[h]
+\resizebox{10cm}{10cm}{
+\begin{tikzpicture}[thick,scale=0.6, every node/.style={transform shape}]
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Filled Basic] (0) at (0.25, 9.25) {};
+		\node [style=Filled Basic] (1) at (0.25, 7.75) {};
+		\node [style=Filled Basic] (2) at (0.25, 6.25) {};
+		\node [style=none] (3) at (0.25, 4.75) {};
+		\node [style=none] (4) at (0.25, -0.25) {};
+		\node [style=Filled Basic] (5) at (0.25, -2) {};
+		\node [style=Filled Basic] (6) at (0.25, -3.5) {};
+		\node [style=Filled Basic] (7) at (10, 9.25) {};
+		\node [style=Filled Basic] (8) at (10, 7.75) {};
+		\node [style=Filled Basic] (9) at (10, 6.25) {};
+		\node [style=none] (10) at (10, 4.75) {};
+		\node [style=none] (11) at (10, -0.25) {};
+		\node [style=Filled Basic] (12) at (10, -2) {};
+		\node [style=Filled Basic] (13) at (10, -3.5) {};
+		\node [style=none] (24) at (-3, 6.5) {};
+		\node [style=none] (25) at (-3, 5) {};
+		\node [style=none] (26) at (-3, 3.5) {};
+		\node [style=none] (27) at (-3, -4.75) {};
+		\node [style=none] (28) at (-3, -6.25) {};
+		\node [style=none] (29) at (12.25, 6.5) {};
+		\node [style=none] (30) at (12.25, 5) {};
+		\node [style=none] (31) at (12.25, 3.5) {};
+		\node [style=none] (32) at (12.25, -4.75) {};
+		\node [style=none] (33) at (12.25, -6.25) {};
+		\node [style=none] (34) at (3, 9) {};
+		\node [style=none] (35) at (2.25, 7.75) {};
+		\node [style=none] (36) at (1.75, 6.75) {};
+		\node [style=none] (37) at (2.25, 1.25) {};
+		\node [style=none] (44) at (-3.75, 6.5) {};
+		\node [style=none] (45) at (-3.75, 5) {};
+		\node [style=none] (46) at (-3.75, 3.5) {};
+		\node [style=none] (47) at (-3.75, -4.75) {$D_{s-1}^S$};
+		\node [style=none] (48) at (-3.75, -6.25) {$D_s^S$};
+		\node [style=none] (50) at (-3.75, 5) {$D_2^S$};
+		\node [style=none] (51) at (-3.75, 3.5) {$D_3^S$};
+		\node [style=none] (54) at (-4, 6.5) {$D_1^S$};
+		\node [style=none] (55) at (13.5, 6.5) {};
+		\node [style=none] (56) at (13.5, 5) {};
+		\node [style=none] (57) at (13.5, 3.5) {};
+		\node [style=none] (58) at (13.5, -4.75) {$D_{t-1}^T$};
+		\node [style=none] (59) at (13.5, -6.25) {$D_t^T$};
+		\node [style=none] (60) at (13.5, 5) {$D_2^T$};
+		\node [style=none] (61) at (13.5, 3.5) {$D_3^T$};
+		\node [style=none] (62) at (13.5, 6.5) {$D_1^T$};
+		\node [style=none] (63) at (5.25, 10.25) {};
+		\node [style=none] (64) at (5.25, 10.25) {$C_{1, \, s-1}$};
+		\node [style=none] (65) at (12.25, -4.75) {};
+		\node [style=none] (66) at (4.5, -0.25) {};
+		\node [style=none] (67) at (5.25, -1.25) {};
+		\node [style=none] (68) at (4, -2.25) {};
+		\node [style=none] (69) at (2.5, -2.75) {};
+		\node [style=none] (70) at (1.25, -4.25) {};
+		\node [style=none] (71) at (-0.5, -4.75) {};
+		\node [style=none] (72) at (-0.75, -3.5) {};
+		\node [style=none] (73) at (3.75, 6) {$C_{1, \, t}$};
+		\node [style=none] (74) at (2.5, 3.25) {};
+		\node [style=none] (75) at (6.25, 5.75) {$C_{s, \, 1}$};
+		\node [style=none] (76) at (7.75, 3) {$C_{s, \, 3}$};
+		\node [style=none] (77) at (5, -4.5) {};
+		\node [style=none] (78) at (5, -4.5) {$C_{s,\,t}$};
+		\node [style=none] (79) at (2.5, 3.25) {$C_{3, \, t}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=Filled Blue] (6) to (13);
+		\draw (6) to (12);
+		\draw (5) to (13);
+		\draw (2) to (13);
+		\draw (1) to (13);
+		\draw (0) to (13);
+		\draw (6) to (9);
+		\draw (8) to (6);
+		\draw (7) to (6);
+		\draw [style=Dashed Black] (3.center) to (4.center);
+		\draw [style=Dashed Black] (10.center) to (11.center);
+		\draw (24.center) to (0);
+		\draw (25.center) to (1);
+		\draw (26.center) to (2);
+		\draw (27.center) to (5);
+		\draw (28.center) to (6);
+		\draw (33.center) to (13);
+		\draw (9) to (31.center);
+		\draw (8) to (30.center);
+		\draw (7) to (29.center);
+		\draw [style=Red, bend right=60, looseness=1.50] (7) to (34.center);
+		\draw [style=Red] (34.center) to (35.center);
+		\draw [style=Red, bend right, looseness=0.75] (36.center) to (37.center);
+		\draw [style=new edge style 0, bend left=15, looseness=0.50] (35.center) to (36.center);
+		\draw (12) to (65.center);
+		\draw [style=Red] (5) to (72.center);
+		\draw [style=Red] (71.center) to (70.center);
+		\draw [style=Red, in=-165, out=15, looseness=2.50] (70.center) to (69.center);
+		\draw [style=Red, bend right] (68.center) to (67.center);
+		\draw [style=Red, bend left=45] (66.center) to (67.center);
+		\draw [style=Red, bend left] (66.center) to (37.center);
+		\draw [style=new edge style 0, in=-180, out=-120, looseness=1.25] (72.center) to (71.center);
+		\draw [style=new edge style 0] (69.center) to (68.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+}
+\caption{Figure 2. This is currently not correct, fix the intersection}
+\end{figure}
+Hence if we choose a floating $-1$ curve $C_{u, \, v}$ to contract the only remaining floating curves are $C_{u, \, \beta}$ and $C_{\alpha , \, v}$ where $\alpha \in \{ 1, \dots, s\}$ and $\beta \in \{1 , \dots , t \}$. When the second floating curve is contracted this uniquely defines whether we are iterating over $s$ or over $t$. So after two contractions the cascade is uniquely defined. To see where it ends up we note that a basic surface is uniquely defined by the number of $-1$ curves coming out of each curve on the boundary. Picking one of these chains of  leads to either $s$ blowdowns or $t$ blowdowns. These cases behave symmetrically, so focusing on the case of $s$ blowdowns we get a curve $E_1 \subset Y$ with self intersection $a$ and no $-1$ curves coming out of it. So it is not unreasonable to hope that this admits a map to $\mb{F}_{a_1}$. To show this we introduce even more notation. 
+We note that we can start by contracting all $-1$ curves intersecting the exceptional curves. We previously had $2$ fibers $F_1 = [f_1, \dots, f_{m_1}]$ and $F_2 = [g_1, \dots g_{m_2}]$ and after purely toric contractions $F_1$ can be mapped to $[-1, \, -2, \, -2 \dots -2 \, -1]$ with length $k_1$, the analogous statement holds for $F_2$. We note that the curve $E_1$ is still in the fiber $[-1, \, -2, \, -2, \dots -2, \, -1]$. After our new series of contractions we now have a curve configuration $[-a_1, \, f_2, \,f_3 \dots f_{m_1}, \, L-1-a_i, \, g_1, \dots g_{m_2}] = [-a_1, \, f_1,  \, f_2 \dots f_{m_1}, \, -k_1-k_2-1, \, g_1, \dots , g_{m_2}]$. We can repeat our toric contractions to contract this too $[-a_1, \, -2, \dots -2, \, -1, \, -k_1 -k_2 +1 , \, -1, \, -2, \dots , \, -2, \, -1]$, at this point as the number of $-2$ curves on the left is $k_1$ and the number of $-2$ curves on the right is $k_2$ we see that this curve configuration can be constructed by blowing up the configuration $[-a_1, \, 0]$ in the following way:
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoAmAXVJADcBDAGwFcYkRkBaegfQEZSAAgA6woZ3JDR4gSLGCJlEAF9S6TLnyEUZAMzU6TVuy69Z0hZLlQIOOIPFXOAa36dz890tXrseAkRkACwGDCxsiBzc-FKeVqI2dg4KrnwKgq7kCh6OsY7WtvaKKmogGH5agaR8oUYRUWZ52aQWXiW+mgE6pMS14SbROYK9KgYwUADm8ESgAGYAThAAtkgCIDgQSMQ+IAvLWzQbSLo7eyuIuoebiEGni+eS69d8ypTKQA
+\begin{tikzcd}
+{[-a_1, \, 0]}                                                          \\
+{[-a_1, \, -1,\, -1]} \arrow[u]                                         \\
+{[-a_1, \, -2, \, -1, \, -2]} \arrow[u]                                 \\
+{[-a_1, \, -2, \dots , -2, -k_1-1, \, -1]} \arrow[u]                    \\
+{[-a_1, \, -2, \dots , -k_1 - k_2 -1, \, -2, \, -2 \dots -2]} \arrow[u]
+\end{tikzcd}
+\]
+So in particular this arises from a basic surface with $k_2 = 0$, $k_1 = 1$ and the strict transform of only one becoming an exceptional curve. This concludes the first case.
+
+\textbf{Case 2}: The second case is $(i, \, j) = (1, \, 2)$. We do not spell this out in the same level of detail. Replicating the above arguments we see that we now get exactly the same curve configuration as in Figure 2 except now connecting the curves $E_1^S$ to $E_2^T$. So once again this leads to a set of two branching contractions. Once again this leads to a basic surface with $k_1 = 1$ and $k_2 = 0$. However this time there are two fibers that are now exceptional curves on $Y$. This proof follows from exactly the same logic as above.
+
+\textbf{Case 3}: The final case is $(i, \, j) = (2, \, 1)$. This is symmetrical to case 2.
+
+A crucial point in this proof is that each case behave independently of the others as two floating curves don't intersect each other only if they lie in the same case.
+
+We note that if there are no $-1$ curves coming out of the curves $E_1^S$ and $E_1^T$ then the cascade is a straight line as the above discussion is entirely predicated on their existence. This concludes the cascade for basic surfaces of this type. 
+
+We make a quick mention of what happens in the case where there is only one exceptional fiber. These surfaces all start by blowing up a point $k$ times. Label the exceptional curves that arose from blowing up this point $E_{k}, \dots E_1$ and we denote the strict transform of the fiber by $E_{0}$. Once again $L = a_1 -k+ 2$ and we have curves with self intersection $a_1 - i -1$ intersecting the $-1$ curves coming out of $E_i$. To get a $-1$ curve we need $a_1 - i - 1 < L = a_1 - k+2$ giving $k-i < 3$ so $i \in \{ k, \, k-1,\, k-2 \}$.  After $a_1-k$ blowups we get a straight chain of blowdowns arising from floating $-1$ curves intersecting $-1$ curves coming out of $E_k$. After $a_1-k+1$ blowups we also get $-1$ curves intersecting the fiber $E_{k-1}$. These curves, pre blowups, intersect the potential floating curves arising from $E_k$ $a_1 - k - 1?$ times. We have then blown up $a_1-k+1$ points 
+
+
+\end{proof}
+
+\begin{rem}
+The surfaces $X_{a_i}^{k_1 + k_2}$ always exist but may not always have $-K_X$ being ample. This depends purely on the values $a_i, \, k_1, \, k_2$.
+\end{rem}
+\begin{cor}
+Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self-intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.
+\end{cor}
 \begin{rem}
 It is fully possible for both $X_1$ and $X_2$ to exist but one of the $X_{a_i}^0$ to not exist. For example consider a singularity with resolution $-3, \, -8, \, -2, \, -2, \, -2, \, -2, \, -2, \, -2, \, -3$. There will be a surface $X$ such that the resolution will have a map to $\mb{F}_8$ but there will be no surface with a map from its resolution to $\mb{F}_3$.
 \end{rem}
 
+
+\section{Outside of the small discrepancy}
+
+If you consider singularities of the type $\frac{1}{p}(1,1)$ we note that if $p \geq 7$ then a $\frac{1}{p}(1,1)$ singularity cannot be joined to any other $\frac{1}{p}(1,1)$ singularity by a $-1$ curve. Hence a similar analysis to  Theorem~\ref{ThmOnSing} gives us the bound that there cannot be a \ldp\ surface $X$ with singularities $\frac{1}{p_1}(1,1), \, \dots, \, \frac{1}{p_n}(1,1)$ and $p_1 \geq 7$ and more than 2 different singularities.
+
+However when we enter the case where $p_1 < 7$ you can get surfaces with many more singularities. For instance consider the surface $X$ with the following minimal resolution:
+\[
+\begin{tikzpicture}[scale = 0.5]
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-3, 3) {};
+		\node [style=none] (1) at (10, 3) {};
+		\node [style=none] (4) at (2, 4) {};
+		\node [style=none] (5) at (-3, 0) {};
+		\node [style=none] (6) at (3.75, 4) {};
+		\node [style=none] (7) at (-1, 0) {};
+		\node [style=none] (8) at (12, -8) {};
+		\node [style=none] (9) at (6, 4) {};
+		\node [style=none] (10) at (0, 4) {};
+		\node [style=none] (11) at (-5, 0) {};
+		\node [style=none] (12) at (-5, 1) {};
+		\node [style=none] (13) at (0, -3) {};
+		\node [style=none] (14) at (-3, 1) {};
+		\node [style=none] (15) at (2, -3) {};
+		\node [style=none] (16) at (-1, 1) {};
+		\node [style=none] (17) at (3.75, -3) {};
+		\node [style=none] (20) at (0, -4) {};
+		\node [style=none] (21) at (2, -4) {};
+		\node [style=none] (22) at (3.75, -4) {};
+		\node [style=none] (23) at (-5, -7) {};
+		\node [style=none] (24) at (-3, -7) {};
+		\node [style=none] (25) at (-1, -7) {};
+		\node [style=none] (26) at (-5, -8) {};
+		\node [style=none] (27) at (-3, -8) {};
+		\node [style=none] (28) at (-1, -8) {};
+		\node [style=none] (29) at (-3.75, 2) {-1};
+		\node [style=none] (30) at (-1.5, 2) {-1};
+		\node [style=none] (31) at (0.5, 2) {-1};
+		\node [style=none] (32) at (-3.5, -1.5) {-3};
+		\node [style=none] (33) at (-1.25, -1.5) {-3};
+		\node [style=none] (34) at (0.65, -1.5) {-3};
+		\node [style=none] (35) at (-3.75, -5.25) {-1};
+		\node [style=none] (36) at (-1.05, -5.25) {-1};
+		\node [style=none] (37) at (0.9, -5.25) {-1};
+		\node [style=none] (38) at (2.25, -5.5) {};
+		\node [style=none] (39) at (0, -11) {};
+		\node [style=none] (40) at (2, -11) {};
+		\node [style=none] (41) at (3.75, -11) {};
+		\node [style=none] (42) at (0, -12) {};
+		\node [style=none] (43) at (2, -12) {};
+		\node [style=none] (44) at (3.75, -12) {};
+		\node [style=none] (45) at (-6, -15) {};
+		\node [style=none] (46) at (-3, -15) {};
+		\node [style=none] (47) at (-1, -15) {};
+		\node [style=none] (48) at (-5, -16) {};
+		\node [style=none] (49) at (-3, -16) {};
+		\node [style=none] (50) at (-1, -16) {};
+		\node [style=none] (51) at (-3.5, -10) {-3};
+		\node [style=none] (52) at (-1, -10) {-3};
+		\node [style=none] (53) at (1, -10) {-3};
+		\node [style=none] (54) at (-3.5, -13) {-1};
+		\node [style=none] (55) at (-0.75, -13) {-1};
+		\node [style=none] (56) at (1, -13) {-1};
+		\node [style=none] (57) at (10, -15) {};
+		\node [style=none] (58) at (12, -4) {};
+		\node [style=none] (59) at (6, -16) {};
+		\node [style=none] (60) at (8.25, -2) {-1};
+		\node [style=none] (61) at (8, -9.25) {-1};
+		\node [style=none] (62) at (2.25, -15.75) {-5};
+		\node [style=none] (63) at (8, 2.5) {-5};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (11.center) to (10.center);
+		\draw (5.center) to (4.center);
+		\draw (7.center) to (6.center);
+		\draw (12.center) to (20.center);
+		\draw (14.center) to (21.center);
+		\draw (16.center) to (22.center);
+		\draw (0.center) to (1.center);
+		\draw (26.center) to (13.center);
+		\draw (27.center) to (15.center);
+		\draw (28.center) to (17.center);
+		\draw (23.center) to (42.center);
+		\draw (24.center) to (43.center);
+		\draw (25.center) to (44.center);
+		\draw (39.center) to (48.center);
+		\draw (49.center) to (40.center);
+		\draw (41.center) to (50.center);
+		\draw (45.center) to (57.center);
+		\draw (9.center) to (8.center);
+		\draw (58.center) to (59.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+This has $h^0(-K_X) \neq 0$, $-K_X^2 = \frac{3}{5}$, six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities. In addition it admits no normal toric degeneration, as it is a complexity one surface and hence any degeneration would have to be equivariant. We can construct this as a toric complete intersection via cox rings and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
+\[
+\begin{blockarray}{cc cc cc cc cc c}
+	T_1 & T_2 & T_3 & T_4 & T_5 & T_6 & T_7 & T_8 & T_9 & T_{10} & T_{11} \\[4pt]
+      \begin{block}{(cc cc cc cc cc c)}
+	0&3&-6&-2&1&0&0&0&0&0&0 \\
+	0&2&-4&-1&0&1&0&0&0&0&0 \\
+	1&-2&3&0&0&0&0&0&0&0&0 \\ 
+	0&3&-6&0&0&0&-2&1&0&0&0 \\ 
+	0&2&-4&0&0&0&-1&0&1&0&0 \\
+	0&-3&7&1&0&0&1&0&0&1&0 \\
+	0&1&-2&0&0&0&0&0&0&-1&1 \\
+      \end{block}
+\end{blockarray}
+\]
+with the equations 
+\[
+\begin{array}{c}
+T_1 T_2^2 T_3 + T_4 T_5^2 T_6 + T_7 T_8^2 T_9 \\[4pt]
+T_1 T_2^2 T_3 + T_4 T_5^2 T_6  + \lambda T_{10} T_{11}
+\end{array}
+\]
+We note that there are also surfaces which admit toric degenerations with the same numerics
 \chapter{Complexity One log Del Pezzo Surfaces}
 
 
 \section{Introduction}
 
-For the purpose of the report we work over $\mathbb{C}$, this generalises to any algebraically closed field of arbitrary characteristic. All varieties we consider are normal and projective. Here we give an algorithm to classify Log Del Pezzos admitting a $\mathbb{C}^\times$ action with only log terminal singularities. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is the study of purely toric varieties, and complexity $n$ is the study of varities with no possible torus action. This provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} he classifies log del Pezzo surfaces admitting said action with Picard rank one and index less than 3. Huggenberger \cite{Huggenberger} she classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
+\section{Introduction}
+
+All varieties we consider are normal and projective. Here we give an algorithm to classify Log Del Pezzos admitting a $\mathbb{C}^\times$ action with only log terminal singularities. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is the study of purely toric varieties, and complexity $n$ is the study of varities with no possible torus action. This provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting said action with Picard rank one and index less than 3. Huggenberger \cite{Huggenberger} classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
 \\
 \\
 \section{Polyhedral divisors}
 Recall that a toric variety is a  normal variety of dimension $n$ containing a dense torus $\C{n}$ with the natural action extending to the variety, there is a one to one correspondence between these varieties and fans inside a lattice $N \cong \mathbb{Z}^n$ upto GL$_2(\mathbb{Z})$, \cite{Cox}.
-Altman et.al \cite{Altmann} establish a similar correspondence for varieties with $T = \C{n-k}$ actions where $k \leq n$. We say that this is a torus action of complexity $k$. They introduce the notion of a polyhedral divisor to recover some of the geometry that a fan encodes in the toric case. In general this applies for any complexity, however the behaviour is easiest to describe in the toric case, then complexity one until you reach the full general case.
+Altman et.al \cite{Altmann} establish a similar correspondence for varieties with $T = \C{{ n-k}}$ actions where $k \leq n$. We say that this is a torus action of complexity $k$. They introduce the notion of a polyhedral divisor to recover some of the geometry that a fan encodes in the toric case. In general this applies for any complexity, however the behaviour is easiest to describe in the toric case, then complexity one until you reach the full general case.
 
 
 Given $X$, a variety with dimension $n$ admitting of the torus $ T = (\mathbb{C}^*)^{n-1}$ action, we can take a Chow quotient $Y$ of $X$ by $T$, essentially a GIT quotient followed by normalisation.  We see that $Y$ will be a variety of dimension $k$, we can resolve this map to $\tilde{X}$ getting the following diagram
@@ -1012,12 +1402,12 @@ X \arrow[rd, dotted] & \tilde{X} \arrow[l] \arrow[d]\\
 \end{tikzcd}
 \]
 
-Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a cone the tail cone $\delta$ is the set of $v \in N$ such that for all $u \in F_i$, $ \forall v \in \delta$ then $u+v \in F_i$.
+Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a polyhedral subdivision such that the tail cone $\delta$ is the set of $v \in N$ such that $F_i$ is invariant under the translation, i.e $\delta = \{ v |\, v(F) subset F \}$.
 \begin{dfn}
-Let $C$ be a non singular curve then we define a polyhedral divisor to be the pair $(\mathcal{D} = \sum_{i = 1}^k F_i \otimes P_i$, $\delta)$ where
+Let $C$ be a nonsingular curve then we define a polyhedral divisor to be the pair $(\mathcal{D} = \sum_{i = 1}^k F_i \otimes P_i$, $\delta)$ where
 \begin{itemize}
 \item $P_i \in C$ are divisors on $C$ 
-\item $F_i$ is a cone in $N_\mathbb{Q} \cong \mathbb{Q}^{n-1}$ and all $F_i$ have tail cone $\delta \subset N$.  We allow the cone $F_i$ to be $\varnothing$.
+\item $F_i$ is a polyhedron contained in $N_\mathbb{Q} \cong \mathbb{Q}^{n-1}$ and all $F_i$ have tail cone $\delta \subset N$.  We allow the cone $F_i$ to be $\varnothing$.
 \end{itemize}
 Given an element $v \in M$, the dual lattice of $N$, and the polyhedral divisor $\mathcal{D}$ we define
 \[
@@ -1030,15 +1420,15 @@ Y_\mathcal{D} = C - \{P_j\}_{j \text{ where } F_j = \varnothing}
 \end{dfn}
 
 This defines a divisor on a subset of $C$. We insist that $\mathcal{D}$ satisfies the following conditions:
-\begin{itemize} 
+\begin{enumerate} 
 \item $\mathcal{D}(u)$ is Cartier for all $u \in \delta^\vee $
 \item $\mathcal{D}(u)$ is semiample for all $u \in \delta^\vee$
 \item $\mathcal{D}(u)$ is big for all $u$ in the relative interior of $\delta^\vee$
-\end{itemize}
+\end{enumerate}
 This is to ensure that it gives an $n$-dimensional variety, and to ensure that it is separated \cite{PS}.
 
 
-We can now calculate the associated affine variety in both $X$ and $\tilde{X}$ by taking respectively Spec/ RelSpec${_C}$ of the graded ring
+We can now calculate the associated affine varieties $X$ and $\tilde{X}$ by taking respectively Spec/ RelSpec${_C}$ of the graded ring
 \[
 \bigoplus_{v \in \delta^\vee} \mathcal{O}_{Y_\mathcal{D}} ( \mathcal{D}(v))
 \]
@@ -1052,68 +1442,16 @@ This corresponds to an inclusion of schemes. We make the following comment that 
 \]
 is the same as taking the divisors 
 \[
-\mathcal{D_i} = F_i \otimes P_i  + \sum_{j=1, \, j \neq i} \varnothing \otimes P_j
+\mathcal{D}_i = F_i \otimes P_i  + \sum_{j=1, \, j \neq i} \varnothing \otimes P_j
 \]
-and then glueing these affine varieties together along the affine patch defined by $C-P_i - P_j$ for all $P_i$, $P_j$.
-
-\begin{comment}
-\begin{figure}[htbp]
-\psset{unit=0.95cm}
-\begin{pspicture}(0,-6)(12,0)
-%\psgrid(0,0)(0,-8)(12,0)
-\psframe[linecolor=white](0.5,-4.5)(3.5,-1.5)
+and then glueing these affine varieties together along the affine patch defined by $C-P_i - P_j$ for all $P_i$, $P_j$. We say that if the tail cone of a polyhedral divisor $\mathcal{D}$ is non zero and there is no point $P$ such that $\mathcal{D}|_P = \varnothing$ then $\mathcal{D}$ is marked. The variety $\widetilde{X}$ is defined to be the variety such that the cone is not marked.
 
 
-\psline{->}(2,-3)(4,-3)
-\psline{->}(2,-3)(0,-1)
-\psline{<->}(2,-5)(2,-1)
-\psline[linewidth=0.5pt, linestyle=dotted]{-}(0,-1.8)(4,-1.8)
-\psline[linewidth=0.5pt, linestyle=dotted]{-}(0,-4.2)(4,-4.2)
-
-\qdisk(0.5,-1.5){1pt}
-\rput[bl]{0}(2.7,-2.15){$\sigma_0$}
-\rput[bl]{0}(1.4,-2.15){$\sigma_1$}
-\rput[bl]{0}(0.8,-3.3){$\sigma_2$}
-\rput[bl]{0}(2.7,-4){$\sigma_3$}
-\rput[tr]{0}(1.4,-1.2){\tiny{$(-1,a)$}}
-\rput[bl]{0}(1.8,-5.5){$\mathbb{F}_a$}
+We now introduce the notion of a polyhedral fan. Consider a collection of polyhedral divisors $\mathcal{S} = \{ \mathcal{D}_i \}$ such that the tail cones form a fan in the sense of toric geometry, we call this the tail fan. Given $\mathcal{S} \ni \mathcal{D}_i = \sum \sigma^i_j \otimes P_j$ then  we can make the divisor $\mathcal{D} = \sum \tau_j \otimes P_j$ where $\tau_j$ a face of each cone corresponding to a face of the tail cone. If $\mathcal{D} \in \mathcal{S}$ for all possible faces of all the tail cone, then this is a polyhedral fan. As this is stated above this makes no mention of how this behaves with respect to a divisor $\mathcal{D} = \sum \sigma_i \otimes P_i + \varnothing \otimes P$. 
+To do this we add that if given a face of the tail fan $\delta$ there is associated polyhedral divisor $\mathcal{D} = \sum \sigma_i \otimes P_i$ with $\delta$ as its tail cone. We then insist that if a cone in the tail fan is not marked then every face of the cone is also not marked. If the collection $\mathcal{S}$ satisfies these conditions then we call it a polyhedral fan.
 
 
-\psline{<-|}(6,-3)(8,-3)
-\psline{|->}(8,-3)(10,-3)
-%\uput*[270](8,-3){$0$}
-\rput[bl]{0}(10.7,-3){\textnormal{tailfan}}
-
-
-\psline{<-|}(6,-1.8)(7.25,-1.8)
-\psline{-|}(7.25,-1.8)(8,-1.8)
-\psline{->}(8,-1.8)(10,-1.8)]
-\uput*[270](7.1,-1.8){${\tiny -\frac{1}{a}}$}
-\rput[bl]{0}(11,-1.8){$\mathcal{S}_0$}
-\rput[bl]{0}(9,-1.6){$\mathcal{D}_{\sigma_0}$}
-\rput[bl]{0}(6.5,-1.6){$\mathcal{D}_{\sigma_2}$}
-\rput[bl]{0}(7.3,-1.6){$\mathcal{D}_{\sigma_1}$}
-
-
-\psline{<-|}(6,-4.2)(8,-4.2)
-\psline{|->}(8,-4.2)(10,-4.2)
-\rput[bl]{0}(11,-4.2){$\mathcal{S}_{\infty}$}
-\rput[bl]{0}(9,-4){$\mathcal{D}_{\sigma_3}$}
-\rput[bl]{0}(6.5,-4){$\mathcal{D}_{\sigma_2}$}
-\rput[bl]{0}(8,-5.5){$\mathcal{S}$}
-
-\psline{|->}(5,-3)(5,-1)
-\psline{|->}(5,-3)(5,-5)
-%\qdisk(5,-1.8){1pt}
-%\qdisk(5,-4.2){1pt}
-%\qdisk(5,-3){1.5pt}
-\rput[bl]{0}(4.5,-5.5){$Y=\mathbb{P}^1$}
-
-
-\end{pspicture}
-\caption{Divisorial fan associated to $\mathbb{F}_a$.}
-\end{figure}
-\end{comment}
+Given a complexity one projective variety $X$ over a curve $C$ this corresponds to a polyhedral fan with the tail fan spanning $N$. Analaously to the case in cones, the variety $\widetilde{X}$ is defined to be the complexity one variety with the same tail fan and polyhedral divisors however every cone is not marked. The action of the $(\mb{C}^\times)^{n-1}$ on $\widetilde{X}$ corresponds to a fibration over $C$ with general fiber $X_t$ equal to the toric variety defined by the tail fan. The degenerate fibers are then described by the polyhedral fans. 
 
 
 
@@ -1121,9 +1459,218 @@ In the case of surfaces of complexity one we often use the notation of fansy div
 \[
 \mathcal{D}_i = [a_i, \infty) \otimes P_i + \sum_{\substack{j = 1 \\ j \neq i}}^n \varnothing \otimes P_j
 \]
-Then this gives rise to a nice quotient map down base curve with respect to the torus action, i.e  the map to $\tilde{X}$ is a local isomorphism. If this is not the case however, then we are left with a bad quotient. These are the only two cases that can occur, in the surface case. In the language of fansy divisors we say if we mean the latter case we denote it with $\mathbb{Q}^+$, if we mean the other the earlier case, we do no denote it at all. In this way fansy divisor uniquely specify polyhedral fans.
+\textbf{Change this paragraph}
+Then this gives rise to a nice quotient map down base curve with respect to the torus action, i.e  the map to $\tilde{X}$ is a local isomorphism. If this is not the case however, then we are left with a bad quotient. In the surface case, there are the only two cases that can occur. In the language of fansy divisors we say if we mean the latter case we denote it with $\mathbb{Q}^+$, if we mean the other the earlier case, we do no denote it at all. In this way fansy divisor uniquely specify polyhedral fans.
 \\
 \\
+\section{ Example}
+
+\begin{ex}\rm
+The first is the polyhedral divisor given by the unmarked polyhedral divisor $[0, 1] \otimes P_0$ over $Y = \mb{P}^1$. 
+The tail cone $\delta$ is equal to $0$. We will show how we can construct from this an affine variety $X$. We denote the polyhedral divisor by $\mathcal{D}$. So the dual of the tail cone $\hat{\delta}$ is the lattice $M$ itself. Given an element $ m >0$ of $M$ we have $\mathcal{D}(m) = -mP_0$ as the minimum value is obtained on $-1$. If $m <0$ we get $\mathcal{D}(m) = mP_0$  as the minimum is attained on 1. Finally if $n=0$ we get $\mathcal{D}(m) = 0$ as a divisor on $\mathbb{A}^1$ as the function is 0 everywhere. 
+
+
+Hence we have the $M$ graded ring
+\[
+\bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-|m|P)
+\]
+In degree 0 the ring is generated by the constant function on $\mb{A}^1$ which we denote $x$ and the function $y$ which is zero at the origin. We note that the function $1$ in degree 0 is the multiplicative identity of our ring. In degree one every element is of the form $f ( a_0 x + a_1 y + a_2 y^2 + \dots  a_n y^n)$, here $f$ is the same function on $\mb{A}^1$ as $y$ but now in degree 1. Every element of degree $m>0$ is of the form $f^m ( a_0 x + a_1 y + a_2 y^2 + \dots  a_n y^n)$. Hence this ring is generated in degree 1. The calculation on the ring graded in negative degree is exactly the same, except with a function $g$.  We note that $fg = y^2$ as $f$ and $g$ are both equal to $y$ as functions on $\mb{A}^1$. We finally discuss the function $x$. Given a function $F \in \mb{C}(X)$, then $F = \sum F_i \chi^{m_i}$, here the $F_i$ are functions on the curve $Y$ and $\chi^{m_i}$ are monomials in the lattice $M$. By construction the function $x = \mathbbm{1}_{Y} \, \chi^0$, hence $x$ is the constant function on the variety. Hence we get the ring $\mathbb{C}[f,  \, g, \, y]/ (fg=y^2)$, so an $A_1$ singularity.
+\end{ex}
+
+We can more generally describe what occurs with polyhedral divisors of the form $[\frac{a}{b}, \, \frac{c}{d}] \otimes P_0$ with $\frac{a}{b} < \frac{c}{d}$. We note that the tail cone $\delta$ is always 0 and so the dual tail cone is all of $M$. From the definitions we get the ring $R = \bigoplus_{m \in M} R_m \chi^m$ where
+\[
+R_m = 
+\left\{
+\begin{array}{cc}
+\mathcal{O}_{\mb{A}_z^1} ( \frac{ma}{b}P) & \text{if } m \geq 0  \vspace{0.2cm} \\
+\mathcal{O}_{\mb{A}_z^1} ( \frac{mc}{d}P) & \text{if } m \leq 0 
+\end{array}
+\right.
+\]
+
+We can associate the monomial $z^u \chi^v$ with the lattice point $(u,v)$ inside a two dimensional monomial lattice. This gives rise to a cone $\sigma$. The set of monomials with poles of order at worst $\frac{a}{b}$ gives rise to the vector $(a, -b)$. Similarly the other side of the graded ring gives rise to the vector $(-c, d)$. These are boundaries $\sigma$, this means that as toric variety they can be described as the cone $(a,b)$, $(c,d)$ inside the lattice $N \cong \mathbb{Z}^2$ with torus action corresponding to $(1,0)$.  Hence we get a toric variety of the form $\frac{1}{r}(\alpha, \, \beta)$ where $r = bc-ad$ and $\alpha$ and $\beta$ are generators of the kernel of the matrix $M$ modulo $r$ where
+\[
+M = \left( \begin{array}{cc} c & a \\ d & b \end{array} \right)
+\]
+
+
+\begin{ex}\rm
+We now show how this behaves in the case of a divisor with tail cone $\delta = [0, \, \infty)$. Consider the divisor $\mathcal{D} = \left[\frac{1}{2}, \, \infty \right) \otimes P_0 + \left[\frac{1}{2}, \, \infty \right) \otimes P_1 + \left[\frac{-1}{2}, \, \infty \right) \otimes P_2$ over $\mb{P}^1$ with coordinates $x_1, \, x_2$. Here the varieties $X$ and $\widetilde{X}$ are different. To start with, we look at how to construct $X$. For simplicity we assume $P_0 = (1; \, 0)$, $P_1 = (1; \, 1)$ and $P_2 = (0; \, 1)$.
+
+The tail cone is $\delta = [0, \, \infty)$ so $\hat\delta = [0, \, \infty)$. By calculating $\mathcal{D}(m)$ we get the following ring
+\[
+\bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{\mb{P}^1} \left( \frac{m}{2} P_0 + \frac{m}{2} P_1 + \frac{-m}{2} P_2 \right)
+\]
+Once again in degree 0 we get the constant function. In degree one we get no functions. In degree 2 we get 2 functions $\frac{x_2}{x_1} \chi^2 $ and $\frac{x_2}{x_1-x_2} \chi^2$ denote these $u$ and $v$. In degree 3 we get the function $\frac{x_2^2}{x_1(x_1-x_2)} \chi^3 $ denote this by $w$. We then have the relations $w^2 = uv(v-u)$. This gives rise to a $D_4$ singularity.  
+
+To calculate $\widetilde{X}$ we do all these calculations as relative spec. In particular this means we can our above graded ring with the following three graded rings
+\[
+\bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{(\mb{P}^1 - P_i - P_j)} \left( \frac{m}{2} P_0 + \frac{m}{2} P_1 + \frac{-m}{2} P_2 \right)
+\]
+For all choices of $i$ and $j$. We then glue together on the intersection. Calculating in the case $i=1$ and $j =2$. We have
+\[
+\bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{(\mb{P}^1 - P_1 - P_2)} \left( \frac{m}{2} P_0 + \frac{m}{2} P_1 + \frac{-m}{2} P_2 \right) \cong \bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{(\mb{A}^1 - P_1)} (\frac{m}{2}P_0)
+\]
+This gives us the ring $\mb{C}[x, \frac{1}{x+1}, \frac{1}{x}\chi^2, \chi^1] = \mb{C}[u,v,w,t]/[v(u+1) = 1, \, uw = t^2]$. Hence this is an $A_1$ singularity. The calculations on the other 3 patches are the same, so we have taken the partial resolution of the $D_4$ singularity by extracting the trivalent curve. 
+\end{ex}
+
+
+\begin{ex}\rm
+Consider the following polyhedral fan with marking $\mb{Q}^\pm$
+\[
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-7, 4) {};
+		\node [style=none] (1) at (-7, 4.25) {};
+		\node [style=none] (2) at (-7, 3.75) {};
+		\node [style=none] (3) at (-3, 4) {};
+		\node [style=none] (4) at (-3, 4.25) {};
+		\node [style=none] (5) at (-3, 3.75) {};
+		\node [style=none] (6) at (0, 4) {};
+		\node [style=none] (7) at (-10, 4) {};
+		\node [style=none] (14) at (0, 2) {};
+		\node [style=none] (15) at (-10, 2) {};
+		\node [style=none] (16) at (-4, 1.75) {};
+		\node [style=none] (17) at (-4, 2.25) {};
+		\node [style=none] (18) at (-10, 0) {};
+		\node [style=none] (19) at (-6, 0.25) {};
+		\node [style=none] (20) at (-6, -0.25) {};
+		\node [style=none] (21) at (0, 0) {};
+		\node [style=none] (22) at (-7, 3.25) {};
+		\node [style=none] (23) at (-7, 3.25) {-1};
+		\node [style=none] (24) at (-3, 3.25) {1};
+		\node [style=none] (25) at (-4, 1.25) {};
+		\node [style=none] (26) at (-4, 1.25) {$\frac{1}{2}$};
+		\node [style=none] (27) at (-6, -0.75) {};
+		\node [style=none] (28) at (-6, -0.75) {$-\frac{1}{2}$};
+		\node [style=none] (29) at (-10, -2) {};
+		\node [style=none] (30) at (0, -2) {};
+		\node [style=none] (31) at (-5, -2) {};
+		\node [style=none] (32) at (-5, -2.75) {};
+		\node [style=none] (33) at (-5, -2.75) {0};
+		\node [style=none] (34) at (2, 5) {};
+		\node [style=none] (35) at (2, -3) {};
+		\node [style=none] (36) at (1.5, 1) {$\mathbb{P}^1$};
+		\node [style=none] (37) at (2.5, -2) {};
+		\node [style=none] (38) at (2.5, -2) {$P_{\text{gen}}$};
+		\node [style=none] (39) at (2.5, 0) {$P_\infty$};
+		\node [style=none] (40) at (2.5, 2) {};
+		\node [style=none] (41) at (2.5, 2) {$P_1$};
+		\node [style=none] (42) at (2.5, 4) {$P_0$};
+		\node [style=none] (43) at (-5, -2.25) {};
+		\node [style=none] (44) at (-5, -1.75) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (2.center);
+		\draw (4.center) to (5.center);
+		\draw (17.center) to (16.center);
+		\draw (19.center) to (20.center);
+		\draw [style=new edge style 1] (21.center) to (18.center);
+		\draw [style=new edge style 1] (15.center) to (14.center);
+		\draw [style=new edge style 1] (7.center) to (6.center);
+		\draw [style=new edge style 1] (29.center) to (30.center);
+		\draw [style=new edge style 1] (34.center) to (35.center);
+		\draw (43.center) to (44.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+We now go through each polyhedral divisor and calculate the associated rings. 
+There are three polyhedral divisors contained inside this polyhedral fan which are one dimensional cones. There are three polyhedral divisors which correspond to two dimensional cones. 
+
+\begin{enumerate}[label =\alph*)]
+\item The unmarked polyhedron $[-1, \, 1]$
+\item The marked cone $1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_\infty$ with tail cone $[0,\, \infty)$.
+\item The marked cone $-1\otimes P_0 + \frac{1}{2} \otimes P_1 + \frac{-1}{2} \otimes P_\infty$ with tail cone $(-\infty, \, 0]$.
+\end{enumerate}
+
+In case $a$ the tail cone $\delta$ is equal to $0$. We denote the polyhedral divisor by $\mathcal{D}$. So the dual of the tail cone $\hat{\delta}$ is the lattice $M$ itself. Given an element $ m >0$ of $M$ we have $\mathcal{D}(m) = -mP_0$. If $m <0$ we get $\mathcal{D}(m) = mP_0$ and if $n=0$ we get $\mathcal{D}(m) = 0$ as a divisor on $\mathbb{A}^1$. 
+
+Hence we have the $M$ graded ring
+\[
+\bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-|m|P)
+\]
+In degree 0 the ring is generated by the constant function $x$ and the function $y$ which is zero at the origin. We note that the function $1$ in degree 0 is the multiplicative identity of our ring. In degree one every element is of the form $f ( a_0 x + a_1 y + a_2 y^2 + \dots  a_n y^n)$, here $f$ is the same function as $y$ but now in degree 1. Every element of degree $m>0$ is of the form $f^m ( a_0 x + a_1 y + a_2 y^2 + \dots  a_n y^n)$. Hence this is generated in degree 1. The calculation on the ring graded in negative degree is exactly the same.  Hence we get the ring $\mathbb{C}[f,  \, g, \, y]/ (fg=y^2)$, so an $A_1$ singularity.
+
+
+In case $a$ the tail cone $\delta$ is equal to $[0 ,  \, \infty)$. We denote the polyhedral divisor by $\mathcal{D}$. So the dual of the tail cone $\hat{\delta}$ is $[0 ,  \, \infty) \subset M$. Given an element $ m \geq 0$ of $M$ we have $\mathcal{D}(m) = mP_0 +\frac{m}{2} P_1 + \frac{-m}{2}P_2$. 
+
+Hence we have the $M$ graded ring
+\[
+\bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{\mathbb{P}^1} \left(mP_0 +\frac{m}{2} P_1 + \frac{-m}{2}P_2 \right) \cong \bigoplus_{m \in M|_{\geq 0}} \mathcal{O}_{\mathbb{P}^1} \left(\frac{m}{2} P_1 + \frac{m}{2}P_2 \right)
+\]
+Here the isomorphism follows via linear equivalence of divisors on $\mathbb{P}^1$.
+
+In degree 0 we just get the constant function. In degree 1, once again it is only the constant function, denoted this by $x$. In degree 2 we have the function with a pole at $P_1$ and a zero at $P_2$, denote this by $f$ and the function $g = \frac{1}{f}$. This generates the ring hence we have $\mathbb{C}[x, \, f, \, g]/(fg = x^4)$, so an $A_3$ singularity.
+
+
+Case $c$ is exactly the same as case $b$ but with the grading negative instead of positive. So it is also an $A_3$ singularity.
+
+
+We finish by discussing the unmarked polyhedral divisors
+
+\begin{enumerate}[label =\Alph*)]
+\item The unmarked cone $-1 \otimes P_0$
+\item The unmarked cone $1 \otimes P_0$
+\item The unmarked cone $\frac{1}{2} \otimes P_1$
+\item The unmarked cone $-\frac{1}{2} \otimes P_2$
+\end{enumerate}
+
+In all case the tail cone $\delta$ is equal to 0. In case $A$ have the following ring graded by $M$
+
+\[
+\bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-mP) \cong \mathbb{C}[x,\, y, \, z]/(yz = 1)
+\]
+Here $x$ is of degree 0, $y$ is of degree 1 and $z$ is of degree $-1$. Case $B$ is symmetrical to case $A$. 
+
+Cases $C$ and $D$ are also symmetrical, and give rise to the rings $\mathbb{C}[x, y_1, y_2, z_1, z_2]$ with relations induced by the second veronese embedding of $C[x, \, y, \, z]/(yz = 1)$. 
+
+To see all the glueings we have the following 
+\[
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-6, -4) {};
+		\node [style=none] (1) at (0, -4) {$\frac{\mathbb{C}[x,y,z]}{yz-x^2}$};
+		\node [style=none] (2) at (6, -4) {$\frac{\mathbb{C}[y_1, y_2, y_3]}{y_1y_3 - y_1^4}$};
+		\node [style=none] (3) at (-6, -4) {$\frac{\mathbb{C}[z_1, z_2, z_3]}{z_1z_3 - z_1^4}$};
+		\node [style=none] (4) at (-3, 0) {$\nu_2 \left(\frac{\mathbb{C}[x,y,z]}{yz = 1} \right)$};
+		\node [style=none] (5) at (3, 0) {$\nu_2 \left(\frac{\mathbb{C}[x,y,z]}{yz = 1} \right)$};
+		\node [style=none] (6) at (9, 0) {$\frac{\mathbb{C}[x,y,z]}{yz = 1}$};
+		\node [style=none] (7) at (-9, 0) {$\frac{\mathbb{C}[x,y,z]}{yz = 1}$};
+		\node [style=none] (8) at (-8.25, -2) {1)};
+		\node [style=none] (9) at (-1.25, -3) {2)};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=new edge style 2] (3.center) to (7.center);
+		\draw [style=new edge style 2] (3.center) to (4.center);
+		\draw [style=new edge style 2] (3.center) to (5.center);
+		\draw [style=new edge style 2] (1.center) to (7.center);
+		\draw [style=new edge style 2] (1.center) to (6.center);
+		\draw [style=new edge style 2] (2.center) to (4.center);
+		\draw [style=new edge style 2] (2.center) to (5.center);
+		\draw [style=new edge style 2] (2.center) to (6.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+We explicitly describe the maps $1)$ and $2)$. To see map $1)$ the base is 
+\[
+\bigoplus_{m \in M|_{\leq 0}} \mathcal{O}_{\mathbb{P}^1} \left(-mP_0 +\frac{-m}{2} P_1 + \frac{m}{2}P_2 \right) 
+\]
+and the image is 
+\[
+\bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-mP_0)
+\]
+There is clearly an inclusion of rings on each level of the negative grading, and this induces the entire map
+\end{ex}
+
+We also provide a quick example of when a polyhedral divisor is unmarked but has unmarked subcones cones as the boundary. 
+
+\begin{ex}\rm
+Let $N$ be $\mb{Q}^2$. Consider the polyhedral divisor defined by $\delta \otimes P_0 + (1, 1) + \delta \otimes P_1$ over $\mathbb{P}^1$ where $\delta = \langle (1,0) , \, (0, 1) \rangle$. We now insist that two dimensional cone is marked. However if we pick a ray of the tail fan, and calculate the dual we see that this does not satisfy of being semiample on the boundary, if the base curve was non affine.
+
+Upon calculation of the affine ring this can be seen as a toric downgrade of the Atiyah flop, with the quotient corresponding to one of the two natural maps to $\mathbb{P}^1$. To see the two flops the first is by unmarking the two dimensional cone and the other is given by the same polyhedral coefficients but now the tail cone is a tail fan with the ray $(1,1)$ bisecting it. This corresponds to only one of the resolutions resolving the quotient down to the $\mathbb{P}^1$.
+\end{ex}
+
+
 \begin{dfn}
 A fansy divisor a smooth curve $C$ is a collection of $n$ subdivison of $\mathbb{Q}$ with markings $\mathbb{Q}^+$, $\mathbb{Q}^-$, $\mathbb{Q}^\pm$ or no markings at all. 
 \end{dfn}
@@ -1246,7 +1793,7 @@ with $(q_1, q_2, q_3)$ satisfying $\sum(1 - \frac{1}{q_i}) < 2$.
 See \cite{Suss}
 \end{proof}
 We now use the following crucial lemma
-\begin{lem}
+\begin{lem}{\label{trivalent}}
 Let $S$ be a log terminal surface singularity of Gorenstein index $l$. Let $E$ be an exceptional curve in the minimal resolution. Then $E^2 \geq -2l$ if it is not a trivalent curve and $E^2 \geq -3l$ if it is trivalent.
 \end{lem}
 \begin{proof}
@@ -1263,129 +1810,223 @@ Taking the minimal resolution of our log del Pezzo, this admits a map to a Hirze
 \end{proof}
 
 \begin{rem}
-In the case of index one, we know DuVal singularities only have $-2$ curves in the resolution hence this bound can be refined to four non general fibers.
+In the case of index one, we know Du Val singularities only have $-2$ curves in the resolution hence this bound can be refined to four non general fibers.
 \end{rem}
-We now, for the sake of classifying abandon the condition on index, replace it with this condition on self intersections. It is easy to check the index post classification.
-We can now specify how the first algorithm works
+
+\begin{lem}{\label{MaxLength}}
+Consider the following polyhedral fan:
+\[\def\arraystretch{1.4}
+\mathcal{S} = 
+\begin{array}{cc}
+\left[a_1^1, \, a_2^1,\,  \dots, a_{n_1 - 1}^1, \, a_{n_1}^1 \right] & P_1 \\
+\left[a_1^2, \, a_2^2,\,  \dots, a_{n_2 - 1}^2, \, a_{n_2}^2 \right] & P_2 \\
+\left[a_1^3, \, a_2^3,\,  \dots, a_{n_3 - 1}^3, \, a_{n_3}^3 \right] & P_3 \\
+\left[a_1^4, \, a_2^4,\,  \dots, a_{n_4 - 1}^4, \, a_{n_4}^4 \right] & P_4 \\
+\vdots \\
+\left[ a_1^{6k}, \, a_2^{6k}, \,  \dots, a_{n_{6k-1}}^{6k}, \, a_{n_{6k}}^{6k} \right] & P_{6k} \\
+\end{array}
+\] 
+If $\mathcal{S}$ defines a log del Pezzo surface $X$ of index $k$ then $\sum_j \lfloor a_1^j \rfloor \geq -6$ and $\sum_j \lceil a_{n_j}^{j} \rceil \leq 6$.
+\end{lem}
+\begin{proof}
+Let $Y$ be the minimal resolution of $X$, and consider $\widetilde{Y}$. This has two parabolic curves $E_1$ and $E_2$ corresponding to $[-0, \, \infty)$ and $(-\infty, \, 0]$. The self intersections of these curves are $\sum_j \lceil a_{n_j}^{j} \rceil \leq 6$ and $\sum_j \lfloor a_1^j \rfloor \geq -6$ respectively, and these values have to be less than $6k$.
+\end{proof}
+
+Just as in the case of Gorenstein index one, where the singularities are formed of $-2$ curves. There is an explicit way to classify the resolutions of singularities of higher index.
+
+\begin{lem}\label{basic bound}
+A singularity of index $n$ which is non toric log terminal singularities can be described by one of the following polyhedral divisors
+\begin{itemize}
+\item $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{n}{m}, \infty \right) \otimes P_3$
+
+\item Finite $E_6$, $E_7$, $E_8$ case
+\end{itemize}
+\end{lem}
+
+\begin{proof}
+We note that for the canonical divisor to be Cartier the corresponding slope function has to have integral slope and $h_P(0) \in \mathbb{Z}$ for all $P \in \mb{P}^1$. We note the slope for a polyhedral divisor of the form $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{p}{q}, \infty \right) \otimes P_3$ is $\frac{1}{p}$. Hence $p$ divides $n$ where $n$ is the index of the singularity. We now note $h_{P_1} (0) = -\frac{-1}{2} + \frac{1}{2} \frac{1}{p} = \frac{1}{2} (1 + \frac{1}{p})$. Now if $p$ is odd this becomes a fraction $\frac{a}{p}$ and if $p$ is even this becomes $\frac{a}{2p}$. Now $h_0(P_3) = \frac{q-1}{q} + \frac{p}{q} \frac{1}{p}$, this is always just $1$. Hence for every $k h_P(n)$ to be an integer for every $P \in \mb{P}^1$ and $n \in \mb{Z}$ we need $k$ to be a multiple of $p$ if $p$ is odd and a multiple of $p$ if $p$ is even.
 
 
-PUT ALGORITHM HERE
+Do the $E_6, \, E_7,\, E_8$ case.
+\end{proof}
+
+\begin{rem}
+This imposes stricter bounds on the number of non generic fibers a complexity one surface of index $n$ can have than Lemma~\ref{basic bound} and enables you to put bounds on per the singularity. 
+\end{rem}
+
+We also need a bound on what possible toric singularities can occur and the possible actions on them.
+
+\begin{lem}{\label{Structure}}
+Let $X$ be a non toric non smooth complexity one log del Pezzo surface. Then there is at least one elliptic point and at least one of the elliptic points, $P_1$, is a singularity.  We can describe $P_1$ locally by a cone $\sigma \subset N \cong \mb{Z}^2$ and a ray $v \in N$. Then $v$ corresponds to a lattice point on the minimal resolution of $\sigma$. Equivalently the minimal resolution of $X$ has at least one parabolic line.
+\end{lem}
+
+
+
+\begin{proof}
+Let $Y$ be the minimal resolution of $X$. Then $X$ admits an equivariant map to $\mb{F}_i$ as every $-1$ curve on $Y$ is torus invariant. Hence $Y$ is constructed by a non toric blowup of a toric surface. Considering the first non toric blowup, we are blowing up a point $P$ on a torus invariant curve $C$. Clearly $C$ is a torus invariant curve in the minimal resolution of $X$.
+
+To show $C$ is not a curve on the surface we note that if $C$ has to be a torus invariant curve on the Hirzebruch surface $\mb{F}_i$, otherwise we would blow up a $-1$ curve at a general point and the resulting curve would have to be contracted. If $C$ was the positive section then then the contraction of the negative section would give a singularity with the desired properties. If $C$ was a fiber, $C$ needs to be blownup at least twice to be non toric, which would make it have negative self intersection, meaning it would have be contracted. This would once again give a curve with the desired properties.
+\end{proof}
+
+
+
+We finish with the following observation that helps shorten calculations.
+Let $X$ be a complexity one surface with the following polyhedral fan:
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, \right] \\
+P_4 & \left[d_1, \, \dots, \, d_{p-1}, 0\right]  \\
+\end{array}
+\]
+and a marking $\mb{Q}^+$.
+Also assume that the minimal resolution of $X$ contains a curve $E$ which is pointwise fixed by the action and which is contracted to elliptic point at positive infinity.
+
+Let $h$ be the piecewise linear function corresponding to $-K_X$. Then $h_P|_{[0, \, \infty)}$ is defined by a unique value $u \in \mb{Q}$. If $-K_X$ is ample then the only possible values for $d_{p-1}$ are the values $\frac{p}{q}$, with $q >0$, such that $\frac{q-1}{q} < u\frac{p}{q}$ this is to preserve convexity. 
+
+
+As there are a finite number of log del Pezzo surfaces, up to deformation, with Gorenstein index $k$ there can only be a finite number of singularities $S$ which can occur on such a surface. 
+
+\begin{algorithm}
+
+The algorithm proceeds iteratively, we start with the polyhedral divisor $w_1 \otimes P_1 + w_2 \otimes P_2 + w_3 \otimes P_3 + \sum_{i = 4, \dots 6k} 0 \otimes P_i$. We will show how to bound the values $w_i$ later. We now wish to extend this by adding an extra cone into one of the fibers such that $-K_X$ is still ample and the surface can be further compactified into a log del Pezzo surface of Gorenstein index $k$. We show there are finitely many choices and we can repeat this process until it terminates.
+
+This corresponds to the following. Given a polyhedral fan $\mathcal{S}$ with tail fan $[0, \infty)$ with the following values
+\[\def\arraystretch{1.2}
+\mathcal{S} = 
+\begin{array}{cc}
+\left[ a_1^1,\,  a_2^1, \, \dots, a_{n_1 - 1}^1, \, w_1 \right] & P_1 \\
+\left[a_1^2, \, a_2^2,\,  \dots, a_{n_2 - 1}^2, \, w_2 \right] & P_2 \\
+\left[a_1^3, \, a_2^3,\,  \dots, a_{n_3 - 1}^3, \, w_3 \right] & P_3 \\
+\left[a_1^4, \, a_2^4,\,  \dots, a_{n_4 - 1}^4, \, 0 \right] & P_4 \\
+\vdots \\
+\left[ a_1^{6k}, \, a_2^{6k}, \,  \dots, a_{n_{6k-1}}^{6k}, \, 0 \right] & P_{6k} \\
+\end{array}
+\]
+We are trying to find all values $a = \frac{p}{q}$, such that the polyhedral divisor $[a, a_1^i]$ is a toric singularity and the fan $\mathcal{S}'$ equal to
+\[\def\arraystretch{1.2}
+\mathcal{S} = 
+\begin{array}{cc}
+\left[ a_1^1,\,  a_2^1, \, \dots, a_{n_1 - 1}^1, \, w_1 \right] & P_1 \\
+\left[a_1^2, \, a_2^2,\,  \dots, a_{n_2 - 1}^2, \, w_2 \right] & P_2 \\
+\left[a_1^3, \, a_2^3,\,  \dots, a_{n_3 - 1}^3, \, w_3 \right] & P_3 \\
+\left[a_1^4, \, a_2^4,\,  \dots, a_{n_4 - 1}^4, \, 0 \right] & P_4 \\
+\vdots \\
+\left[a, \, a_1^i, \, a_2^i,\,  \dots, a_{n_4 - 1}^i, \, 0 \right] & P_4 \\
+\vdots \\
+\left[ a_1^{6k}, \, a_2^{6k}, \,  \dots, a_{n_{6k-1}}^{6k}, \, 0 \right] & P_{6k} \\
+\end{array}
+\]
+can still be compactified into a log del Pezzo surface of index $k$. While not drawn above in the fan $i$ can be 1, 2 or 3. Let $a_1^i = \frac{r}{s}$. As the we are dealing with cones with tail cone $0$ we know this corresponds to a locally toric singularity so we have the following picture:
+
+\[
+Toric picture!!!!
+\] 
+ 
+Every possible choice of $p, \, q$ lies along a line $L_a$, as the curve joining them has to be a $-1$ curve via Lemma~\ref{-1 curve lemma}. We wish to show that there are only finitely many values along the line $L_a$ which are valid. We denote by $L_0$ the line parallel to $L_a$ going through the origin. We note that if $L_a$ crosses the x axis there are only finitely many values, denote by $v$ the ray generating this line. If $L_a$ does not cross the origin, denote the points on the line $v_0, \, v_1, \, v_2, \, \dots$. This forms an infinite family. Note that if $P$ is a point such that $v_i, P$ gives a Gorenstein index $k$ singularity then $(v_{i+k}, P )$ also gives a Gorenstein index $k$ singularity. In fact every possible point $P'$ such that $(v_{i+k}, P')$ is a a Gorenstein index $k$ singularity is of this form. We now split into two cases, the first is that the line $L_0$ is the x$-$axis. In this case, let $v_i = (t_i, u_i)$ then as $i$ tends towards infinity $\frac{t_i}{u_i}$ limits towards $-\infty$ so we get a bound via Lemma~{MaxLength}. If $L_0$ is not horizontal then considering the points $v_i$ as $i$ limits towards infinity, then the points $P_i$ such that $(v_i, \, P_i)$ is a Gorenstein index $k$ singularity are eventually all positive and all have $y$ coordinate larger than the $y$ coordinate of any of the $w$'s. Hence they cannot join together, and hence cannot occur. 
+ 
+All that remains is to bound the possible singularities we have started with. However this follows by a similar logic. They lie in infinite families. Once the singularity gets too large, the bounds become unfeasible and they cannot occur.
+\end{algorithm}
 
 
 As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one.
 
-\begin{ex}
-As a Gorenstein surface singularity are of DuVal type we see that the minimal resolution can only admit maps to $\mb{F}_0$, $\mb{F}_1$ or $\mb{F}_2$. We now ask what possible torus actions can there be on these Hirzebruch surfaces such that we will only have DuVal singularities. For convenience we write the fan of $\mb{F}_n$ having rays generated by $(1,0)$, $(0,1)$, $(-1, n)$, $(0,-1)$. We can then write a subtorus as a vector $v \in N$.
+\begin{ex}\rm
+
+We start with the Gorenstein index $k = 1$, i.e the only singularities are Du Val. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution. We iterate over all possible singularities and all possible actions until we can show they do not exist. We illustrate this in the case that the singularity with which the action corresponds with a ray in the minimal resolution is an $A_n$ singularity. We assume that this singularity has polyhedral divisor with tail cone $[ 0, \, \infty)$. From now on we assume this without stating it.
+
+To make this easier we make two observations. The first is that if a fiber over a point $P_i$ is $[a_1 = \frac{p_1}{q_1} , \dots, a_n = \frac{p_n}{q_n}, \, 0]$ then $q_i = 1$. This follows via the above remarks, first, we know we get an $A_m$ singularity given by $(0, 1), \, (p_n,  \, q_n)$. Then, via the stated properties of our singularity, we have the slope of $h_P|_{[0, \, \infty)}$ is $-1$. So we need $\frac{q_n-1}{q_n} < \frac{-p_n}{q_n}$ which implies $p_n + q_n < 1$, hence if $q_n > 1$ then $p_n < -1$. Now every point on the line connecting $(p_n, \, q_n)$ to $(0, \, 1)$ has to satisfy this inequality. In particular there is a point $(-1, a)$ on this line, with $a  \in \mb{Z}$, satisfying the inequality, hence $ a \leq 1$. As $ a>0$ for $q_n>0$ we have the only possible value of $a$ is one. This corresponds to $q_n = 1$.
 
 
-We make the observation, to save time, that we have classified all log del Pezzo surfaces which do only admit maps to $\mb{F}_0$ or $\mb{F}_1$ ~\ref{Theroem on curves}. This results in only one surface.
-
-
-For the case of $\mb{F}_2$ either our torus action coincides with a ray of the fan or it does not. There are only four cases where it coincides. However via symmetry we only need to consider the rays $(0,1)$ and $(1,0)$. In the first case your surface has two parabolic lines and hence admits a well defined map to $\mb{P}^1$. As this a morphism we see that the our torus invariant fibers are $0$ curves. The only ways to blow up a zero curve to get values greater than $-2$ are:
-\begin{itemize}
-\item $-2$, $-1$, $-2$
-\item $-1$, $-2$, \dots , $-2$, $-1$
-\item $-1$, $-1$
-\item $0$
-\end{itemize}
-We note that with the exception of the second case nothing there are finitely many options. It is clear that in the second case a chain of $k$ $-2$ curves can only arise on a fiber by blowing up parbolic lines a total of $k+1$ times. However earlier on we showed that there could only be a total of $4$ blowups on the parabolic line hence this is bounded.  
-
-
-The case of the vector $v = (1,0)$ corresponds to the case of one parabolic line and this case is dealt with in the next paragraphs.
-
-
-Dealing with the case where the vector $v$ does not correspond to a ray of the fan. To do a non toric blowup we need to do a  sequence of blowups that will produce a line of torus invariant points. We note that if we do this twice then there will be a well defined map to $\mb{P}^1$ with the two parabolic lines being sections. This means that there would be a map to a Hirzerbuch surface such that one of these lines is being sent to the negative section and the other to the positive. As both of these would be fixed by the torus action these have been classified in the previous paragraphs.
-
-
-In the case we have one parabolic line, this line has to arise as a weighted blowup of a point $P$ which is the intersection of a fiber $F$ and a section $A$. This is because any other torus fixed point would lie on the $-2$ curve, which we would then have to blow up, which would contradict DuVal singularities. Without loss of generality we can assume that our torus fixed point corresponds to cone $(1,0)$, $(0, -1)$. This gives us an affine chart $\mb{A}^2_{x, \, y}$ with the coordinates corresponding to the rays $(1,0)$, $(0, -1)$. The only possible weights are then $(1,1)$, $(2,1)$, $(1,2)$, $(1,3)$ and $(1,-4)$. So the only possible coordinates for $v$ are $(1, -1)$, $(2, -1)$, $(1, -2)$, $(1, -3)$ and $(1,-4)$. We note that if $v = (1,-2)$ is a torus action which also corresponds with a ray, this has a fiber with self intersection $2$. Given a fibration, the fact we can only blow up one side of each fiber means the only possible fibers are of the form 
+The second observation is let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{v} \otimes P_2$. be a polyhedral divisor with tail cone $[ 0 , \, \infty)$. We can assume without loss of generality that $u \geq v$. Then if $u>v+2$ and $v \geq 2$ then there are no complexity one Gorenstein log del Pezzo surfaces which contain $\mathcal{D}$ as a polyhedral cone. We not as $u,  v \geq 2$ we have the only possible poyhedral fans over $P1$ are $[0, \, \frac{1}{u}
+]$ and $[\frac{1}{u}]$, similarly for $P_2$. Viewing this from a toric perspective the only points that can be connected to $(1,u)$ or $(0,1)$ while preserving the necessary convexity are less than $-v$. This implies as a complexity one surface this would need a denominator on another fiber less than $v$, but this cannot happen. 
 
 \begin{itemize}
-\item $-1$, $-2$, \dots $-2$ , $n-1$
-\item $-2$, $-2$, \dots $-2$, $n-k$
-\item $-2$, $-2$, \dots $-2$, $-1$, $-2$
 
+\item  $A_1$
+
+\item $A_2$
+
+\item $A_3$
+
+\item $A_4$
+
+\item \begin{bf} $A_5$ Singularity \end{bf}
+
+This has several possible actions taking the first us the polyhedral divisor 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{5} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, 1\right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
 \end{itemize}
+The only choices for the first row are $[0, \frac{1}{5}]$ and $[\frac{1}{5}]$. We call this case $a$ and case $b$. 
 
-The fibres in the other case go have values ranging from $1$ (the $(1,1)$ blowup) to $3$ (the $(2,1)$ weighted blowup). 
+In case $a$ if there is another elliptic point it has to be arising from a toric singularity with coordinates $(0, 1)$ and $(-1, u)$ with $u \leq -4$ and the subtorus once again corresponding to the horizontal line.
+%Rejig the above sentence.
+This cannot happen as every other row can only have denominators equal to $1$. So this case does not occur. Note a non toric singularity cannot occur otherwise the slope on the tailfan $[-\infty , 0)$ would be one and this would not be convex on $P_1$.
+
+For case $b$ we have exactly the same argument that it would have to be connected to a singularity with denominator greater than $1$, hence cannot occur. So this does not occur. 
+
+
+The next case is 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{4} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, \frac{1}{2} \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
+Once again two cases for $P_1$,  $[0, \frac{1}{4}]$ and $[\frac{1}{4}]$. If it is the first case then the denominator has to be greater than $2$ so does not occur. In the second case there is only one possibility: the other elliptic singularity is given by toric coordinates $(1, \, 4),$ $(-1, -2)$. The only way to get a denominator greater than 1 is on $P_2$ and  the only choice is if this is the original $\frac{1}{2}$ hence we get
+\[
+\left[\frac{1}{4} \right] \otimes P_1 + \left[\frac{1}{2} \right] \otimes P_2 + [0, -\, 1] \otimes P_3
+\]
+
+The final case is 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{3} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, \frac{1}{3} \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
+This leads to a lot more cases, as follows. Once again possible choices for $P_1$ and $P_2$ are $\left[ 0, \, \frac{1}{3} \right]$ or $\left[ \frac{1}{3} \right]$. Once again denoting these by case $a$ and case $b$. In case $a$ it needs to connect to a point with denominator $ u \in \{2, \, 5, \, 8 \dots \}$, however it is impossible to construct any of these denominators, so this does no occur. In the case $b$, we either have the $A_1$ singularity with coordinates $(1, 3),\, (-1, -1)$ or the $A_2$ singularity given by $(1, 3),\, (-2, -3)$, other values result in non compatible denominators. If we had the singularity given by $(1, 3),\, (-1, -1)$, then the polyhedral divisor over $P_2$ would have to be $\left[ 0, \frac{1}{3} \right]$ which we have already shown cannot occur. If we have the $A_2$ singularity then this involves the only way this can be constructed is via 
+\[
+\left[\frac{1}{3} \right] \otimes P_1 + \left[\frac{1}{3} \right] \otimes P_2 + [0, -\, 1] \otimes P_3
+\]
+This finishes the $A_5$ case.
+
+\item \begin{bf} $A_N$ Singularity for $N \geq 6$ \end{bf}
+
+This results in a singularity given by surface given by 
+\[\def\arraystretch{1.2}
+\begin{array}{cc}
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{u} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, \frac{1}{v} \right] \\
+P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
+P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
+\end{array}
+\]
+We split this into three case 
+\begin{enumerate}[label =\alph*)]
+\item $u = v$
+\item $u = v + 1$
+\item $u = v + 2$
+\end{enumerate}
+Every other case is covered by our discussion at the beginning or the example. We note that which of these cases occur on the value of $N$. We note as $N \geq 6$ this implies $u \geq 4$ and $v \geq 3$.
+
+In case a), the only denominators that occur which are less than or equal to $v$ are $\frac{1}{u-2}$ and $\frac{1}{u-1}$ however as $u \geq 3$, as $N \geq 6$ we have neither of these values are equal to $u$ or $1$ so this cannot occur.
+
+In case b), 
 \end{ex}
 
 
-
-With the above disclaimer we carry on. We know that our standard admit a canonical map to a Hirzebruch surface, so we instead work backwards, take a Hirzebruch surface, look at a subtorus action on it and consider all the ways we can make a basic surface out of it.
-\\
-From here on out our fan for a Hirzebruch surface $\mathbb{F}_n$ will be $(0,1), \, (1,0), \, (0,-1), \, (-1, n)$. There are 4 possible ways the diagram of the Weil divisors on a Hirzebruch surface with a given $\mathbb{C}^*$ action can look
-\begin{enumerate}[label =\Alph*]
-\item - Two parabolic lines, this corresponds with the subtorus $(0, \pm 1)$.
-\item - One parabolic line, this corresponds to the subtorus $(\pm 1, 0)$.
-\item - Two elliptic points, connected by a line, this corresponds the sublattice generated by a point lieing in between $(-1,0)$ and $(-1, n)$.
-\item - Two elliptic points, not connected by a line, this corresponds to any other point.
-\end{enumerate} 
-
-\begin{comment}
-\begin{figure}[htbp]
-\psset{unit=0.8cm}
-\begin{pspicture}(0,-6)(18,0)
-%\psgrid(0,0)(0,-8)(12,0)
-\psframe[linecolor=white](0.5,-6)(19,-1.5)
-
-\psline[linecolor = blue]{-}(0.5, -4)(3.5, -4)
-\psline{-}(1, -4.5)(1, -1.5)
-\psline{-}(3, -4.5)(3, -1.5)
-\psline[linecolor = blue]{-}(0.5, -2)(3.5, -2)
-
-\psline{-}(5, -4)(8, -4)
-\psline{-}(5.5, -4.5)(5.5, -1.5)
-\psline[linecolor = blue]{-}(7.5, -4.5)(7.5, -1.5)
-\psline{-}(5, -2)(8, -2)
-\pscircle[fillcolor = red, fillstyle = solid](5.5, -2){0.15}
-
-
-\psline{-}(9.5, -4)(12.5, -4)
-\psline{-}(10, -4.5)(10, -1.5)
-\psline{-}(12, -4.5)(12, -1.5)
-\psline{-}(9.5, -2)(12.5, -2)
-\pscircle[fillcolor = red, fillstyle = solid](10, -2){0.15}
-\pscircle[fillcolor = red, fillstyle = solid](12, -2){0.15}
-
-\psline{-}(14, -4)(17, -4)
-\psline{-}(14.5, -4.5)(14.5, -1.5)
-\psline{-}(16.5, -4.5)(16.5, -1.5)
-\psline{-}(14, -2)(17, -2)
-\pscircle[fillcolor = red, fillstyle = solid](14.5, -2){0.15}
-\pscircle[fillcolor = red, fillstyle = solid](16.5, -4){0.15}
-
-\end{pspicture}
-\caption{The possible fibers in the theorem.}
-\end{figure}
-\end{comment}
-
-In the above pictures we have the $n$ curve on the top and the $(-n)$ curve on the bottom, with the two vertical lines being the 0 fibers. The blue lines are parabolic lines, and the red points represent elliptic points.
-\\
-\\
-If $X$ is a log del Pezzo with $Y$ its minimal resolution. The number of Elliptic points can only decrease in the cascade , hence we see that it would map down to one of B, C, D. Next note that if we consider case C or D there is no way to make it non toric without resolving one of the elliptic points. Because of this we have the following theorem 
-\\
-\begin{lem}
-Let $X$ be a complexity one log del Pezzo, $Y$ its minimal resolution. Then if $Y$ has two elliptic points, then $X$ is toric.
-\end{lem}
-We now split things into a case by case analysis. In case A, we have 0 fibers so we just substitute them with the all possible choices of fibers in\autoref{T:ZDQ}, using \cite{IMT} we know that we can only substitute in at most 4 fibers. Hence this case is finished. Note that actually the 4 fibers comes out in the calculations in this case, although that does not prove the general log del Pezzo case.
-\\
-\\
- For case B, if we resolve the elliptic point on $Y$ in the process of our cascade then it admits a canoncial $\mathbb{P}^1$ fibration, hence we can factor it through case A. Hence we only care about ones that preserve the elliptic point. From the fan we know that it requires $n$ blowups of $\mathbb{F}_n$ to resolve the elliptic point, in these cases the elliptic point lies on the intersection of a $(-1)$ curve and a curve $C$ with $C^2 > 0$. We also see that the zero curve intersecting the elliptic point has to be taken to one of the cases \autoref{T:ZDQ} , we deal with the three cases, nothing happens at the elliptic point, it becomes an $A_n$ singularity and finally the $[ -2, -1, -2]$. If $n \neq 1,2$ then we cannot have an $A_n$ singularity, as we would have a $(-1)$ curve next to a curve with positive self intersection, i.e  the top line, so we would have to keep on blowing up till it has negative self intersection, but this would resolve the elliptic point. Also note if $n=0$ case B does not occur, it would take zero blowups to resolve the elliptic singularity, i.e we just have two parabolic lines, so it is just case A. We deal with $n=1, \, 2$ separately. In the case of nothing happening at the elliptic point. We need to blow up two point on the parabolic curve to get a non toric surface. After this we have two $(-1)$ intersecting $(-2)$ curves, we know by \autoref{T:ZDQ} there is nothing more we can do at those points, so we are left with only being able to blow up the intersection of a $(-1)$ curve with a positive curve. We know we cannot blow up a third point on the parabolic line or it will stop being a klt singularity.  Moving on to the $[-2, -1, -2]$ case, we have all the same possibilities as before, however it may take slightly less blowups than before we reach an acceptable configuration as we have our elliptic point lieing on a $(-2)$ curve. This leaves with only two non toric options from a given Hirzebruch surface.
-\\
-\\
-In the case of $n=1$ we cannot blowup the elliptic point, the only other difference is not being able to use the klt argument, however the $(-1)$ curve being next to the 0 curve guarantees that it still cannot be less than $(-2)$, and if we modify the $(-1)$ curve in any other way it would arise from a different configuration and hence has already been classified. In the case $n = 2$ it also falls under the previous classifaction as we are only allowed one blowup and in this case the two $(-1)$ curves intersect.
-\\
-\\
-In case C we see there is a symmetry between the two elliptic points, so it does not matter which we resolve. When we resolve it we will have $(-1)$ curve adjacent to at most two sets of negative curves. To make a non toric example, we need to blow up one of the lines connecting the parabolic line to the elliptic point. This curve has self intersection greater than 0, using the same argument as before, we can only blow up one point on the parabolic line. As our curve has positive self intersection we know, that we have to have, by the previous argument again, the following set of curves connecting to our parabolic line $[-2, \, -1, \,  -2, \dots -2 ]$. In particular the number of $-2$ curves is greater than two. Using [Ishii, Brieskhorn] classification of singularities, we see that to be klt, you have to have at most 3 negative meeting in a point and one of those has to be just $-2$ curve. Because of this the possible points generating the torus action, up to symmetry, are 
-\\
-\begin{itemize}
-\item $(n, -1)$ or $(1, -n)$, here this is a $\mathbb{P}(1, n)$ blowup. One component is smooth.
-\item $(2n - 1, -2)$ or $(2, -2n+1)$ this weighted blowup gives a $\frac{1}{2}(1,1)$ singularity in one chart, this is the singularity whose resolution is a just a $(-2)$ curve. 
-\end{itemize}
-Note that different values of $n$ give different singularities in the other chart. In the first case, they are clearly just $A_n$ singularities. In the second case, you just get $[-3, \, -2, \dots -2]$, here the chain has $n-1$ of the $(-2)$ curves. We also need both case of the these torus actions as the vary which side the singularities appear. Of course the Brieskhorn classification is much more comprehensive than this, and once the code is written I will start a more comprehensive check as to which or these give klt log del Pezzos. 
-\\
-\\
-In case D, it proceeds almost exactly the same as case C. However you do not have the pleasantness of the symmetry. However it is still straight forward what will happen, the elliptic point next to $0$ curve and the $n$ curve will have the same possible choices of torus actions as in Case C. For the one on the intersection on the $(-n)$ curve and the 0 curve, 2 of the expected 4 options will not occur due to the presence of the $(-n)$ curve. The Brieskhorn classification in this situation gives us $n \leq 5$.
 
 
 
