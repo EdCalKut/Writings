@@ -591,8 +591,7 @@ Let $h$ be the piecewise linear function corresponding to $-K_X$. Then $h_P|_{[0
 As there are a finite number of log del Pezzo surfaces, up to deformation, with Gorenstein index $k$ there can only be a finite number of singularities $S$ which can occur on such a surface. 
 
 \begin{algorithm}
-
-The algorithm proceeds iteratively, we start with the polyhedral divisor $w_1 \otimes P_1 + w_2 \otimes P_2 + w_3 \otimes P_3 + \sum_{i = 4, \dots 6k} 0 \otimes P_i$. We will show how to bound the values $w_i$ later. We now wish to extend this by adding an extra cone into one of the fibers such that $-K_X$ is still ample and the surface can be further compactified into a log del Pezzo surface of Gorenstein index $k$. We show there are finitely many choices and we can repeat this process until it terminates.
+This algorithm classifies log del Pezzo surfaces with index $k$. The algorithm proceeds iteratively, we start with the polyhedral divisor $w_1 \otimes P_1 + w_2 \otimes P_2 + w_3 \otimes P_3 + \sum_{i = 4, \dots 6k} 0 \otimes P_i$. We can assume $w_1$ is of the form $\frac{k'}{n}$ where $k'|n$. We will show how to bound the values $n$ later. We now wish to extend this by adding an extra cone into one of the fibers such that $-K_X$ is still ample and the surface can be further compactified into a log del Pezzo surface of Gorenstein index $k$. We show there are finitely many choices and we can repeat this process until it terminates.
 
 This corresponds to the following. Given a polyhedral fan $\mathcal{S}$ with tail fan $[0, \infty)$ with the following values
 \[\def\arraystretch{1.2}
@@ -626,11 +625,17 @@ can still be compactified into a log del Pezzo surface of index $k$. While not d
 Toric picture!!!!
 \] 
  
-Every possible choice of $p, \, q$ lies along a line $L_a$, as the curve joining them has to be a $-1$ curve via Lemma~\ref{-1 curve lemma}. We wish to show that there are only finitely many values along the line $L_a$ which are valid. We denote by $L_0$ the line parallel to $L_a$ going through the origin. We note that if $L_a$ crosses the x axis there are only finitely many values, denote by $v$ the ray generating this line. If $L_a$ does not cross the origin, denote the points on the line $v_0, \, v_1, \, v_2, \, \dots$. This forms an infinite family. Note that if $P$ is a point such that $v_i, P$ gives a Gorenstein index $k$ singularity then $(v_{i+k}, P )$ also gives a Gorenstein index $k$ singularity. In fact every possible point $P'$ such that $(v_{i+k}, P')$ is a a Gorenstein index $k$ singularity is of this form. We now split into two cases, the first is that the line $L_0$ is the x$-$axis. In this case, let $v_i = (t_i, u_i)$ then as $i$ tends towards infinity $\frac{t_i}{u_i}$ limits towards $-\infty$ so we get a bound via Lemma~{MaxLength}. If $L_0$ is not horizontal then considering the points $v_i$ as $i$ limits towards infinity, then the points $P_i$ such that $(v_i, \, P_i)$ is a Gorenstein index $k$ singularity are eventually all positive and all have $y$ coordinate larger than the $y$ coordinate of any of the $w$'s. Hence they cannot join together, and hence cannot occur. 
+Every possible choice of $p, \, q$ lies along a line $L_a$, as the curve joining them has to be a $-1$ curve via Lemma~\ref{-1 curve lemma}. We wish to show that there are only finitely many values along the line $L_a$ which are valid. We denote by $L_0$ the line parallel to $L_a$ going through the origin. We note that if $L_a$ crosses the x axis there are only finitely many values, denote by $v$ the ray generating this line. If $L_a$ does not cross the origin, denote the points on the line $v_0, \, v_1, \, v_2, \, \dots$. This forms an infinite family. Note that if $P$ is a point such that $v_i, P$ gives a Gorenstein index $k$ singularity then $(v_{i+k}, P )$ also gives a Gorenstein index $k$ singularity. In fact every possible point $P'$ such that $(v_{i+k}, P')$ is a a Gorenstein index $k$ singularity is of this form. We now split into two cases, the first is that the line $L_0$ is the x$-$axis. In this case, let $v_i = (t_i, u_i)$ then as $i$ tends towards infinity $\frac{t_i}{u_i}$ limits towards $-\infty$ so we get a bound via Lemma~{MaxLength}. If $L_0$ is not horizontal then considering the points $v_i$ as $i$ limits towards infinity, then the points $P_i$ such that $(v_i, \, P_i)$ is a Gorenstein index $k$ singularity are eventually all positive and all have $x$ coordinate larger than the $x$ coordinate of any of the $w$'s which is bounded by $k$. Hence they cannot join together, and hence cannot occur. 
  
-All that remains is to bound the possible singularities we have started with. However this follows by a similar logic. They lie in infinite families. Once the singularity gets too large, the bounds become unfeasible and they cannot occur.
+All that remains is to bound the possible singularities we have started with. However this follows by a similar logic. They lie in infinite families and once the singularity gets too large, the bounds become unfeasible and they cannot occur. To see this we note that we have a bound on the values $y$ such that $\frac{x}{y}$ is the most negative value in a fiber. As the singularity gets longer we see that eventually there would be no way of completing the polyhedral divisor without introducing a value which exceeds this bound on $y$. 
 \end{algorithm}
 
+\begin{rem}
+This algorithm can be re purposed to work in the toric case. To see this we start with a family of singularities $ S_k = (-a, n), \, (b+kn, n)$ and we wish to bound the values $k$. We get the following pictures as $k$ increases
+\[
+Insert Toric picture 2!
+\] 
+\end{rem}
 
 As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one.
 
@@ -652,30 +657,23 @@ The second observation is let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{
 
 \item $A_3$
 
-\item $A_4$
+\item \begin{bf} $A_4$ Singularity \end{bf}
 
-\item \begin{bf} $A_5$ Singularity \end{bf}
-
-This has several possible actions taking the first us the polyhedral divisor 
+The only case is $u = v+1$ and we have
 \[\def\arraystretch{1.2}
 \begin{array}{cc}
-P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{5} \right] \\ 
-P_2 & \left[b_1 , \, \dots, \, b_m, 1\right] \\
+P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{3} \right] \\ 
+P_2 & \left[b_1 , \, \dots, \, b_m, \frac{1}{2} \right] \\
 P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
 P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
 \end{array}
 \]
-\end{itemize}
-The only choices for the first row are $[0, \frac{1}{5}]$ and $[\frac{1}{5}]$. We call this case $a$ and case $b$. 
-
-In case $a$ if there is another elliptic point it has to be arising from a toric singularity with coordinates $(0, 1)$ and $(-1, u)$ with $u \leq -4$ and the subtorus once again corresponding to the horizontal line.
-%Rejig the above sentence.
-This cannot happen as every other row can only have denominators equal to $1$. So this case does not occur. Note a non toric singularity cannot occur otherwise the slope on the tailfan $[-\infty , 0)$ would be one and this would not be convex on $P_1$.
-
-For case $b$ we have exactly the same argument that it would have to be connected to a singularity with denominator greater than $1$, hence cannot occur. So this does not occur. 
+There are two cases for $P_1$,  $[0, \frac{1}{3}]$ and $[\frac{1}{3}]$. If it is the first case then the denominator has to be greater than $2$ so does not occur. So only the second case occurs.
 
 
-The next case is 
+\item \begin{bf} $A_5$ Singularity \end{bf}
+
+Starting with the case is $u = v+2$ and we have
 \[\def\arraystretch{1.2}
 \begin{array}{cc}
 P_1 & \left[ a_1, \, \dots , \, a_n, \frac{1}{4} \right] \\ 
@@ -725,7 +723,12 @@ Every other case is covered by our discussion at the beginning or the example. W
 
 In case a), the only denominators that occur which are less than or equal to $v$ are $\frac{1}{u-2}$ and $\frac{1}{u-1}$ however as $u \geq 3$, as $N \geq 6$ we have neither of these values are equal to $u$ or $1$ so this cannot occur.
 
-In case b), 
+In case b), we have potential denominators $\frac{1}{v-1}$, $\frac{1}{v-2}$, $\frac{1}{u-1}$ and $\frac{1}{u-2}$. This equals $\frac{1}{u}$, $\frac{1}{u-1}$, $\frac{1}{u-2}$. As these all have denominators greater than 1 they cannot occur on a fiber. 
+
+Exactly the same logic holds in case c).
+
+
+\end{itemize}
 \end{ex}
 
 
