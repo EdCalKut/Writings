@@ -311,12 +311,12 @@ For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$-curv
 		\node [style=none] (8) at (-4, -2) {};
 		\node [style=none] (9) at (-4, -2) {};
 		\node [style=none] (10) at (2, 4) {};
-		\node [style=none] (11) at (-1.75, 1.75) {-1};
+		\node [style=none] (11) at (-1.75, 1.65) {$-1$};
 		\node [style=none] (12) at (0.25, 2.75) {};
-		\node [style=none] (13) at (0.25, 2.55) {-1};
-		\node [style=none] (14) at (1.5, 0.75) {0};
-		\node [style=none] (15) at (-0.5, -1.5) {0};
-		\node [style=none] (16) at (-2.5, -0.25) {-1};
+		\node [style=none] (13) at (0.25, 2.45) {$-1$};
+		\node [style=none] (14) at (1.5, 0.75) {$0$};
+		\node [style=none] (15) at (-0.5, -1.5) {$0$};
+		\node [style=none] (16) at (-2.35, -0.15) {$-1$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw (3.center) to (2.center);
@@ -599,7 +599,7 @@ X_b^0 & X_b^1 \arrow[l, "\phi_b^0"'] & \cdots \arrow[l, "\phi_b^1"'] & X_b^{b-1}
 Once again by Theorem~\ref{ThmOnSing} there are two heads of the cascade given by the following two surfaces. These correspond to surfaces constructed by blowing up $\mb{F}_a$ in $b$ points and $\mb{F}_b$ in $a$ points, then contracting the negative curves. We call these surfaces $X_a$ and $X_b$ respectively.
 
 \[
-\resizebox{7cm}{5cm}{
+\resizebox{8.75cm}{5.3125cm}{
 \begin{tikzpicture}{s}
     \node (0) at (-2.5, 4) {};
 	\node (1) at (-2.5, -4) {};
@@ -714,18 +714,87 @@ This structure of the cascade can be put in more general terms.
 \begin{thm}
 Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in the previous theorem. Let $X_i$ be the surface constructed from $X_{a_i}$. If $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$. 
 
-In addition we can describe the shape of the cascade. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. We explained the case of the singularity of length 2 above. In the case of the singularity having length 3, then the cascade looks like:
+In addition we can describe the shape of the cascade. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 
+
+For the general case we split in to cases. Given a basic surface $X$ it is constructed by first blowing up a Hirzebruch surface $k_1$ times at one point and $k_2$ times at another. We classify by these cases
+
+\begin{enumerate}
+\item $k_1 = k_2 = 0$: This corresponds to one singularity and we have 
 \[
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0B9YARgF8AesRB9S6TLnyEUPclVqMWbLr0E8RYkBmx4CRAExzq9Zq0QgAOhagQcCUeJ1SiAZiMLTy7vwHA6nHgBafg1HST0UNx55EyVzLn1ff30+UK0JXWkSUn0YxTMObhShNO1wrNlc43yvYGL1B3SnCORDKo84y2tbe00yzNccvM94osE-Tn1g1Mb+5xQAViHqkcKGvoz55AA2ZY6ChNLNlrIAFmHOlRdBYVnjitJzlcvua4F1sIGUQyf9tisbHYjs0sm5frEDmMkpwXNNgeUiAB2PYQrwuETyGBQADm8CIoAAZgAnCAAWyQshAOAgSDIf3MVjQAAssAF3iBqAw6AAjGAMAAK9zYRKw2KZODSxLJSEMVJpiEpqIZFmZrJ4An0HJAXN5AqF5hFYoljSl5MQbjlMueBUZLLZEyCKS1Or5gpBwtF4slJLNp2o1KQAA5rf8VXbEhMpiFOTzXfrtTACcbNKakLtLYglvSuqrJuyY7q3QiDZ7k4SfUhkRn00qc+GNc7Y3r3SWjd7pYhgxmq7XbayI8k4QW4y2QIavSaK53-fKAJwh5UAFSZMBwdEbhfjDETZZAqcQ84zFt7YbV0KC0e1TaLXzHpfbZsPAYVfuzfZh0Nhl5dzeLCaTD4UnSz6Hie-J2uow6-re467vuPCys+PCKjUyq5sAbyQVem6jrBgEKhaSGyie6FvJqUE3vMd5tpOHY8K+SHHqhdashh4z+LCToUfGeG0WaPBZkhdJgeGG4jn+vEUHwQA
+Insert cavey Prince
+\]
+
+\item If $k_1 = 1$ and $k_2 = 0$ and there is only one degenerate fiber in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface then the singularity is of length 2 and is classified above.
+
+\end{enumerate}
+
+We now call a cascade of type 1 the following diagram:
+\[
+\begin{tikzpicture}[baseline= (a).base]
+\node[scale=.6] (a) at (0,0){
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAmAXVJADcBDAGwFcYkQANAfWJAF9S6TLnyEUABgrU6TVuw4ACALwLu4-oJAZseAkXJSaDFm0QgAOuYDGUCDgQChO0UQDMhmSfldg9ALQA1jyBXOR+xHwaTiJ6KO6u0sZyZgCaUVrCumLIBgAsibKmICk8AHq8jhnOsci5pPlGhewlxKXk6dox2QYArAVeZpa0tvYdmS4odX2NAxbmw3YOmp1Z+qQAbP3JxT5gPHzlY9XZdZsz2yXAe+QH7ZUrE7UeSUXcviHEITdHXUQ9pMQtkUAOo-VYof4Jc5FABaYMe63qQPYMLKd2W4xqiPEyLMwLR8KxANxIHxrQqGOORAA7KQcdD2JYbItCdkABx0kn44AQUK3Vk04kMwbWEZLaLg5AcwHC0k+XkRQ73THZRFQzzbVHkgUoWnql6M0Us5VU3VI2VMsU6qWkfVNMyo4AAW32SspvxQHIaGthPhdNza-GkMCgAHN4ERQAAzABOECdSEkIBwECQEU0sfjSAMydTiHElUzCcQ7lz2cLceLpZTSFyFaziDqZcQPXrxabNcQ6zbSH+zepPa7NE7bMHtObAE5Bxzm8QCxnK2myM3XIPiMvO8QbguG+vh3niKud8XD-u03Xj2mc5vW5fEFuz-fu3fiH3NwOX+PN6OX4jZ1OXwnR9yHnaNF3vas83IdMwIbaDgO3WCTw7KCjyQ7Nrygi90MQchIOzVtKD4IA
+
 \begin{tikzcd}
-X_{1}^0 & X_{1}^1 \arrow[l, "\phi_1^1"']   & \cdots \arrow[l, "\phi_1^2"']   & X_{1}^{a_1-1} \arrow[l, "\phi_1^{a_1-2}"']                      &  &                                                                    &                          &                          \\
-        &                                  &                                & &  &                                                                    &                          &                          \\
-X_{2}^0 & X_{2}^1 \arrow[l, "\phi_2^1"']   & \cdots \arrow[l, "\phi_2^2"']   & X_{2}^{a_2-1} \arrow[l, "\phi_2^{a_2-1}"']  &  &\arrow[ll, "\phi_2^{a_2}"]  X_1 \arrow[lluu, "\phi_1^{a_1-1}"'] \arrow[lldd, "\phi_3^{a_3-1}"] & X_2 \arrow[l, "\Phi_1"'] & X_3 \arrow[l, "\Phi_2"'] \\
-        &                                  &                                &                                                                 &  &                                                                    &                          &                          \\
-X_{3}^0 & X_{3}^1 \arrow[l, "\phi_{3}^1"'] & \cdots \arrow[l, "\phi_{3}^2"'] & X_{2}^{a_3-1} \arrow[l, "\phi_{3}^{a_3-2}"']                    &  &                                                                    &                          &                         
+        &               &                  &                                     &                                               &                        & W_1^2 \arrow[r] & \cdots \arrow[r] & W_{o_2}^2 \\
+        &               &                  &                                     &                                               & W \arrow[ru] \arrow[r] & W_1^1 \arrow[r] & \cdots \arrow[r] & W_{o_1}^1 \\
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l] \arrow[ru] \arrow[rd] &                        &                 &                  &           \\
+        &               &                  & Y \arrow[ld] \arrow[rd]             &                                               & Z \arrow[rd] \arrow[r] & Z_1^1 \arrow[r] & \cdots \arrow[r] & Z_{m_1}^1 \\
+        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]                               &                        & Z_1^2 \arrow[r] & \cdots \arrow[r] & Z_{m_2}^2 \\
+        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]                              &                        &                 &                  &           \\
+        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2                                     &                        &                 &                  &          
+\end{tikzcd}
+};
+\end{tikzpicture}
+\]
+This enables us to enumerate the following cases
+\begin{enumerate}
+\item $k_1 \neq 0$ and $k_2 \neq 0$ and $a-k_1-k_2 >2$ . This lies in a cascade of type 1 and starts from $X_0$.
+
+
+\item The $Y_{n_1}^1$ or $Y_{n_2}^2$ are surfaces such that $k_1 = 1$ and $k_2 = 0$ and there is only one degenerate fiber in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface. 
+
+\item The $Z_{m_1}^1$, $Z_{m_2}^2$, $W_{o_1}^1$ and $W_{o_2}$ are surfaces such that $k_1 = 1$ and $k_2 = 0$ and there are two degenerate fibers in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface. 
+\end{enumerate}
+Other cases lie in a cascade of type 2 which is represented by the following diagram:
+\[
+\begin{tikzpicture}[baseline= (a).base]
+\node[scale=.79] (a) at (0,0){
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkQANAfWJAF9S6TLnyEU5CtTpNW7DgAIAvPO7l+gkBmx4CRAEySaDFm0QgAOuYDGUCDgQCh20UQDMh6Sbldg9ALQA1gDUen6ufOpOIrooACwexrJm3L6BXKF6EY6awjpiyACsCTKmnD7+Ael+xFkaWtH5AGzFXsnlaZmROc4xyPHEUomlAJo8XfV5RPF6gyXslrS29uO5LihFA0ZzZgBaY9kTa8jNm55JIADq+3WrvUUzW60W5ot2Djc9TaQPZ6ULS+8opM4qRXLMnqNCAdbvkimDHuc9gBbFafIjNeG-dhXCD8KQwKAAc3gRFAADMAE4QFGICQgHC4xA1DSU6lIAz0xnkbKsmnuTnsnlUmnxAWIcIs4VIIpi2JCtmIZpigrykU0BlIADsqq16sZAA4dYgZRrEABOI1K03EbmShVmvVIYjM8lSpl062ZO00-WOpkS10K51+4hy71OjnWlWUPhAA
+\begin{tikzcd}
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k+2-3} \arrow[l] & X_{a-k_1-2} \arrow[l] \arrow[d] & X_{a-k_1-1} \arrow[l] \arrow[d] & X_{a-k_1} \arrow[l] \arrow[d] \\
+        &               &                  &                       & Y_1 \arrow[d]                   & Z_1 \arrow[d]                   & W_1 \arrow[d]                 \\
+        &               &                  &                       & \vdots \arrow[d]                & \vdots \arrow[d]                & \vdots \arrow[d]              \\
+        &               &                  &                       & Y_n                             & Z_m                             & W_o                          
+\end{tikzcd}
+};
+\end{tikzpicture}
+\]
+This enables us to enumerate the following cases
+\begin{enumerate}
+\item $k_1 > 0$ and $k_2= 0$ and there is only one degenerate fiber. This lies in a cascade of type 2 starting from $X_0$ or from $Y_n$.
+
+\item Two non degenerate fibers but $a - k_1 - k_2 = 0$ or $1$. This lies in a cascade of type 2 starting from $Z_m$
+
+\item Two non degenerate fibers but with $k_1 >1$ and $k_2 = 0$
+\end{enumerate}
+There are a couple of final sporadic cases 
+\begin{enumerate}
+\item $k_1 = k_2 = 0$ and there are two non degenerate fibers. Then the singularity of  This has the following cascade 
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0ACAXk-YH1iIAL6l0mXPkIoAjOSq1GLNgJkixIDNjwEiAJnnV6zVohAAdcwGMoEHAlHjtUogGZDikyv7A6AWgBrfhlA-j0-GWF1J0ldFAAWD2NlMwFfUJCgvSjHTQkdaWR3GQVk0xAATWi85zjkAz1SpXKK4IA9NVytWMLExqNmtlaZNr1q7oL9UlcmrzNLGlt7cfyXBOnZlItzRbsHDQm1+tJ4zZafMGDhDpXa3pOzoYuw67HhBRgoAHN4IlAAMwAThAALZIOQgHAQJBkTwpMBMBgMagMOgAIxgDAACqs4iAGDB-jhqkDQUgDJDoYgIWUkAikSj0ZicXc2ASiSTgWDEO5KeSBnN6cj8UzsbjpPjCcTcqTubyoUgAKwC+GI4WojFi1lmdnSjSypCJPk8lWmIWMzUsnpsqWcsmIZXGgBsprpaotzPFNo5Mq5SuoCsQAHZXYhzSLLV6dbbffaXcaAByh8Maz3ayU+-V+4MBqkATmT7ojaet0czAOzSeNMlhtLDRdTWtLGb1FftBerNMG9YZxabkzL0oowiAA
+\begin{tikzcd}
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l] \\
+        &               &                  & Y \arrow[ld] \arrow[rd]             &                         \\
+        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]         \\
+        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]        \\
+        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2              
 \end{tikzcd}
 \]
-For any singularity of length greater than 3, then a basic surface either falls into a cascade of the above form or it lies in a straight series.
+The $Y_i$ are of the form $k_2 = 0$ and $k_1 = 1$ with one degenerate fiber.
+
+
+\end{enumerate}
+
 
 \end{thm}
 \begin{proof}
@@ -739,6 +808,9 @@ We note that $k_1$ and $k_2$ should not be viewed as invariant of the surface $X
 X & Y \arrow[l, "f"] \arrow[r, "\pi"] & \mb{F}_{a_i}
 \end{tikzcd}
 \]
+This is because the map to a Hirzebruch surface is non unique even with the moderate restrictions we have placed on these maps.
+
+
 We now note that by construction in the case where the strict transform of both fibers are exceptional curves we get a curve $C$ on $Y$ with self-intersection $a_i - k_1 -k_2$. Via construction $C$ was a toric curve and $f_*(C) \in |-K_X|$. We have that the class group of $X$ is generated by $C$ and $D_i$ where $D_i$ are the curves arising from the non toric blowups of $Y$. This implies that the cascade of $X$ is of length $L = a_i - k_1-k_2$  as blowups in general position do not affect the $-K_X \cdot D_i$ and when we blow up $a_i - k_1 -k_2 +1$ times $K_X^2 \leq 0$ via the small discrepancy condition. If $L < 0$ then this surface is not a \ldp\ surface.
 
 
@@ -748,7 +820,7 @@ In the case where one of the fibers is not exceptional, so $k_2  = 0$,  we have 
 We now wish to explore the birational relationships between these surfaces. The first stage is to show that the only possible $-1$ curves on any surface in the cascade arise from the class $|B+ a_i F|$ on the Hirzebruch surface $\mb{F}_{a_i}$. To show this we note that it is impossible for any curve that intersects $|B|$ to end up being a floating curve as it will always intersect the curve $B$. So any floating curve $C$ lies in the class $n|B+a_i F|$. To show that $n=1$ we compute the self intersection of these curves. If $n=2$ then the smallest possible self intersection of a curve not going through the singularity  is $4a_i - k_1 - k_2 - 4$ if there is two exceptional fibers and $4a_i - k_1 -2$ if there is only one. As in the first case $L = a_i- k_1-k_2$ as $a_i \geq 2 $  we have $4a_i -k_1-k_2 - 4 > L$ so we cannot blow up enough to make this a $-1$ curve. In the second case $L = a_i -k_1+2$ so once again as $a_i \geq 2$  we cannot blow up enough to make it a $-1$ curve. As $n$ increases the size of the self intersection increases and hence they can never occur as floating $-1$ curves.
 
 
-Now we explicitly state how the cascade structure occurs. We note that out of the exceptional curves $E_i \subset Y$ only the curves that arose as part of the original $k_1$ and $k_2$ blowups can be intersected by curves in the class $|B + a_i F|$ as otherwise they would have to intersect the fiber with multiplicity greater than $1$. Label these curves $S_1, \dots ,S_{k_1}$ and $T_1, \dots , T_{k_2}$ with $S_{1}$ and $T_{1}$ being the strict transforms of the fibers. Hence any potential floating curve intersects a $-1$ curve coming out of a curve $S_i$ and a $-1$ curve coming out of $T_j$. We now denote by $C_{i,\, j}$ the curve intersecting a $-1$ curve coming from $S_i$ and a $-1$ curve coming from $T_j$. Then in the case of both fibers becoming exceptional curves $C_{i, \, j}^2 = L- 4 + i + j$ so in order for it to become a $-1$ curve it needs to be blown up in $L - 3 + i + j$ points. However as the length of the cascade is $L$ this implies $i+j \leq 3$. So $\{ (i, \, j) \} = \{(1,1), (1,2), (2,1) \} $. We now go on a case by case analysis:
+Now we explicitly state how the cascade structure occurs. We note that out of the exceptional curves $E_i \subset Y$ only the curves that arose as part of the original $k_1$ and $k_2$ blowups can be intersected by curves in the class $|B + a_i F|$ as otherwise they would have to intersect the fiber with multiplicity greater than $1$. Label these exceptional curves $S_1, \dots ,S_{k_1}$ and $T_1, \dots , T_{k_2}$ with $S_{1}$ and $T_{1}$ being the strict transforms of the fibers. Hence any potential floating curve intersects a $-1$ curve coming out of a curve $S_i$ and a $-1$ curve coming out of $T_j$. We now denote by $C_{i,\, j}$ the curve intersecting a $-1$ curve coming from $S_i$ and a $-1$ curve coming from $T_j$. Then in the case of both fibers becoming exceptional curves $C_{i, \, j}^2 = L- 4 + i + j$ so in order for it to become a $-1$ curve it needs to be blown up in $L - 3 + i + j$ points. However as the length of the cascade is $L$ this implies $i+j \leq 3$. So $\{ (i, \, j) \} = \{(1,1), (1,2), (2,1) \} $. We now go on a case by case analysis:
 
 
 \textbf{Case 1}: We start with $(i, \, j)  = (1,\, 1)$. It takes $L - 1$ blowups for this to become a $-1$ curve. Denoting the number of $-1$ curves intersecting $S_1$ and $T_1$ by $s, \, t$, we label these curves $D_u^S$ and $D_v^T$ respectively. We have $st$ possible curves which would give rise to a $-1$ curve after $L-1$ blowups. We denote by $C_{u, \, v}$ the curve intersecting $D_u^S$ and $D_v^T$. These curves originally lay in $|B+ a_i F|$ so on the Hirzebruch surface they intersected $b$ times. By repeating the same calculation on  this on$Y$ blown up $L-1$ times, we see that $C_{u,\, v}$ intersects $C_{u' , \, v'}$ if and only if $u \neq u'$ and $v \neq v'$. So fixing $C_{u, \, v}$ we get the following curve configuration
@@ -870,7 +942,7 @@ We note that we can start by contracting all $-1$ curves intersecting the except
 {[-a_1, \, -2, \dots , -k_1 - k_2 -1, \, -2, \, -2 \dots -2]} \arrow[u]
 \end{tikzcd}
 \]
-So in particular this arises from a basic surface with $k_2 = 0$, $k_1 = 1$ and the strict transform of only one becoming an exceptional curve. This concludes the first case.
+So in particular this arises from a basic surface with $k_2 = 0$, $k_1 = 1$ and the strict transform of only one fiber becoming an exceptional curve. This concludes the first case.
 
 \textbf{Case 2}: The second case is $(i, \, j) = (1, \, 2)$. We do not spell this out in the same level of detail. Replicating the above arguments we see that we now get exactly the same curve configuration as in Figure 2 except now connecting the curves $E_1^S$ to $E_2^T$. So once again this leads to a set of two branching contractions. Once again this leads to a basic surface with $k_1 = 1$ and $k_2 = 0$. However this time there are two fibers that are now exceptional curves on $Y$. This proof follows from exactly the same logic as above.
 
@@ -880,19 +952,26 @@ A crucial point in this proof is that each case behave independently of the othe
 
 We note that if there are no $-1$ curves coming out of the curves $E_1^S$ and $E_1^T$ then the cascade is a straight line as the above discussion is entirely predicated on their existence. This concludes the cascade for basic surfaces of this type. 
 
-We make a quick mention of what happens in the case where there is only one exceptional fiber. These surfaces all start by blowing up a point $k$ times. Label the exceptional curves that arose from blowing up this point $E_{k}, \dots E_1$ and we denote the strict transform of the fiber by $E_{0}$. Once again $L = a_1 -k+ 2$ and we have curves with self intersection $a_1 - i -1$ intersecting the $-1$ curves coming out of $E_i$. To get a $-1$ curve we need $a_1 - i - 1 < L = a_1 - k+2$ giving $k-i < 3$ so $i \in \{ k, \, k-1,\, k-2 \}$.  After $a_1-k$ blowups we get a straight chain of blowdowns arising from floating $-1$ curves intersecting $-1$ curves coming out of $E_k$. After $a_1-k+1$ blowups we also get $-1$ curves intersecting the fiber $E_{k-1}$. These curves, pre blowups, intersect the potential floating curves arising from $E_k$ $a_1 - k - 1?$ times. We have then blown up $a_1-k+1$ points 
+We make a quick mention of what happens in the case where there is only one non generic fiber. These surfaces all start by blowing up a point $k$ times. Label the exceptional curves that arose from blowing up this point $E_{k}, \dots E_1$ and we denote the strict transform of the fiber by $E_{0}$. Once again $L = a_1 - k+ 2$ and we have curves with self intersection $a_1 - i -1$ intersecting the $-1$ curves coming out of $E_i$. To get a $-1$ curve we need $a_1 - i - 1 < L = a_1 - k+2$ giving $k-i < 3$ so $i \in \{ k, \, k-1,\, k-2 \}$. 
+
+After $a_1-k$ blowups we get a straight chain of blowdowns arising from floating $-1$ curves intersecting $-1$ curves coming out of $E_k$. None of these new $-1$ curves intersect each other, but they intersect every single one the curves introduced by blowing up. Hence we get a straight line cascade. 
 
 
+After $a_1-k+1$ blowups we also get $-1$ curves intersecting the fiber $E_{k-1}$. These curves intersect the floating curves arising the case above once. So upon blowdown these two cascades cannot intersect. This gives another straight line cascade. 
+
+The final case behaves a little differently 
 \end{proof}
 
 \begin{rem}
-The surfaces $X_{a_i}^{k_1 + k_2}$ always exist but may not always have $-K_X$ being ample. This depends purely on the values $a_i, \, k_1, \, k_2$.
+With $k_1$ and $k_2$ being relatively large compared to $a$ it is possible that large parts of this cascade will not exist.
 \end{rem}
+\begin{comment}
 \begin{cor}
 Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self-intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.
 \end{cor}
+\end{comment}
 \begin{rem}
-It is fully possible for both $X_1$ and $X_2$ to exist but one of the $X_{a_i}^0$ to not exist. For example consider a singularity with resolution $-3, \, -8, \, -2, \, -2, \, -2, \, -2, \, -2, \, -2, \, -3$. There will be a surface $X$ such that the resolution will have a map to $\mb{F}_8$ but there will be no surface with a map from its resolution to $\mb{F}_3$.
+It is fully possible for an $X_{a_i}$ to not exist. For example consider a singularity with resolution $-3, \, -8, \, -2, \, -2, \, -2, \, -2, \, -2, \, -2, \, -3$. There will be a surface $X$ such that the resolution will have a map to $\mb{F}_8$ but there will be no surface with a map from its resolution to $\mb{F}_3$.
 \end{rem}
 
 
