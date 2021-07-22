@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  15 JUL 2021 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  19 JUL 2021 22:24
 entering extended mode
 **./ComplexityOneLDP.tex
 (ComplexityOneLDP.tex
@@ -1211,12 +1211,12 @@ LaTeX Warning: Citation `Br' on page 12 undefined on input line 502.
 LaTeX Warning: Reference `-1 curve lemma' on page 16 undefined on input line 62
 8.
 
-[16] [17] [18] Excluding 'comment' comment. [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 853.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 853.
+[16] [17] [18] [19] Excluding 'comment' comment. [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 856.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 856.
  (ComplexityOneLDP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 853.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 853.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 856.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 856.
 Package rerunfilecheck Info: File `ComplexityOneLDP.out' has not changed.
 (rerunfilecheck)             Checksum: 366AC65E753F12E69D9BB43C41F320DC;273.
 
@@ -1225,8 +1225,8 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 23198 strings out of 492970
- 437209 string characters out of 3127037
+ 23199 strings out of 492970
+ 437216 string characters out of 3127037
  533489 words of memory out of 3000000
  26380 multiletter control sequences out of 15000+200000
  12955 words of font info for 51 fonts, out of 3000000 for 9000
@@ -1254,9 +1254,9 @@ amsfonts/cm/cmti12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/user/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ComplexityOneLDP.pdf (19 pages, 294028 bytes).
+Output written on ComplexityOneLDP.pdf (20 pages, 295127 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
