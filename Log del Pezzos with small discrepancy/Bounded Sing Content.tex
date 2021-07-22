@@ -410,7 +410,8 @@ without loss of generality we may assume that it is the exceptional curve of the
 Hence $\pi$ is indeed an isomorphism in a neighbourhood of~$B$.
 
 
-We note that  $l \leq 1$ has been classified in Proposition~\ref{Surfaces to F_1}. So we restrict to $l \geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves cannot be contracted (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$ in Lemma~\ref{introlemmaonFl}).
+We note that  $l \leq 1$ has been classified in Proposition~\ref{Surfaces to F_1}. So we restrict to $l \geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves cannot be contracted (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$.
+% We can reference back to results on curve in Hirzebruch surfaces.
 %, as we are assuming $l$ is the largest possible value of $l$ and hence $B$ could not be blown up. 
 Denote these two adjacent curves by $C_1$ and $C_2$ respectively. Assume there was another singularity with exceptional curves $\{ E_i^{S'} \}_{i=0}^{m_{S'}} $ on $Y$. Then by Lemma~\ref{HSlem} there would be a curve $E_j^{S'}$ such that $\pi_* E_j^{S'}$ is a curve with self-intersection $0, \,  l,\,  l+2$. However these curves would necessarily intersect $C_1$ and $C_2$ meaning either $S'$ is not distinct from $S$ or there is a $-1$-curve in $Y$ connecting two of their curves in the minimal resolution. Hence $X$ has precisely one singularity. 
 
@@ -583,7 +584,10 @@ We now do a more difficult example by classifying the \ldp's with singularities 
 
 
 \begin{cor}\label{doublecurve}
-Let $X$ be a surface such that the basket is  $(\{ S_{a_1, \, b_1}, \dots , S_{a_m, \, b_m} \}, \, n )$ , with the condition that $a_i, \, b_i \geq 3$ and we exclude the case $a_i = b_i = 3$. Then there is at most one singularities. They fall into a cascade of the form
+Let $X$ be a surface such that the basket is  $(\{ S_{a_1, \, b_1}, \dots , S_{a_m, \, b_m} \}, \, n )$, with the condition that $a_i, \, b_i \geq 3$ and we exclude the case $a_i = b_i = 3$. Then there is at most one singularity $S_{a, \, b}$.
+
+
+Moreover all such surfaces fall into a cascade of the following form
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0B9OgPWJAC+pdJlz5CKAIzkqtRizZdekwcJAZseAkQBMM6vWatEIADqmAxlAg4EQkZvFEAzPrlHF3HsDoBaSQIABKoOYtooACykkrKGCiZcKvbqoloSyACs0bHyxhycOiEpjuEkpDo5HgmcAEZ8RRph6dIVBrmedUlqjWm65ZXxZpbWtg2pTiiure6DXHXANf4CgrIwUADm8ESgAGYAThAAtkjSIDgQSGQzeeZoABZYXvzUDHQ1MAwACuPhIAwwOxwRX2RyQejOF0QpziN1M90eyhALzeH2+JQkfwBQOSIOOiFcELBbSqQ3hXh8vh0y2R7y+Pwx-0BwIOeIA7NRzkgAGzEwa3B61eo01H0th7LDrO7YtS4pAADg5kPZ1zY-MenSRfxRdPRYolUuZoMQAE5FfLebCyfNFlTNa9aWimnrJdLdiykFFCSaLaq4QLrUtDXjPZz8T6TGryX4AkGkFkvZ6Yb7Pg87drHb0TOKXSsBEA
 \begin{tikzcd}
@@ -666,7 +670,7 @@ Once again by Theorem~\ref{ThmOnSing} there are two heads of the cascade given b
 	\draw (27.center) to (28.center);
 	% brace
 	\draw [decorate,decoration={brace,amplitude=5pt},xshift=-5pt,yshift=0pt]
-(1.5,-1.5) -- (1.5,1.5) node [black,midway,xshift=-1em] {$b$};\
+(1.5,-1.5) -- (1.5,1.5) node [black,midway,xshift=-1em] {$a$};\
 \end{tikzpicture}
 }
 \]
@@ -716,84 +720,113 @@ Given a singularity with small discrepancy such that the minimal resolution is $
 
 In addition we can describe the shape of the cascade. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 
 
-For the general case we split in to cases. Given a basic surface $X$ it is constructed by first blowing up a Hirzebruch surface $k_1$ times at one point and $k_2$ times at another. We classify by these cases
+For the general case we split in to cases. Given a basic surface $X$ it is constructed by first blowing up a Hirzebruch surface $k_1$ times at one point and $k_2$ times at another. We label these curves $E_i^S$ and $E_i^T$ respectively. Let $s_i$, $t_i$ be the number of $-1$ curves intersecting $E_i^S$ and $E_i^T$ respectively. We then classify the cascade via these invariants
 
 \begin{enumerate}
-\item $k_1 = k_2 = 0$: This corresponds to one singularity and we have 
+\item The singularity is length one then we have 
 \[
 Insert cavey Prince
 \]
 
-\item If $k_1 = 1$ and $k_2 = 0$ and there is only one degenerate fiber in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface then the singularity is of length 2 and is classified above.
+\item If $k_1 = 0$ and $k_2 = 0$ and there is only one degenerate fiber in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface then the singularity is of length 2 and is classified in the examples.
 
 \end{enumerate}
 
-We now call a cascade of type 1 the following diagram:
+Consider $X$ a surface with $k_1$ and $k_2$ not equal to zero. In addition $s_1$, $t_1$, $s_2$ and $t_2$ are all non zero. Then we have the following cascade
 \[
 \begin{tikzpicture}[baseline= (a).base]
 \node[scale=.6] (a) at (0,0){
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAmAXVJADcBDAGwFcYkQANAfWJAF9S6TLnyEUABgrU6TVuw4ACALwLu4-oJAZseAkXJSaDFm0QgAOuYDGUCDgQChO0UQDMhmSfldg9ALQA1jyBXOR+xHwaTiJ6KO6u0sZyZgCaUVrCumLIBgAsibKmICk8AHq8jhnOsci5pPlGhewlxKXk6dox2QYArAVeZpa0tvYdmS4odX2NAxbmw3YOmp1Z+qQAbP3JxT5gPHzlY9XZdZsz2yXAe+QH7ZUrE7UeSUXcviHEITdHXUQ9pMQtkUAOo-VYof4Jc5FABaYMe63qQPYMLKd2W4xqiPEyLMwLR8KxANxIHxrQqGOORAA7KQcdD2JYbItCdkABx0kn44AQUK3Vk04kMwbWEZLaLg5AcwHC0k+XkRQ73THZRFQzzbVHkgUoWnql6M0Us5VU3VI2VMsU6qWkfVNMyo4AAW32SspvxQHIaGthPhdNza-GkMCgAHN4ERQAAzABOECdSEkIBwECQEU0sfjSAMydTiHElUzCcQ7lz2cLceLpZTSFyFaziDqZcQPXrxabNcQ6zbSH+zepPa7NE7bMHtObAE5Bxzm8QCxnK2myM3XIPiMvO8QbguG+vh3niKud8XD-u03Xj2mc5vW5fEFuz-fu3fiH3NwOX+PN6OX4jZ1OXwnR9yHnaNF3vas83IdMwIbaDgO3WCTw7KCjyQ7Nrygi90MQchIOzVtKD4IA
-
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBmAXVJADcBDAGwFcYkQANAAgF4uOA+sRABfUuky58hFAEYK1Ok1btBs0eJAZseAkQBMCmgxZtEIADoWAxlAg4EYiTulFyRpadUDg9ALQA1gKygQL6frIiGs5SeigALB4mKuaCvqEhQfpRTlqSujLI7vGKyWYgAJrReS5xyIYArKXK5RXBAHrqudqxhYlNxi3sbbLt+tU9BQakAGzNXuZWtHYOE-muCbPzKZYWy-aOmpMb9aQA7NutPmDBIp1rtX3nl8PXYXfj3et1DaSyL6kAOSAnz0YEZcFZcGRB69IgzUj6AGVYGwqYoBHEZEcYGgyHBfH6cHZNEnM6kLGDBa7WwHUl1AAcFOxuOEX0eRHJ-ypO2AI06IlR7LhKHJSJ55T5HWyQqO30KTO5nh2Vlpq2F6OQTPFyvKqpWhximoAnH9kVLgDdZFxgXdIsCuPTCqadWV2BabkTAR9BYCnURfgNdaoQb5ARDQkSIjk5RyMaQShLhn6NScEXMk6k8RGoX4Zf7RVtMzSDQWtUXg0ChGXyUG3eYpaN7TWE+b+fnU4zSHWhosbKXOwrW8X9XTB0RTYnKyAPWFvWNBWXTT3qbPZPPmyJFDAoABzeBEUAAMwAThAALZIeQgHAQJBkStgZiMRg0Rj0ABGMEYAAV5exGBgI8cGqU8LyQQwbzvRBr3rJ8XzfT9vz-OMQEA4DQLPS9EHcKCIMzeDXzQpDf3-cx0JA3IwOw3DbyQX5H2fIj3y-UjUIozDwMQRI8JwgimMQ1iUJFNCgMozRqPomg6MQBFGIQ4ihLI0SMKorCpN48l5OYkjhPRFTxOPdTZOk6CmW0wTkOUji1K4rSZNNCzFKs9ixM47DzJk2QHzggTnLYkSbIk4zHK82De0IyyAv0oKjK4nivOyYKuNkSCvPIWzsNS0yr3iTLcpymCGnyorCtkGYStkWjoNkM5Kuqq8GUqzzoP0YgSrawr9CSuKstC1rImSrL7Jq40SoS1qMqGiCGsQfQ8umubZv0YrFpWrqKrWuSZP0Oq1omiCmv2rqxrWlqkHIdq1v6i7Bt627CvIHqQEknCHxk8gMsoEQgA
 \begin{tikzcd}
-        &               &                  &                                     &                                               &                        & W_1^2 \arrow[r] & \cdots \arrow[r] & W_{o_2}^2 \\
-        &               &                  &                                     &                                               & W \arrow[ru] \arrow[r] & W_1^1 \arrow[r] & \cdots \arrow[r] & W_{o_1}^1 \\
-X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l] \arrow[ru] \arrow[rd] &                        &                 &                  &           \\
-        &               &                  & Y \arrow[ld] \arrow[rd]             &                                               & Z \arrow[rd] \arrow[r] & Z_1^1 \arrow[r] & \cdots \arrow[r] & Z_{m_1}^1 \\
-        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]                               &                        & Z_1^2 \arrow[r] & \cdots \arrow[r] & Z_{m_2}^2 \\
-        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]                              &                        &                 &                  &           \\
-        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2                                     &                        &                 &                  &          
+        &               &                  &                                     &                                                 &                                               & X''_{a''-k_1''-k_2''-2} \arrow[r] & \cdots \arrow[r]    & X''_0            &                   \\
+        &               &                  &                                     &                                                 & X''_{a''-k_1''-k_2''-1} \arrow[rd] \arrow[ru] &                                   & {Y_1^1}'' \arrow[r] & \cdots \arrow[r] & {Y_{n_1 ''}^1}''  \\
+        &               &                  &                                     &                                                 &                                               & Y'' \arrow[ru] \arrow[r]          & {Y_1^2}'' \arrow[r] & \cdots \arrow[r] & {Y_{n_2''}^2}''   \\
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l] \arrow[ruu] \arrow[rdd] &                                               &                                   &                     &                  &                   \\
+        &               &                  & Y \arrow[ld] \arrow[rd]             &                                                 &                                               & Y' \arrow[rd] \arrow[r]           & {Y_1^2}' \arrow[r]  & \cdots \arrow[r] & {Y_{n_2'}^2}'     \\
+        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]                                 & X'_{a'-k_1'-k_2'-1} \arrow[ru] \arrow[rd]     &                                   & {Y_1^1}' \arrow[r]  & \cdots \arrow[r] & {Y_{n_1'}^1}'     \\
+        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]                                &                                               & X_{a'-k_1'-k_2'-2}' \arrow[r]     & \cdots \arrow[r]    & X'_0             &                   \\
+        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2                                       &                                               &                                   &                     &                  &                  
 \end{tikzcd}
 };
 \end{tikzpicture}
 \]
-This enables us to enumerate the following cases
+where we have 
 \begin{enumerate}
-\item $k_1 \neq 0$ and $k_2 \neq 0$ and $a-k_1-k_2 >2$ . This lies in a cascade of type 1 and starts from $X_0$.
+\item $X$ is a surface with $k_1$ and $k_2$ not equal to zero. In addition $s_1$, $t_1$, $s_2$ and $t_2$ are all non zero.
 
 
-\item The $Y_{n_1}^1$ or $Y_{n_2}^2$ are surfaces such that $k_1 = 1$ and $k_2 = 0$ and there is only one degenerate fiber in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface. 
+\item The $Y_{n_1}^1$ or $Y_{n_2}^2$ are surfaces such that $k_1 = 0$ and $k_2 = a_1 + 1 - s_1$ or $k_2 = a_1 + 1 - t_1$ respectively. In each of the $Y_i$ there is only one degenerate fiber in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface. 
 
-\item The $Z_{m_1}^1$, $Z_{m_2}^2$, $W_{o_1}^1$ and $W_{o_2}$ are surfaces such that $k_1 = 1$ and $k_2 = 0$ and there are two degenerate fibers in the $\mb{P}^1$ fibration induced by the map to the Hirzebruch surface. 
+\item The surfaces $X_0'$ and $X_0''$ are of the same form as $X$ and the picture has 3-fold symmetry.
 \end{enumerate}
-Other cases lie in a cascade of type 2 which is represented by the following diagram:
+There are a variety of subcases of this which occur 
+\begin{enumerate}
+\item The next case is $X$ is a surface with $k_1 = k_2 = 0$ and there two non general fibers or $s_2 = t_2 = 0$. Then the cascade is 
 \[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0ACAXk-YH1iIAL6l0mXPkIoAjOSq1GLNgJkixIDNjwEiAJnnV6zVohAAdcwGMoEHAlHjtUogGZDikyv7A6AWgBrfhlA-j0-GWF1J0ldFAAWD2NlMwFfUJCgvSjHTQkdaWR3GQVk0xAATWi85zjkAz1SpXKK4IA9NVytWMLExqNmtlaZNr1q7oL9UlcmrzNLGlt7cfyXBOnZlItzRbsHDQm1+tJ4zZafMGDhDpXa3pOzoYuw67Gu1bqAViTB1IByHx0P4ZYFZYGREQKGBQADm8CIoAAZgAnCAAWyQchAOAgSDInhSYCYDAY1AYdAARjAGAAFD7SEAMGCInDVFHopAGbG4xBYspIIkksmU6l0u5sJkstmojGIdzczkDOaC0mMkW0+kS5ms3Ls2XynFIb4E0wq4VUjXisySnUaPVIRIKuVKwnE1Xki1inpaqW6mVG6iGxAANhdprd5tFmut2ulHMQxqDAHYwwKI2rPdHGbG-fHQ06ABypxBmjNRq3Z312-2IFNOgCcxdLHvL3pjVaRNaLTpk+P5JfTLctbcrts78cbPb5v2b6q9k3bY5A9sQjqDMmyFGEQA
+\begin{tikzcd}
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l]  &  \\
+        &               &                  & Y \arrow[ld] \arrow[rd]             &                                   &                     \\
+        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]                   &                     \\
+        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]                  &                     \\
+        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2                         &                    
+\end{tikzcd}
+\]
+\item The next case is $X$ is a surface with $k_1 = 0$, $k_2 \neq 0$ and there are two non general fibers or $t_2 = 0$. 
+\[
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQANAAgF4uOA+sRABfUuky58hFOQrU6TVu0HlR4kBmx4CRAEzyaDFm0QgAOuYDGUCDgRiJ26UQDMhxSZUDg9ALQA1gLkgQJ6fuQi6k5SuigALB7GymaCvqEhQXpRjpqSOjLI7noKyaYgAJrRec5xyAaupUrlFcEAemq5WrGFiY1Gzeyt5G161d0F+qTxTV5mlrS29uP5LgnTsykW5ot2DhoTa-WkAKybLT5gwSIdK7W9p+dDl2E3Y12rdSdJg6kA5D56H8MsCssDIncekQAGykYhPMwVP6QyYoADscIRIGAw1GImRH3uRAAHJiBnNtjY9iijgBOMmeLY4l56P5vfE0ur0qjkpmtYBXchsjocwlQ9E-CnMkaRAkHT6FUk8xnlSxU5Zi1HIWElXnlNJAkGhVl+bJymJajG6lXsNVLfYWo6k61lFQA4QiBQwKAAc3gRFAADMAE4QAC2SDkIBwECQZBtiDAzEYjBojHoACMYIwAAoK9iMGCBnDVEPhpAGaOxxBR12J5OpkDprO5-NmQvF0uhiOIdxVit6pBJlNpzPZvNE9tFku5Ms9vsxpDfBPDxvN8dtpvTrvlxCJfu9wf1kdNsetydbzuz7tLmiLxCwlcN0ctifiy8zjRz28HjFPk-rue74dp+QY3g+d7VqS-5rmeb6oh+O49n+970jBL4bheIFIUg0H3uQ8Z1quGFAQh2HXruaH4bWvzEaer6buRX7gfu+HZMxu7kJW956MQFE9rxkEVpEHECVGPHsWBnHcdW5CuPxkYLrJ8QKTWrGyScqnkMu+HQlpVGyWiWlKZGxKeiIQA
 \begin{tikzpicture}[baseline= (a).base]
-\node[scale=.79] (a) at (0,0){
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkQANAfWJAF9S6TLnyEU5CtTpNW7DgAIAvPO7l+gkBmx4CRAEySaDFm0QgAOuYDGUCDgQCh20UQDMh6Sbldg9ALQA1gDUen6ufOpOIrooACwexrJm3L6BXKF6EY6awjpiyACsCTKmnD7+Ael+xFkaWtH5AGzFXsnlaZmROc4xyPHEUomlAJo8XfV5RPF6gyXslrS29uO5LihFA0ZzZgBaY9kTa8jNm55JIADq+3WrvUUzW60W5ot2Djc9TaQPZ6ULS+8opM4qRXLMnqNCAdbvkimDHuc9gBbFafIjNeG-dhXCD8KQwKAAc3gRFAADMAE4QFGICQgHC4xA1DSU6lIAz0xnkbKsmnuTnsnlUmnxAWIcIs4VIIpi2JCtmIZpigrykU0BlIADsqq16sZAA4dYgZRrEABOI1K03EbmShVmvVIYjM8lSpl062ZO00-WOpkS10K51+4hy71OjnWlWUPhAA
+\node[scale=.6] (a) at (0,0){
 \begin{tikzcd}
-X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k+2-3} \arrow[l] & X_{a-k_1-2} \arrow[l] \arrow[d] & X_{a-k_1-1} \arrow[l] \arrow[d] & X_{a-k_1} \arrow[l] \arrow[d] \\
-        &               &                  &                       & Y_1 \arrow[d]                   & Z_1 \arrow[d]                   & W_1 \arrow[d]                 \\
-        &               &                  &                       & \vdots \arrow[d]                & \vdots \arrow[d]                & \vdots \arrow[d]              \\
-        &               &                  &                       & Y_n                             & Z_m                             & W_o                          
+        &               &                  &                                     &                                   &                                           & Y' \arrow[r] \arrow[rd]       & {Y_1^2}' \arrow[r] & \cdots \arrow[r] & {Y_{n_2'}^2}' \\
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l] \arrow[r] & X'_{a'-k_1'-k_2'-1} \arrow[rd] \arrow[ru] &                               & {Y_1^1}'           & \cdots \arrow[r] & {Y_{n_1'}^1}' \\
+        &               &                  & Y \arrow[ld] \arrow[rd]             &                                   &                                           & X_{a'-k_1'-k_2'-2}' \arrow[r] & \cdots \arrow[r]   & X'_0             &               \\
+        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]                   &                                           &                               &                    &                  &               \\
+        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]                  &                                           &                               &                    &                  &               \\
+        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2                         &                                           &                               &                    &                  &              
 \end{tikzcd}
 };
 \end{tikzpicture}
 \]
-This enables us to enumerate the following cases
-\begin{enumerate}
-\item $k_1 > 0$ and $k_2= 0$ and there is only one degenerate fiber. This lies in a cascade of type 2 starting from $X_0$ or from $Y_n$.
-
-\item Two non degenerate fibers but $a - k_1 - k_2 = 0$ or $1$. This lies in a cascade of type 2 starting from $Z_m$
-
-\item Two non degenerate fibers but with $k_1 >1$ and $k_2 = 0$
-\end{enumerate}
-There are a couple of final sporadic cases 
-\begin{enumerate}
-\item $k_1 = k_2 = 0$ and there are two non degenerate fibers. Then the singularity of  This has the following cascade 
+\item The next case is $s_1 = 0$ and two non general fibers
 \[
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0ACAXk-YH1iIAL6l0mXPkIoAjOSq1GLNgJkixIDNjwEiAJnnV6zVohAAdcwGMoEHAlHjtUogGZDikyv7A6AWgBrfhlA-j0-GWF1J0ldFAAWD2NlMwFfUJCgvSjHTQkdaWR3GQVk0xAATWi85zjkAz1SpXKK4IA9NVytWMLExqNmtlaZNr1q7oL9UlcmrzNLGlt7cfyXBOnZlItzRbsHDQm1+tJ4zZafMGDhDpXa3pOzoYuw67HhBRgoAHN4IlAAMwAThAALZIOQgHAQJBkTwpMBMBgMagMOgAIxgDAACqs4iAGDB-jhqkDQUgDJDoYgIWUkAikSj0ZicXc2ASiSTgWDEO5KeSBnN6cj8UzsbjpPjCcTcqTubyoUgAKwC+GI4WojFi1lmdnSjSypCJPk8lWmIWMzUsnpsqWcsmIZXGgBsprpaotzPFNo5Mq5SuoCsQAHZXYhzSLLV6dbbffaXcaAByh8Maz3ayU+-V+4MBqkATmT7ojaet0czAOzSeNMlhtLDRdTWtLGb1FftBerNMG9YZxabkzL0oowiAA
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQANAAgF4uOA+sRABfUuky58hFOQrU6TVu0HlR4kBmx4CRAEzyaDFm0QgAOuYDGUCDgRiJ26UQDMhxSZUDg9ALQA1gLkgQJ6fuQi6k5SuigALB7GymaCvqEhQXpRjpqSOjLI7noKyaYgAJrRec5xyAaupUrlFcEAemq5WrGFiY1Gzeyt5G161d0F+qTxTV5mlrS29uP5LgnTsykW5ot2DhoTa-WkAKybLT5gwSIdK7W9p+dDl2E3Y12rdSdJg6kA5D56H8MsCssDIncekQAGykYhPMwVP6QyYoADscIRIGAw1GImRH3uRAAHJiBnNtjY9iijgBOMmeLY4l56P5vfE0ur0qjkpmtYBXchsjocwlQ9E-CnMkaRAkHT6FUk8xnlSxU5Zi1HIWElXnlNJAkGhVl+bJymJajG6lXsNVLfYWo6k61lFQA4QiBQwKAAc3gRFAADMAE4QAC2SDkIBwECQZBtiDAzEYjBojHoACMYIwAAoK9iMGCBnDVEPhpAGaOxxBR12J5OpkDprO5-NmQvF0uhiOIdxVit6pBJlNpzPZvNE9tFku5Ms9vsxpDfBPDxvN8dtpvTrvlxCJfu9wf1kdNsetydbzuz7tLmiLxCwlcN0ctifiy8zjRz28HjFPk-rue74dp+QY3g+d7VqS-5rmeb6oh+O49n+970jBL4bheIFIUg0H3uQ8Z1quGFAQh2HXruaH4bWvzEaer6buRX7gfu+HZMxu7kJW956MQFE9rxkEVpEHECVGPHsWBnHcdW5CuPxkYLrJ8QKTWrGyScqnkMu+HQlpVGyWiWlKZGxKeiIQA
+\begin{tikzpicture}[baseline= (a).base]
+\node[scale=.6] (a) at (0,0){
 \begin{tikzcd}
-X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l] \\
-        &               &                  & Y \arrow[ld] \arrow[rd]             &                         \\
-        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]         \\
-        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]        \\
-        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2              
+        &               &                  &                                     &                                   &                                           & Y' \arrow[r] \arrow[rd]       & {Y_1^2}' \arrow[r] & \cdots \arrow[r] & {Y_{n_2'}^2}' \\
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d] & X_{a-k_1-k_2} \arrow[l] \arrow[r] & X'_{a'-k_1'-k_2'-1} \arrow[rd] \arrow[ru] &                               & {Y_1^1}'           & \cdots \arrow[r] & {Y_{n_1'}^1}' \\
+        &               &                  & Y \arrow[ld] \arrow[rd]             &                                   &                                           & X_{a'-k_1'-k_2'-2}' \arrow[r] & \cdots \arrow[r]   & X'_0             &               \\
+        &               & Y_1^1 \arrow[d]  &                                     & Y_1^2 \arrow[d]                   &                                           &                               &                    &                  &               \\
+        &               & \vdots \arrow[d] &                                     & \vdots \arrow[d]                  &                                           &                               &                    &                  &               \\
+        &               & Y_{n_1}^1        &                                     & Y_{n_2}^2                         &                                           &                               &                    &                  &              
+\end{tikzcd}
+};
+\end{tikzpicture}
+\]
+\item The next case is $s_1 = t_1 = 0$ and two non general fibers
+\[
+\begin{tikzcd}
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] & X_{a-k_1-k_2} \arrow[l]  &  \\
 \end{tikzcd}
 \]
-The $Y_i$ are of the form $k_2 = 0$ and $k_1 = 1$ with one degenerate fiber.
-
-
+\item We also have the case $s_2 =0$ or $k_1 = k_2 = 0$ with one non general fiber, which has cascade
+\[
+\begin{tikzcd}
+X_a^0 & X_a^1 \arrow[l, "\phi_a^0"]  & \cdots \arrow[l, "\phi_a^1"]  & X_a^{a-1}  \arrow[l, "\phi_a^{a-2}"] &                                                           &                        \\
+      &                              &                               &                                      & X_1 \arrow[ld, "\phi_b^{b-1}"] \arrow[lu, "\phi_a^{a-1}"] & X_2 \arrow[l, "\Phi_1"'] & X_3 \arrow[l, "\Phi_2"']\\
+X_b^0 & X_b^1 \arrow[l, "\phi_b^0"'] & \cdots \arrow[l, "\phi_b^1"'] & X_b^{b-1} \arrow[l, "\phi_b^{b-2}"'] &                                                           &                       
+\end{tikzcd}
+\]
+\item finally case $s_1 = s_2 =0$ with one non general fiber, which has cascade 
+\[
+\begin{tikzcd}
+X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{n-1} \arrow[l] & X_{n} \arrow[l]  &  \\
+\end{tikzcd}
+\]
 \end{enumerate}
+We note that $s_1=0$ and $s_2 = 0$ with one non general fiber would occur in case 3 above.
+
 
 
 \end{thm}
@@ -823,7 +856,7 @@ We now wish to explore the birational relationships between these surfaces. The 
 Now we explicitly state how the cascade structure occurs. We note that out of the exceptional curves $E_i \subset Y$ only the curves that arose as part of the original $k_1$ and $k_2$ blowups can be intersected by curves in the class $|B + a_i F|$ as otherwise they would have to intersect the fiber with multiplicity greater than $1$. Label these exceptional curves $S_1, \dots ,S_{k_1}$ and $T_1, \dots , T_{k_2}$ with $S_{1}$ and $T_{1}$ being the strict transforms of the fibers. Hence any potential floating curve intersects a $-1$ curve coming out of a curve $S_i$ and a $-1$ curve coming out of $T_j$. We now denote by $C_{i,\, j}$ the curve intersecting a $-1$ curve coming from $S_i$ and a $-1$ curve coming from $T_j$. Then in the case of both fibers becoming exceptional curves $C_{i, \, j}^2 = L- 4 + i + j$ so in order for it to become a $-1$ curve it needs to be blown up in $L - 3 + i + j$ points. However as the length of the cascade is $L$ this implies $i+j \leq 3$. So $\{ (i, \, j) \} = \{(1,1), (1,2), (2,1) \} $. We now go on a case by case analysis:
 
 
-\textbf{Case 1}: We start with $(i, \, j)  = (1,\, 1)$. It takes $L - 1$ blowups for this to become a $-1$ curve. Denoting the number of $-1$ curves intersecting $S_1$ and $T_1$ by $s, \, t$, we label these curves $D_u^S$ and $D_v^T$ respectively. We have $st$ possible curves which would give rise to a $-1$ curve after $L-1$ blowups. We denote by $C_{u, \, v}$ the curve intersecting $D_u^S$ and $D_v^T$. These curves originally lay in $|B+ a_i F|$ so on the Hirzebruch surface they intersected $b$ times. By repeating the same calculation on  this on$Y$ blown up $L-1$ times, we see that $C_{u,\, v}$ intersects $C_{u' , \, v'}$ if and only if $u \neq u'$ and $v \neq v'$. So fixing $C_{u, \, v}$ we get the following curve configuration
+\textbf{Case 1}: We start with $(i, \, j)  = (1,\, 1)$. It takes $L - 1$ blowups for this to become a $-1$ curve. Denoting the number of $-1$ curves intersecting $S_1$ and $T_1$ by $s, \, t$, we label these curves $D_u^S$ and $D_v^T$ respectively. We have $st$ possible curves which would give rise to a $-1$ curve after $L-1$ blowups. We denote by $C_{u, \, v}$ the curve intersecting $D_u^S$ and $D_v^T$. These curves originally lay in $|B+ a_i F|$ so on the Hirzebruch surface they intersected $b$ times. By repeating the same calculation on  this on $Y$ blown up $L-1$ times, we see that $C_{u,\, v}$ intersects $C_{u' , \, v'}$ if and only if $u \neq u'$ and $v \neq v'$. So fixing $C_{u, \, v}$ we get the following curve configuration
 
 \begin{figure}[h]
 \resizebox{10cm}{10cm}{
@@ -928,38 +961,32 @@ Now we explicitly state how the cascade structure occurs. We note that out of th
 	\end{pgfonlayer}
 \end{tikzpicture}
 }
-\caption{Figure 2. This is currently not correct, fix the intersection}
+\caption{This is currently not correct, fix the intersection}
 \end{figure}
-Hence if we choose a floating $-1$ curve $C_{u, \, v}$ to contract the only remaining floating curves are $C_{u, \, \beta}$ and $C_{\alpha , \, v}$ where $\alpha \in \{ 1, \dots, s\}$ and $\beta \in \{1 , \dots , t \}$. When the second floating curve is contracted this uniquely defines whether we are iterating over $s$ or over $t$. So after two contractions the cascade is uniquely defined. To see where it ends up we note that a basic surface is uniquely defined by the number of $-1$ curves coming out of each curve on the boundary. Picking one of these chains of  leads to either $s$ blowdowns or $t$ blowdowns. These cases behave symmetrically, so focusing on the case of $s$ blowdowns we get a curve $E_1 \subset Y$ with self intersection $a$ and no $-1$ curves coming out of it. So it is not unreasonable to hope that this admits a map to $\mb{F}_{a_1}$. To show this we introduce even more notation. 
-We note that we can start by contracting all $-1$ curves intersecting the exceptional curves. We previously had $2$ fibers $F_1 = [f_1, \dots, f_{m_1}]$ and $F_2 = [g_1, \dots g_{m_2}]$ and after purely toric contractions $F_1$ can be mapped to $[-1, \, -2, \, -2 \dots -2 \, -1]$ with length $k_1$, the analogous statement holds for $F_2$. We note that the curve $E_1$ is still in the fiber $[-1, \, -2, \, -2, \dots -2, \, -1]$. After our new series of contractions we now have a curve configuration $[-a_1, \, f_2, \,f_3 \dots f_{m_1}, \, L-1-a_i, \, g_1, \dots g_{m_2}] = [-a_1, \, f_1,  \, f_2 \dots f_{m_1}, \, -k_1-k_2-1, \, g_1, \dots , g_{m_2}]$. We can repeat our toric contractions to contract this too $[-a_1, \, -2, \dots -2, \, -1, \, -k_1 -k_2 +1 , \, -1, \, -2, \dots , \, -2, \, -1]$, at this point as the number of $-2$ curves on the left is $k_1$ and the number of $-2$ curves on the right is $k_2$ we see that this curve configuration can be constructed by blowing up the configuration $[-a_1, \, 0]$ in the following way:
-\[
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoAmAXVJADcBDAGwFcYkRkBaegfQEZSAAgA6woZ3JDR4gSLGCJlEAF9S6TLnyEUZAMzU6TVuy69Z0hZLlQIOOIPFXOAa36dz890tXrseAkRkACwGDCxsiBzc-FKeVqI2dg4KrnwKgq7kCh6OsY7WtvaKKmogGH5agaR8oUYRUWZ52aQWXiW+mgE6pMS14SbROYK9KgYwUADm8ESgAGYAThAAtkgCIDgQSMQ+IAvLWzQbSLo7eyuIuoebiEGni+eS69d8ypTKQA
-\begin{tikzcd}
-{[-a_1, \, 0]}                                                          \\
-{[-a_1, \, -1,\, -1]} \arrow[u]                                         \\
-{[-a_1, \, -2, \, -1, \, -2]} \arrow[u]                                 \\
-{[-a_1, \, -2, \dots , -2, -k_1-1, \, -1]} \arrow[u]                    \\
-{[-a_1, \, -2, \dots , -k_1 - k_2 -1, \, -2, \, -2 \dots -2]} \arrow[u]
-\end{tikzcd}
-\]
-So in particular this arises from a basic surface with $k_2 = 0$, $k_1 = 1$ and the strict transform of only one fiber becoming an exceptional curve. This concludes the first case.
+Hence if we choose a floating $-1$ curve $C_{u, \, v}$ to contract the only remaining floating curves are $C_{u, \, \beta}$ and $C_{\alpha , \, v}$ where $\alpha \in \{ 1, \dots, s\}$ and $\beta \in \{1 , \dots , t \}$. When the second floating curve is contracted this uniquely defines whether we are iterating over $s$ or over $t$. So after two contractions the cascade is uniquely defined. To see where it ends up we note that a basic surface is uniquely defined by the number of $-1$ curves coming out of each curve on the boundary. Picking one of these chains of  leads to either $s$ blowdowns or $t$ blowdowns. These cases behave symmetrically, so focusing on the case of $s$ blowdowns we get a curve $S_1 = E_1 \subset Y$ with self intersection $-a_1$ and no $-1$ curves coming out of it. So it admits a map to $\mb{F}_{a_1}$. We note that in our notation the basic surface $Y^1_{n_1}$ which it blows down to has to have new value $k^{Y^1_{n_1}}_1 = 0$ as there is only one exceptional curve next to it, so there is only one non general fiber of the fibration. As we are doing $s$ blow downs the self intersection of the positive section is $1 + s = a_1 - k^{Y^1_{n_1}}_2  + 2$. This gives us $k^{Y^1_{n_1}}_2  = a_1 + 1 - s$. 
 
-\textbf{Case 2}: The second case is $(i, \, j) = (1, \, 2)$. We do not spell this out in the same level of detail. Replicating the above arguments we see that we now get exactly the same curve configuration as in Figure 2 except now connecting the curves $E_1^S$ to $E_2^T$. So once again this leads to a set of two branching contractions. Once again this leads to a basic surface with $k_1 = 1$ and $k_2 = 0$. However this time there are two fibers that are now exceptional curves on $Y$. This proof follows from exactly the same logic as above.
+\textbf{Case 2}: The second case is $(i, \, j) = (1, \, 2)$. We do not spell this out in the same level of detail. Replicating the above arguments we see that we now get exactly the same curve configuration as in Figure 2 except now connecting the curves $E_1^S$ to $E_2^T$. So once again this leads to a set of two branching contractions. However they have different curve basic surfaces at the end, if you contract the curves $D^S_u$ you get a surface $Z_{m_1}$ with $k^{Z_{m_1}}_1 = 0$ and only one non general fiber. However now via the same calculations as above $k^{Z_{m_1}}_2 = a_1 + 2 - s$. In the other case we are contracting all curves of the form $D^T_v$ this gives rise to a surface $W_{m_2}$ with $k_1 = 0$ but two exceptional fibers. This has $k_2^{W_{m_2}} = t$. 
 
 \textbf{Case 3}: The final case is $(i, \, j) = (2, \, 1)$. This is symmetrical to case 2.
 
 A crucial point in this proof is that each case behave independently of the others as two floating curves don't intersect each other only if they lie in the same case.
 
-We note that if there are no $-1$ curves coming out of the curves $E_1^S$ and $E_1^T$ then the cascade is a straight line as the above discussion is entirely predicated on their existence. This concludes the cascade for basic surfaces of this type. 
+We note that if there are no $-1$ curves coming out of the curves $E_1^S$ and $E_1^T$ then the cascade is a straight line as the above discussion is entirely predicated on their existence.
+Via similar logic we get the following cases where not all of these maps occur. Let $s_i$, $t_i$ equal the number of $-1$ curve going through $E_i^S$ and $E_i^T$ respectively.
+\begin{enumerate}
+\item $k_1 = k_2 = 0$ and there two non general fibers or $s_2 = t_2 = 0$. Then neither case 2 or 3 can occur.
+
+\item $k_1 = 0$, $k_2 \neq 0$ and there are two non general fibers or $t_2 = 0$. Then case 3 cannot occur.
+
+\item $s_1 = 0$. Then case 1 and 2 cannot occur. 
+
+\item $s_1 = t_1 = 0$. Then the cascade is a straight line. 
+\end{enumerate}
+This concludes the cascade for basic surfaces of this type. 
 
 We make a quick mention of what happens in the case where there is only one non generic fiber. These surfaces all start by blowing up a point $k$ times. Label the exceptional curves that arose from blowing up this point $E_{k}, \dots E_1$ and we denote the strict transform of the fiber by $E_{0}$. Once again $L = a_1 - k+ 2$ and we have curves with self intersection $a_1 - i -1$ intersecting the $-1$ curves coming out of $E_i$. To get a $-1$ curve we need $a_1 - i - 1 < L = a_1 - k+2$ giving $k-i < 3$ so $i \in \{ k, \, k-1,\, k-2 \}$. 
 
-After $a_1-k$ blowups we get a straight chain of blowdowns arising from floating $-1$ curves intersecting $-1$ curves coming out of $E_k$. None of these new $-1$ curves intersect each other, but they intersect every single one the curves introduced by blowing up. Hence we get a straight line cascade. 
-
-
-After $a_1-k+1$ blowups we also get $-1$ curves intersecting the fiber $E_{k-1}$. These curves intersect the floating curves arising the case above once. So upon blowdown these two cascades cannot intersect. This gives another straight line cascade. 
-
-The final case behaves a little differently 
+Considering the case where $i = k-1$ then it intersects a $-1$ curve going through the curve $E_{k-1}$, which has self intersection $-a_{k-1}$. Blowing down all these floating curves gives rise to a basic surface $X$ which has a map to $\mb{F}_{a_{k-1}}$, sending $E$ to the negative section. Hence this is a surface in one of the above cases, as there are two exceptional curves adjacent to the negative section. 
 \end{proof}
 
 \begin{rem}
