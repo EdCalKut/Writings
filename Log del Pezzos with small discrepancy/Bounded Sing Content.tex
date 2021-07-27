@@ -149,7 +149,7 @@ all $i=1,\dots,n$.
 
 To simplify our calculations we introduce to the notation $e_i = d_i + 1$. 
 
-\begin{prop}
+\begin{prop}\label{small prop}
 In the notation above,
 a singularity $S$ has small discrepancy if and only if $C_1^2 \neq -2$ and $C_n^2 \neq -2$ and $ S \not\cong \frac{1}{3}(1,1)$.
 \end{prop}
@@ -175,7 +175,7 @@ Let $X$ be a surface. A $-1$ cycle $Z = \sum_{D \in S} D \subset X$ is a rationa
 X=X_0 \arrow[r] & X_1 \arrow[r] & \cdots \arrow[r] & X_n
 \end{tikzcd}
 \]
-Such that each map is a contraction of a $-1$ curve $D \in S$ and the image of $Z$ is a nonsingular point.
+Such that each map is a contraction of a $-1$-curve $D \in S$ and the image of $Z$ is a nonsingular point.
 \end{dfn}
 
 \begin{lem}\label{lem!badcurve}
@@ -271,7 +271,7 @@ at least~2 in each case.
 The argument in the nodal case follows similarly, up to the case division of configurations
 at which there is an additional case:
 
-We note that if $g^{-1}{P}$ contains two curve $C_i$, $C_j$ with $I_Q (C_i, \, C_j) \ge 2$ then either one of them is a $-1$-curve or it cannot occur on the minimal resolution of a \ldp\ surface. This is because every curve in $\pi^{-1}{P}$ has negative self-intersection, if its intersection is less than $-1$ then it would have to be contracted on the map down to $X$, resulting in a noncyclic quotient singularity. Hence one of them is $-1$ curve, and this cannot occur as it would contradict Lemma~\ref{lem!badcurve}. Hence this cannot occur, so we have to blow up the point $P$ enough times such that all the intersections are transverse. At this point we have a curve $A$ such that $A$ intersects transversely at least three other curves, $E, \, C_1, \, C_2 \dots $ with $C_i \in \pi^{-1} {P}$. In addition $C$ is the only $-1$ curve in $\pi^{-1}{P}$. As $Y$ is constructed from further blowups we split into configurations 
+We note that if $g^{-1}{P}$ contains two curve $C_i$, $C_j$ with $I_Q (C_i, \, C_j) \ge 2$ then either one of them is a $-1$-curve or it cannot occur on the minimal resolution of a \ldp\ surface. This is because every curve in $\pi^{-1}{P}$ has negative self-intersection, if its intersection is less than $-1$ then it would have to be contracted on the map down to $X$, resulting in a noncyclic quotient singularity. Hence one of them is $-1$-curve, and this cannot occur as it would contradict Lemma~\ref{lem!badcurve}. Hence this cannot occur, so we have to blow up the point $P$ enough times such that all the intersections are transverse. At this point we have a curve $A$ such that $A$ intersects transversely at least three other curves, $E, \, C_1, \, C_2 \dots $ with $C_i \in \pi^{-1} {P}$. In addition $C$ is the only $-1$-curve in $\pi^{-1}{P}$. As $Y$ is constructed from further blowups we split into configurations 
 
 \begin{enumerate}
 \item
@@ -332,7 +332,7 @@ For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$-curv
 This results in three adjacent $-1$-curves. 
 We now split into cases;
 
-\textbf{Case 1}: Our next blow up is a blow up at a smooth point. This results in $DP_6$. We note that on any surface $Z$ which occurs as a blowup at general points of $DP_6$ has the property that for every $-1$ curve $C$ there is a map $\pi_C \colon Z \ra \mb{F}_1$ sending $C$ to the negative section $B$. Hence, in order for $X$ to be nonsingular this involves blowing up a point on a $-1$ curve. Hence we get the following diagram:
+\textbf{Case 1}: Our next blow up is a blow up at a smooth point. This results in $DP_6$. We note that on any surface $Z$ which occurs as a blowup at general points of $DP_6$ has the property that for every $-1$-curve $C$ there is a map $\pi_C \colon Z \ra \mb{F}_1$ sending $C$ to the negative section $B$. Hence, in order for $X$ to be nonsingular this involves blowing up a point on a $-1$-curve. Hence we get the following diagram:
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoBGAXVJADcBDAGwFcYkQAVEAX1PU1z5CKcqQAM1Ok1bsAWjz4gM2PASJkJNBizaIQsgOQL+KoUVFUt03SAA6tgLYAjYADEA+uW7GlA1cJJSYkltGT17Zzd3Ym9eE0E1FDEKEOt2ACEfZQSA5M0pHXYAYR5JGCgAc3giUAAzACcIByQyEBwIJFECsLtbNCxPHwamlpp2pDE4kGHmxC7xxABmKZmJsY6lq0LwvoHiIcbZ5LaNgBYVw6QANnWkAFZuSm4gA
 \begin{tikzcd}
@@ -341,7 +341,7 @@ B          \subset \mb{F}_1    & T \arrow[l, "\pi_2"] \arrow[d]  \\
                         & \mb{F}_2                       
 \end{tikzcd}
 \]
-Where the $\pi_i$ are blow ups of a point on a $-1$ curve. Hence this case cannot occur.
+Where the $\pi_i$ are blow ups of a point on a $-1$-curve. Hence this case cannot occur.
 
 
 \textbf{Case 2}: Blowing up a point on the curve which is the pullback of the section $B$ of $\mb{F}_1$. Once again this results in an obvious map to $\mb{F}_2$. We note that our surface admits two maps to $\mb{F}_1$ via the symmetry of the surface.
@@ -349,7 +349,7 @@ Where the $\pi_i$ are blow ups of a point on a $-1$ curve. Hence this case canno
 
 
 \textbf{Case 3}:
-Blowing up a general point of the $-1 $ curve which occurred as the strict transform of the fiber. By blowing up $p-1$ distinct points. This results in an infinite family of \ldp's with a single $\frac{1}{p}(1,1)$ singularity and potentially $A_n$ singularities.
+Blowing up a general point of the $-1$-curve which occurred as the strict transform of the fiber. By blowing up $p-1$ distinct points. This results in an infinite family of \ldp's with a single $\frac{1}{p}(1,1)$ singularity and potentially $A_n$ singularities.
 Via the previous arguments any subsequent blowups not on this curve would induce a map to $\mb{F}_2$.
 \end{proof}
 
@@ -376,7 +376,7 @@ To prove the first statement note that $\pi_* E_i^S$ cannot be a singular curve 
 
 
 
-To show that not all the curves $E_j^S$ can be contracted to a point if $l \geq 2$, we go for a proof by contradiction. Assume $l \ge 2$ and every exceptional curve in a singularity $S$ is contracted to a point $P \in \mb{F}_l$. Then $P$ lies on a fiber $F$ which intersects the curve $B$. First we consider $P \not\in B$. We have $E_i^S \in \pi^{-1}{P}$ for all $i$. Hence we have to blow up several times. However the strict transform of the fiber $F$, denoted $\wt{F}$ now has $\wt{F}^2 \leq -1$. If $\wt{F}^2 \leq -2$ then it has to be contracted, meaning $\wt{F}, \, B \in \{ E_i^S \}$ which would be curves not contracted to a point. If $\wt{F}^2 = -1$, then the only $-1 $ curves in $\pi^{-1}{P}$ cannot intersect $\wt{F}$. This is because after the first blowup we have an exceptional curve $E$ and the fiber $\wt{F}$. These both have square $-1$. If we blow up the intersection point of $\wt{F}$ and $E$ then $\wt{F}^2 \leq -2$, hence we can only blowup general points on $E$. At this point we have non e of the $-1$-curves intersecting $E$. If we blowup no points on $E$ then clearly we are not introducing a singularity so this does not occur. Now finally we note that our curve configuration would contradict Lemma~\ref{lem!badcurve}. 
+To show that not all the curves $E_j^S$ can be contracted to a point if $l \geq 2$, we go for a proof by contradiction. Assume $l \ge 2$ and every exceptional curve in a singularity $S$ is contracted to a point $P \in \mb{F}_l$. Then $P$ lies on a fiber $F$ which intersects the curve $B$. First we consider $P \not\in B$. We have $E_i^S \in \pi^{-1}{P}$ for all $i$. Hence we have to blow up several times. However the strict transform of the fiber $F$, denoted $\wt{F}$ now has $\wt{F}^2 \leq -1$. If $\wt{F}^2 \leq -2$ then it has to be contracted, meaning $\wt{F}, \, B \in \{ E_i^S \}$ which would be curves not contracted to a point. If $\wt{F}^2 = -1$, then the only $-1$-curves in $\pi^{-1}{P}$ cannot intersect $\wt{F}$. This is because after the first blowup we have an exceptional curve $E$ and the fiber $\wt{F}$. These both have square $-1$. If we blow up the intersection point of $\wt{F}$ and $E$ then $\wt{F}^2 \leq -2$, hence we can only blowup general points on $E$. At this point we have non e of the $-1$-curves intersecting $E$. If we blowup no points on $E$ then clearly we are not introducing a singularity so this does not occur. Now finally we note that our curve configuration would contradict Lemma~\ref{lem!badcurve}. 
 
 \end{proof}
 
@@ -680,7 +680,7 @@ Once again by Theorem~\ref{ThmOnSing} there are two heads of the cascade given b
  -K_{X_a}^2 =8 - b + a \left( 1- \frac{b+1}{ab-1} \right) ^2 + b \left(1- \frac{a+1}{ab-1} \right)^2 -2\left(1- \frac{a+1}{ab-1}\right)\left(1- \frac{b+1}{ab-1}\right)
 \] 
 We will show that this admits a cascade of length $a+2$. The first $a$ terms are easy to describe as we see that these admit a toric degeneration to $X_\Sigma$ with $\Sigma$ being the fan with rays $(-1, b), \, (-1, 0), \, (a, -1), \, (a-u, -1)$, where $u$ is the number of blowups. This has an $A_{b-1}$ singularity and an $A_{u-1}$ singularity.
-Via Cox rings this can be viewed as $\mb{C}^4_\{x, y,z,t\}$ with a quotient 
+Via Cox rings this can be viewed as $\mb{C}^4_{\{x, y,z,t\}}$ with a quotient 
 \[
 \begin{blockarray}{cccc}
 	x & y & z & t \\[4pt]
@@ -714,9 +714,10 @@ inside the toric variety with weights
 This structure of the cascade can be put in more general terms. 
 
 \section{Cascades}
+Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in the previous theorem.
 
 \begin{thm}
-Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in the previous theorem. Let $X_i$ be the surface constructed from $X_{a_i}$. If $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$. 
+Let $X_i$ be one of the surfaces constructed from $X_{a_i}$. If $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$. 
 
 In addition we can describe the shape of the cascade. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 
 
@@ -1091,14 +1092,21 @@ However when we enter the case where $p_1 < 7$ you can get surfaces with many mo
 	\end{pgfonlayer}
 \end{tikzpicture}
 \]
-This has $h^0(-K_X) \neq 0$, $-K_X^2 = \frac{3}{5}$, six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities. In addition it admits no normal toric degeneration, as it is a complexity one surface and hence any degeneration would have to be equivariant. We can construct this as a toric complete intersection via cox rings and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
+This has $h^0(-K_X) \neq 0$, $-K_X^2 = \frac{3}{5}$, six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities. This is a complexity one surface.
+\begin{lem}
+If a complexity one surface admits a toric degeneration it is equivariant
+\end{lem}
+\begin{prop}
+The above surface $X$ does not admit an equivariant toric degeneration.
+\end{prop}
+We can construct this as a toric complete intersection via cox rings and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
 \[
 \begin{blockarray}{cc cc cc cc cc c}
 	T_1 & T_2 & T_3 & T_4 & T_5 & T_6 & T_7 & T_8 & T_9 & T_{10} & T_{11} \\[4pt]
       \begin{block}{(cc cc cc cc cc c)}
+	1&-2&3&0&0&0&0&0&0&0&0 \\ 
 	0&3&-6&-2&1&0&0&0&0&0&0 \\
 	0&2&-4&-1&0&1&0&0&0&0&0 \\
-	1&-2&3&0&0&0&0&0&0&0&0 \\ 
 	0&3&-6&0&0&0&-2&1&0&0&0 \\ 
 	0&2&-4&0&0&0&-1&0&1&0&0 \\
 	0&-3&7&1&0&0&1&0&0&1&0 \\
@@ -1108,10 +1116,8 @@ This has $h^0(-K_X) \neq 0$, $-K_X^2 = \frac{3}{5}$, six $\frac{1}{3}(1,1)$ sing
 \]
 with the equations 
 \[
-\begin{array}{c}
-T_1 T_2^2 T_3 + T_4 T_5^2 T_6 + T_7 T_8^2 T_9 \\[4pt]
-T_1 T_2^2 T_3 + T_4 T_5^2 T_6  + \lambda T_{10} T_{11}
-\end{array}
+T_1 T_2^2 T_3 + T_4 T_5^2 T_6 + T_7 T_8^2 T_9 = 
+T_1 T_2^2 T_3 + T_4 T_5^2 T_6  + \lambda T_{10} T_{11} = 0
 \]
-We note that there are also surfaces which admit toric degenerations with the same numerics.
+There are also surfaces which admit toric degenerations with the same numerics.
 \end{document}
