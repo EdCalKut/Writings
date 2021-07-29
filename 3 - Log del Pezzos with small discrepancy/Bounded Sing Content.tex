@@ -1104,14 +1104,16 @@ Given a Looijenga surface $X$,
 \end{proof}
 However this surface has the following invariants
 \begin{itemize}
-\item $h^0(-K_X) \neq 0$
-\item $-K_X^2 = \frac{3}{5}$
-\item six $\frac{1}{3}(1,1)$ singularities 
-\item two $\frac{1}{5}(1,1)$ singularities
+\item $-K_X^2 = \frac{2}{5}$
+\item Six $\frac{1}{3}(1,1)$ singularities 
+\item Two $\frac{1}{5}(1,1)$ singularities
+\item $h^0(-K_X) = 1$
 \end{itemize}
- This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{Polarised polyhedral divisors}. 
-Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{YoungPersonsGuide}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$.  
-We can construct this as a toric complete intersection via cox rings and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
+This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{Polarised polyhedral divisors}. 
+Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{YoungPersonsGuide}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$. This gives $-K_X^2 = \frac{2}{5}$. We see once again via \cite{YoungPersonsGuide} that we can calculate $h^0(-K_X)$ from this and we get one.
+
+
+We can construct this surface as a toric complete intersection via cox rings \cite{HausenCoxRings} and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
 \[
 \begin{blockarray}{cc cc cc cc cc c}
 	T_1 & T_2 & T_3 & T_4 & T_5 & T_6 & T_7 & T_8 & T_9 & T_{10} & T_{11} \\[4pt]
@@ -1131,5 +1133,10 @@ with the equations
 T_1 T_2^2 T_3 + T_4 T_5^2 T_6 + T_7 T_8^2 T_9 = 
 T_1 T_2^2 T_3 + T_4 T_5^2 T_6  + \lambda T_{10} T_{11} = 0
 \]
+To do this we note that this surface has polyhedral divisor as introduced in Chapter 4
+\[ 
+\left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_1 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_2 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_3 + \left[ -5, \, -4 \right] \otimes P_4
+\]
+We can then use 
 There are also surfaces which admit toric degenerations with the same numerics.
 \end{document}

@@ -1,0 +1,78 @@
+Miles notes:
+
+Suggestions to improve the prose of classification of small log discrepancy
+Reid, Miles
+Mon 26/07/2021 10:24
+
+
+You should refer throughout to singularities $\frac1r(1,b)$
+with $[a_1,\dots,a_n] = r/b$, rather than the awkward
+mouthful "singularities $S$ with minimal resolution
+$a_1,..a_n$ or $-a_1,..-a_n$ etc."
+
+[The notation goes back to Hirzebruch, and everyone knows
+them.]
+
+You should refer throughout to the minimal discrepancy
+condition $a_1,a_n\ge3$ of Proposition~\ref{earlier Prop!3.2}
+
+
+p.13, break Theorem 6.1 into section.
+
+The first sentence would go better before Theorem 6.1:
+
+Given $[a_1,\dots,a_n] = r/b$ satisfying the minimal
+discrepancy condition $a_1,a_n\ge3$ of
+Proposition~\ref{earlier Prop!3.2}, the finitely many basic
+log del Pezzo surfaces $X_i$ with singularity $\frac1r(1,b)$
+were classified in the course of the proof of
+Theorem~\ref{th!previous Thm 4.7}. Recall that a
+neighbourhood of the $j$th curve $E_i$ maps isomorphically
+to a neighbourhood of the negative section of the scroll
+$\FF_{a_i}$ for some $j=1,\dots,n$.
+
+[I don't know what "basic" means -- you probably mean the
+head of a cascade, with no $-1$-curves in the complement of
+the orbifold points. It would be worth making the
+classification you refer to as a formal Theorem.]
+
+Theorem 6.1 Let $X_i$ be as above.
+
+Then the blowup at $m$ general points of $X_i$ is again a
+log del Pezzo surfaces for
+
+m <= a_j+3-n  if j <> 1,n
+<= a_j+4-n
+
+
+
+
+p.20 last two Remark add \rm
+Your prose is awkward.
+
+Remark 1. \rm For $k_1,k_2\gg a$, large parts of this
+cascade cannot exist.
+
+Remark 2. \rm There are definitely cases when $X_{a_i}$ does
+not exist. For ex ... [-3,-8,...-3]. There exists a surface
+$X$ whose resolution has a morphism to $\FF_8$. On the other
+hand, there is no surface whose resolution maps to $\FF_3$.
+
+
+p.21, last section.
+
+title -> Outside small discrepancy [omit "of the"]
+
+The big figure: -1 -> $-1$ and -3 -> $-3$ throughout.
+after figure: -K_X^2 = 3/5 -> (-K_X)^2 = 3/5
+cox rings -> Cox rings
+it lies as a complete intersection
+  -> it is the codimension two complete intersection
+The displayed equations would fit on one line
+ (first expr.) = (second expr.) = 0.
+ We note that there are also surfaces with the same numerics
+ that admit a toric degeneration.
+
+ I think your "hence any degeneration would have to be
+ equivariant" is unconvincing. If it is correct and worth
+ saying, it might be worth proclaiming it as a Proposition.

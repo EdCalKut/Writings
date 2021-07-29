@@ -1,0 +1,26 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Acknowledgments}{ii}{chapter*.2}
+\contentsline {chapter}{Declarations}{iii}{chapter*.3}
+\contentsline {chapter}{Abstract}{iv}{chapter*.4}
+\contentsline {chapter}{Chapter{} \numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}What is this thesis about}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Log del Pezzo surfaces of complexity 1}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Bounded singularity content of log del Pezzo surfaces}{4}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Smoothings of log extemal extractions}{5}{subsection.1.2.3}
+\contentsline {chapter}{Chapter{} \numberline {2}Technical details}{6}{chapter.2}
+\contentsline {chapter}{Chapter{} \numberline {3}Small Discrepancy}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Context}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Standard notions and notation for quotient singularities}{8}{section.3.2}
+\contentsline {section}{\numberline {3.3}Singularities with small discrepancy}{8}{section.3.3}
+\contentsline {section}{\numberline {3.4}Log del Pezzo surfaces and small discrepancy}{9}{section.3.4}
+\contentsline {section}{\numberline {3.5}Examples}{18}{section.3.5}
+\contentsline {section}{\numberline {3.6}Cascades}{22}{section.3.6}
+\contentsline {section}{\numberline {3.7}Outside of the small discrepancy}{28}{section.3.7}
+\contentsline {chapter}{Chapter{} \numberline {4}Complexity One log Del Pezzo Surfaces}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}Introduction}{33}{section.4.2}
+\contentsline {section}{\numberline {4.3}Polyhedral divisors}{34}{section.4.3}
+\contentsline {section}{\numberline {4.4} Example}{37}{section.4.4}
+\contentsline {section}{\numberline {4.5}Divisors in complexity one}{44}{section.4.5}
+\contentsline {section}{\numberline {4.6}Algorithms}{48}{section.4.6}
