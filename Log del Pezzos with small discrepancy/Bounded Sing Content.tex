@@ -396,6 +396,7 @@ $X$ has either one singularity or two singularities, and if there are two one of
 \item\label{thm38ii}
 If $X$ admits no floating $-1$-curves then $X$ admits a toric degeneration. %In particular given a singularity $S$ we have at most $m$ basic surfaces, where $m$ is the number of exceptional curves in the resolution of $S$.
 \end{enumerate}
+In addition we can explicitly describe all possible basic surfaces.
 \end{thm}
 \begin{proof}
 Given a \ldp\ $X_0$ we start by contracting all floating $-1$ curves. This gives rise to a \ldp\ $X_1$; note that $X_1$ is not $\P^2$ since the contraction map is an isomorphism in the neighbourhood of any singularity of $X_0$. Let $\sigma\colon Y\rightarrow X_1$ be the minimal resolution of $X_1$. We know that there is a map $\pi \colon Y \rightarrow \mathbb{F}_l$, and we may suppose $l$ is maximal.
@@ -717,9 +718,7 @@ This structure of the cascade can be put in more general terms.
 Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in the previous theorem.
 
 \begin{thm}
-Let $X_i$ be one of the surfaces constructed from $X_{a_i}$. If $i \neq 1,\, n$ then this admits a cascade of length $a_i + 3 - n$, if $i = 1, \, n$ then the cascade is of length $a_i + 4 - n$. 
-
-In addition we can describe the shape of the cascade. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 
+Let $X_i$ be one of the basic surfaces constructed in Theorem~\ref{ThmOnSing}. We can describe how these are birationally related. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 
 
 For the general case we split in to cases. Given a basic surface $X$ it is constructed by first blowing up a Hirzebruch surface $k_1$ times at one point and $k_2$ times at another. We label these curves $E_i^S$ and $E_i^T$ respectively. Let $s_i$, $t_i$ be the number of $-1$ curves intersecting $E_i^S$ and $E_i^T$ respectively. We then classify the cascade via these invariants
 
@@ -728,7 +727,10 @@ There is the sporadic case where the singularity is length one then we have
 \[
 Insert cavey Prince
 \]
-
+and the cascade of length one when there are two singularities
+\[
+X_{a,b}
+\]
 
 Consider $X$ a surface with $k_1$ and $k_2$ not equal to zero. In addition $s_1$, $t_1$, $s_2$ and $t_2$ are all non zero. Then we have the following cascade
 \[
@@ -1092,13 +1094,23 @@ However when we enter the case where $p_1 < 7$ you can get surfaces with many mo
 	\end{pgfonlayer}
 \end{tikzpicture}
 \]
-This has $h^0(-K_X) \neq 0$, $-K_X^2 = \frac{3}{5}$, six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities. This is a complexity one surface.
 \begin{lem}
-If a complexity one surface admits a toric degeneration it is equivariant
+This surface does not admit a toric degeneration.
 \end{lem}
-\begin{prop}
-The above surface $X$ does not admit an equivariant toric degeneration.
-\end{prop}
+\begin{proof}
+Given a Looijenga surface $X$,
+ in the sense of \ref{Something chapter 2}, %Change this to make it make sense!
+ and a curve $C$ in the boundary. Let $C_1,$ $\dots, $ $C_n$ be the $-1$-curves intersecting $C$. Then at most two of these $-1$-curves intersect curves with self intersection less than $-1$, as they would have to be in the boundary which is a cycle. The $-5$ curves in the above picture clearly do not satisfy this constraint, hence this surface does not admit a well defined boundary.
+\end{proof}
+However this surface has the following invariants
+\begin{itemize}
+\item $h^0(-K_X) \neq 0$
+\item $-K_X^2 = \frac{3}{5}$
+\item six $\frac{1}{3}(1,1)$ singularities 
+\item two $\frac{1}{5}(1,1)$ singularities
+\end{itemize}
+ This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{Polarised polyhedral divisors}. 
+Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{YoungPersonsGuide}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$.  
 We can construct this as a toric complete intersection via cox rings and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
 \[
 \begin{blockarray}{cc cc cc cc cc c}
