@@ -326,33 +326,7 @@ Here $x$ is of degree 0, $y$ is of degree 1 and $z$ is of degree $-1$. Case $B$ 
 
 Cases $C$ and $D$ are also symmetrical, and give rise to the rings $\mathbb{C}[x, y_1, y_2, z_1, z_2]$ with relations induced by the second veronese embedding of $C[x, \, y, \, z]/(yz = 1)$. 
 
-To see all the glueings we have the following 
-\[
-\begin{tikzpicture}
-	\begin{pgfonlayer}{nodelayer}
-		\node [style=none] (0) at (-6, -4) {};
-		\node [style=none] (1) at (0, -4) {$\frac{\mathbb{C}[x,y,z]}{yz-x^2}$};
-		\node [style=none] (2) at (6, -4) {$\frac{\mathbb{C}[y_1, y_2, y_3]}{y_1y_3 - y_1^4}$};
-		\node [style=none] (3) at (-6, -4) {$\frac{\mathbb{C}[z_1, z_2, z_3]}{z_1z_3 - z_1^4}$};
-		\node [style=none] (4) at (-3, 0) {$\nu_2 \left(\frac{\mathbb{C}[x,y,z]}{yz = 1} \right)$};
-		\node [style=none] (5) at (3, 0) {$\nu_2 \left(\frac{\mathbb{C}[x,y,z]}{yz = 1} \right)$};
-		\node [style=none] (6) at (9, 0) {$\frac{\mathbb{C}[x,y,z]}{yz = 1}$};
-		\node [style=none] (7) at (-9, 0) {$\frac{\mathbb{C}[x,y,z]}{yz = 1}$};
-		\node [style=none] (8) at (-8.25, -2) {1)};
-		\node [style=none] (9) at (-1.25, -3) {2)};
-	\end{pgfonlayer}
-	\begin{pgfonlayer}{edgelayer}
-		\draw [style=new edge style 2] (3.center) to (7.center);
-		\draw [style=new edge style 2] (3.center) to (4.center);
-		\draw [style=new edge style 2] (3.center) to (5.center);
-		\draw [style=new edge style 2] (1.center) to (7.center);
-		\draw [style=new edge style 2] (1.center) to (6.center);
-		\draw [style=new edge style 2] (2.center) to (4.center);
-		\draw [style=new edge style 2] (2.center) to (5.center);
-		\draw [style=new edge style 2] (2.center) to (6.center);
-	\end{pgfonlayer}
-\end{tikzpicture}
-\]
+
 We explicitly describe the maps $1)$ and $2)$. To see map $1)$ the base is 
 \[
 \bigoplus_{m \in M|_{\leq 0}} \mathcal{O}_{\mathbb{P}^1} \left(-mP_0 +\frac{-m}{2} P_1 + \frac{m}{2}P_2 \right) 
