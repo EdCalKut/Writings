@@ -49,6 +49,7 @@
 
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
+\newtheorem*{thm*}{Theorem}
 
 \newtheorem{cor}[thm]{Corollary}
 
@@ -109,8 +110,8 @@
 \setcounter{chapter}{3}
 
 \section{Context}
-The main result of this chapter is 
-\begin{thm}\label{ThmOnSing}
+The main results of this chapter are 
+\begin{thm*}\label{ThmOnSing}
 Let $X$ be a non-smooth \ldp\ with only singularities of small discrepancy. Then 
 \begin{enumerate}
 \item\label{thm38i}
@@ -118,15 +119,20 @@ $X$ has either one singularity or two singularities, and if there are two each o
 \item\label{thm38ii}
 If $X$ admits no floating $-1$-curves then $X$ admits a toric degeneration. %In particular given a singularity $S$ we have at most $m$ basic surfaces, where $m$ is the number of exceptional curves in the resolution of $S$.
 \end{enumerate}
-\end{thm}
+\end{thm*}
+and how we birationally classify the resulting surfaces.
 
 \section{Standard notions and notation for quotient singularities}
-We reference back to chapter 2 for a lot of the notation.
-\label{sec!notation}
+We reference back to chapter 2 for a lot of the notation. We use the following definitions liberally throughout the chapter.
+\begin{dfn}
+Let $X$ be a \ldp\ surface. If $X$ cannot be constructed as the blowup of a surface $X'$ then we say $X$ is a basic surface.
 
-\section{Singularities with small discrepancy}
+\end{dfn}
 
-Recall from Section~\ref{sec!notation} our standard notation for quotient singularities.
+\begin{dfn}
+A floating $-1$-curve on a surface $X$ is a curve $C \subset X$, such that the exist a map $\pi\: X \rightarrow X'$ which contracts $C$ and is a blowdown.
+\end{dfn}
+
 We consider the germ $S$ of a cyclic quotient singularity appearing at a point $P$ on a 
 projective surface $X$.
 The minimal resolution of $X$ is denoted $f\colon Y \longrightarrow X$. It contains a chain of
@@ -140,6 +146,12 @@ We also denote the discrepancies of each $C_i$ (as curves in $Y$) by $d_i\in\Q$:
 \[
 K_Y = f^*(K_X) + \sum_{i=1}^n d_i C_i.
 \]
+We denote by $a_i$ the value $C_i^2$. The values $a_i$ uniquely define $S$ via Hirzebruch-Jung fractions \cite{ReidCyclic} and the notation $S=[a_1, \dots , a_n]$ indicates the singularity such that the resolution has these self intersections.
+\label{sec!notation}
+
+\section{Singularities with small discrepancy}
+
+
 We introduce a property of cyclic quotient singularities that is central to the rest of the chapter.
 \begin{dfn}
 Let $S$ be a cyclic quotient singularity, and $C_1, \dots ,C_n$ the exceptional curves of the minimal resolution of $S$ and $d_1, \dots,d_n$ their discrepancies, as above.
@@ -167,16 +179,6 @@ quotient singularity with small discrepancy.
 
 \section{Log del Pezzo surfaces and small discrepancy}
 
-\begin{dfn}[\cite{Artin}]
-Let $X$ be a surface. A $-1$ cycle $Z = \sum_{D \in S} D \subset X$ is a rationally connected set of curves such that there is a sequence of maps 
-\[
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAA0BedgfWJAC+pdJlz5CKAIzkqtRiza9Jg4SAzY8BIgCYZ1es1aIQAHRMBjKBBwIhIjeKIBmPXMOKehAbJhQA5vBEoABmAE4QALZIZCA4EEiSdiBhkQnUcUjaSSlRiLqx8YhO3gJAA
-\begin{tikzcd}
-X=X_0 \arrow[r] & X_1 \arrow[r] & \cdots \arrow[r] & X_n
-\end{tikzcd}
-\]
-Such that each map is a contraction of a $-1$-curve $D \in S$ and the image of $Z$ is a nonsingular point.
-\end{dfn}
 
 \begin{lem}\label{lem!badcurve}
 Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
@@ -332,7 +334,7 @@ For $\mb{F}_1$ other cases arise. Clearly if we blow up a point on the $-1$-curv
 This results in three adjacent $-1$-curves. 
 We now split into cases;
 
-\textbf{Case 1}: Our next blow up is a blow up at a smooth point. This results in $DP_6$. We note that on any surface $Z$ which occurs as a blowup at general points of $DP_6$ has the property that for every $-1$-curve $C$ there is a map $\pi_C \colon Z \ra \mb{F}_1$ sending $C$ to the negative section $B$. Hence, in order for $X$ to be nonsingular this involves blowing up a point on a $-1$-curve. Hence we get the following diagram:
+\textbf{Case 1}: Our next blow up is a blow up at a smooth point. This results in $DP_6$. We note that on any surface $Z$ which occurs as a blowup at general points of $DP_6$ has the property that for every $-1$-curve $C$ there is a map $\pi_C \colon Z \ra \mb{F}_1$ sending $C$ to the negative section $B$. Hence, as in order for $X$ to be nonsingular this involves blowing up a point on a $-1$-curve we get the following diagram:
 \[
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoBGAXVJADcBDAGwFcYkQAVEAX1PU1z5CKcqQAM1Ok1bsAWjz4gM2PASJkJNBizaIQsgOQL+KoUVFUt03SAA6tgLYAjYADEA+uW7GlA1cJJSYkltGT17Zzd3Ym9eE0E1FDEKEOt2ACEfZQSA5M0pHXYAYR5JGCgAc3giUAAzACcIByQyEBwIJFECsLtbNCxPHwamlpp2pDE4kGHmxC7xxABmKZmJsY6lq0LwvoHiIcbZ5LaNgBYVw6QANnWkAFZuSm4gA
 \begin{tikzcd}
@@ -372,11 +374,11 @@ In addition there is always a curve $E_j^S$ not contracted by $\pi$ for all sing
 
 \end{lem}
 \begin{proof} 
-To prove the first statement note that $\pi_* E_i^S$ cannot be a singular curve by Proposition~\ref{MainProp}, hence it is a smooth rational curve. The only smooth rational curves on a Hirzebruch Surface $\mb{F}_l$ are the curves $B$, with $B^2 = -l$, $F$ with $F^2 = 0$ and the curves lieing inside the linear systems $|lF + B|$,  $|(l+1)F + B|$, $|2F|$, $|2(lF+B)|$  and finally $|(l+2)F + B|$. We note that the final case could not arise on $\mb{F}_l$ when $l \ge 2$.  In this case the curve $B$ is also the image of an exceptional curve from a singularity. Hence any curve in $|(l+2)F + B$ would intersect $B$, when counting multiplicities, $2$ times. This would be a contradiction to Lemma~\ref{lem!badcurve}. A similar argument occurs with $2F$ which is meeting the curve $B$ at a single point with multiplicity 2.
+To prove the first statement note that $\pi_* E_i^S$ cannot be a singular curve by Proposition~\ref{MainProp}, hence it is a smooth rational curve. The only smooth rational curves on a Hirzebruch Surface $\mb{F}_l$ are the curves $B$, with $B^2 = -l$, $F$ with $F^2 = 0$ and the curves lieing inside the linear systems $|lF + B|$,  $|(l+1)F + B|$, $|2F|$, $|2(lF+B)|$  and finally $|(l+2)F + B|$. We note that the final case does not have to be considered when $l \ge 2$ as it would intersect the negative section with multiplicity two. This would be a contradiction to Lemma~\ref{lem!badcurve}. A similar argument occurs with $2F$ which is meeting the curve $B$ at a single point with multiplicity 2.
 
 
 
-To show that not all the curves $E_j^S$ can be contracted to a point if $l \geq 2$, we go for a proof by contradiction. Assume $l \ge 2$ and every exceptional curve in a singularity $S$ is contracted to a point $P \in \mb{F}_l$. Then $P$ lies on a fiber $F$ which intersects the curve $B$. First we consider $P \not\in B$. We have $E_i^S \in \pi^{-1}{P}$ for all $i$. Hence we have to blow up several times. However the strict transform of the fiber $F$, denoted $\wt{F}$ now has $\wt{F}^2 \leq -1$. If $\wt{F}^2 \leq -2$ then it has to be contracted, meaning $\wt{F}, \, B \in \{ E_i^S \}$ which would be curves not contracted to a point. If $\wt{F}^2 = -1$, then the only $-1$-curves in $\pi^{-1}{P}$ cannot intersect $\wt{F}$. This is because after the first blowup we have an exceptional curve $E$ and the fiber $\wt{F}$. These both have square $-1$. If we blow up the intersection point of $\wt{F}$ and $E$ then $\wt{F}^2 \leq -2$, hence we can only blowup general points on $E$. At this point we have non e of the $-1$-curves intersecting $E$. If we blowup no points on $E$ then clearly we are not introducing a singularity so this does not occur. Now finally we note that our curve configuration would contradict Lemma~\ref{lem!badcurve}. 
+To show that not all the curves $E_j^S$ can be contracted to a point if $l \geq 2$, we go for a proof by contradiction. Assume $l \ge 2$ and every exceptional curve in a singularity $S$ is contracted to a point $P \in \mb{F}_l$. Then $P$ lies on a fiber $F$ which intersects the curve $B$. First we consider $P \not\in B$. We have $E_i^S \in \pi^{-1}{P}$ for all $i$. Hence we have to blow up $P$ several times. However the strict transform of the fiber $F$, denoted $\wt{F}$ now has $\wt{F}^2 \leq -1$. If $\wt{F}^2 \leq -2$ then it has to be contracted, meaning $\wt{F}, \, B \in \{ E_i^S \}$ which would be curves not contracted to a point. If $\wt{F}^2 = -1$, then the only $-1$-curves in $\pi^{-1}{P}$ cannot intersect $\wt{F}$. This is because, after the first blowup we have an exceptional curve $E$ and the fiber $\wt{F}$. These both have square $-1$. If we blow up the intersection point of $\wt{F}$ and $E$ then $\wt{F}^2 \leq -2$, hence we can only blowup general points on $E$. At this point we have none of the $-1$-curves intersecting $\wt{F}$. If we blowup no points on $E$ then clearly we are not introducing a singularity so this does not occur. Now finally we note that our curve configuration would contradict Lemma~\ref{lem!badcurve} if we had $\wt{F}^2 = -1$ as it would connect $B$ to an exceptional curve $E_i^S$. 
 
 \end{proof}
 
@@ -399,7 +401,7 @@ If $X$ admits no floating $-1$-curves then $X$ admits a toric degeneration. %In 
 In addition we can explicitly describe all possible basic surfaces.
 \end{thm}
 \begin{proof}
-Given a \ldp\ $X_0$ we start by contracting all floating $-1$ curves. This gives rise to a \ldp\ $X_1$; note that $X_1$ is not $\P^2$ since the contraction map is an isomorphism in the neighbourhood of any singularity of $X_0$. Let $\sigma\colon Y\rightarrow X_1$ be the minimal resolution of $X_1$. We know that there is a map $\pi \colon Y \rightarrow \mathbb{F}_l$, and we may suppose $l$ is maximal.
+Given a \ldp\ $X_0$ we start by contracting all floating $-1$-curves. This gives rise to a \ldp\ $X_1$; note that $X_1$ is not $\P^2$ since the contraction map is an isomorphism in the neighbourhood of any singularity of $X_0$. Let $\sigma\colon Y\rightarrow X_1$ be the minimal resolution of $X_1$. We know that there is a map $\pi \colon Y \rightarrow \mathbb{F}_l$, and we may suppose $l$ is maximal.
 %We start by considering the case $l > 1$. 
 There is a curve $B \subset \mathbb{F}_l$ with $B^2 = -l$. 
 %Assume there is no  $l' >l$ such that $Y \rightarrow \mb{F}_{l'}$. 
@@ -407,11 +409,11 @@ If $l\ge2$ then $B$ has to be the image of a $\sigma$-exceptional curve $E_i$ in
 
 We first show that $\pi$ cannot contract a curve to a point on $B$.
 If on the contrary there is a curve contracted to $B$, then
-without loss of generality we may assume that it is the exceptional curve of the final blowdown $Y\rightarrow Y_2\rightarrow\F_l$. In that case, there two curves $C_1, \, C_2$ on $Y_2$, both $-1$ curves, with $C_2$ being the strict transform of $0$ fiber. But then we could instead contract $C_2$ from $Y_2$ and get a map to $\mb{F}_{l+1}$, contradicting maximality of~$l$. 
+without loss of generality we may assume that it is the exceptional curve of the final blowdown $Y\rightarrow Y_2\rightarrow\F_l$. In that case, there two curves $C_1, \, C_2$ on $Y_2$, both $-1$-curves, with $C_2$ being the strict transform of $0$ fiber. But then we could instead contract $C_2$ from $Y_2$ and get a map to $\mb{F}_{l+1}$, contradicting maximality of~$l$. 
 Hence $\pi$ is indeed an isomorphism in a neighbourhood of~$B$.
 
 
-We note that  $l \leq 1$ has been classified in Proposition~\ref{Surfaces to F_1}. So we restrict to $l \geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves cannot be contracted (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$.
+We note that  $l \leq 1$ has been classified in Proposition~\ref{Surfaces to F_1}. So we restrict to $l \geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves $E_{j\pm1}^S$ cannot be contracted to a point via $\pi$ (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$.
 % We can reference back to results on curve in Hirzebruch surfaces.
 %, as we are assuming $l$ is the largest possible value of $l$ and hence $B$ could not be blown up. 
 Denote these two adjacent curves by $C_1$ and $C_2$ respectively. Assume there was another singularity with exceptional curves $\{ E_i^{S'} \}_{i=0}^{m_{S'}} $ on $Y$. Then by Lemma~\ref{HSlem} there would be a curve $E_j^{S'}$ such that $\pi_* E_j^{S'}$ is a curve with self-intersection $0, \,  l,\,  l+2$. However these curves would necessarily intersect $C_1$ and $C_2$ meaning either $S'$ is not distinct from $S$ or there is a $-1$-curve in $Y$ connecting two of their curves in the minimal resolution. Hence $X$ has precisely one singularity. 
@@ -419,7 +421,7 @@ Denote these two adjacent curves by $C_1$ and $C_2$ respectively. Assume there w
 To complete the analysis of this step, suppose $S$ is a $\frac{1}{p}(1,1)$ singularity and that its unique exceptional curve is mapped to the negative section~$B$. Then consider the possibility of there being another singularity $S'$ on~$X$. By Lemma~\ref{HSlem}, there is a curve $E_j^{S'}$ such that $A=\pi_* E_j^{S'}$ has self-intersection $l$ or $4l$; it cannot be $0$ or $l+2$ as it must not meet~$B$. If $S'$ is not a $\frac{1}{p}(1,1)$ then there is at least one exceptional curve among the $E_k^{S'}$ that is contracted to a point on $A\subset\F_l$. However each blowup of a point $Q\in A$ introduces a $-1$-curve $D$ which is joined to curve $B$ by another $-1$-curve, the birational transform of the fiber through~$Q$. Hence none of these curves $E_k^{S'}$ can be mapped to $D$, as otherwise it would be adjoined to $B$ by a $-1$-curve, contradicting Lemma~\ref{lem!badcurve}.
 Thus any other singularity on $X$ is also of type $\frac{1}{p}(1,1)$ (though possibly for a different~$p$).
 
-Suppose now that there was a third singularity of type $\frac{1}{p}(1,1)$. Once again, its exceptional curve would have to be sent to a $0, \, l, \, l+2$. Any smooth rational curve on $\F_l$ with one of these intersection numbers intersects the curve $A$. Thus on $Y$ it must either meet the birational transform of $A$ or meet some curve that contacts to~$A$. Once again in the second case it will result in two singularities connected by a $-1$-curve. This is a contradiction to small discrepancy.
+Suppose now that there was a third singularity of type $\frac{1}{p}(1,1)$. Once again, its exceptional curve would have to be sent to a $0, \, l, \, l+2$. Any smooth rational curve on $\F_l$ with one of these intersection numbers intersects the curve $A$. Thus on $Y$ it must either meet the birational transform of $A$ or meet some curve that intersects $A$. Once again in the second case it will result in two singularities connected by a $-1$-curve. This is a contradiction to small discrepancy.
 % or at least one of the curves that contr blowing up points on $A$. In the first case it contradicts it being a new singularity and in the second it contradicts the singularities not being joined by a $-1$-curve. 
 
 Thus $X$ has exactly one or two singularities of type $\frac{1}p(1,1)$,
@@ -432,16 +434,16 @@ and part~\eqref{thm38i} is complete in the case $l\ge2$.
 
 
 For part~\eqref{thm38ii}, we first observe that neither of the adjacent curves $E_{j\pm1}^S$ can
-map to an $l+2$ curve, since in that case $X$ will have a floating $-1$-curve. This is because $l+1$ points in general position on the $l+2$ curve can be cut out as the intersection of the $l+2$ curve with an $l$ curve.
+map to an $l+2$ curve, as this would result in $X$ will have a floating $-1$-curve. This is because $l+1$ points in an $l+2$ curve can be cut out as the intersection of the $l+2$ curve with an $l$ curve and we would have to blowup at least $l+1$ times.
 
-%We finish by discussing the condition that there are no floating minus one curves. We note that in the case where there is a curve $E_i^S$ such that $\pi_* E_i^S$ is an $l+2$ of an $l$ curve then the blowup introduces floating $-1$ curves corresponding to the $l$ curve that goes through $l+1$ of the points blown up. Hence this surface is not minimal.
+%We finish by discussing the condition that there are no floating minus one curves. We note that in the case where there is a curve $E_i^S$ such that $\pi_* E_i^S$ is an $l+2$ of an $l$ curve then the blowup introduces floating $-1$-curves corresponding to the $l$ curve that goes through $l+1$ of the points blown up. Hence this surface is not minimal.
 
 Because of this we see that the only possibilities for $\pi_*(E_{j\pm1}^S)$ are two different $0$ curves. 
-(Again we suppose there are two adjacent curves; the case of one adjacent curve is the same.)
-We can then proceed to construct the configuration of all exceptional curves inductively. This means that when a surface of this form is able to be constructed we can obtain it by doing two weighted blowups at a general point of a Hirzebruch surface and then doing a series of non toric blowups on the boundary. The following surface is one example, arising from blowing up two general points of a Hirzebruch surface with weight $(1,i)$ and $(1,n-i)$. 
+(Again we suppose there are two adjacent curves; the case of one adjacent curve follows via the same logic.)
+We can then proceed to construct the configuration of all exceptional curves inductively. This means that when a surface of this form is able to be constructed we can obtain it by doing two weighted blowups at two general points of a Hirzebruch surface  withe weights $k_1$ and $k_2$. We then do a series of toric blowups, and then finally do a series of non toric blowups on the boundary. The following surface is one example, arising from blowing up two general points of a Hirzebruch surface with weight $(1,i)$ and $(1,n-i)$. 
 \begin{figure}[ht]
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}\label{figure1}
   % nodes
 	\node (0) at (-4.5, -3.5) {};
 	\node (1) at (4.5, -3.5) {};
@@ -459,7 +461,7 @@ We can then proceed to construct the configuration of all exceptional curves ind
 	\node (13) at (6, 5) {};
 	\node (14) at (-4, 8.5) {};
 	\node (15) at (4, 8.5) {};
-	\node [label={[blue]below:$a_{i} +3-n$}] (16) at (0, 7.4) {};
+	\node [label={[blue]below:$a_{i} -k_1-k_2$}] (16) at (0, 7.4) {};
 	\node [label={above:$a_0$}] (17) at (-5, 6.75) {};
 	\node [label={above:$a_n$}] (18) at (5, 6.75) {};
 	\node (20) at (-5, 3.75) {$\vdots$};
@@ -539,18 +541,31 @@ We can then proceed to construct the configuration of all exceptional curves ind
 \end{center}
 \caption{Example of surface.\label{fig!logdp}}
 \end{figure}
-This is the picture where the map to the Hirzebruch surface is an isomorphism on an exceptional curve $E_i$, where $1<i<n$. Here the red curve s indicate $-1$-curves and the blue curves indicate curves with positive self-intersection. The blue curve has self-intersection $a_i+ 3 - n$. This value is dependent on $n \ge 3$ and the map to the Hirzebruch surface being an isomorphism on a curve $E_i$ with $1<i<n$. This is because on the Hirzebruch surface $\mb{F}_{a_i}$ this curve had self-intersection $a_i$. The $n-3$ of our exceptional curves are mapped to points and hence it has self-intersection $a_i-(n-3)$. In the case that our map is an isomorphism on the curve $E_1$ or $E_n$ then we have a similar looking configuration except with positive curve now having self-intersection $a_i + 4 - n$ as there is an extra point being blown up however the image of the curve in the Hirzebruch surface now is in the linear system $|(l+1)F + B|$. Hence its self-intersection is now $l -(n - 3) -1 = l - n + 4$.
+
+
+In Figure~\ref{figure1} the picture is where the map to the Hirzebruch surface is an isomorphism on an exceptional curve $E_i$, where $1<i<n$. Here the red curves indicate $-1$-curves and the blue curves indicate curves with positive self-intersection. The blue curve has self-intersection $a_i - k_1- k_2$. This value is dependent on the map to the Hirzebruch surface $\mb{F}_{a_i}$.  If $i=1$ or $i=n$ then we would have a similar looking configuration except with positive curve now having self-intersection $a_i + 2 - k_1$ as we consider the curve in the linear system $|(l+1)F + B|$ which would be the nodal curve inside $|{-}K_X$. 
 
 The toric degeneration property now follows. By construction all these surfaces $X$ are \LJ s,
 and so admit a toric degeneration by \cite[Theorem ??]{GHK}.
 %When these singularities are $\mb{Q}$-Gorenstein rigid we get a unique corresponding singularity content, as there is only one surface. 
 \end{proof}
 
+\begin{rem}\rm
+If for every possible value of $k_1$ and $k_2$ we have $k_1 + k_2 > a_i$ for all $i$. Then there are no basic surfaces with singularity $S$. For instance the singularity $S = [3,2,2,2,2,2,2,2,2,2,3]$ cannot be the only singularity on a log del Pezzo surface. This enables us, in certain case, to state existence of a surface in terms of length of the singularity.
+\end{rem}
+\begin{comment}
+\begin{cor}
+Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self-intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.
+\end{cor}
+\end{comment}
 
-This leads to the following corollary in which we classify all log del Pezzo surfaces with singularities of small discrepancy, each of which is resolved by a single exceptional curve.
+We use these results to classify \ldp\ surfaces with certain singularities. This leads to the following corollaries in which we classify all log del Pezzo surfaces with singularities of small discrepancy, each of which is resolved by a one or two exceptional curves.
  
 \section{Examples}
  
+We start by specifying how we deviate from the previous literature. In \cite{ReidSuzuki} they construct cascades as explicit maps between \ldp\ surfaces, mirroring the classical constructions. We do not do this, however we explicitly state when the map exists and give good embeddings. If a variety admits no floating $-1$-curves, so a basic surface, we call it the root of a cascade. If a surface $X$ cannot be blown up at any point while preserving ${-}K_X$ ample we call it the head of a cascade. 
+
+
 \begin{cor}
 Let $X$ be a log del Pezzo surface with small discrepancy and
 basket  $\{ \{ \frac{1}{p_1}(1,1), \, \dots \, \frac{1}{p_n}(1,1) \}, \, m \}$
@@ -571,7 +586,7 @@ In particular, in the case of two singularities there is no cascade.
 The small discrepancy condition is equivalent to the condition that
 $p_i \geq 4$ for each $i=1,\dots,n$. 
 For the sake of completeness, we outline the classification result of \cite{CP} that
-describes part~\ref{dp11i}, which also follows independently from Propostion~\ref{ } and Theorem~\ref{ThmOnSing}.
+describes part~\ref{dp11i}, which also follows independently from Propostion~\ref{Surfaces to F_1} and Theorem~\ref{ThmOnSing}.
 
 \begin{proof}
 With these restrictions on singularities, it fits the criterion for the above theorem. The explicit classification was done in the proof of Theorem~\ref{ThmOnSing}. The case of one singularity was done in \cite{CaveyPrince}. The only examples of these surfaces with more than one singularity are constructed by blowing up a Hirzebruch surface in several points along a line and then contracting the two curves. Denote this surface by $X$. Then $X$ admits a toric degeneration to $(-p_1, -1), \, (0, 1), \, (p_2, 1)$. This is $\mb{P}(a+b, a, b)$ quotiented out by $\mu_c$ acting with weights $(1,1,0,1)$. Taking the $v_{a+b}$ gives us the desired embedding. Note $X$ admits a $\mb{C}^*$ action and the degeneration is equivariant with respect to the torus action. We have $-K_X^2 = \frac{4}{p_1} + \frac{4}{p_2}$. Even in cases where $-K_X^2 > 1$ we see that $X$ cannot be blown up while preserving $-K_X$ ample. If $X$ admitted a blow up at a general point $P$ then there is a fiber $F$ such that $P \in F$. Then $\widetilde F$ is a $-1$-curve on the minimal resolution connecting the $-p_1$ curve with the $-p_2$ curve. This is a contradiction. Hence there is only one element in the cascade.
@@ -581,7 +596,7 @@ With these restrictions on singularities, it fits the criterion for the above th
 We note that this surface can be see as a hypersurface of degree $p+q$ inside $\mb{P}(1,\,1,\,p,\,q)$.
 
 \end{proof}
-We now do a more difficult example by classifying the \ldp's with singularities $S_{a,b}$ with resolution $E_1, \, E_2$ with $E_1^2 = -a,\, E_2^2 = -b$. To make sure that this obeys they conditions on the theorem we insist $a, \, b \neq 2$. We note that the case of $S_{3,3}$ does satisfy the conditions for the theorem. However we are interested in $\mb{Q}$g smoothings and $S_{3,3}$ is not $\mb{Q}$g rigid and admits a partial smoothing to $\frac{1}{6}(1,1)$ singularity. These were classified above. This is the only one of these singularities which is not $\mb{Q}$Gorenstein rigid. This is a more complicated example of how the above theorem can be used.
+We now do a more difficult example by classifying the \ldp's with singularities $S_{a,b}$ with resolution $E_1, \, E_2$ with $E_1^2 = -a,\, E_2^2 = -b$. To make sure that this obeys they conditions on the theorem we insist $a, \, b \neq 2$. We note that the case of $S_{3,3}$ does satisfy the conditions for the theorem. However we are interested in $\mb{Q}$-Gorenstein smoothings and $S_{3,3}$ is not $\mb{Q}$-Gorenstein rigid and admits a partial smoothing to $\frac{1}{6}(1,1)$ singularity. These were classified above. This is the only one of these singularities which is not $\mb{Q}$-Gorenstein rigid. This is a more complicated example of how the above theorem can be used.
 
 
 \begin{cor}\label{doublecurve}
@@ -601,7 +616,7 @@ X_b^0 & X_b^1 \arrow[l, "\phi_b^0"'] & \cdots \arrow[l, "\phi_b^1"'] & X_b^{b-1}
 
 \begin{proof}
 
-Once again by Theorem~\ref{ThmOnSing} there are two heads of the cascade given by the following two surfaces. These correspond to surfaces constructed by blowing up $\mb{F}_a$ in $b$ points and $\mb{F}_b$ in $a$ points, then contracting the negative curves. We call these surfaces $X_a$ and $X_b$ respectively.
+Once again by Theorem~\ref{ThmOnSing} there are two roots of the cascade given by the following two surfaces. These correspond to surfaces constructed by blowing up $\mb{F}_a$ in $b$ points on a fiber and $\mb{F}_b$ in $a$ points on a fiber, then contracting the negative curves. We call these surfaces $X_a$ and $X_b$ respectively.
 
 \[
 \resizebox{8.75cm}{5.3125cm}{
@@ -676,7 +691,7 @@ Once again by Theorem~\ref{ThmOnSing} there are two heads of the cascade given b
 }
 \]
 
- These admits a toric degeneration to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We only consider the case of $X_a$ as $X_b$ is completely symmetric. We see that the we can smooth it by taking the $b$th Veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lies as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. We get the following formula for the anticanonical degree of $X_a$:
+ These admits a toric degeneration to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We only consider the case of $X_a$ as $X_b$ is completely symmetric. We see that we can smooth it by taking the $b$th Veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lieing as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. We get the following formula for the anticanonical degree of $X_a$:
  \[
  -K_{X_a}^2 =8 - b + a \left( 1- \frac{b+1}{ab-1} \right) ^2 + b \left(1- \frac{a+1}{ab-1} \right)^2 -2\left(1- \frac{a+1}{ab-1}\right)\left(1- \frac{b+1}{ab-1}\right)
 \] 
@@ -691,7 +706,7 @@ Via Cox rings this can be viewed as $\mb{C}^4_{\{x, y,z,t\}}$ with a quotient
       \end{block}
 \end{blockarray}
 \]
-Taking the Veronese embedding of degree $u$ in the variables $x, \, z,\,t$ gets us the coordinates $z^u, \, t^u, \, zt$. And to smooth the $A_{b-1}$ singularity we take the $b$ Veronese embedding of the variables $x^b, \, y^b, \, xy$. Once again we can smooth this out. This gives us the surface as complete intersection with weights 
+Taking the Veronese embedding of degree $u$ in the variables $z,\,t$ gets us the coordinates $z^u, \, t^u, \, zt$. This enable us to smooth the $A_{u-1}$ singularity. To smooth the $A_{b-1}$ singularity we take the $b$ Veronese embedding of the variables $x$ and $y$ gives us $x^b, \, y^b, \, xy$. Once again we can smooth this out. This gives us the surface as complete intersection with weights 
 $\begin{matrix} b & b^2u \\ ab & u \end{matrix}$
 inside the toric variety with weights
 
@@ -705,22 +720,23 @@ inside the toric variety with weights
 \end{blockarray}
 \]
 
- The $(a+1)$st blowup admits a toric degeneration to $(-1, b), \, (-1, -1), \, (a, -1)$. The toric degeneration of the $a+2$'nd blowup is $(-1,0)$, $(-a, -1-a)$, $(-1, -1-a)$, $(b, ab-1)$.
- We note that this surface still has a boundary of a curve  $C \in -K_X$. This strict transform $\wt{C} \subset Y$ has self-intersection $0$ as it started of as an $a+2$ curve and has been blown up $a+2$ times. Hence $X$ admits a degeneration as it is a \LJ. To see the cascade result we note that if you blow up the surface $X_a$ times at points $P_1 \dots P_a$. To each of these points there is a unique fiber going through it $F_i$. The strict transform of these fibers after blowing up is a $-1$-curve going through the $-a$ curve. Hence after blowing $X_a$ and $X_b$ respectively $a$ and $b$ times we get a surface which has as a boundary three curves with self-intersection $0, -a, -b$ and in both cases you have your $a$ and your $b$ curves have $a$ and $b$ minus one curves intersecting them respectively. Hence they are isomorphic. 
+ After $(a+1)$ blowups the surface admits a toric degeneration to the toric variety defined by the spanning fan of $(-1, b)$, $(-1, -1)$, $(a, -1)$. The toric degeneration after $(a+2)$ blowups is given by spanning fan $(-1,0)$, $(-a, -1-a)$, $(-1, -1-a)$, $(b, ab-1)$. 
+
+To see the cascade result we note that if you blow up the surface $X_a$ times at points $P_1 \dots P_a$. To each of these points there is a unique fiber going through it $F_i$. The strict transform of these fibers after blowing up is a $-1$-curve going through the $-a$-curve. Hence after blowing $X_a$ and $X_b$ respectively $a$ and $b$ times we get a surface which has as a boundary three curves with self-intersection $0, -a, -b$ and in both cases you have your $a$ and your $b$ curves have $a$ and $b$ minus one curves intersecting them respectively. Hence they are isomorphic. 
  
  
- We note that we have made in the above calculations no effort to show that the elements in the cascade are \ldp\ surfaces. However it is not hard to show, assume we are blowing up $a+2$ points giving surface $X_3$. This has minimal resolution $Y_3$. The class group of $Y_3$ is generated by the curves $D_1, \, D_2, \, D_3, \, D_4, \, E_1^0, \dots E_b^0, \, E_1^1, \dots E_{a+2}^1$. Here the $D_i$ for a cycle such that $\sum D_i \in |-K_{Y_3}|$. These have self-intersections $-a, \, -b, \, -1, \, -1$ respectively. Here $D_3$ was a curve of degree $a$  on $\mb{F}_a$ blown up $a+1$ times and $D_4$ was a fiber on which a point has been blown up. The $E_i^0$ are $-1$-curves intersecting the $-b$ curve. The $E_i^1$ are floating $-1$-curves. We wish to show $-K_{X_3}$ is ample. We note that showing $-K_{X_3} \cdot C > 0$ for all $C$ generating the class group would suffice. We note that the curves $D_1, \, D_2$ are contracted when sent to $X_3$. We note that $-K_{X_3} \cdot E_i^0 = -K_{X_a} \cdot E_i^0$ as we are blowing up points not on these curves. Then $-K_{X_3} \cdot E_i^0 = 1$ as these are floating $-1$-curves. Finally to see that $-K_{X_3} \cdot D_3 > 0$ we note that, when pushed forwards to $X_3$, it only goes through the one singularity on $X_3$ with multiplicity $-1$. This is because on $Y_3$ it is only intersecting the $-a$ curve transversely. Hence $-K_{X_3} \cdot D_3 = 1 + d_a$ where $d_a$ is the discrepancy of the $-a$ curve. Via log terminality we have $d_a > -1$. Hence the product is greater than 0. The argument for the curve is exactly the same with $d_a$ replaced with $d_b$. From this we see $X_3$ is a \ldp, hence every surface in the cascade is a \ldp\ surface.
+We note that we have made in the above calculations no effort to show that the elements in the cascade are \ldp\ surfaces. However it is not hard to show, assume we are blowing up $a+2$ points giving a surface $X_3$. If this is a \ldp\ surface then every element in the cascade is. This has minimal resolution $Y_3$. The class group of $Y_3$ is generated by the curves $D_1$, $D_2$, $D_3$, $D_4$, $E_1^0, \dots, E_b^0$,  $E_1^1, \dots, E_{a+2}^1$. Here the $D_i$ form a cycle such that $\sum D_i \in |{-}K_{Y_3}|$. These have self-intersections $-a, \, -b, \, -1, \, -1$ respectively. Here $D_3$ was a curve of degree $a$  on $\mb{F}_a$ blown up $a+1$ times and $D_4$ was a fiber on which a single point has been blown up. The $E_i^0$ are $-1$-curves intersecting the $-b$ curve and are not floating. The $E_i^1$ are floating $-1$-curves. We wish to show ${-}K_{X_3}$ is ample. We show $-K_{X_3} \cdot C > 0$ for all $C$ generating the class group which is equivalent. We note that the curves $D_1, \, D_2$ are contracted when sent to $X_3$. We note that ${-}K_{X_3} \cdot E_i^0 = {-}K_{X_a} \cdot E_i^0 > 0$ as we are blowing up points not on these curves and ${-}K_{X_a}$ is ample. Then $-K_{X_3} \cdot E_i^0 = 1$ as these are floating $-1$-curves. Finally to see that $-K_{X_3} \cdot D_3 > 0$ we note that, when pushed forwards to $X_3$, it only goes through the one singularity on $X_3$ with multiplicity $-1$. This is because on $Y_3$ it is only intersecting the $-a$-curve transversely. Hence $-K_{X_3} \cdot D_3 = 1 + d_a$ where $d_a$ is the discrepancy of the $-a$-curve. Via log terminality we have $d_a > -1$. Hence the product is greater than 0. The argument for the curve $D_4$ is symmetric with $d_a$ replaced with $d_b$. From this we see $X_3$ is a \ldp, hence every surface in the cascade is a \ldp\ surface.
 \end{proof}
 
 This structure of the cascade can be put in more general terms. 
 
 \section{Cascades}
-Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in the previous theorem.
+Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in Theorem~\ref{ThmOnSing}. Attached to any one of these basic surfaces we have the invariants $a_i$ and $k_1$, $k_2$. The $a_i$ indicates the basic surface $X$ has minimal resolution $Y$ which admits a map to $\mb{F}_{a_i}$ which is an isomorphism on the negative section. The invariants $k_1$ and $k_2$ are the number of times we blew up general points on $\mb{F}_{a_i}$ to obtain $Y$.
 
 \begin{thm}
-Let $X_i$ be one of the basic surfaces constructed in Theorem~\ref{ThmOnSing}. We can describe how these are birationally related. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 
+Let $X_i$ be one of the basic surfaces constructed in Theorem~\ref{ThmOnSing}. We can describe how their cascades. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 
 
-For the general case we split in to cases. Given a basic surface $X$ it is constructed by first blowing up a Hirzebruch surface $k_1$ times at one point and $k_2$ times at another. We label these curves $E_i^S$ and $E_i^T$ respectively. Let $s_i$, $t_i$ be the number of $-1$ curves intersecting $E_i^S$ and $E_i^T$ respectively. We then classify the cascade via these invariants
+For the general case we split in to cases. We label the exceptional curves on $X_i$ arising via the first $k_1+k_2$ blowups by $E_i^S$ and $E_i^T$ respectively. Let $s_i$, $t_i$ be the number of $-1$-curves intersecting $E_i^S$ and $E_i^T$ respectively. We then classify the cascade via these invariants
 
 
 There is the sporadic case where the singularity is length one then we have 
@@ -813,9 +829,9 @@ X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] & X_{a-k_
 \item We also have the case $s_2 =0$ or $k_1 = k_2 = 0$ with one non general fiber, which has cascade
 \[
 \begin{tikzcd}
-X_a^0 & X_a^1 \arrow[l, "\phi_a^0"]  & \cdots \arrow[l, "\phi_a^1"]  & X_a^{a-1}  \arrow[l, "\phi_a^{a-2}"] &                                                           &                        \\
-      &                              &                               &                                      & X_1 \arrow[ld, "\phi_b^{b-1}"] \arrow[lu, "\phi_a^{a-1}"] & X_2 \arrow[l, "\Phi_1"'] & X_3 \arrow[l, "\Phi_2"']\\
-X_b^0 & X_b^1 \arrow[l, "\phi_b^0"'] & \cdots \arrow[l, "\phi_b^1"'] & X_b^{b-1} \arrow[l, "\phi_b^{b-2}"'] &                                                           &                       
+X_a^0 & X_a^1 \arrow[l ]  & \cdots \arrow[l]  & X_a^{a-1}  \arrow[l] &                                                           &                        \\
+      &                              &                               &                                      & X_1 \arrow[ld] \arrow[lu] & X_2 \arrow[l] & X_3 \arrow[l]\\
+X_b^0 & X_b^1 \arrow[l] & \cdots \arrow[l] & X_b^{b-1} \arrow[l] &                                                           &                       
 \end{tikzcd}
 \]
 \item finally case $s_1 = s_2 =0$ with one non general fiber, which has cascade 
@@ -847,18 +863,18 @@ This is because the map to a Hirzebruch surface is non unique even with the mode
 We now note that by construction in the case where the strict transform of both fibers are exceptional curves we get a curve $C$ on $Y$ with self-intersection $a_i - k_1 -k_2$. Via construction $C$ was a toric curve and $f_*(C) \in |-K_X|$. We have that the class group of $X$ is generated by $C$ and $D_i$ where $D_i$ are the curves arising from the non toric blowups of $Y$. This implies that the cascade of $X$ is of length $L = a_i - k_1-k_2$  as blowups in general position do not affect the $-K_X \cdot D_i$ and when we blow up $a_i - k_1 -k_2 +1$ times $K_X^2 \leq 0$ via the small discrepancy condition. If $L < 0$ then this surface is not a \ldp\ surface.
 
 
-In the case where one of the fibers is not exceptional, so $k_2  = 0$,  we have that the class group is generated by the same $D_i$, the fiber class $F$ and a final curve $C$. Here $-K_X = C + F$ and $F^2 = 0$, $C^2 =  a_i - k_1$. This surface admits a cascade of length $L = a_i - k_1 + 2$. This is because, we only need to calculate the intersections on the subgroup generated by $C$ and $F$. If we blowup $L$ times we can assume that we blew up one point on the fiber $F$ and $a_i-k_1+1$ points on the curve $C$. After this process the strict transform of both these curves would have self-intersection $-1$. As these are both on through a singularity with multiplicity one we see that $-K_X$ has positive intersection with these curves. If we blow up one more time we can assume all $L+1$ points lie on a curve in the class $|C+F|$ this has self-intersection $L$ and hence after all these blowups would be a $-1$ curve intersecting the singularity twice. This would not be a \ldp\ surface via small discrepancy.
+In the case where one of the fibers is not exceptional, so $k_2  = 0$,  we have that the class group is generated by the same $D_i$, the fiber class $F$ and a final curve $C$. Here $-K_X = C + F$ and $F^2 = 0$, $C^2 =  a_i - k_1$. This surface admits a cascade of length $L = a_i - k_1 + 2$. This is because, we only need to calculate the intersections on the subgroup generated by $C$ and $F$. If we blowup $L$ times we can assume that we blew up one point on the fiber $F$ and $a_i-k_1+1$ points on the curve $C$. After this process the strict transform of both these curves would have self-intersection $-1$. As these are both on through a singularity with multiplicity one we see that $-K_X$ has positive intersection with these curves. If we blow up one more time we can assume all $L+1$ points lie on a curve in the class $|C+F|$ this has self-intersection $L$ and hence after all these blowups would be a $-1$-curve intersecting the singularity twice. This would not be a \ldp\ surface via small discrepancy.
 
 
-We now wish to explore the birational relationships between these surfaces. The first stage is to show that the only possible $-1$ curves on any surface in the cascade arise from the class $|B+ a_i F|$ on the Hirzebruch surface $\mb{F}_{a_i}$. To show this we note that it is impossible for any curve that intersects $|B|$ to end up being a floating curve as it will always intersect the curve $B$. So any floating curve $C$ lies in the class $n|B+a_i F|$. To show that $n=1$ we compute the self intersection of these curves. If $n=2$ then the smallest possible self intersection of a curve not going through the singularity  is $4a_i - k_1 - k_2 - 4$ if there is two exceptional fibers and $4a_i - k_1 -2$ if there is only one. As in the first case $L = a_i- k_1-k_2$ as $a_i \geq 2 $  we have $4a_i -k_1-k_2 - 4 > L$ so we cannot blow up enough to make this a $-1$ curve. In the second case $L = a_i -k_1+2$ so once again as $a_i \geq 2$  we cannot blow up enough to make it a $-1$ curve. As $n$ increases the size of the self intersection increases and hence they can never occur as floating $-1$ curves.
+We now wish to explore the birational relationships between these surfaces. The first stage is to show that the only possible $-1$-curves on any basic surface arise from the class $|B+ a_i F|$ on the Hirzebruch surface $\mb{F}_{a_i}$. To show this we note that it is impossible for any curve that intersects $|B|$ to end up being a floating curve as it will always intersect the curve $B$. So any floating curve $C$ lies in the class $n|B+a_i F|$. To show that $n=1$ we compute the self intersection of these curves. If $n=2$ then the smallest possible self intersection of a curve not going through the singularity  is $4a_i - k_1 - k_2 - 4$ if there are two non general fibers and $4a_i - k_1 -2$ if there is only one. As in the first case $L = a_i- k_1-k_2$ as $a_i \geq 2 $  we have $4a_i -k_1-k_2 - 4 > L$ so we cannot blow up enough to make this a $-1$-curve. In the second case $L = a_i -k_1+2$ so once again as $a_i \geq 2$  we cannot blow up enough to make it a $-1$-curve. As $n$ increases the size of the self intersection increases and hence they can never occur as floating $-1$-curves.
 
 
-Now we explicitly state how the cascade structure occurs. We note that out of the exceptional curves $E_i \subset Y$ only the curves that arose as part of the original $k_1$ and $k_2$ blowups can be intersected by curves in the class $|B + a_i F|$ as otherwise they would have to intersect the fiber with multiplicity greater than $1$. Label these exceptional curves $S_1, \dots ,S_{k_1}$ and $T_1, \dots , T_{k_2}$ with $S_{1}$ and $T_{1}$ being the strict transforms of the fibers. Hence any potential floating curve intersects a $-1$ curve coming out of a curve $S_i$ and a $-1$ curve coming out of $T_j$. We now denote by $C_{i,\, j}$ the curve intersecting a $-1$ curve coming from $S_i$ and a $-1$ curve coming from $T_j$. Then in the case of both fibers becoming exceptional curves $C_{i, \, j}^2 = L- 4 + i + j$ so in order for it to become a $-1$ curve it needs to be blown up in $L - 3 + i + j$ points. However as the length of the cascade is $L$ this implies $i+j \leq 3$. So $\{ (i, \, j) \} = \{(1,1), (1,2), (2,1) \} $. We now go on a case by case analysis:
+Now we explicitly state how the cascade structure occurs. We note that we can restrict our analysis to the exceptional curves $E_i \subset Y$ that arose as part of the original $k_1$ and $k_2$ blowups. These are the only curves that can be intersected by curves in the class $|B + a_i F|$ as otherwise they would have to intersect the fiber with multiplicity greater than $1$. Label these exceptional curves $S_1, \dots ,S_{k_1}$ and $T_1, \dots , T_{k_2}$ with $S_{1}$ and $T_{1}$ being the strict transforms of the fibers. Hence any potential floating curve intersects a $-1$-curve coming out of a curve $S_i$ and a $-1$-curve coming out of $T_j$. We now denote by $C_{i,\, j}$ the curve intersecting a $-1$-curve coming from $S_i$ and a $-1$-curve coming from $T_j$. Then in the case of both fibers becoming exceptional curves $C_{i, \, j}^2 = L- 4 + i + j$ so in order for it to become a $-1$-curve it needs to be blown up in $L - 3 + i + j$ points. However as the length of the cascade is $L$ this implies $i+j \leq 3$. So $\{ (i, \, j) \} = \{(1,1), (1,2), (2,1) \} $. We now go on a case by case analysis:
 
 
-\textbf{Case 1}: We start with $(i, \, j)  = (1,\, 1)$. It takes $L - 1$ blowups for this to become a $-1$ curve. Denoting the number of $-1$ curves intersecting $S_1$ and $T_1$ by $s, \, t$, we label these curves $D_u^S$ and $D_v^T$ respectively. We have $st$ possible curves which would give rise to a $-1$ curve after $L-1$ blowups. We denote by $C_{u, \, v}$ the curve intersecting $D_u^S$ and $D_v^T$. These curves originally lay in $|B+ a_i F|$ so on the Hirzebruch surface they intersected $b$ times. By repeating the same calculation on  this on $Y$ blown up $L-1$ times, we see that $C_{u,\, v}$ intersects $C_{u' , \, v'}$ if and only if $u \neq u'$ and $v \neq v'$. So fixing $C_{u, \, v}$ we get the following curve configuration
+\textbf{Case 1}: We start with $(i, \, j)  = (1,\, 1)$. It takes $L - 1$ blowups for these curves to become $-1$-curves. Denoting the number of $-1$-curves intersecting $S_1$ and $T_1$ by $s, \, t$, we label these curves $D_u^S$ and $D_v^T$ respectively. We have $st$ possible curves which would give rise to a $-1$-curve after $L-1$ blowups. We denote by $C_{u, \, v}$ the curve intersecting $D_u^S$ and $D_v^T$. These curves originally lay in $|B+ a_i F|$ so on the Hirzebruch surface they intersected $b$ times. By repeating the same calculation on  this on $Y$ blown up $L-1$ times, we see that $C_{u,\, v}$ intersects $C_{u' , \, v'}$ if and only if $u \neq u'$ and $v \neq v'$. So fixing $C_{u, \, v}$ we get the curve configuration in Figure~\ref{CurveConfigFigure}
 
-\begin{figure}[h]
+\begin{figure}\label{CurveConfigFigure}[h]
 \resizebox{10cm}{10cm}{
 \begin{tikzpicture}[thick,scale=0.6, every node/.style={transform shape}]
 	\begin{pgfonlayer}{nodelayer}
@@ -963,16 +979,16 @@ Now we explicitly state how the cascade structure occurs. We note that out of th
 }
 \caption{This is currently not correct, fix the intersection}
 \end{figure}
-Hence if we choose a floating $-1$ curve $C_{u, \, v}$ to contract the only remaining floating curves are $C_{u, \, \beta}$ and $C_{\alpha , \, v}$ where $\alpha \in \{ 1, \dots, s\}$ and $\beta \in \{1 , \dots , t \}$. When the second floating curve is contracted this uniquely defines whether we are iterating over $s$ or over $t$. So after two contractions the cascade is uniquely defined. To see where it ends up we note that a basic surface is uniquely defined by the number of $-1$ curves coming out of each curve on the boundary. Picking one of these chains of  leads to either $s$ blowdowns or $t$ blowdowns. These cases behave symmetrically, so focusing on the case of $s$ blowdowns we get a curve $S_1 = E_1 \subset Y$ with self intersection $-a_1$ and no $-1$ curves coming out of it. So it admits a map to $\mb{F}_{a_1}$. We note that in our notation the basic surface $Y^1_{n_1}$ which it blows down to has to have new value $k^{Y^1_{n_1}}_1 = 0$ as there is only one exceptional curve next to it, so there is only one non general fiber of the fibration. As we are doing $s$ blow downs the self intersection of the positive section is $1 + s = a_1 - k^{Y^1_{n_1}}_2  + 2$. This gives us $k^{Y^1_{n_1}}_2  = a_1 + 1 - s$. 
+Hence if we choose a floating $-1$-curve $C_{u, \, v}$ to contract the only remaining floating curves are $C_{u, \, \beta}$ and $C_{\alpha , \, v}$ where $\alpha \in \{ 1, \dots, s\}$ and $\beta \in \{1 , \dots , t \}$. When the second floating curve is contracted this uniquely defines whether we are iterating over $s$ or over $t$. So after two contractions the cascade is uniquely defined. To see where it ends up we note that a basic surface is uniquely defined by the number of $-1$-curves coming out of each curve on the boundary. Picking one of these chains of  leads to either $s$ blowdowns or $t$ blowdowns. These cases behave symmetrically, so focusing on the case of $s$ blowdowns we get a curve $S_1 = E_1 \subset Y$ with self intersection $-a_1$ and no $-1$-curves coming out of it. So it admits a map to $\mb{F}_{a_1}$. We note that in our notation the basic surface $Y^1_{n_1}$ which it blows down to has to have new value $k^{Y^1_{n_1}}_1 = 0$ as there is only one exceptional curve intersecting it. Hence there is only one non general fiber of the fibration. As we are doing $s$ blow downs the self intersection of the positive section is $1 + s = a_1 - k^{Y^1_{n_1}}_2  + 2$. This gives us $k^{Y^1_{n_1}}_2  = a_1 + 1 - s$. 
 
-\textbf{Case 2}: The second case is $(i, \, j) = (1, \, 2)$. We do not spell this out in the same level of detail. Replicating the above arguments we see that we now get exactly the same curve configuration as in Figure 2 except now connecting the curves $E_1^S$ to $E_2^T$. So once again this leads to a set of two branching contractions. However they have different curve basic surfaces at the end, if you contract the curves $D^S_u$ you get a surface $Z_{m_1}$ with $k^{Z_{m_1}}_1 = 0$ and only one non general fiber. However now via the same calculations as above $k^{Z_{m_1}}_2 = a_1 + 2 - s$. In the other case we are contracting all curves of the form $D^T_v$ this gives rise to a surface $W_{m_2}$ with $k_1 = 0$ but two exceptional fibers. This has $k_2^{W_{m_2}} = t$. 
+\textbf{Case 2}: The second case is $(i, \, j) = (1, \, 2)$. We do not spell this out in the same level of detail. Replicating the above arguments we see that we now get exactly the same curve configuration as in Figure 2 except now connecting the curves $E_1^S$ to $E_2^T$. So once again this leads to a set of two branching contractions. However the choice of contractions now give different basic surfaces at the end. If you contract the curves $C_{u, \,1}$ you get a surface $Z_{m_1}$ with $k^{Z_{m_1}}_1 = 0$ and only one non general fiber. However now via the same calculations as previously $k^{Z_{m_1}}_2 = a_1 + 2 - s$. In the other case we are contracting all curves of the form $D^T_v$ this gives rise to a surface $W_{m_2}$ with $k_1 = 0$ but two exceptional fibers. This has invariant $k_2^{W_{m_2}} = t$. 
 
 \textbf{Case 3}: The final case is $(i, \, j) = (2, \, 1)$. This is symmetrical to case 2.
 
-A crucial point in this proof is that each case behave independently of the others as two floating curves don't intersect each other only if they lie in the same case.
+A crucial point in this proof is that each case behaves independently of the others as two floating curves don't intersect each other only if they lie in the same case. This means that upon any contraction we have limited ourselves to a set of $-1$-curves.
 
-We note that if there are no $-1$ curves coming out of the curves $E_1^S$ and $E_1^T$ then the cascade is a straight line as the above discussion is entirely predicated on their existence.
-Via similar logic we get the following cases where not all of these maps occur. Let $s_i$, $t_i$ equal the number of $-1$ curve going through $E_i^S$ and $E_i^T$ respectively.
+We note that if there are no $-1$-curves coming out of the curves $E_1^S$ and $E_1^T$ then the cascade is a straight line as the above discussion is entirely predicated on their existence.
+Via similar logic we get the following cases where not all of these maps occur. Let $s_i$, $t_i$ equal the number of $-1$-curve going through $E_i^S$ and $E_i^T$ respectively. These conditions are symmetrical in $s$ and $t$
 \begin{enumerate}
 \item $k_1 = k_2 = 0$ and there two non general fibers or $s_2 = t_2 = 0$. Then neither case 2 or 3 can occur.
 
@@ -980,31 +996,20 @@ Via similar logic we get the following cases where not all of these maps occur. 
 
 \item $s_1 = 0$. Then case 1 and 2 cannot occur. 
 
-\item $s_1 = t_1 = 0$. Then the cascade is a straight line. 
+\item $s_1 = t_1 = 0$ or $s_1 = s_2 = 0$. Then the cascade is a straight line. 
 \end{enumerate}
 This concludes the cascade for basic surfaces of this type. 
 
-We make a quick mention of what happens in the case where there is only one non generic fiber. These surfaces all start by blowing up a point $k$ times. Label the exceptional curves that arose from blowing up this point $E_{k}, \dots E_1$ and we denote the strict transform of the fiber by $E_{0}$. Once again $L = a_1 - k+ 2$ and we have curves with self intersection $a_1 - i -1$ intersecting the $-1$ curves coming out of $E_i$. To get a $-1$ curve we need $a_1 - i - 1 < L = a_1 - k+2$ giving $k-i < 3$ so $i \in \{ k, \, k-1,\, k-2 \}$. 
+We make a quick mention of what happens in the case where there is only one non generic fiber. These surfaces all start by blowing up a point $k$ times. Label the exceptional curves that arose from blowing up this point $E_{k}, \dots E_1$ and we denote the strict transform of the fiber by $E_{0}$. Once again $L = a_1 - k+ 2$ and we have curves with self intersection $a_1 - i -1$ intersecting the $-1$-curves coming out of $E_i$. To get a $-1$-curve we need $a_1 - i - 1 < L = a_1 - k+2$ giving $k-i < 3$ so $i \in \{ k, \, k-1,\, k-2 \}$. 
 
-Considering the case where $i = k-1$ then it intersects a $-1$ curve going through the curve $E_{k-1}$, which has self intersection $-a_{k-1}$. Blowing down all these floating curves gives rise to a basic surface $X$ which has a map to $\mb{F}_{a_{k-1}}$, sending $E$ to the negative section. Hence this is a surface in one of the above cases, as there are two exceptional curves adjacent to the negative section. 
+Considering the case where $i = k-1$ then the curve intersects a $-1$-curve going through the curve $E_{k-1}$, which has self intersection $-a_{k-1}$. Blowing down all these floating curves gives rise to a basic surface $X$ which has a map to $\mb{F}_{a_{k-1}}$, sending $E_k$ to the negative section. Hence this is a surface in one of the above cases, as there are two exceptional curves adjacent to the negative section. So we it lies in one of the above diagrams.
 \end{proof}
 
-\begin{rem}
-With $k_1$ and $k_2$ being relatively large compared to $a$ it is possible that large parts of this cascade will not exist.
-\end{rem}
-\begin{comment}
-\begin{cor}
-Let $S$ be a singularity with small discrepancy, $-a_1, \dots , -a_n$ be the self-intersection of the resolutions. Then if $n \geq \max (a_i) + 5 $. Then there exists no \ldp\ with only singularities of type $S$.
-\end{cor}
-\end{comment}
-\begin{rem}
-It is fully possible for an $X_{a_i}$ to not exist. For example consider a singularity with resolution $-3, \, -8, \, -2, \, -2, \, -2, \, -2, \, -2, \, -2, \, -3$. There will be a surface $X$ such that the resolution will have a map to $\mb{F}_8$ but there will be no surface with a map from its resolution to $\mb{F}_3$.
-\end{rem}
-
+The smallest possible length of a singularity where this full cascade can be seen is if the singularity is length 5 or more.
 
 \section{Outside of the small discrepancy}
 
-If you consider singularities of the type $\frac{1}{p}(1,1)$ we note that if $p \geq 7$ then a $\frac{1}{p}(1,1)$ singularity cannot be joined to any other $\frac{1}{p}(1,1)$ singularity by a $-1$ curve. Hence a similar analysis to  Theorem~\ref{ThmOnSing} gives us the bound that there cannot be a \ldp\ surface $X$ with singularities $\frac{1}{p_1}(1,1), \, \dots, \, \frac{1}{p_n}(1,1)$ and $p_1 \geq 7$ and more than 2 different singularities.
+If you consider singularities of the type $\frac{1}{p}(1,1)$ we note that if $p \geq 7$ then a $\frac{1}{p}(1,1)$ singularity cannot be joined to any other $\frac{1}{p}(1,1)$ singularity by a $-1$-curve. Hence a similar analysis to  Theorem~\ref{ThmOnSing} gives us the bound that there cannot be a \ldp\ surface $X$ with singularities $\frac{1}{p_1}(1,1), \, \dots, \, \frac{1}{p_n}(1,1)$ and $p_1 \geq 7$ and more than 2 different singularities.
 
 However when we enter the case where $p_1 < 7$ you can get surfaces with many more singularities. For instance consider the surface $X$ with the following minimal resolution:
 \[
@@ -1110,7 +1115,7 @@ However this surface has the following invariants
 \item $h^0(-K_X) = 1$
 \end{itemize}
 This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{Polarised polyhedral divisors}. 
-Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{YoungPersonsGuide}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$. This gives $-K_X^2 = \frac{2}{5}$. We see once again via \cite{YoungPersonsGuide} that we can calculate $h^0(-K_X)$ from this and we get one.
+Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then 8 subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{YoungPersonsGuide}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$. This gives $-K_X^2 = \frac{2}{5}$. We see once again via \cite{YoungPersonsGuide} that we can calculate $h^0(-K_X)$ from this and we get $h^0(-K_X) = 1$.
 
 
 We can construct this surface as a toric complete intersection via cox rings \cite{HausenCoxRings} and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
