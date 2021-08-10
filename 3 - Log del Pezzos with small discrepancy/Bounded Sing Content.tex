@@ -690,12 +690,19 @@ Once again by Theorem~\ref{ThmOnSing} there are two roots of the cascade given b
 \end{tikzpicture}
 }
 \]
-
- These admits a toric degeneration to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We only consider the case of $X_a$ as $X_b$ is completely symmetric. We see that we can smooth it by taking the $b$th Veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lieing as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. We get the following formula for the anticanonical degree of $X_a$:
+From construction, we see the following formula for the anticanonical degree of $X_a$:
  \[
- -K_{X_a}^2 =8 - b + a \left( 1- \frac{b+1}{ab-1} \right) ^2 + b \left(1- \frac{a+1}{ab-1} \right)^2 -2\left(1- \frac{a+1}{ab-1}\right)\left(1- \frac{b+1}{ab-1}\right)
+ -K_{X_a}^2 =8 - b + a \left( 1- \tfrac{b+1}{ab-1} \right) ^2 + b \left(1- \tfrac{a+1}{ab-1} \right)^2 -2\left(1- \tfrac{a+1}{ab-1}\right)\left(1- \tfrac{b+1}{ab-1}\right)
 \] 
-We will show that this admits a cascade of length $a+2$. The first $a$ terms are easy to describe as we see that these admit a toric degeneration to $X_\Sigma$ with $\Sigma$ being the fan with rays $(-1, b), \, (-1, 0), \, (a, -1), \, (a-u, -1)$, where $u$ is the number of blowups. This has an $A_{b-1}$ singularity and an $A_{u-1}$ singularity.
+We note that once we blow up $a$ time our formula will be completely symmetric in $a$ and $b$.
+
+Each of these admit a toric degeneration, to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We can see this as an equivariant toric degeneration of a complexity one variety or via the discrete Legendre transform of section~\ref{Section 2.3}. We only consider the case of $X_a$ since $X_b$ is completely symmetric. We see that we can smooth it by taking the $b$th Veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lying as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. 
+
+We will show that this admits a cascade of length $a+2$. 
+
+The first $a$ terms are easy to describe as we see that these admit a toric degeneration to $X_\Sigma$ with $\Sigma$ being the fan with rays $(-1, b), \, (-1, 0), \, (a, -1), \, (a-u, -1)$, where $u$ is the number of blowups. This has an $A_{b-1}$ singularity and an $A_{u-1}$ singularity. We see that this is the toric degeneration by considering the fan $(-1, a)$, $(0, -1)$, $(1,-1)$ with $a-1$ focus focus singularities along the vector $(1,0)$ and $u$ singularities along the vector $(0,1)$. We can can then compute the dual, via the discrete legendre transform to get the following polygon:
+\[
+\]
 Via Cox rings this can be viewed as $\mb{C}^4_{\{x, y,z,t\}}$ with a quotient 
 \[
 \begin{blockarray}{cccc}
@@ -706,23 +713,24 @@ Via Cox rings this can be viewed as $\mb{C}^4_{\{x, y,z,t\}}$ with a quotient
       \end{block}
 \end{blockarray}
 \]
-Taking the Veronese embedding of degree $u$ in the variables $z,\,t$ gets us the coordinates $z^u, \, t^u, \, zt$. This enable us to smooth the $A_{u-1}$ singularity. To smooth the $A_{b-1}$ singularity we take the $b$ Veronese embedding of the variables $x$ and $y$ gives us $x^b, \, y^b, \, xy$. Once again we can smooth this out. This gives us the surface as complete intersection with weights 
-$\begin{matrix} b & b^2u \\ ab & u \end{matrix}$
+Taking the Veronese embedding of degree $\left( \begin{array}{c} u \\ b \end{array} \right)$ we get a codimension 2 complete intersection with weights
+$\begin{matrix} b & b^2u \\ ab & u \end{matrix}$ 
 inside the toric variety with weights
 
 \[
 \begin{blockarray}{ccc ccc}
-	x^b & y^b & z^u & xy & t^u & t^{bu}z \\[4pt]
+	x^b & y^b & xy & z^u  & t^u & tz \\[4pt]
       \begin{block}{(ccc ccc)}
-		b & 0 & b(bu - (ab-1) ) & 1 & ab-1 & b^2\\
-		1 & ab-1 & u & a & 0 & 1\\
+		b & 0 & 1 & bu - (ab-1) & ab-1 & b\\
+		1 & ab-1  & a & u & 0 & 1\\
       \end{block}
 \end{blockarray}
 \]
+We can see the smoothing of both the $A_n$ singularities inside this embedding, so this gives this a good coordinate construction for our variety.
 
  After $(a+1)$ blowups the surface admits a toric degeneration to the toric variety defined by the spanning fan of $(-1, b)$, $(-1, -1)$, $(a, -1)$. The toric degeneration after $(a+2)$ blowups is given by spanning fan $(-1,0)$, $(-a, -1-a)$, $(-1, -1-a)$, $(b, ab-1)$. 
 
-To see the cascade result we note that if you blow up the surface $X_a$ times at points $P_1 \dots P_a$. To each of these points there is a unique fiber going through it $F_i$. The strict transform of these fibers after blowing up is a $-1$-curve going through the $-a$-curve. Hence after blowing $X_a$ and $X_b$ respectively $a$ and $b$ times we get a surface which has as a boundary three curves with self-intersection $0, -a, -b$ and in both cases you have your $a$ and your $b$ curves have $a$ and $b$ minus one curves intersecting them respectively. Hence they are isomorphic. 
+To see the cascade result we note that if you blow up the surface $X_a$ times at points $P_1 \dots P_a$. To each of these points there is a unique fiber going through it $F_i$. The strict transform of these fibers after blowing up is a $-1$-curve going through the $-a$-curve. Hence after blowing $X_a$ and $X_b$ respectively $a$ and $b$ times we get a surface which has as a boundary three curves with self-intersection $0, -a, -b$ and in both cases you have your $a$ and your $b$ curves have $a$ and $b$ minus one curves intersecting them respectively. Hence they are isomorphic. We can also see this as an isomorphism of affine manifolds.
  
  
 We note that we have made in the above calculations no effort to show that the elements in the cascade are \ldp\ surfaces. However it is not hard to show, assume we are blowing up $a+2$ points giving a surface $X_3$. If this is a \ldp\ surface then every element in the cascade is. This has minimal resolution $Y_3$. The class group of $Y_3$ is generated by the curves $D_1$, $D_2$, $D_3$, $D_4$, $E_1^0, \dots, E_b^0$,  $E_1^1, \dots, E_{a+2}^1$. Here the $D_i$ form a cycle such that $\sum D_i \in |{-}K_{Y_3}|$. These have self-intersections $-a, \, -b, \, -1, \, -1$ respectively. Here $D_3$ was a curve of degree $a$  on $\mb{F}_a$ blown up $a+1$ times and $D_4$ was a fiber on which a single point has been blown up. The $E_i^0$ are $-1$-curves intersecting the $-b$ curve and are not floating. The $E_i^1$ are floating $-1$-curves. We wish to show ${-}K_{X_3}$ is ample. We show $-K_{X_3} \cdot C > 0$ for all $C$ generating the class group which is equivalent. We note that the curves $D_1, \, D_2$ are contracted when sent to $X_3$. We note that ${-}K_{X_3} \cdot E_i^0 = {-}K_{X_a} \cdot E_i^0 > 0$ as we are blowing up points not on these curves and ${-}K_{X_a}$ is ample. Then $-K_{X_3} \cdot E_i^0 = 1$ as these are floating $-1$-curves. Finally to see that $-K_{X_3} \cdot D_3 > 0$ we note that, when pushed forwards to $X_3$, it only goes through the one singularity on $X_3$ with multiplicity $-1$. This is because on $Y_3$ it is only intersecting the $-a$-curve transversely. Hence $-K_{X_3} \cdot D_3 = 1 + d_a$ where $d_a$ is the discrepancy of the $-a$-curve. Via log terminality we have $d_a > -1$. Hence the product is greater than 0. The argument for the curve $D_4$ is symmetric with $d_a$ replaced with $d_b$. From this we see $X_3$ is a \ldp, hence every surface in the cascade is a \ldp\ surface.
@@ -731,7 +739,7 @@ We note that we have made in the above calculations no effort to show that the e
 This structure of the cascade can be put in more general terms. 
 
 \section{Cascades}
-Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in Theorem~\ref{ThmOnSing}. Attached to any one of these basic surfaces we have the invariants $a_i$ and $k_1$, $k_2$. The $a_i$ indicates the basic surface $X$ has minimal resolution $Y$ which admits a map to $\mb{F}_{a_i}$ which is an isomorphism on the negative section. The invariants $k_1$ and $k_2$ are the number of times we blew up general points on $\mb{F}_{a_i}$ to obtain $Y$.
+Given a singularity with small discrepancy such that the minimal resolution is $a_1, \dots a_n$, there are a finite number of basic surfaces classified in Theorem~\ref{ThmOnSing}. Attached to any one of these basic surfaces $X$ with minimal resolution $Y$ we have the following invariants $a_i$ and $k_1$, $k_2$. The $a_i$ indicates that $Y$ admits a map to $\mb{F}_{a_i}$ which is an isomorphism on the negative section. The invariants $k_1$ and $k_2$ are the number of times we blew up general points on $\mb{F}_{a_i}$ to obtain $Y$.
 
 \begin{thm}
 Let $X_i$ be one of the basic surfaces constructed in Theorem~\ref{ThmOnSing}. We can describe how their cascades. In the case when the singularities are of the form $\frac{1}{p}(1,1)$ the cascades have been classified by \cite{CP} and the above example. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  5 AUG 2021 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  10 AUG 2021 09:31
 entering extended mode
 **"./Bounded Sing Content.tex"
 ("Bounded Sing Content.tex"
@@ -1261,7 +1261,7 @@ Package Fancyhdr Warning: \headheight is too small (8.0pt):
 
 [2] [3] [4] [5] [6] [7]
 
-Package caption Warning: \label without proper reference on input line 445.
+Package caption Warning: \label without proper reference on input line 446.
 See the caption package documentation for explanation.
 
 
@@ -1286,9 +1286,13 @@ LaTeX Warning: Citation `CaveyPrince' on page 10 undefined on input line 592.
 
 [10] [11]
 Missing character: There is no s in font nullfont!
- [12] [13]
 
-LaTeX Warning: Citation `CP' on page 14 undefined on input line 737.
+
+LaTeX Warning: Reference `Section 2.3' on page 12 undefined on input line 699.
+
+[12] [13]
+
+LaTeX Warning: Citation `CP' on page 14 undefined on input line 745.
 
 Missing character: There is no . in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -1296,17 +1300,11 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (6.2293pt too wide) detected at line 768
+Overfull \hbox (6.2293pt too wide) detected at line 776
 []
  []
 
 [14]
-Missing character: There is no . in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
@@ -1315,53 +1313,59 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
 
-Underfull \vbox (badness 6461) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
 
-LaTeX Warning: Reference `1/p(1,1)' on page 17 undefined on input line 850.
+LaTeX Warning: Reference `1/p(1,1)' on page 17 undefined on input line 858.
 
 [17] [18]
 
-Package caption Warning: \label without proper reference on input line 876.
+Package caption Warning: \label without proper reference on input line 906.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `CurveConfigFigure' on page 19 undefined on input line
- 875.
+ 883.
 
-[19] [20]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[19]
+Underfull \vbox (badness 2680) has occurred while \output is active []
 
- [21]
+ [20]
+[21]
 
 LaTeX Warning: Reference `Something chapter 2' on page 22 undefined on input li
-ne 1107.
-
-
-LaTeX Warning: Citation `Polarised polyhedral divisors' on page 22 undefined on
- input line 1117.
-
-
-LaTeX Warning: Citation `YoungPersonsGuide' on page 22 undefined on input line 
-1118.
-
-
-LaTeX Warning: Citation `YoungPersonsGuide' on page 22 undefined on input line 
-1118.
+ne 1115.
 
 [22]
 
+LaTeX Warning: Citation `Polarised polyhedral divisors' on page 23 undefined on
+ input line 1125.
+
+
+LaTeX Warning: Citation `YoungPersonsGuide' on page 23 undefined on input line 
+1126.
+
+
+LaTeX Warning: Citation `YoungPersonsGuide' on page 23 undefined on input line 
+1126.
+
+
 LaTeX Warning: Citation `HausenCoxRings' on page 23 undefined on input line 112
-1.
+9.
 
 [23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1147.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1147.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1155.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1155.
  ("Bounded Sing Content.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1147.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1147.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1155.
 
 Package rerunfilecheck Info: File `"Bounded Sing Content".out' has not changed.
 
@@ -1375,10 +1379,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 34695 strings out of 492970
- 802964 string characters out of 3127037
- 1006167 words of memory out of 3000000
- 37730 multiletter control sequences out of 15000+200000
+ 34696 strings out of 492970
+ 802977 string characters out of 3127037
+ 1007386 words of memory out of 3000000
+ 37731 multiletter control sequences out of 15000+200000
  11238 words of font info for 44 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  62i,19n,96p,1860b,1635s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1401,7 +1405,7 @@ user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pf
 b><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb>
-Output written on "Bounded Sing Content.pdf" (23 pages, 301872 bytes).
+Output written on "Bounded Sing Content.pdf" (23 pages, 303850 bytes).
 PDF statistics:
  283 PDF objects out of 1000 (max. 8388607)
  74 named destinations out of 1000 (max. 500000)
