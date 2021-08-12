@@ -110,7 +110,7 @@
 \setcounter{chapter}{3}
 
 \section{Context}
-The main results of this chapter are 
+The main result of this chapter is 
 \begin{thm*}\label{ThmOnSing}
 Let $X$ be a non-smooth \ldp\ with only singularities of small discrepancy. Then 
 \begin{enumerate}
@@ -130,7 +130,7 @@ Let $X$ be a \ldp\ surface. If $X$ cannot be constructed as the blowup of a surf
 \end{dfn}
 
 \begin{dfn}
-A floating $-1$-curve on a surface $X$ is a curve $C \subset X$, such that the exist a map $\pi\: X \rightarrow X'$ which contracts $C$ and is a blowdown.
+A floating $-1$-curve on a surface $X$ is a curve $C \subset X$, such that the exist a map $\pi \colon X \rightarrow X'$ which contracts $C$ and is a blowdown.
 \end{dfn}
 
 We consider the germ $S$ of a cyclic quotient singularity appearing at a point $P$ on a 
@@ -143,10 +143,10 @@ $C_i\cap C_{i+1}$ which is a single transverse intersection for each $i=1,\dots,
 in other words,
 $C_1$ and $C_n$ are the two `ends' of the chain.
 We also denote the discrepancies of each $C_i$ (as curves in $Y$) by $d_i\in\Q$: thus
-\[
+\[\
 K_Y = f^*(K_X) + \sum_{i=1}^n d_i C_i.
 \]
-We denote by $a_i$ the value $C_i^2$. The values $a_i$ uniquely define $S$ via Hirzebruch-Jung fractions \cite{ReidCyclic} and the notation $S=[a_1, \dots , a_n]$ indicates the singularity such that the resolution has these self intersections.
+We denote by $a_i$ the value $C_i^2$. The values $a_i$ uniquely define $S$ via Hirzebruch-Jung fractions \cite{ReidCyclic} and the notation $S=\frac{1}{r}(1, a) = [a_1, \dots , a_n]$ indicates the singularity such that the resolution has these self intersections.
 \label{sec!notation}
 
 \section{Singularities with small discrepancy}
@@ -159,14 +159,14 @@ We say that $S$ is a \emph{singularity with small discrepancy} if $d_i \leq -\fr
 all $i=1,\dots,n$.
 \end{dfn}
 
-To simplify our calculations we introduce to the notation $e_i = d_i + 1$. 
+To simplify our calculations we introduce to the notation of the log discrepancy $e_i = d_i + 1$. 
 
 \begin{prop}\label{small prop}
 In the notation above,
 a singularity $S$ has small discrepancy if and only if $C_1^2 \neq -2$ and $C_n^2 \neq -2$ and $ S \not\cong \frac{1}{3}(1,1)$.
 \end{prop}
 \begin{proof}
- We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$ and then apply this to show it for the intermediate values. We use the following formula for the discrepancy $e_i =  \frac{e_{i-1}+e_{i+1}}{a_i}$. We note that if $a_1 \geq 4$, then as $e_0 = 1$ and $e_2 \leq 1$ we have $e_1 \leq \frac{2}{-4}$. This implies the inequality for small discrepancy. In the case where $a_1 = 3$ this results in the following, as $e_1 \geq e_2$ by substituting $e_2$ into $e_1 = \frac{1 + e_2}{-3}$ we get  $ e_2 \leq \frac{1 + e_2}{3}$ rearranges to $2e_2 - 1 < 0$. Hence $e_2 \leq \frac{1}{2}$. Substituting this back into the equation for $e_1$ we get $e_1 \leq  \frac{1+ \frac{1}{2}}{3} =  \frac{1}{2}$. 
+ We use the fact that the discrepancy is a strictly decreasing sequence then a strictly increasing sequence. So it suffices to show this for $C_1$ and $C_n$ and then apply this to show it for the intermediate values. We use the following formula for the log discrepancy $e_i =  \frac{e_{i-1}+e_{i+1}}{a_i}$. We note that if $a_1 \geq 4$, then as $e_0 = 1$ and $e_2 \leq 1$ we have $e_1 \leq \frac{2}{-4}$. This implies the inequality for small discrepancy. In the case where $a_1 = 3$ this results in the following, as $e_1 \geq e_2$ by substituting $e_2$ into $e_1 = \frac{1 + e_2}{-3}$ we get  $ e_2 \leq \frac{1 + e_2}{3}$ rearranges to $2e_2 - 1 < 0$. Hence $e_2 \leq \frac{1}{2}$. Substituting this back into the equation for $e_1$ we get $e_1 \leq  \frac{1+ \frac{1}{2}}{3} =  \frac{1}{2}$. 
  \end{proof}
 
 
@@ -184,7 +184,7 @@ quotient singularity with small discrepancy.
 Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
 strict transform $\widetilde C \subset Y$ is smooth. Let $\{ E_i \}$ be the exceptional locus of $f$. Suppose in addition that 
 $\widetilde C \cdot \sum E_i \geq 2$.
-Then if $\widetilde C^2 = -1$ implies $-K_X \cdot C \leq 0$.
+Then $\widetilde C^2 = -1$ implies $-K_X \cdot C \leq 0$.
 
 In particular, $\widetilde C$ is smooth and
 $C$ either meets at least two singularities of $X$ or meets one singularity
@@ -401,7 +401,7 @@ If $X$ admits no floating $-1$-curves then $X$ admits a toric degeneration. %In 
 In addition we can explicitly describe all possible basic surfaces.
 \end{thm}
 \begin{proof}
-Given a \ldp\ $X_0$ we start by contracting all floating $-1$-curves. This gives rise to a \ldp\ $X_1$; note that $X_1$ is not $\P^2$ since the contraction map is an isomorphism in the neighbourhood of any singularity of $X_0$. Let $\sigma\colon Y\rightarrow X_1$ be the minimal resolution of $X_1$. We know that there is a map $\pi \colon Y \rightarrow \mathbb{F}_l$, and we may suppose $l$ is maximal.
+Given a \ldp\ $X_0$ we start by contracting all floating $-1$-curves. This gives rise to a \ldp\ $X_1$; note that $X_1$ is not $\P^2$ since the contraction map is an isomorphism in the neighbourhood of any singularity of $X_0$. Let $\sigma\colon Y\rightarrow X_1$ be the minimal resolution of $X_1$. We know that there is a map $\pi \colon Y \rightarrow \mathbb{F}_l$, and we may suppose $l$ is maximal with this property.
 %We start by considering the case $l > 1$. 
 There is a curve $B \subset \mathbb{F}_l$ with $B^2 = -l$. 
 %Assume there is no  $l' >l$ such that $Y \rightarrow \mb{F}_{l'}$. 
@@ -413,12 +413,12 @@ without loss of generality we may assume that it is the exceptional curve of the
 Hence $\pi$ is indeed an isomorphism in a neighbourhood of~$B$.
 
 
-We note that  $l \leq 1$ has been classified in Proposition~\ref{Surfaces to F_1}. So we restrict to $l \geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves $E_{j\pm1}^S$ cannot be contracted to a point via $\pi$ (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$.
+We note that  $l \leq 1$ has been classified in Proposition~\ref{Surfaces to F_1}. So we restrict to $l \geq 2$. Now there is a singularity $S$ such that $B \in \{ \pi_*E_i^S \}$. Assume first that $S$ is not a $\frac{1}{p}(1,1)$ singularity. Note that there is a curve $E_j^S$ such that $\pi_* E_j^S$ is $B$. The adjacent (one or two) exceptional curves $E_{j\pm1}^S$ cannot be contracted to a point via $\pi$ (by the argument of the previous paragraph). We suppose there are two adjacent curves $E_{j\pm 1}^S$; the case where $E_j^S$ is at the end of a chain of blowups with only one adjacent exceptional curve works in exactly the same way. Thus each of $\pi_*E_{j\pm 1}^S$ is either a $0$ curve (a fiber) or an $l+2$ curve on~$\F_l$ (by the classification of smooth rational curves on $\F_l$).
 % We can reference back to results on curve in Hirzebruch surfaces.
 %, as we are assuming $l$ is the largest possible value of $l$ and hence $B$ could not be blown up. 
 Denote these two adjacent curves by $C_1$ and $C_2$ respectively. Assume there was another singularity with exceptional curves $\{ E_i^{S'} \}_{i=0}^{m_{S'}} $ on $Y$. Then by Lemma~\ref{HSlem} there would be a curve $E_j^{S'}$ such that $\pi_* E_j^{S'}$ is a curve with self-intersection $0, \,  l,\,  l+2$. However these curves would necessarily intersect $C_1$ and $C_2$ meaning either $S'$ is not distinct from $S$ or there is a $-1$-curve in $Y$ connecting two of their curves in the minimal resolution. Hence $X$ has precisely one singularity. 
 
-To complete the analysis of this step, suppose $S$ is a $\frac{1}{p}(1,1)$ singularity and that its unique exceptional curve is mapped to the negative section~$B$. Then consider the possibility of there being another singularity $S'$ on~$X$. By Lemma~\ref{HSlem}, there is a curve $E_j^{S'}$ such that $A=\pi_* E_j^{S'}$ has self-intersection $l$ or $4l$; it cannot be $0$ or $l+2$ as it must not meet~$B$. If $S'$ is not a $\frac{1}{p}(1,1)$ then there is at least one exceptional curve among the $E_k^{S'}$ that is contracted to a point on $A\subset\F_l$. However each blowup of a point $Q\in A$ introduces a $-1$-curve $D$ which is joined to curve $B$ by another $-1$-curve, the birational transform of the fiber through~$Q$. Hence none of these curves $E_k^{S'}$ can be mapped to $D$, as otherwise it would be adjoined to $B$ by a $-1$-curve, contradicting Lemma~\ref{lem!badcurve}.
+To complete the analysis of this step, suppose $S$ is a $\frac{1}{p}(1,1)$ singularity and that its unique exceptional curve is mapped to the negative section~$B$. Then consider the possibility of there being another singularity $S'$ on~$X$. By Lemma~\ref{HSlem}, there is a curve $E_j^{S'}$ such that $A=\pi_* E_j^{S'}$ and $A$ has self-intersection $l$ or $4l$; it cannot be $0$ or $l+2$ as it must not meet~$B$. If $S'$ is not a $\frac{1}{p}(1,1)$ then there is at least one exceptional curve among the $E_k^{S'}$ that is contracted to a point on $A\subset\F_l$. However each blowup of a point $Q\in A$ introduces a $-1$-curve $D$ which is joined to curve $B$ by another $-1$-curve, the birational transform of the fiber through~$Q$. Hence none of these curves $E_k^{S'}$ can be mapped to $D$, as otherwise it would be adjoined to $B$ by a $-1$-curve, contradicting Lemma~\ref{lem!badcurve}.
 Thus any other singularity on $X$ is also of type $\frac{1}{p}(1,1)$ (though possibly for a different~$p$).
 
 Suppose now that there was a third singularity of type $\frac{1}{p}(1,1)$. Once again, its exceptional curve would have to be sent to a $0, \, l, \, l+2$. Any smooth rational curve on $\F_l$ with one of these intersection numbers intersects the curve $A$. Thus on $Y$ it must either meet the birational transform of $A$ or meet some curve that intersects $A$. Once again in the second case it will result in two singularities connected by a $-1$-curve. This is a contradiction to small discrepancy.
@@ -434,13 +434,13 @@ and part~\eqref{thm38i} is complete in the case $l\ge2$.
 
 
 For part~\eqref{thm38ii}, we first observe that neither of the adjacent curves $E_{j\pm1}^S$ can
-map to an $l+2$ curve, as this would result in $X$ will have a floating $-1$-curve. This is because $l+1$ points in an $l+2$ curve can be cut out as the intersection of the $l+2$ curve with an $l$ curve and we would have to blowup at least $l+1$ times.
+map to an $l+2$ curve, as this would result in $X$ will have a floating $-1$-curve. This is because $l+1$ points on an $l+2$-curve can be cut out as the intersection of the $l+2$-curve with an $l$-curve and we would have to blowup at least $l+1$ times. Hence the strict transform of this $l$-curve would be a $-1$-curve.
 
 %We finish by discussing the condition that there are no floating minus one curves. We note that in the case where there is a curve $E_i^S$ such that $\pi_* E_i^S$ is an $l+2$ of an $l$ curve then the blowup introduces floating $-1$-curves corresponding to the $l$ curve that goes through $l+1$ of the points blown up. Hence this surface is not minimal.
 
 Because of this we see that the only possibilities for $\pi_*(E_{j\pm1}^S)$ are two different $0$ curves. 
 (Again we suppose there are two adjacent curves; the case of one adjacent curve follows via the same logic.)
-We can then proceed to construct the configuration of all exceptional curves inductively. This means that when a surface of this form is able to be constructed we can obtain it by doing two weighted blowups at two general points of a Hirzebruch surface  withe weights $k_1$ and $k_2$. We then do a series of toric blowups, and then finally do a series of non toric blowups on the boundary. The following surface is one example, arising from blowing up two general points of a Hirzebruch surface with weight $(1,i)$ and $(1,n-i)$. 
+We can then proceed to construct the configuration of all exceptional curves inductively. This means that when a surface of this form is able to be constructed we can obtain it by doing two weighted blowups at two general points of a Hirzebruch surface  withe weights $k_1$ and $k_2$. We then do a series of toric blowups, and then finally do a series of non toric blowups on the boundary. The following surface is one example, arising from blowing up two general points of a Hirzebruch surface with weight $(1,k_1)$ and $(1,k_2)$. 
 \begin{figure}[ht]
 \begin{center}
 \begin{tikzpicture}\label{figure1}
@@ -462,15 +462,15 @@ We can then proceed to construct the configuration of all exceptional curves ind
 	\node (14) at (-4, 8.5) {};
 	\node (15) at (4, 8.5) {};
 	\node [label={[blue]below:$a_{i} -k_1-k_2$}] (16) at (0, 7.4) {};
-	\node [label={above:$a_0$}] (17) at (-5, 6.75) {};
-	\node [label={above:$a_n$}] (18) at (5, 6.75) {};
+	\node [label={above:$-a_0$}] (17) at (-5.5, 6.75) {};
+	\node [label={above:$-a_n$}] (18) at (5, 6.75) {};
 	\node (20) at (-5, 3.75) {$\vdots$};
 	\node (20a) at (5, 3.75) {$\vdots$};
-	\node [label={below:$a_i$}] (21) at (0, -3.5) {};
-	\node [label={above:$a_{i-2}$}] (22) at (-5, 1.5) {};
-	\node [label={above:$a_{i+2}$}] (23) at (5, 1.5) {};
-	\node [label={below:$a_{i-1}$}] (22a) at (-5, -1.75) {};
-	\node [label={below:$a_{i+1}$}] (23a) at (5, -1.75) {};
+	\node [label={below:$-a_i$}] (21) at (0, -3.5) {};
+	\node [label={above:$-a_{i-2}$}] (22) at (-5, 1.5) {};
+	\node [label={above:$-a_{i+2}$}] (23) at (5, 1.5) {};
+	\node [label={below:$-a_{i-1}$}] (22a) at (-5, -1.75) {};
+	\node [label={below:$-a_{i+1}$}] (23a) at (5, -1.75) {};
 	%% a_{i-1}
 	\node (24) at (-5.5, -1) {};
 	\node (25) at (-2.75, 0.75) {};
@@ -530,28 +530,28 @@ We can then proceed to construct the configuration of all exceptional curves ind
 	\draw [red] (53.center) to (54.center);
 	% braces
 	\draw [decorate,decoration={brace,amplitude=5pt},xshift=5pt,yshift=3pt,red] (-2.75, 0.75) -- (-1.25, -1.5) 
-	node [red,midway,xshift=2.5em,yshift=1ex] {$a_{i-1}-1$};
+	node [red,midway,xshift=2.5em,yshift=1ex] {$b_{i-1}$};
 	\draw [decorate,decoration={brace,amplitude=5pt},xshift=-5pt,yshift=3pt,red] (1.25, -1.5) -- (2.75, 0.75) 
-	node [red,midway,xshift=-2.5em,yshift=1ex] {$a_{i+1}-1$};
+	node [red,midway,xshift=-2.5em,yshift=1ex] {$b_{i+1}$};
 	\draw [decorate,decoration={brace,amplitude=5pt},xshift=5pt,yshift=-3pt,red] (-1.75, 6.25) -- (-3.25, 4) 
-	node [red,midway,xshift=2em,yshift=-1ex] {$a_0-1$};
+	node [red,midway,xshift=2em,yshift=-1ex] {$b_0$};
 	\draw [decorate,decoration={brace,amplitude=5pt},xshift=-5pt,yshift=-3pt,red] (3.25, 4) -- (1.75, 6.25) 
-	node [red,midway,xshift=-2em,yshift=-1ex] {$a_n-1$};
+	node [red,midway,xshift=-2em,yshift=-1ex] {$b_n$};
 \end{tikzpicture}
 \end{center}
-\caption{Example of surface.\label{fig!logdp}}
+\caption{Example of a minimal surface with invariants $S = [a_1, \, \dots\, a_n]$ and the number of blowups being $k_1$ and $k_2$.\label{fig!logdp}}
 \end{figure}
 
 
-In Figure~\ref{figure1} the picture is where the map to the Hirzebruch surface is an isomorphism on an exceptional curve $E_i$, where $1<i<n$. Here the red curves indicate $-1$-curves and the blue curves indicate curves with positive self-intersection. The blue curve has self-intersection $a_i - k_1- k_2$. This value is dependent on the map to the Hirzebruch surface $\mb{F}_{a_i}$.  If $i=1$ or $i=n$ then we would have a similar looking configuration except with positive curve now having self-intersection $a_i + 2 - k_1$ as we consider the curve in the linear system $|(l+1)F + B|$ which would be the nodal curve inside $|{-}K_X$. 
+In Figure~\ref{figure1} the picture is where the map to the Hirzebruch surface is an isomorphism on an exceptional curve $E_i$, where $1<i<n$. Here the red curves indicate $-1$-curves and the blue curves indicate curves with positive self-intersection. The blue curve has self-intersection $a_i - k_1- k_2$. This value is dependent on the map to the Hirzebruch surface $\mb{F}_{a_i}$.  If $i=1$ or $i=n$ then we would have a similar looking configuration except with positive curve now having self-intersection $a_i + 2 - k_1$ as we consider the curve in the linear system $|(l+1)F + B|$ which would be the nodal curve inside $|{-}K_X|$. 
 
 The toric degeneration property now follows. By construction all these surfaces $X$ are \LJ s,
-and so admit a toric degeneration by \cite[Theorem ??]{GHK}.
+and so admit a toric degeneration by \ref{GHK}[Theorem ??].
 %When these singularities are $\mb{Q}$-Gorenstein rigid we get a unique corresponding singularity content, as there is only one surface. 
 \end{proof}
 
 \begin{rem}\rm
-If for every possible value of $k_1$ and $k_2$ we have $k_1 + k_2 > a_i$ for all $i$. Then there are no basic surfaces with singularity $S$. For instance the singularity $S = [3,2,2,2,2,2,2,2,2,2,3]$ cannot be the only singularity on a log del Pezzo surface. This enables us, in certain case, to state existence of a surface in terms of length of the singularity.
+If for every possible value of $k_1$ and $k_2$ we have $k_1 + k_2 > a_i$ for all $i$. Then there are no log del Pezzo surfaces with singularity $S$. For instance the singularity $S = [3,2,2,2,2,2,2,2,2,2,3]$ cannot be the only singularity on a log del Pezzo surface. This enables us, in certain case, to state existence of a surface in terms of length of the singularity.
 \end{rem}
 \begin{comment}
 \begin{cor}
@@ -1115,11 +1115,9 @@ Given a Looijenga surface $X$,
  in the sense of \ref{Something chapter 2}, %Change this to make it make sense!
  and a curve $C$ in the boundary. Let $C_1,$ $\dots, $ $C_n$ be the $-1$-curves intersecting $C$. Then at most two of these $-1$-curves intersect curves with self intersection less than $-1$, as they would have to be in the boundary which is a cycle. The $-5$ curves in the above picture clearly do not satisfy this constraint, hence this surface does not admit a well defined boundary.
 \end{proof}
-However this surface has the following invariants
+However this surface has six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities and the following invariants
 \begin{itemize}
 \item $-K_X^2 = \frac{2}{5}$
-\item Six $\frac{1}{3}(1,1)$ singularities 
-\item Two $\frac{1}{5}(1,1)$ singularities
 \item $h^0(-K_X) = 1$
 \end{itemize}
 This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{Polarised polyhedral divisors}. 
@@ -1146,10 +1144,9 @@ with the equations
 T_1 T_2^2 T_3 + T_4 T_5^2 T_6 + T_7 T_8^2 T_9 = 
 T_1 T_2^2 T_3 + T_4 T_5^2 T_6  + \lambda T_{10} T_{11} = 0
 \]
-To do this we note that this surface has polyhedral divisor as introduced in Chapter 4
+To do this we note that this surface has polyhedral divisor, as introduced in Chapter 4
 \[ 
 \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_1 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_2 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_3 + \left[ -5, \, -4 \right] \otimes P_4
 \]
-We can then use 
-There are also surfaces which admit toric degenerations with the same numerics.
+Where $\lambda$ is a deformation parameter. This gives us equations for the surface, to obtain the weights we calculate the action of the picard torus via taking the smith normal form of the matrix representing relations on the class group. We do not provide this calculation as it is largely disjoint from the rest of this Thesis. We note that there are also surfaces which admit toric degenerations with the same numerics.
 \end{document}
