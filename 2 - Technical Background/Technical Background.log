@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  16 AUG 2021 09:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  19 AUG 2021 10:18
 entering extended mode
 **"./Technical Background.tex"
 ("Technical Background.tex"
@@ -1303,12 +1303,12 @@ LaTeX Warning: Reference `ReidSuzuki' on page 3 undefined on input line 151.
 
 LaTeX Warning: Reference `GrossBook' on page 3 undefined on input line 156.
 
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+[3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
  ("Technical Background.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `"Technical Background".out' has not changed.
 
 (rerunfilecheck)             Checksum: DB68EDB3A64A190F5190826E3E5DF8FC;174.
@@ -1318,8 +1318,8 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 32550 strings out of 492970
- 758373 string characters out of 3127037
+ 32553 strings out of 492970
+ 758397 string characters out of 3127037
  957210 words of memory out of 3000000
  35645 multiletter control sequences out of 15000+200000
  11238 words of font info for 44 fonts, out of 3000000 for 9000
@@ -1344,9 +1344,9 @@ sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmti12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on "Technical Background.pdf" (3 pages, 178335 bytes).
+Output written on "Technical Background.pdf" (4 pages, 180296 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
+ 115 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
