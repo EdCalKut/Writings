@@ -153,16 +153,17 @@ We finish with a very brief overview of \ref{CortiHeu}, \ref{Cuzzucoli} and \ref
 
 \section{Gross Siebert}
 
-In this section we do not use or even refer to the full power of the Gross-Siebert program, we are mainly using results referencing how certain SYZ fibrations are constructed and how these give rise to toric degenerations. Our main reference throughout is \ref{GrossBook}, mainly chapters 1.4 and 1.6. We have made a variety of small changes to notation, namely our fans lie inside $N$ instead of $M$ to be consistent with the rest of the notation within the thesis and we do not consider fans on non compact affine manifolds.
+In this section we do not use or even refer to the full power of the Gross-Siebert program, we are mainly using results referencing how certain SYZ fibrations are constructed and how these give rise to toric degenerations. Our main reference throughout is \cite{GrossBook}, mainly chapters 1.4 and 1.5. We have made a variety of small changes to notation, namely our fans lie inside $N$ instead of $M$ to be consistent with the rest of the notation within the thesis and we do not consider fans on non compact affine manifolds.
 
 We start with the definition of a tropical affine manifold
-\begin{dfn}
-
+\begin{dfn}[\cite{GrossBook} 1.22]
+A tropical affine manifold is a real topological manifold (possibly with boundary) with an atlas of coordinate charts such that every transition function lies in $N_\mb{R} \rtimes GL(N)$.
 \end{dfn}
-and then allow singularities on this tropical manifold with the following definition:
-\begin{dfn}
+and then allow singularities on this tropical manifold is a manifold $B$ and a codimension two or more locus $\Delta$ such that $B-\Delta$ is a tropical affine manifold.
 
-\end{dfn}
-We finish by extending the definition of a fan to lie on tropical affine manifolds with singularities. This allows us to have a one to one correspondence between these fans on tropical manifolds with singularities and surfaces $X$ such that the minimal resolution $Y$ admits a map to a toric variety which is a series of blowups along curves on the boundary. 
+We finish by extending the definition of a fan to lie on tropical affine manifolds with singularities. We a collection of cones $\Sigma$ on a tropical affine manifold $B$ is a fan, if it satisfies the usual condition of a fan in a lattice $N$ and the condition that locally around every cone $\sigma \in \Sigma$ there is embedding of $\sigma$ into a lattice. For the full technical definition see \cite{GrossBook}[1.26]. Now given a surface $X$ such that the minimal resolution $Y$ can be constructed from a toric variety $Z_\Sigma$ by blowing up points on the boundary we show how this related to a fan on a tropical affine manifold. Denote by $C_i$ a curve in the boundary of $Z_\Sigma$, and $\rho_i \in N$ the corresponding  ray in $\Sigma$. If we blow up $C_i$ $k$ times then we introduce $k$ singular points along the ray $\rho_i$ each with monodromy $\left( \begin{pmatrix} 1 & 1 // 0 & 1 \end{pmatrix} \right)$ in a a basis $u_i$, $v_i$ with $u_i$ being the primitive generator of $\rho_i$. This gives a fan $\Sigma'$ on a singular integral tropical manifold, such that when we look at the self intersection of the divisors $D_i$ corresponding to rays we have exactly the same values as on the boundary of $Y$. % This needs to be edited.
+
+We now sketch out the discrete Legendre transform, in \cite{GrossBook} this is defined with respect to a polarisation. For the sake of brevity we ignore this technicality, however for a correct definition \cite{GrossBook} section 1.6 has a complete definition. 
+
 \end{document}
 
