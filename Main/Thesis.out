@@ -8,26 +8,26 @@
 \BOOKMARK [2][-]{subsection.1.2.2}{Bounded singularity content of log del Pezzo surfaces}{section.1.2}% 8
 \BOOKMARK [2][-]{subsection.1.2.3}{Smoothings of log extemal extractions}{section.1.2}% 9
 \BOOKMARK [0][-]{chapter.2}{Chapter Technical details}{}% 10
-\BOOKMARK [1][-]{section.1.1}{Toric Geometry}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.1.1.1}{Cox rings}{section.1.1}% 12
-\BOOKMARK [2][-]{subsection.1.1.2}{Cyclic quotient singularities and singularity content}{section.1.1}% 13
-\BOOKMARK [1][-]{section.1.2}{Log del Pezzo background}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.1.2.1}{Definitions}{section.1.2}% 15
-\BOOKMARK [2][-]{subsection.1.2.2}{Hirzebruch Surfaces}{section.1.2}% 16
-\BOOKMARK [2][-]{subsection.1.2.3}{Basic Surfaces}{section.1.2}% 17
-\BOOKMARK [1][-]{section.1.3}{Gross Siebert}{chapter.2}% 18
-\BOOKMARK [0][-]{chapter.2}{Chapter Small Discrepancy}{}% 19
-\BOOKMARK [1][-]{section.2.1}{Context}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.2}{Standard notions and notation for quotient singularities}{chapter.2}% 21
-\BOOKMARK [1][-]{section.2.3}{Singularities with small discrepancy}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.4}{Log del Pezzo surfaces and small discrepancy}{chapter.2}% 23
-\BOOKMARK [1][-]{section.2.5}{Examples}{chapter.2}% 24
-\BOOKMARK [1][-]{section.2.6}{Cascades}{chapter.2}% 25
-\BOOKMARK [1][-]{section.2.7}{Outside of the small discrepancy}{chapter.2}% 26
-\BOOKMARK [0][-]{chapter.3}{Chapter Complexity One log Del Pezzo Surfaces}{}% 27
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.2}{Introduction}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.3}{Polyhedral divisors}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.4}{ Example}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.5}{Divisors in complexity one}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.6}{Algorithms}{chapter.3}% 33
+\BOOKMARK [1][-]{section.2.1}{Toric Geometry}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.1.1}{Cox rings}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.2}{Cyclic quotient singularities and singularity content}{section.2.1}% 13
+\BOOKMARK [1][-]{section.2.2}{Log del Pezzo background}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.1}{Definitions}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.2}{Hirzebruch Surfaces}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.3}{Basic Surfaces}{section.2.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Gross Siebert}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Chapter Small Discrepancy}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Context}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Standard notions and notation for quotient singularities}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.3}{Singularities with small discrepancy}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.4}{Log del Pezzo surfaces and small discrepancy}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.5}{Examples}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.6}{Cascades}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.7}{Outside of the small discrepancy}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Chapter Complexity One log Del Pezzo Surfaces}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Introduction}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Polyhedral divisors}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{ Example}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Divisors in complexity one}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.6}{Algorithms}{chapter.4}% 33
