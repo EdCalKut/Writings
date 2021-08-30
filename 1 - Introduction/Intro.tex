@@ -75,14 +75,16 @@
 
 \begin{document} 
 
+\bibliographystyle{plain}
+
 This thesis solves a range of classification problems for singular surfaces.
 
 
-Throughout this thesis we consider varieties $X$ with $-K_X$ ample and various restrictions on the singularities. These are particular instances of Fano varieties. A two dimensional Fano variety is called a \ldp\ surface, see ~\ref{beginnersdef}. Smooth log del Pezzo surfaces were described in work in the late 19th century and early 20th century. These surface are all of the form $\mb{P}^2$ blown up in $k$ points where $k <9 $, or the exceptional case $\mb{P}^1 \times \mb{P}^1$. Such an elegant classification does not exist in the case of \ldp\ surfaces with singularities; as represented by \cite{Reid, etc....}. A lot of work has been done on extending this classification to singular surfaces. In particular recent approaches have been interested in using of machinery of toric degeneration's. This technique involves constructing a family $\mathcal{X}$ over $\mb{A}^1$ such that the fiber over $0$ is a normal surface that contains $\C{2}$ as a dense subvariety for which the natural action of the torus extends to the variety.  
+Throughout this thesis we consider varieties $X$ with $-K_X$ ample and various restrictions on the singularities. These are particular instances of Fano varieties. A two dimensional Fano variety is called a \ldp\ surface, see ~\ref{beginnersdef}. Smooth log del Pezzo surfaces were described in work in the late 19th century and early 20th century. These surface are all of the form $\mb{P}^2$ blown up in $k$ points where $k <9 $, or the exceptional case $\mb{P}^1 \times \mb{P}^1$. Such an elegant classification does not exist in the case of \ldp\ surfaces with singularities; as represented by \cite{CH}, \cite{MR2053462}. A lot of work has been done on extending this classification to singular surfaces. In particular recent approaches have been interested in using of machinery of toric degeneration's. This technique involves constructing a family $\mathcal{X}$ over $\mb{A}^1$ such that the fiber over $0$ is a normal surface that contains $\C{2}$ as a dense subvariety for which the natural action of the torus extends to the variety.  
 
 
 
- Work of \cite{CH} and \cite{AC} have established a one to one correspondence between \ldp\ surfaces with $h^0(-K_X) \neq 0$ and toric degenerations subject to assumptions on the singularities of the surface. It has been conjectured that this one to one correspondence extends to other classes of singularities beyond those considered in the above papers. There has also been work by a variety of authors, \emph{Cavey et.al} \cite {CSasd}, trying to bound the types of singularities that can occur on such toric degenerations. 
+ Work of \cite{CH} and \cite{AC} have established a one to one correspondence between \ldp\ surfaces with $h^0(-K_X) \neq 0$ and toric degenerations upto mutation subject to assumptions on the singularities of the surface. It has been conjectured that this one to one correspondence extends to other classes of singularities beyond those considered in the above papers. 
  
  
  
@@ -103,7 +105,7 @@ This is an absolutely hopeless task in full generality.
 Nevertheless, we can classify special cases as follows.
 
 \subsection{Log del Pezzo surfaces of complexity 1}
-The Gorenstein index of a singularity $S$ is the smallest value $n$ such that $n K_S$ is Cartier (see Def~\ref{}). We define the Gorenstein index of a surface $X$ to be the smallest value $n$ such that $nK_X$ is Cartier.
+The Gorenstein index of a singularity $S$ is the smallest value $n$ such that $n K_S$ is Cartier. We define the Gorenstein index of a surface $X$ to be the smallest value $n$ such that $nK_X$ is Cartier.
 For any given $i \in \mathbb{N}$, the set of deformation
 families of log del Pezzo surfaces $X$ with Gorenstein index $i_X=i$
 is finite \cite{f}.
@@ -135,14 +137,14 @@ In particular, we classify log del Pezzo surfaces that admit a $\mathbb{C}^\time
 In this thesis we give an algorithm to classify log del Pezzo surfaces that admit a $\mathbb{C}^\times$ action and which have only log terminal singularities. 
 
 
-A variety $X$ of dimension $n$ equipped with an action of a torus of dimension $n-k$ is referred to as a variety of complexity $k$; see Definition~\ref{forwardref} for the precise definition. To illustrate the notion, note first that a toric variety $X$ has an action of its $n$-dimensional `big torus' $T\subset X$, and equipped with this action $X$ is a variety of complexity~0.
+A normal variety $X$ of dimension $n$ equipped with an effective action of a torus of dimension $n-k$ is referred to as a variety of complexity $k$. To illustrate the notion, note first that a toric variety $X$ has an action of its $n$-dimensional `big torus' $T\subset X$, and equipped with this action $X$ is a variety of complexity~0.
 One could also give consider $X$ equipped with the natural action of a $k$-dimensional
-subtorus $T'\subset T$, and then $X$ is a variety of complexity~$k$. (See \S\ref{asdf}.)
+subtorus $T'\subset T$, and then $X$ is a variety of complexity~$k$. (See \S\ref{ToricDowngrades}.)
 
 However, there are many varieties of complexity $k<n$ whose torus action does not extend to a toric variety. This is one of the main themes of this thesis: we study
 and classify surfaces of complexity~1 that are not toric.
 
-In this way, complexity provides a way of grading the difficulty of a classification problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting a $\mathbb{C}^\times$ action which have picard rank one and Gorenstein index less than~3. Huggenberger \cite{Huggenberger} classifies log del Pezzo surfaces of complexity~1 that have index 1 and arbitrary picard rank. Ilten, Mishna and Trainor \cite{IMT} recover the same classification and extend it into higher dimension. The methods and language used are broadly the same (though, in the language of toric geometry, it varies whether papers work in the lattice $N$ or its dual lattice $M$), though Huggenberger exploits Hausen's anticanonical complex technology to describe the Cox ring in detail. 
+In this way, complexity provides a way of grading the difficulty of a classification problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting a $\mathbb{C}^\times$ action which have picard rank one and Gorenstein index less than~3. Huggenberger \cite{Huggenberger} classifies log del Pezzo surfaces of complexity~1 that have index 1 and arbitrary picard rank. Ilten, Mishna and Trainor \cite{IMT} recover the same classification and extend it into higher dimension. The methods and language used are broadly the same (though, analogous to the language of toric geometry, it varies whether papers work in the lattice $N$ or its dual lattice $M$), though Huggenberger exploits Hausen's anticanonical complex technology to describe the Cox ring in detail. 
 
 We extend these results by presenting an algorithm that classifies
 log del Pezzo surfaces of complexity 1 with given index.
@@ -172,7 +174,7 @@ Let $X$ be a surface with singularities of only small discrepancy then $X$ has a
 
 This reproves the results of \cite{CP} who classified log del Pezzo surfaces with only $\frac{1}{p}$ singularities and extends results in \cite{Cuzzo} who classified surfaces with $\frac{1}{5}(1,2)$  and $\frac{1}{p}(1,1)$ singularities.
 
-We also consider how the cascade of these surfaces behaves. This notion was introduced in \cite{RS} and is essentially asking for the birational relations between the surfaces. we prove that once our singularity is sufficiently complicated then you get a subset of the following series of birational relations
+We also consider how the cascade of these surfaces behaves. This notion was introduced in \cite{MR2053462} and is essentially asking for the birational relations between the surfaces. we prove that once our singularity is sufficiently complicated then you get a subset of the following series of birational relations
 
 \[
 \begin{tikzpicture}[baseline= (a).base]
@@ -230,5 +232,6 @@ We then characterise these possible toric degenerations, and extend this in part
 
 6 - Complexity One Fanos Terminal - Rederives (Kasprzyk 03, Huggenberger-Nicholussi et.al) and then expands.
 
+\bibliography{Bibliography}
 
 \end{document}

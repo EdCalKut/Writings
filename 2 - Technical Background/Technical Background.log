@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  26 AUG 2021 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  30 AUG 2021 08:52
 entering extended mode
 **"./Technical Background.tex"
 ("Technical Background.tex"
@@ -1288,7 +1288,7 @@ ss--Siebert Al-go-rithm.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--55
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
 []\OT1/cmr/m/n/10 Miles Reid. Sur-face cyclic quo-tient sin-gu-lar-i-ties and H
 irzebruch-Jung res-o-lu-tions,
  []
@@ -1340,7 +1340,7 @@ ublic/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/user/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Technical Background.pdf" (5 pages, 246795 bytes).
+Output written on "Technical Background.pdf" (5 pages, 246790 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)

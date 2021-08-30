@@ -107,6 +107,8 @@
 
 \begin{document} 
 
+\bibliographystyle{plain}
+
 \setcounter{chapter}{3}
 
 \section{Context}
@@ -146,7 +148,7 @@ We also denote the discrepancies of each $C_i$ (as curves in $Y$) by $d_i\in\Q$:
 \[\
 K_Y = f^*(K_X) + \sum_{i=1}^n d_i C_i.
 \]
-We denote by $a_i$ the value $C_i^2$. The values $a_i$ uniquely define $S$ via Hirzebruch-Jung fractions \cite{ReidCyclic} and the notation $S=\frac{1}{r}(1, a) = [a_1, \dots , a_n]$ indicates the singularity such that the resolution has these self intersections.
+We denote by $a_i$ the value $C_i^2$. The values $a_i$ uniquely define $S$ via Hirzebruch-Jung fractions \cite{Reid-cyclic} and the notation $S=\frac{1}{r}(1, a) = [a_1, \dots , a_n]$ indicates the singularity such that the resolution has these self intersections.
 \label{sec!notation}
 
 \section{Singularities with small discrepancy}
@@ -546,7 +548,7 @@ We can then proceed to construct the configuration of all exceptional curves ind
 In Figure~\ref{figure1} the picture is where the map to the Hirzebruch surface is an isomorphism on an exceptional curve $E_i$, where $1<i<n$. Here the red curves indicate $-1$-curves and the blue curves indicate curves with positive self-intersection. The blue curve has self-intersection $a_i - k_1- k_2$. This value is dependent on the map to the Hirzebruch surface $\mb{F}_{a_i}$.  If $i=1$ or $i=n$ then we would have a similar looking configuration except with positive curve now having self-intersection $a_i + 2 - k_1$ as we consider the curve in the linear system $|(l+1)F + B|$ which would be the nodal curve inside $|{-}K_X|$. 
 
 The toric degeneration property now follows. By construction all these surfaces $X$ are \LJ s,
-and so admit a toric degeneration by \ref{GHK}[Theorem ??].
+and so admit a toric degeneration as mentioned in the technical background \ref{GrossSec}.
 %When these singularities are $\mb{Q}$-Gorenstein rigid we get a unique corresponding singularity content, as there is only one surface. 
 \end{proof}
 
@@ -566,7 +568,7 @@ We use these results to classify \ldp\ surfaces with certain singularities. This
 We start by specifying how we deviate from the previous literature. In \cite{ReidSuzuki} they construct cascades as explicit maps between \ldp\ surfaces, mirroring the classical constructions. We do not do this, however we explicitly state when the map exists and give good embeddings. If a variety admits no floating $-1$-curves, so a basic surface, we call it the root of a cascade. If a surface $X$ cannot be blown up at any point while preserving ${-}K_X$ ample we call it the head of a cascade. 
 
 
-\begin{cor}
+\begin{cor}\label{LengthOne}
 Let $X$ be a log del Pezzo surface with small discrepancy and
 basket  $\{ \{ \frac{1}{p_1}(1,1), \, \dots \, \frac{1}{p_n}(1,1) \}, \, m \}$
 for $n\ge0$ and $m\ge0$. Then $n\le2$ and moreover
@@ -747,16 +749,9 @@ Let $X_i$ be one of the basic surfaces constructed in Theorem~\ref{ThmOnSing}. W
 For the general case we split in to cases. We label the exceptional curves on $X_i$ arising via the first $k_1+k_2$ blowups by $E_i^S$ and $E_i^T$ respectively. Let $s_i$, $t_i$ be the number of $-1$-curves intersecting $E_i^S$ and $E_i^T$ respectively. We then classify the cascade via these invariants
 
 
-There is the sporadic case where the singularity is length one then we have 
-\[
-Insert cavey Prince
-\]
-and the cascade of length one when there are two singularities
-\[
-X_{a,b}
-\]
+There is the sporadic case where the singularity is length one where we have the cascade arising in \cite{CP} and the single surface with two singularities.
 
-Consider $X$ a surface with $k_1$ and $k_2$ not equal to zero. In addition $s_1$, $t_1$, $s_2$ and $t_2$ are all non zero. Then we have the following cascade
+Outside of the above case, consider $X$ a surface with $k_1$ and $k_2$ not equal to zero. In addition $s_1$, $t_1$, $s_2$ and $t_2$ are all non zero. Then we have the following cascade
 \[
 \begin{tikzpicture}[baseline= (a).base]
 \node[scale=.6] (a) at (0,0){
@@ -855,7 +850,7 @@ We note that $s_1=0$ and $s_2 = 0$ with one non general fiber would occur in cas
 
 \end{thm}
 \begin{proof}
-Given a singularity $S$ of small discrepancy with length $m>1$. Then a basic surface $X$ with singularity $S$ has minimal resolution $Y$. The surface $Y$ is constructed by taking a Hirzebruch surface $\mb{F}_{a_i}$ picking two points $P_1$, $P_2$ and blowing them up $k_1$ and $k_2$ times, this gives rise to an intermediate surface $Z$ and then $X$ is constructed by doing further blow ups. We can assume $k_1 \leq k_2$ and this gives the relations that either $k_1 = k_2 = 0$ and $m \in \{1, \, 2, \, 3 \}$ or $k_1 = 0$ and $k_1 = m-2$ or $k_1 + k_2 = m-3$. These cases arise by considering the case where the strict transform of both/ one/ none of the fibers are exceptional curves. The case where no fiber becomes an exceptional curve has been classified in Example~\ref{1/p(1,1)} and we will note mention it further.
+Given a singularity $S$ of small discrepancy with length $m>1$. Then a basic surface $X$ with singularity $S$ has minimal resolution $Y$. The surface $Y$ is constructed by taking a Hirzebruch surface $\mb{F}_{a_i}$ picking two points $P_1$, $P_2$ and blowing them up $k_1$ and $k_2$ times, this gives rise to an intermediate surface $Z$ and then $X$ is constructed by doing further blow ups. We can assume $k_1 \leq k_2$ and this gives the relations that either $k_1 = k_2 = 0$ and $m \in \{1, \, 2, \, 3 \}$ or $k_1 = 0$ and $k_1 = m-2$ or $k_1 + k_2 = m-3$. These cases arise by considering the case where the strict transform of both/ one/ none of the fibers are exceptional curves. The case where no fiber becomes an exceptional curve has been classified in Corollary~\ref{LengthOne} and we will note mention it further.
 
 
 We note that $k_1$ and $k_2$ should not be viewed as invariant of the surface $X$ but an invariant of the given map to $\mb{F}_{a_i}$:
@@ -1121,10 +1116,10 @@ However this surface has six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{
 \item $h^0(-K_X) = 1$
 \end{itemize}
 This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{Polarised polyhedral divisors}. 
-Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then 8 subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{YoungPersonsGuide}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$. This gives $-K_X^2 = \frac{2}{5}$. We see once again via \cite{YoungPersonsGuide} that we can calculate $h^0(-K_X)$ from this and we get $h^0(-K_X) = 1$.
+Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then 8 subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{Young}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$. This gives $-K_X^2 = \frac{2}{5}$. We see once again via \cite{Young} that we can calculate $h^0(-K_X)$ from this and get $h^0(-K_X) = 1$.
 
 
-We can construct this surface as a toric complete intersection via cox rings \cite{HausenCoxRings} and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
+We can construct this surface as a toric complete intersection via cox rings \cite{HausenCox} and we see that it lies as a complete intersection in the toric variety given by the GIT quotient
 \[
 \begin{blockarray}{cc cc cc cc cc c}
 	T_1 & T_2 & T_3 & T_4 & T_5 & T_6 & T_7 & T_8 & T_9 & T_{10} & T_{11} \\[4pt]
@@ -1149,4 +1144,6 @@ To do this we note that this surface has polyhedral divisor, as introduced in Ch
 \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_1 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_2 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_3 + \left[ -5, \, -4 \right] \otimes P_4
 \]
 Where $\lambda$ is a deformation parameter. This gives us equations for the surface, to obtain the weights we calculate the action of the picard torus via taking the smith normal form of the matrix representing relations on the class group. We do not provide this calculation as it is largely disjoint from the rest of this Thesis. We note that there are also surfaces which admit toric degenerations with the same numerics.
+
+\bibliography{Bibliography.bbl}
 \end{document}
