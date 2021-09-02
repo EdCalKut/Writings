@@ -565,6 +565,7 @@ Let $h$ be the piecewise linear function corresponding to $-K_X$. Then $h_P|_{[0
 As there are a finite number of log del Pezzo surfaces, up to deformation, with Gorenstein index $k$ there can only be a finite number of singularities $S$ which can occur on such a surface. 
 
 \begin{algorithm}
+
 This algorithm classifies log del Pezzo surfaces with index $k$. The algorithm proceeds iteratively, we start with the polyhedral divisor $w_1 \otimes P_1 + w_2 \otimes P_2 + w_3 \otimes P_3 + \sum_{i = 4, \dots 6k} 0 \otimes P_i$. We can assume $w_1$ is of the form $\frac{k'}{n}$ where $k'|n$. We will show how to bound the values $n$ later. We now wish to extend this by adding an extra cone into one of the fibers such that $-K_X$ is still ample and the surface can be further compactified into a log del Pezzo surface of Gorenstein index $k$. We show there are finitely many choices and we can repeat this process until it terminates.
 
 This corresponds to the following. Given a polyhedral fan $\mathcal{S}$ with tail fan $[0, \infty)$ with the following values
@@ -629,7 +630,9 @@ The second observation is let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{
 
 \item $A_2$
 
-\item $A_3$
+\item  \begin{bf} $A_3$ Singularity \end{bf} 
+
+We start with the case $u = v+2$ 
 
 \item \begin{bf} $A_4$ Singularity \end{bf}
 
