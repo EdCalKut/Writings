@@ -1644,7 +1644,7 @@ X \arrow[rd, dotted] & \tilde{X} \arrow[l] \arrow[d]\\
 \end{tikzcd}
 \]
 
-Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a polyhedral subdivision such that the tail cone $\delta$ is the set of $v \in N$ such that $F_i$ is invariant under the translation, i.e $\delta = \{ v |\, v(F) subset F \}$.
+Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a polyhedral subdivision such that the tail cone $\delta$ is the set of $v \in N$ such that $F_i$ is invariant under the translation, so $\delta = \{ v |\, v(F) subset F \}$.
 \begin{dfn}
 Let $C$ be a nonsingular curve then we define a polyhedral divisor to be the pair $(\mathcal{D} = \sum_{i = 1}^k F_i \otimes P_i$, $\delta)$ where
 \begin{itemize}
@@ -1996,7 +1996,7 @@ gives us the following resolution:
 \end{figure}
 \end{comment}
 
-\section{Algorithms}
+\section{Algorithm}
 We propose two different algorithms for the classification of complexity one log del Pezzo surfaces. These both rely on several key facts
 
 \begin{lem}{\cite{Suss}}
@@ -2053,11 +2053,13 @@ Just as in the case of Gorenstein index one, where the singularities are formed 
 
 \begin{lem}\label{basic bound}
 A singularity of index $n$ which is non toric log terminal singularities can be described by one of the following polyhedral divisors
-\begin{itemize}
-\item $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{n}{m}, \infty \right) \otimes P_3$
+\begin{enumerate}
+
+
+\item $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{n}{m}, \infty \right) \otimes P_3$ corresponding to $D_n$ singularities.
 
 \item Finite $E_6$, $E_7$, $E_8$ case
-\end{itemize}
+\end{enumerate}
 \end{lem}
 
 \begin{proof}
@@ -2074,7 +2076,7 @@ This imposes stricter bounds on the number of non generic fibers a complexity on
 We also need a bound on what possible toric singularities can occur and the possible actions on them.
 
 \begin{lem}{\label{Structure}}
-Let $X$ be a non toric non smooth complexity one log del Pezzo surface. Then there is at least one elliptic point and at least one of the elliptic points, $P_1$, is a singularity.  We can describe $P_1$ locally by a cone $\sigma \subset N \cong \mb{Z}^2$ and a ray $v \in N$. Then $v$ corresponds to a lattice point on the minimal resolution of $\sigma$. Equivalently the minimal resolution of $X$ has at least one parabolic line.
+Let $X$ be a non toric non smooth complexity one log del Pezzo surface. Then there is at least one elliptic point and at least one of the elliptic points, $P_1$, is a singularity.  Either $P_1$ is non toric or we can describe $P_1$ locally by a cone $\sigma \subset N \cong \mb{Z}^2$ and a ray $v \in N$. Then $v$ corresponds to a lattice point on the minimal resolution of $\sigma$. Equivalently the minimal resolution of $X$ has at least one parabolic line.
 \end{lem}
 
 
@@ -2162,7 +2164,7 @@ We start with the Gorenstein index $k = 1$, i.e the only singularities are Du Va
 To make this easier we make two observations. The first is that if a fiber over a point $P_i$ is $[a_1 = \frac{p_1}{q_1} , \dots, a_n = \frac{p_n}{q_n}, \, 0]$ then $q_i = 1$. This follows via the above remarks, first, we know we get an $A_m$ singularity given by $(0, 1), \, (p_n,  \, q_n)$. Then, via the stated properties of our singularity, we have the slope of $h_P|_{[0, \, \infty)}$ is $-1$. So we need $\frac{q_n-1}{q_n} < \frac{-p_n}{q_n}$ which implies $p_n + q_n < 1$, hence if $q_n > 1$ then $p_n < -1$. Now every point on the line connecting $(p_n, \, q_n)$ to $(0, \, 1)$ has to satisfy this inequality. In particular there is a point $(-1, a)$ on this line, with $a  \in \mb{Z}$, satisfying the inequality, hence $ a \leq 1$. As $ a>0$ for $q_n>0$ we have the only possible value of $a$ is one. This corresponds to $q_n = 1$.
 
 
-The second observation is let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{v} \otimes P_2$. be a polyhedral divisor with tail cone $[ 0 , \, \infty)$. We can assume without loss of generality that $u \geq v$. Then if $u>v+2$ and $v \geq 2$ then there are no complexity one Gorenstein log del Pezzo surfaces which contain $\mathcal{D}$ as a polyhedral cone. We not as $u,  v \geq 2$ we have the only possible poyhedral fans over $P1$ are $[0, \, \frac{1}{u}
+The second observation is let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{v} \otimes P_2$ be a polyhedral divisor with tail cone $[ 0 , \, \infty)$. We can assume without loss of generality that $u \geq v$. Then if $u>v+2$ and $v \geq 2$ then there are no complexity one Gorenstein log del Pezzo surfaces which contain $\mathcal{D}$ as a polyhedral cone. We not as $u,  v \geq 2$ we have the only possible poyhedral fans over $P1$ are $[0, \, \frac{1}{u}
 ]$ and $[\frac{1}{u}]$, similarly for $P_2$. Viewing this from a toric perspective the only points that can be connected to $(1,u)$ or $(0,1)$ while preserving the necessary convexity are less than $-v$. This implies as a complexity one surface this would need a denominator on another fiber less than $v$, but this cannot happen. 
 
 \begin{itemize}
