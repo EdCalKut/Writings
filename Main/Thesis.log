@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  9 SEP 2021 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  13 SEP 2021 02:13
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -876,42 +876,66 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
 \c@thm=\count159
+\c@algorithm=\count160
 \pgf@layerbox@edgelayer=\box47
 \pgf@layerboxsaved@edgelayer=\box48
 \pgf@layerbox@nodelayer=\box49
 \pgf@layerboxsaved@nodelayer=\box50
 
-No file Thesis.aux.
+(Thesis.aux
+
+LaTeX Warning: Label `ThmOnSing' multiply defined.
+
+
+LaTeX Warning: Label `thm38i' multiply defined.
+
+
+LaTeX Warning: Label `thm38ii' multiply defined.
+
+
+! Package natbib Error: Bibliography not compatible with author-year citations.
+
+(natbib)                Press <return> to continue in numerical citation style.
+
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 ...and\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+? 
+)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 273.
-LaTeX Font Info:    ... okay on input line 273.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 273.
-LaTeX Font Info:    ... okay on input line 273.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 273.
-LaTeX Font Info:    ... okay on input line 273.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 273.
-LaTeX Font Info:    ... okay on input line 273.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 273.
-LaTeX Font Info:    ... okay on input line 273.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 273.
-LaTeX Font Info:    ... okay on input line 273.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 273.
-LaTeX Font Info:    ... okay on input line 273.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 278.
+LaTeX Font Info:    ... okay on input line 278.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 278.
+LaTeX Font Info:    ... okay on input line 278.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 278.
+LaTeX Font Info:    ... okay on input line 278.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 278.
+LaTeX Font Info:    ... okay on input line 278.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 278.
+LaTeX Font Info:    ... okay on input line 278.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 278.
+LaTeX Font Info:    ... okay on input line 278.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 278.
+LaTeX Font Info:    ... okay on input line 278.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count160
+\scratchcounter=\count161
 \scratchdimen=\dimen256
 \scratchbox=\box51
-\nofMPsegments=\count161
-\nofMParguments=\count162
+\nofMPsegments=\count162
+\nofMParguments=\count163
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count163
+\MPscratchCnt=\count164
 \MPscratchDim=\dimen257
-\MPnumerator=\count164
-\makeMPintoPDFobject=\count165
+\MPnumerator=\count165
+\makeMPintoPDFobject=\count166
 \everyMPtoPDFconversion=\toks47
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
@@ -968,7 +992,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring ON on input line 273.
+Package hyperref Info: Link coloring ON on input line 278.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -982,11 +1006,12 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 string.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count166
+\c@section@level=\count167
 )
-LaTeX Info: Redefining \ref on input line 273.
-LaTeX Info: Redefining \pageref on input line 273.
-LaTeX Info: Redefining \nameref on input line 273.
+LaTeX Info: Redefining \ref on input line 278.
+LaTeX Info: Redefining \pageref on input line 278.
+LaTeX Info: Redefining \nameref on input line 278.
+ (Thesis.out) (Thesis.out)
 \@outlinefile=\write5
 \openout5 = `Thesis.out'.
 
@@ -998,23 +1023,23 @@ Package epstopdf Info: Source file: <crest_fullcolour.eps>
 (epstopdf)                    size: 3725 bytes
 (epstopdf)             Command: <epstopdf --outfile=crest_fullcolour-eps-conver
 ted-to.pdf crest_fullcolour.eps>
-(epstopdf)             \includegraphics on input line 280.
+(epstopdf)             \includegraphics on input line 285.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./crest_fullcolour-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<crest_fullcolour-eps-converted-to.pdf, id=6, 40.15pt x 52.195pt>
+<crest_fullcolour-eps-converted-to.pdf, id=122, 40.15pt x 52.195pt>
 File: crest_fullcolour-eps-converted-to.pdf Graphic file (type pdf)
 <use crest_fullcolour-eps-converted-to.pdf>
 Package pdftex.def Info: crest_fullcolour-eps-converted-to.pdf  used on input l
-ine 280.
+ine 285.
 (pdftex.def)             Requested size: 142.26378pt x 184.98532pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 280.
+LaTeX Font Info:    Try loading font information for U+msa on input line 285.
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 280.
+LaTeX Font Info:    Try loading font information for U+msb on input line 285.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1022,146 +1047,79 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./crest_full
-colour-eps-converted-to.pdf>]
+colour-eps-converted-to.pdf>] (Thesis.tocpdfTeX warning (ext4): destination wit
+h the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.21 ...es and small discrepancy}{14}{section.3.4}
+                                                   [1
+
+])
 \tf@toc=\write6
 \openout6 = `Thesis.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.291 \begin{thesisacknowledgments}
-                                           %% Use this to write your [1
 
-]
-[2
+Overfull \vbox (8.2pt too high) has occurred while \output is active []
 
-] [3
+ [2]
+[3
 
 ] [4
+
+] [5
 
 ]
 Chapter 1.
 
-Package natbib Warning: Citation `ballentine82' on page 1 undefined on input li
-ne 358.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 358--360
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 358--360
-
- []
-
-
-Package natbib Warning: Citation `abraham_etal' on page 1 undefined on input li
-ne 362.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
-
- []
-
-
-Package natbib Warning: Citation `MTW' on page 1 undefined on input line 366.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--369
-
- []
+Package natbib Warning: Citation `AC' on page 1 undefined on input line 377.
 
 [1
 
 ]
 
-LaTeX Warning: Reference `beginnersdef' on page 2 undefined on input line 379.
-
-
-Package natbib Warning: Citation `CH' on page 2 undefined on input line 379.
-
-
-Package natbib Warning: Citation `MR2053462' on page 2 undefined on input line 
-379.
-
-
-Package natbib Warning: Citation `CH' on page 2 undefined on input line 383.
-
-
-Package natbib Warning: Citation `AC' on page 2 undefined on input line 383.
-
-
 LaTeX Warning: Reference `Log terminal Singularity' on page 2 undefined on inpu
-t line 397.
+t line 391.
 
-[2]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 403.
+(hyperref)                than one, level fixed on input line 397.
 
 
-Package natbib Warning: Citation `f' on page 3 undefined on input line 407.
+Package natbib Warning: Citation `f' on page 2 undefined on input line 401.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 438.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 432.
+
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 438.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 432.
 
 
-LaTeX Warning: Reference `ToricDowngrades' on page 3 undefined on input line 43
-8.
+Package natbib Warning: Citation `Huggenberger' on page 3 undefined on input li
+ne 437.
 
 [3]
-
-Package natbib Warning: Citation `Suss' on page 4 undefined on input line 443.
-
-
-Package natbib Warning: Citation `Huggenberger' on page 4 undefined on input li
-ne 443.
-
-
-Package natbib Warning: Citation `IMT' on page 4 undefined on input line 443.
-
-
-Overfull \hbox (15.93993pt too wide) in paragraph at lines 453--453
+Overfull \hbox (15.93993pt too wide) in paragraph at lines 447--447
 []\OT1/cmr/bx/n/14.4 Bounded sin-gu-lar-ity con-tent of log del Pezzo sur-faces
  
  []
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 456.
+LaTeX Warning: Reference `' on page 4 undefined on input line 450.
 
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 458.
+LaTeX Warning: Reference `' on page 4 undefined on input line 452.
 
 [4]
 
-Package natbib Warning: Citation `CP' on page 5 undefined on input line 464.
+Package natbib Warning: Citation `Cuzzo' on page 5 undefined on input line 465.
 
-
-LaTeX Warning: Reference `ref to main appearance in text' on page 5 undefined o
-n input line 467.
-
-
-Package natbib Warning: Citation `CP' on page 5 undefined on input line 471.
-
-
-Package natbib Warning: Citation `Cuzzo' on page 5 undefined on input line 471.
-
-
-
-Package natbib Warning: Citation `MR2053462' on page 5 undefined on input line 
-473.
 
 Missing character: There is no . in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -1169,559 +1127,316 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (2.88602pt too wide) detected at line 491
+Overfull \hbox (2.88602pt too wide) detected at line 485
 []
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `Length two sing' on page 5 undefined on input line 48
+8.
 
- [5]
-
-LaTeX Warning: Reference `Length two sing' on page 6 undefined on input line 49
-4.
-
-[6] [7]
+Excluding 'comment' comment. [5]
 Chapter 2.
 
-Package natbib Warning: Citation `cox' on page 8 undefined on input line 514.
-
-
-Package natbib Warning: Citation `cox' on page 8 undefined on input line 516.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8
+ [6
 
 ]
-Overfull \hbox (8.04813pt too wide) in paragraph at lines 519--519
+Overfull \hbox (8.04813pt too wide) in paragraph at lines 514--514
 []\OT1/cmr/bx/n/14.4 Cyclic quo-tient sin-gu-lar-i-ties and sin-gu-lar-ity con-
 tent 
  []
 
+[7]
 
-Package natbib Warning: Citation `Reid-cyclic' on page 9 undefined on input lin
-e 521.
-
-
-Package natbib Warning: Citation `SingContent' on page 9 undefined on input lin
-e 521.
-
-
-Package natbib Warning: Citation `Reid-cyclic' on page 9 undefined on input lin
-e 530.
-
-
-Package natbib Warning: Citation `Kollar-SB' on page 9 undefined on input line 
-533.
-
-
-Package natbib Warning: Citation `SingContent' on page 9 undefined on input lin
-e 537.
-
-[9]
-
-Package natbib Warning: Citation `Section 4' on page 10 undefined on input line
- 540.
+Package natbib Warning: Citation `Section 4' on page 8 undefined on input line 
+535.
 
 
 Underfull \vbox (badness 2591) has occurred while \output is active []
 
- [10]
+ [8]
+[9]
 
-Package natbib Warning: Citation `Kawamata' on page 11 undefined on input line 
-560.
-
-
-Package natbib Warning: Citation `Young' on page 11 undefined on input line 563
-.
+Package natbib Warning: Citation `CortiHeu' on page 10 undefined on input line 
+564.
 
 
-Package natbib Warning: Citation `Park' on page 11 undefined on input line 566.
+Package natbib Warning: Citation `Cuzzucoli' on page 10 undefined on input line
+ 564.
 
 
-[11]
-
-Package natbib Warning: Citation `CortiHeu' on page 12 undefined on input line 
-569.
+Package natbib Warning: Citation `CaveyPrince' on page 10 undefined on input li
+ne 564.
 
 
-Package natbib Warning: Citation `Cuzzucoli' on page 12 undefined on input line
- 569.
+Package natbib Warning: Citation `CortiHeu' on page 10 undefined on input line 
+564.
 
 
-Package natbib Warning: Citation `CaveyPrince' on page 12 undefined on input li
-ne 569.
+Package natbib Warning: Citation `Cuzzucoli' on page 10 undefined on input line
+ 564.
 
 
-Package natbib Warning: Citation `CortiHeu' on page 12 undefined on input line 
-569.
+Package natbib Warning: Citation `CaveyPrince' on page 10 undefined on input li
+ne 564.
 
 
-Package natbib Warning: Citation `Cuzzucoli' on page 12 undefined on input line
- 569.
+Package natbib Warning: Citation `ReidSuzuki' on page 10 undefined on input lin
+e 564.
 
-
-Package natbib Warning: Citation `CaveyPrince' on page 12 undefined on input li
-ne 569.
-
-
-Package natbib Warning: Citation `ReidSuzuki' on page 12 undefined on input lin
-e 569.
-
-
-Package natbib Warning: Citation `GrossBook' on page 12 undefined on input line
- 574.
-
-
-Package natbib Warning: Citation `GrossBook' on page 12 undefined on input line
- 577.
-
-[12]
-
-Package natbib Warning: Citation `GrossBook' on page 13 undefined on input line
- 582.
-
-
-Package natbib Warning: Citation `GrossBook' on page 13 undefined on input line
- 584.
-
-
-Package natbib Warning: Citation `GrossBook' on page 13 undefined on input line
- 584.
-
-[13]
+[10] [11]
 Chapter 3.
+[12
 
-! LaTeX Error: Environment thm* undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.593 \begin{thm*}
-                  \label{ThmOnSing}
-? 
-
-! LaTeX Error: \begin{document} ended by \end{thm*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.601 \end{thm*}
-                
-? 
-[14
-
-]
-
-Package natbib Warning: Citation `Reid-cyclic' on page 15 undefined on input li
-ne 628.
-
-[15]
-Overfull \hbox (16.40723pt too wide) in paragraph at lines 659--659
+] [13]
+Overfull \hbox (16.40723pt too wide) in paragraph at lines 654--654
 []\OT1/cmr/bx/n/17.28 Log del Pezzo sur-faces and small dis-crep-ancy 
  []
 
-[16]
+[14] [15] [16]
+Underfull \vbox (badness 3815) has occurred while \output is active []
 
-LaTeX Warning: Reference `lem!minus2curve' on page 17 undefined on input line 7
-24.
-
-[17]
-
-LaTeX Warning: Reference `lem!badcurve' on page 18 undefined on input line 748.
-
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 18 undefined on input line 755.
-
-
-[18]
-
-LaTeX Warning: Reference `lem!badcurve' on page 19 undefined on input line 764.
-
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 19 undefined on input line 764.
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
+ [17]
 Underfull \vbox (badness 1057) has occurred while \output is active []
 
- [20]
-
-LaTeX Warning: Reference `MainProp' on page 21 undefined on input line 856.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 21 undefined on input line 856.
-
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 21 undefined on input line 860.
-
-
-[21]
-
-LaTeX Warning: Reference `lem!badcurve' on page 22 undefined on input line 865.
-
-
-[22]
-
-LaTeX Warning: Reference `Surfaces to F_1' on page 23 undefined on input line 8
-95.
-
-
-LaTeX Warning: Reference `HSlem' on page 23 undefined on input line 898.
-
-
-LaTeX Warning: Reference `HSlem' on page 23 undefined on input line 900.
-
-
-LaTeX Warning: Reference `lem!badcurve' on page 23 undefined on input line 900.
-
-
-
+ [18]
+[19] [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
+ [21]
 
-LaTeX Warning: Reference `thm38i' on page 24 undefined on input line 907.
-
-
-LaTeX Warning: Reference `thm38ii' on page 24 undefined on input line 915.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `figure1' on page 24 undefined on input line 1025.
+Package caption Warning: \label without proper reference on input line 920.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `figure1' on page 22 undefined on input line 1020.
+
+[22] Excluding 'comment' comment. [23]
+
+Package natbib Warning: Citation `ReidSuzuki' on page 24 undefined on input lin
+e 1040.
+
+
+Package natbib Warning: Citation `CaveyPrince' on page 24 undefined on input li
+ne 1066.
 
 [24]
-
-LaTeX Warning: Reference `GrossSec' on page 25 undefined on input line 1028.
-
-Excluding 'comment' comment.
-
-Package natbib Warning: Citation `ReidSuzuki' on page 25 undefined on input lin
-e 1045.
-
-
-Package natbib Warning: Citation `CP' on page 25 undefined on input line 1055.
-
-[25]
-
-Package natbib Warning: Citation `CP' on page 26 undefined on input line 1067.
-
-
-LaTeX Warning: Reference `dp11i' on page 26 undefined on input line 1068.
-
-
-LaTeX Warning: Reference `Surfaces to F_1' on page 26 undefined on input line 1
-068.
-
-
-LaTeX Warning: Reference `ThmOnSing' on page 26 undefined on input line 1068.
-
-
-LaTeX Warning: Reference `ThmOnSing' on page 26 undefined on input line 1071.
-
-
-Package natbib Warning: Citation `CaveyPrince' on page 26 undefined on input li
-ne 1071.
-
-[26]
-
-LaTeX Warning: Reference `ThmOnSing' on page 27 undefined on input line 1098.
-
-Missing character: There is no s in font nullfont!
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-
-LaTeX Warning: Reference `Section 2.3' on page 28 undefined on input line 1178.
-
+ [25]
+Missing character: There is no s in font nullfont!
 
 
-Underfull \vbox (badness 4634) has occurred while \output is active []
+LaTeX Warning: Reference `Section 2.3' on page 26 undefined on input line 1173.
+
+
+[26] [27]
+Underfull \vbox (badness 1173) has occurred while \output is active []
 
  [28]
-[29]
-
-LaTeX Warning: Reference `ThmOnSing' on page 30 undefined on input line 1221.
-
-[30]
-
-LaTeX Warning: Reference `ThmOnSing' on page 31 undefined on input line 1224.
-
-
-Package natbib Warning: Citation `CP' on page 31 undefined on input line 1224.
-
-
-Package natbib Warning: Citation `CP' on page 31 undefined on input line 1229.
-
 Missing character: There is no . in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (6.2293pt too wide) detected at line 1248
-[]
- []
-
-[31]
-Missing character: There is no . in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-
-Overfull \hbox (26.7433pt too wide) detected at line 1286
+Overfull \hbox (6.2293pt too wide) detected at line 1243
 []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Missing character: There is no . in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (26.7433pt too wide) detected at line 1281
+[]
+ []
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (26.7433pt too wide) detected at line 1297
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+Underfull \vbox (badness 2828) has occurred while \output is active []
 
  [32]
-Missing character: There is no . in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
+[33] [34]
 
-Overfull \hbox (26.7433pt too wide) detected at line 1302
-[]
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-
-LaTeX Warning: Reference `LengthOne' on page 34 undefined on input line 1330.
-
-[34]
 Underfull \vbox (badness 1173) has occurred while \output is active []
 
  [35]
-
-LaTeX Warning: Reference `CurveConfigFigure' on page 36 undefined on input line
- 1355.
-
-
-Underfull \vbox (badness 1173) has occurred while \output is active []
+Underfull \vbox (badness 2478) has occurred while \output is active []
 
  [36]
 [37]
 
-LaTeX Warning: Reference `ThmOnSing' on page 38 undefined on input line 1492.
+LaTeX Warning: Reference `Something chapter 2' on page 38 undefined on input li
+ne 1583.
 
 [38]
 
-LaTeX Warning: Reference `Something chapter 2' on page 39 undefined on input li
-ne 1587.
-
-[39]
-
-Package natbib Warning: Citation `Polarised polyhedral divisors' on page 40 und
-efined on input line 1595.
+Package natbib Warning: Citation `Polarised polyhedral divisors' on page 39 und
+efined on input line 1591.
 
 
-Package natbib Warning: Citation `Young' on page 40 undefined on input line 159
-6.
+Underfull \vbox (badness 2790) has occurred while \output is active []
 
-
-Package natbib Warning: Citation `Young' on page 40 undefined on input line 159
-6.
-
-
-Package natbib Warning: Citation `HausenCox' on page 40 undefined on input line
- 1599.
-
-[40] [41] [42] [43]
+ [39]
+[40]
 Chapter 4.
 
-Package natbib Warning: Citation `Suss' on page 44 undefined on input line 1630
-.
+Package natbib Warning: Citation `Huggenberger' on page 41 undefined on input l
+ine 1626.
 
 
-Package natbib Warning: Citation `Huggenberger' on page 44 undefined on input l
-ine 1630.
-
-
-Package natbib Warning: Citation `IMT' on page 44 undefined on input line 1630.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1633
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1629
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1633
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1629
 
  []
 
 
-Package natbib Warning: Citation `Cox' on page 44 undefined on input line 1634.
+Package natbib Warning: Citation `Cox' on page 41 undefined on input line 1630.
 
 
 
-Package natbib Warning: Citation `Altmann' on page 44 undefined on input line 1
-635.
+Package natbib Warning: Citation `Altmann' on page 41 undefined on input line 1
+631.
 
-[44
+[41
 
-]
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1651.
+] [42]
 
- [45]
+Package natbib Warning: Citation `PS' on page 43 undefined on input line 1666.
 
-Package natbib Warning: Citation `PS' on page 46 undefined on input line 1670.
-
-[46]
-
-Package natbib Warning: Citation `Suss' on page 47 undefined on input line 1700
-.
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 1703--1708
+[43] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 1699--1704
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1703--1708
+Underfull \hbox (badness 10000) in paragraph at lines 1699--1704
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 1719.
+ [45]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 1715.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-[49] [50] [51]
+[46] [47] [48]
 Underfull \vbox (badness 1248) has occurred while \output is active []
 
- [52]
-[53]
-
-LaTeX Warning: Reference `Tech' on page 54 undefined on input line 1894.
-
+ [49]
+[50] Excluding 'comment' comment.
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 1901.
+d on input line 1898.
 
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 1908--1910
+
+Underfull \hbox (badness 10000) in paragraph at lines 1905--1907
 
  []
 
 
-Package natbib Warning: Citation `PS' on page 55 undefined on input line 1910.
+Underfull \vbox (badness 6641) has occurred while \output is active []
+
+ [51]
+
+Package natbib Warning: Citation `PS' on page 52 undefined on input line 1907.
+
+[52]
+
+Package natbib Warning: Citation `PS' on page 53 undefined on input line 1925.
+
+
+Package natbib Warning: Citation `PS' on page 53 undefined on input line 1931.
+
+
+Package natbib Warning: Citation `PS' on page 53 undefined on input line 1937.
+
+
+Package natbib Warning: Citation `PS' on page 53 undefined on input line 1939.
+
+
+Underfull \vbox (badness 5288) has occurred while \output is active []
+
+ [53]
+
+Package natbib Warning: Citation `PS' on page 54 undefined on input line 1947.
+
+
+Package natbib Warning: Citation `PS' on page 54 undefined on input line 1956.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1953--1958
+
+ []
+
+
+Underfull \vbox (badness 5741) has occurred while \output is active []
+
+ [54]
+
+Package natbib Warning: Citation `Br' on page 55 undefined on input line 1979.
 
 [55]
+Underfull \vbox (badness 5245) has occurred while \output is active []
 
-Package natbib Warning: Citation `PS' on page 56 undefined on input line 1928.
-
-
-Package natbib Warning: Citation `PS' on page 56 undefined on input line 1934.
-
-
-Package natbib Warning: Citation `PS' on page 56 undefined on input line 1940.
-
-[56]
-
-Package natbib Warning: Citation `PS' on page 57 undefined on input line 1942.
-
-
-Package natbib Warning: Citation `PS' on page 57 undefined on input line 1950.
-
-
-Package natbib Warning: Citation `PS' on page 57 undefined on input line 1959.
-
-
-Package natbib Warning: Citation `S' on page 57 undefined on input line 1963.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1956--1964
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1956--1964
-
- []
-
-[57] Excluding 'comment' comment.
-
-Package natbib Warning: Citation `Suss' on page 58 undefined on input line 2002
-.
-
-
-Package natbib Warning: Citation `Suss' on page 58 undefined on input line 2010
-.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [56]
+[57]
+Underfull \vbox (badness 6542) has occurred while \output is active []
 
  [58]
-
-Package natbib Warning: Citation `Br' on page 59 undefined on input line 2017.
-
-
-Underfull \vbox (badness 1242) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [59]
-[60]
 
-LaTeX Warning: Reference `basic bound' on page 61 undefined on input line 2073.
+LaTeX Warning: Reference `-1 curve lemma' on page 60 undefined on input line 21
+08.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
 [61]
-
-! LaTeX Error: Environment algorithm undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2110 \begin{algorithm}
-                        
-? 
-[62]
-
-LaTeX Warning: Reference `-1 curve lemma' on page 63 undefined on input line 21
-46.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
-
-! LaTeX Error: \begin{document} ended by \end{algorithm}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2149 \end{algorithm}
-                      
-? 
-[64]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [65]
-Overfull \hbox (7.6257pt too wide) in paragraph at lines 2194--2196
+ [62]
+Overfull \hbox (7.6257pt too wide) in paragraph at lines 2156--2158
 \OT1/cmr/m/n/12 We note that the point $\OML/cmm/m/it/12 P[]$ \OT1/cmr/m/n/12 i
 s in-volved, how-ever this does not con-tra-dict Lemma  as
  []
@@ -1729,69 +1444,51 @@ s in-volved, how-ever this does not con-tra-dict Lemma  as
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66]
+ [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+[65] [66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
-[68] [69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(Thesis.bbl [68]
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
+[]\OT1/cmr/m/n/12 Mohammad Akhtar and Alexan-der Kasprzyk.  Sin-gu-lar-ity con-
+tent.
+ []
 
- [70]
-(Thesis.bbl [71] [72
+[69
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[73]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2361.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2361.
- (Thesis.aux
+[70]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2323.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2323.
+ (Thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2323.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2323.
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 89FEED0441D546DF154993ABD97AE3EA;2024.
 
-
-! Package natbib Error: Bibliography not compatible with author-year citations.
-
-(natbib)                Press <return> to continue in numerical citation style.
-
-
-See the natbib package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.170 ...and\NAT@force@numbers{}\NAT@force@numbers
-                                                  
-? 
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2361.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2361.
-
-
-
-Package rerunfilecheck Warning: File `Thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  DE2365A7EB3DE6510EFD7CEF59898DE7;2122.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24080 strings out of 492970
- 467561 string characters out of 3127037
- 571453 words of memory out of 3000000
- 27276 multiletter control sequences out of 15000+200000
- 14341 words of font info for 56 fonts, out of 3000000 for 9000
+ 24119 strings out of 492970
+ 468160 string characters out of 3127037
+ 550084 words of memory out of 3000000
+ 27310 multiletter control sequences out of 15000+200000
+ 14693 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,82p,1861b,1601s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,19n,82p,1844b,1603s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bb
 m12.pk><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
@@ -1804,17 +1501,17 @@ b><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/user/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/us
-er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/user/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/u
+ser/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmti8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmtt12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis.pdf (78 pages, 463895 bytes).
+/cmti12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmtt12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Thesis.pdf (76 pages, 485903 bytes).
 PDF statistics:
- 590 PDF objects out of 1000 (max. 8388607)
- 209 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 205 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 
