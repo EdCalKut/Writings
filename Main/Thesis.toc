@@ -20,11 +20,12 @@
 \contentsline {section}{\numberline {3.3}Singularities with small discrepancy}{13}{section.3.3}
 \contentsline {section}{\numberline {3.4}Log del Pezzo surfaces and small discrepancy}{14}{section.3.4}
 \contentsline {section}{\numberline {3.5}Examples}{24}{section.3.5}
-\contentsline {section}{\numberline {3.6}Cascades}{29}{section.3.6}
+\contentsline {section}{\numberline {3.6}Web of maps}{29}{section.3.6}
 \contentsline {section}{\numberline {3.7}Outside of the small discrepancy}{38}{section.3.7}
 \contentsline {chapter}{Chapter{} \numberline {4}Complexity One log Del Pezzo Surfaces}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Polyhedral divisors}{42}{section.4.2}
-\contentsline {section}{\numberline {4.3}Examples}{45}{section.4.3}
-\contentsline {section}{\numberline {4.4}Divisors in complexity one}{52}{section.4.4}
-\contentsline {section}{\numberline {4.5}Algorithm}{55}{section.4.5}
+\contentsline {section}{\numberline {4.1}Abstract}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Introduction}{41}{section.4.2}
+\contentsline {section}{\numberline {4.3}Polyhedral divisors}{42}{section.4.3}
+\contentsline {section}{\numberline {4.4}Examples}{45}{section.4.4}
+\contentsline {section}{\numberline {4.5}Divisors in complexity one}{52}{section.4.5}
+\contentsline {section}{\numberline {4.6}Algorithm}{55}{section.4.6}
