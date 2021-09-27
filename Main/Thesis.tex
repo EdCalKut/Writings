@@ -2045,7 +2045,8 @@ This imposes stricter bounds on the number of non generic fibers a complexity on
 We also need a bound on what possible toric singularities can occur and the possible actions on them.
 
 \begin{lem}{\label{Structure}}
-Let $X$ be a non toric non smooth complexity one log del Pezzo surface. Then there is at least one elliptic point and at least one of the elliptic points, $P_1$, is a singularity.  Either $P_1$ is non toric or we can describe $P_1$ locally by a cone $\sigma \subset N \cong \mb{Z}^2$ and a ray $v \in N$. Then $v$ corresponds to a lattice point on the minimal resolution of $\sigma$. Equivalently the minimal resolution of $X$ has at least one parabolic line.
+Let $X$ be a non toric non smooth complexity one log del Pezzo surface described by a polyhedral fan $\Xi$. Then the map to the invariant $\mb{P}^1$ is not a morphism and the locus of indeterminacy contains a singular point. In addition, consider the cones $\sigma_1$ and $\sigma_2$ with tail fan $[0, \, \infty)$ and $(-\infty, 0]$, and the associated affine charts $X_{\sigma_1}$ and $X_{\sigma_2}$. Then for at least one of these charts, $X_i$, the minimal resolution $Y_i$ admits a morphism to $\wt{X}_i$.
+
 \end{lem}
 
 
@@ -2068,7 +2069,7 @@ P_3 & \left[c_1, \, \dots, \, c_o, \right] \\
 P_4 & \left[d_1, \, \dots, \, d_{p-1}, 0\right]  \\
 \end{array}
 \]
-Also assume that the minimal resolution of $X$ contains a curve $E$ which is pointwise fixed by the action and which is contracted to elliptic point at positive infinity.
+Also assume that the minimal resolution of $X$ contains a curve $E$ which is pointwise fixed by the action and which is contracted to point corresponding to the tail cone $[0, \infty)$.
 
 Let $h$ be the piecewise linear function corresponding to $-K_X$. Then $h_P|_{[0, \, \infty)}$ is defined by a unique value $u \in \mb{Q}$. If $-K_X$ is ample then the only possible values for $d_{p-1}$ are the values $\frac{p}{q}$, with $q >0$, such that $\frac{q-1}{q} < u\frac{p}{q}$, this is to preserve convexity. 
 
@@ -2118,26 +2119,91 @@ All that remains is to bound the possible singularities we have started with. Ho
 \end{algorithm}
 \end{comment}
 
-\begin{algorithm}
-We start with a singularity given by $a \otimes P_1  + b \otimes P_2 + c \otimes P_3$, such that the minimal resolution contains a parabolic line, (note we allow some of these values to be 0). 
+\begin{algorithm}\label{ToricAlg}
+This algorithm can be re purposed to work in the toric case. To see this we start with a family of singularities $ S_k = (-a, n), \, (b+kn, n)$ and we wish to bound the values $k$. We get the following picture:
 
-We wish to bound theses values, if the singularity is of type $E$ then there are already only finitely many. If it is of type $A_n$ then we can assume $c = 0$ and $a = \frac{k}{u}$ and $b = \frac{k}{v}$. Assume that the fan on $P_1$ and $P_2$ both have only one point, then there are only finitely many options as, as $u$ and $v$ increase $-k$ modulo $u$ and $v$ also increase and this would increase the index of the singularity corresponding to the tail cone $[-\infty, 0)$. Hence this case is bounded. Alternatively assume there is another point on the fan of $P_1$. As $u$ and $v$ increase in value
-
-
+\begin{figure}[h]
+\resizebox{10cm}{10cm}{
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Filled Basic] (0) at (0, 0) {};
+		\node [style=none] (1) at (-0.25, 0.25) {};
+		\node [style=none] (2) at (0.25, -0.25) {};
+		\node [style=none] (3) at (-0.25, -0.25) {};
+		\node [style=none] (4) at (0.25, 0.25) {};
+		\node [style=none] (5) at (-2, 4) {};
+		\node [style=none] (6) at (8, 4) {};
+		\node [style=none] (7) at (-3, 6) {};
+		\node [style=none] (8) at (12, 6) {};
+		\node [style=none] (9) at (9, 4) {};
+		\node [style=none] (10) at (10, 4) {};
+		\node [style=none] (11) at (12, 4) {};
+		\node [style=none] (12) at (-3, 4) {};
+		\node [style=none] (13) at (-4, 4) {};
+		\node [style=none] (29) at (-5, 4) {$\dots$};
+		\node [style=none] (14) at (-6, 4) {};
+		\node [style=none] (15) at (0, -1) {};
+		\node [style=none] (16) at (1, -4) {};
+		\node [style=none] (17) at (1, -6) {};
+		\node [style=none] (18) at (1, -10) {};
+		\node [style=none] (19) at (1, 0) {};
+		\node [style=none] (20) at (2, 0) {};
+		\node [style=none] (21) at (4, 0) {};
+		\node [style=none] (22) at (-2, -2) {};
+		\node [style=none] (23) at (-3, -2) {};
+		\node [style=none] (24) at (0, -2) {};
+		\node [style=none] (25) at (11, 4) {$\dots$};
+		\node [style=none] (26) at (-1.25, 4.5) {$(-a, n)$};
+		\node [style=none] (27) at (8, 4.5) {};
+		\node [style=none] (28) at (7.5, 4.5) {$(b + kn, n)$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (2.center);
+		\draw (3.center) to (4.center);
+		\draw [style=Filled Blue] (5.center) to (6.center);
+		\draw (0) to (8.center);
+		\draw (0) to (7.center);
+		\draw [style=Dashed Line] (12.center) to (16.center);
+		\draw [style=Dashed Line] (17.center) to (13.center);
+		\draw [style=Dashed Line] (14.center) to (18.center);
+		\draw [style=new edge style 0] (23.center) to (9.center);
+		\draw [style=new edge style 0] (22.center) to (10.center);
+		\draw [style=new edge style 0] (24.center) to (11.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+}
+\end{figure}
+Any vertex $v$ adjacent to $(-a, n)$ has to have the line connecting the two vertices intersecting an integer lattice point on at least one of the blue lines. Dependent on which blue line determines the index of the corresponding singularity, there are only finitely many red an blue lines. As $k$ increases the red lines increase in slope. Eventually these slopes become large enough that a given red lines intersect the line connecting $v$ to $(-a, n)$ at a point $(x,y)$ with $-1<y<0$. At this point there would be no way for this singularity to lie in a covex fan of index $n$.
 \end{algorithm}
 
-\begin{rem}
-This algorithm can be re purposed to work in the toric case. To see this we start with a family of singularities $ S_k = (-a, n), \, (b+kn, n)$ and we wish to bound the values $k$. We get the following pictures as $k$ increases
-\[
-Insert Toric picture 2!
-\] 
-\end{rem}
+\begin{algorithm}
+This algorithm constructs all complexity one log del Pezzo surfaces of index $n$.
+We start with a singularity given by $a \otimes P_1  + b \otimes P_2 + c \otimes P_3$, such that the minimal resolution contains a parabolic line, (note we allow some of these values to be 0) as can be assumed via Lemma~\ref{Structure}. 
+
+We wish to bound theses values, if the singularity is of type $E$ then there are already only finitely many. If it is of type $A_n$ then we can assume $c = 0$ and $a = \frac{k}{u}$ and $b = \frac{k}{v}$ where $k$ divides $n$. Assume that the fan on $P_1$ and $P_2$ both have only one point then they are both vertices of the polyhedral divisor with tail cone $(-\infty, 0]$. Hence there are only finitely many options as, as $u$ and $v$ increase $-k$ modulo $u$ and $v$ also increase and this would increase the index of the singularity corresponding to the tail cone $[-\infty, 0)$. Hence this case is bounded. Alternatively assume there is another point $c = \frac{p}{q}$ on the fan of $P_1$. As $u$ and $v$ increase in value eventually there will be only be $k$ possible values of $c$ all of these are greater than 0 and additionally, via looking at the local toric picture we can see as $u$ gets larger there can only be one other point on this divisorial fan. Let  $D^1_{c}$ be the divisor corresponding to the value $c$ on the polyhedral fan over $P_1$. Now if the fans end in $-\infty$, then we have following locally toric fan $(k, u),$ $(p, q),$ $(-1, 0)$ as $u$ tends toward infinity it is easy to verify that $-K_X \cdot D^1_{c}$ will eventually become negative contradicting being a log del Pezzo. Hence there are only finitely many options. If the fan does not end in $-\infty$ then once again asymptotically we will only have $k$ possible values for other points on a fiber. If the value $c$ is not an integer then it will asymptotically get larger as $u$ increases, once again if $u$ is large enough there can only be two point on the fan over $P_1$. If the tail cone $(-\infty, 0]$ gives rise to a non cylic quotient then as $c$ gets larger the index increases. Alternatively if the singularity is a cylic quotient then we can consider the fibers $P_1$ and $P_i$ which have smallest values on the fan being a non integer. If $i = 2$ then we can consider this to be a problem in toric geometry by considering all fans of the following form:
+\\
+\\
+ A similar argument holds if $k \neq 2$ and you have non complete fans of the following form:
+ \\
+ \\
+ Finally in the case that $c$ is an integer. Then the tail fan $(\infty, 0]$ defines a singularity. Once again if the singularity is a non cyclic quotient then the slope associated with $h_{-K_X}|_{(-\infty, 0]}$ is $\frac{1}{k}$ where $k$ divides $n$. So this slope is bounded however 
+as $v$ gets larger the slope associated to $h_{-K_X}(P_1)|_{[c, \frac{k}{v}]}$ decreases as $v$ increases so eventually this will stop being convex contradicting ampleness. If this is a  cyclic quotient cyclic singularity then there are two values $i$ and $j$ with $i<j$ such that the smallest value on $P_i$ and $P_j$ are non integers. If $i = 2$ then this fits into the above analysis with $P_1$ replaced with $P_2$ and if $i \neq 2$ then then there are only finitely many possibilities as the toric picture of $P_i$ and $P_j$ would non complete fans with index $n$ of the form:
+\\
+\\
+Once again these slopes are bounded so we have a bound on the slope of $h_{-K_X}(P_1)|_{[c, \frac{k}{v}]}$. So the possible values of $u$ and $v$ are bounded.
+
+The case of $D_n$ is analogous to the $A_n$ singularity and we do not explicitly describe it. 
+
+We now describe how to explicitly grow a polyhedral fan from a given starting point. Given a polyhedral fan of the form $[a^1_1, \, \dots a^1_{n_1}] \otimes P_1 + [a^2_1, \, \dots a^2_{m_2}] \otimes P_2 + \, \dots \, + [a^n_1, \, \dots a^n_{m_n}] \otimes P_n$ with tail fan $[0, \infty)$ we ask how can we extend this so that it is nearer a compact log del Pezzo surface of index $n$. The first stage is checking whether the same fan with tail fan the whoel of $\mb{Q}$ is well defined and a log del Pezzo surface of index $n$, and then checking whether $[\infty , \, a^1_1, \, \dots a^1_{n_1}] \otimes P_1 + [\infty, \, a^2_1, \, \dots a^2_{m_2}] \otimes P_2 + \, \dots \, + [\infty , \, a^n_1, \, \dots a^n_{m_n}] \otimes P_n$ is a log del Pezzo surface of index $n$. Finally the case of extending the fan over a given point, corresponds exactly to the toric algorithm~\ref{ToricAlg}. 
+\end{algorithm}
+
+
 
 As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one and only cyclic quotient singularities.
 
 \begin{ex}\rm
 
-We start with the Gorenstein index $k = 1$, i.e the only singularities are Du Val. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution. We iterate over all possible singularities and all possible actions until we can show they do not exist. We illustrate this in the case that the singularity with which the action corresponds with a ray in the minimal resolution is an $A_n$ singularity, and there is no non cylic quotient singularities. We assume that this singularity has polyhedral divisor with tail cone $[ 0, \, \infty)$. From now on we assume this without stating it.
+We start with the Gorenstein index $k = 1$, i.e the only singularities are Du Val. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution via Lemma~\ref{Structure}. We iterate over all possible singularities and all possible actions until we can show they do not exist. We illustrate this in the case that the singularity with which the action corresponds with a ray in the minimal resolution is an $A_n$ singularity, and there is no non cylic quotient singularities. We assume that this singularity has polyhedral divisor with tail cone $[ 0, \, \infty)$. From now on we assume this without stating it.
 
 To make this easier we make two observations. The first is that if a fiber over a point $P_i$ is $[a_1 = \frac{p_1}{q_1} , \dots, a_n = \frac{p_n}{q_n}, \, 0]$ then $q_i = 1$. This follows via the above remarks, first, we know we get an $A_m$ singularity given by $(0, 1), \, (p_n,  \, q_n)$. Then, via the stated properties of our singularity, we have the slope of $h_P|_{[0, \, \infty)}$ is $-1$. So we need $\frac{q_n-1}{q_n} < \frac{-p_n}{q_n}$ which implies $p_n + q_n < 1$, hence if $q_n > 1$ then $p_n < -1$. Now every point on the line connecting $(p_n, \, q_n)$ to $(0, \, 1)$ has to satisfy this inequality. In particular there is a point $(-1, a)$ on this line, with $a  \in \mb{Z}$, satisfying the inequality, hence $ a \leq 1$. As $ a>0$ for $q_n>0$ we have the only possible value of $a$ is one. This corresponds to $q_n = 1$.
 
