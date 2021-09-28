@@ -447,9 +447,9 @@ a closed-form classification via methods of this type for all such del Pezzo wit
 \subsection{Bounded singularity content of log del Pezzo surfaces}
 
 We can consider log del Pezzos from a completely different point of view. Rather than considering the global invariants, we can consider the local invariants of the singularities. 
-It follows from the definition (Def \ref{}) that the singularities
+It follows from the definition~\ref{Log Terminal} that the singularities
 are all finite quotient singularities, but this class of singularities itself is an infinite set. 
-The {\em discrepancies} associated to a singularity (see Def~\ref{}) form a measure of
+The {\em discrepancies} associated to a singularity form a measure of
 its complexity expressed as a collection of rational numbers, one for each curve in a resolution. 
 When these numbers are small, but still greater than $-1$, the singularity may be regarded as `more complicated'. 
 However surfaces that have only these more complicated singularities can be classified explicitly. Informally,
@@ -542,7 +542,7 @@ Given a normal surface singularity $S$ and minimal resolution $\pi \colon \wt{S}
 \[
 K_{\wt{S}} = \pi^*(K_S) + \sum a_i E_i
 \] 
-\begin{dfn}
+\begin{dfn}\label{Log Terminal}
 Throughout this thesis a log del Pezzo surface is a normal complex projective surface with log terminal singularities and ${-}K_X$ ample.
 \end{dfn}
 Where we say a singularity is 
@@ -564,7 +564,7 @@ We briefly state some basic results about Hirzebruch surfaces \cite{Park}. A Hir
 We finish with a very brief overview of \cite{CortiHeu}, \cite{Cuzzucoli} and \cite{CaveyPrince} as some of the methods we employ are similar. Respectively these paper classify log del Pezzos with singularities with minimal resolution $[3]$ in \cite{CortiHeu}, $[3,2]$ and $[3]$ in \cite{Cuzzucoli}, and finally one singularity with resolution $[n]$ in \cite{CaveyPrince}. The structure is similar, classify the possible surfaces $X$ which admit no Mori contractions to another surface which could arise from these choices of singularities. These are called basic surfaces. Then study their blowups and their birational relations, often in the context of cascades as introduced by \cite{ReidSuzuki}. Via these explicit classifications they have been able to give explicit coordinate contstructions and their toric degenerations (when they exist). In Chapter 2 we classify log del Pezzo surfaces with singularities of the form $[a_1, \, \dots ,   \, a_n]$ with both $a_1$ and $a_n$ greater than two via similar although modified methods.
 
 
-\section{Gross Siebert}[\label{GrossSec}]
+\section{Gross Siebert}\label{GrossSec}
 
 In this section we do not use or even refer to the full power of the Gross-Siebert program, we are mainly using results referencing how certain SYZ fibrations are constructed and how these give rise to toric degenerations. Our main reference throughout is \cite{GrossBook}, mainly chapters 1.4 and 1.5. We have made a variety of small changes to notation, namely our fans lie inside $N$ instead of $M$ to be consistent with the rest of the notation within the thesis and we do not consider fans on non compact affine manifolds.
 
@@ -917,7 +917,7 @@ Because of this we see that the only possibilities for $\pi_*(E_{j\pm1}^S)$ are 
 We can then proceed to construct the configuration of all exceptional curves inductively. This means that when a surface of this form is able to be constructed we can obtain it by doing two weighted blowups at two general points of a Hirzebruch surface  withe weights $k_1$ and $k_2$. We then do a series of toric blowups, and then finally do a series of non toric blowups on the boundary. The following surface is one example, arising from blowing up two general points of a Hirzebruch surface with weight $(1,k_1)$ and $(1,k_2)$. 
 \begin{figure}[h]
 \begin{center}
-\begin{tikzpicture}[scale= 0.75]\label{figure1}
+\begin{tikzpicture}[scale= 0.75]
   % nodes
 	\node (0) at (-4.5, -3.5) {};
 	\node (1) at (4.5, -3.5) {};
@@ -1013,7 +1013,7 @@ We can then proceed to construct the configuration of all exceptional curves ind
 	node [red,midway,xshift=-2em,yshift=-1ex] {$b_n$};
 \end{tikzpicture}
 \end{center}
-\caption{Example of a minimal surface with invariants $S = [a_1, \, \dots\, a_n]$ and the number of blowups being $k_1$ and $k_2$.\label{fig!logdp}}
+\caption{Example of a minimal surface with invariants $S = [a_1, \, \dots\, a_n]$ and the number of blowups being $k_1$ and $k_2$.\label{fig!logdp}}\label{figure1}
 \end{figure}
 
 
@@ -1170,7 +1170,7 @@ From construction, we see the following formula for the anticanonical degree of 
 \] 
 We note that once we blow up $a$ time our formula will be completely symmetric in $a$ and $b$.
 
-Each of these admit a toric degeneration, to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We can see this as an equivariant toric degeneration of a complexity one variety or via the discrete Legendre transform of section~\ref{Section 2.3}. We only consider the case of $X_a$ since $X_b$ is completely symmetric. We see that we can smooth it by taking the $b$th Veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lying as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. 
+Each of these admit a toric degeneration, to $\mb{P}(1, b, ab-1)$ and $\mb{P}(1, a, ab-1)$ respectively. We can see this as an equivariant toric degeneration of a complexity one variety or via the discrete Legendre transform of section~\ref{GrossSec}. We only consider the case of $X_a$ since $X_b$ is completely symmetric. We see that we can smooth it by taking the $b$th Veronese embedding and  getting $\mb{P}_{u,\,v,\,w,\,t}(1, 1, ab-1, a)$ with the relation $uw = t^b$. This admits a smoothing giving us the surface lying as $X_{ab} \subset \mb{P}(1,\, 1, \, ab-1, \, a)$. 
 
 We will show that this admits a cascade of length $a+2$. 
 
@@ -1580,7 +1580,7 @@ This surface does not admit a toric degeneration.
 \end{lem}
 \begin{proof}
 Given a Looijenga surface $X$,
- in the sense of \ref{Something chapter 2}, %Change this to make it make sense!
+ in the sense of \ref{GrossSec}, %Change this to make it make sense!
  and a curve $C$ in the boundary. Let $C_1,$ $\dots, $ $C_n$ be the $-1$-curves intersecting $C$. Then at most two of these $-1$-curves intersect curves with self intersection less than $-1$, as they would have to be in the boundary which is a cycle. The $-5$ curves in the above picture clearly do not satisfy this constraint, hence this surface does not admit a well defined boundary.
 \end{proof}
 However this surface has six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{5}(1,1)$ singularities and the following invariants
@@ -1627,15 +1627,15 @@ In this chapter we introduce an algorithm which enables us to classify log del P
 
 \section{Introduction}
 
-All varieties we consider are normal and projective. Here we give an algorithm to classify Log Del Pezzos admitting a $\mathbb{C}^\times$ action with only log terminal singularities. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is the study of purely toric varieties, and complexity $n$ is the study of varities with no possible torus action. This provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting said action with Picard rank one and index less than 3. Huggenberger \cite{Huggenberger} classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
+All varieties we consider are normal and projective. Here we give an algorithm to classify log del Pezzo surfaces  with only log terminal singularities that admit a $\mathbb{C}^\times$ action. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is the study of purely toric varieties, and complexity $n$ is the study of varities with no possible torus action. This provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting said action with Picard rank one and index less than 3. Huggenberger \cite{Huggenberger} classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
 \\
 \\
 \section{Polyhedral divisors}
-Recall that a toric variety is a  normal variety of dimension $n$ containing a dense torus $\C{n}$ with the natural action extending to the variety, there is a one to one correspondence between these varieties and fans inside a lattice $N \cong \mathbb{Z}^n$ upto GL$_2(\mathbb{Z})$, \cite{Cox}.
-Altman et.al \cite{Altmann} establish a similar correspondence for varieties with $T = \C{{ n-k}}$ actions where $k \leq n$. We say that this is a torus action of complexity $k$. They introduce the notion of a polyhedral divisor to recover some of the geometry that a fan encodes in the toric case. In general this applies for any complexity, however the behaviour is easiest to describe in the toric case, then complexity one until you reach the full general case.
+Recall that a toric variety is a  normal variety of dimension $n$ containing a dense torus $\C{n}$ with the natural action extending to the variety, there is a correspondence between these varieties and fans inside a lattice $N \cong \mathbb{Z}^n$.
+In \cite{AltHau} the authors establish a similar correspondence for varieties with $T = \C{{ n-k}}$ actions where $k \leq n$. We say that this is a torus action of complexity $k$. They introduce the notion of a polyhedral divisor to recover some of the geometry that a fan encodes in the toric case. 
 
 
-Given $X$, a variety with dimension $n$ admitting of the torus $ T = (\mathbb{C}^*)^{n-1}$ action, we can take a Chow quotient $Y$ of $X$ by $T$, essentially a GIT quotient followed by normalisation.  We see that $Y$ will be a variety of dimension $k$, we can resolve this map to $\tilde{X}$ getting the following diagram
+Given $X$, a normal quasiprojective $n$-dimensional variety admitting a faithful action of the torus $ T = (\mathbb{C}^*)^{n-1}$, we can take a Chow quotient as defined in \cite{AltHau} $Y$ of $X$ by $T$. This is for practical purposes a GIT quotient followed by normalisation.  We see that $Y$ will be a variety of dimension $k$, we can resolve this map to $\tilde{X}$ getting the following diagram
 
 \[
 \begin{tikzcd}
@@ -1644,7 +1644,7 @@ X \arrow[rd, dotted] & \tilde{X} \arrow[l] \arrow[d]\\
 \end{tikzcd}
 \]
 
-Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a polyhedral subdivision such that the tail cone $\delta$ is the set of $v \in N$ such that $F_i$ is invariant under the translation, so $\delta = \{ v |\, v(F) subset F \}$.
+Here $Y \cong C$ is a normal curve. In this thesis we will primarily be interested in the case where $C \cong \mathbb{P}^1$. We start by introducing the notion of a tail cone of a given polyhedral cone. This is given $F$ a polyhedral subdivision such that the tail cone $\delta$ is the set of $v \in N$ such that $F_i$ is invariant under the translation, so $\delta = \{ v |\, v(F) \subset F \}$.
 \begin{dfn}
 Let $C$ be a nonsingular curve then we define a polyhedral divisor to be the pair $(\mathcal{D} = \sum_{i = 1}^k F_i \otimes P_i$, $\delta)$ where
 \begin{itemize}
@@ -1693,7 +1693,7 @@ We now introduce the notion of a polyhedral fan. Consider a collection of polyhe
 To do this we add that if given a face of the tail fan $\delta$ there is associated polyhedral divisor $\mathcal{D} = \sum \sigma_i \otimes P_i$ with $\delta$ as its tail cone. We then insist that if a cone in the tail fan is not marked then every face of the cone is also not marked. If the collection $\mathcal{S}$ satisfies these conditions then we call it a polyhedral fan.
 
 
-Given a complexity one projective variety $X$ over a curve $C$ this corresponds to a polyhedral fan with the tail fan spanning $N$. Analaously to the case in cones, the variety $\widetilde{X}$ is defined to be the complexity one variety with the same tail fan and polyhedral divisors however every cone is not marked. The action of the $(\mb{C}^\times)^{n-1}$ on $\widetilde{X}$ corresponds to a fibration over $C$ with general fiber $X_t$ equal to the toric variety defined by the tail fan. The degenerate fibers are then described by the polyhedral fans. 
+Given a complexity one projective variety $X$ over a curve $C$ this corresponds to a polyhedral fan with the tail fan spanning $N$. Analaously to the case in cones, the variety $\widetilde{X}$ is defined to be the complexity one variety with the same tail fan and polyhedral divisors however every cone is not marked. The action of the $(\mb{C}^*)^{n-1}$ on $\widetilde{X}$ corresponds to a fibration over $C$ with general fiber $X_t$ equal to the toric variety defined by the tail fan. The degenerate fibers are then described by the polyhedral fans. 
 
 
 
@@ -2119,6 +2119,7 @@ All that remains is to bound the possible singularities we have started with. Ho
 \end{algorithm}
 \end{comment}
 
+We begin by showing how the analogous algorithm in the toric case behaves. 
 \begin{algorithm}\label{ToricAlg}
 This algorithm can be re purposed to work in the toric case. To see this we start with a family of singularities $ S_k = (-a, n), \, (b+kn, n)$ and we wish to bound the values $k$. We get the following picture:
 
@@ -2173,8 +2174,12 @@ This algorithm can be re purposed to work in the toric case. To see this we star
 \end{tikzpicture}
 }
 \end{figure}
-Any vertex $v$ adjacent to $(-a, n)$ has to have the line connecting the two vertices intersecting an integer lattice point on at least one of the blue lines. Dependent on which blue line determines the index of the corresponding singularity, there are only finitely many red an blue lines. As $k$ increases the red lines increase in slope. Eventually these slopes become large enough that a given red lines intersect the line connecting $v$ to $(-a, n)$ at a point $(x,y)$ with $-1<y<0$. At this point there would be no way for this singularity to lie in a covex fan of index $n$.
+Any vertex $v$ adjacent to $(-a, n)$ has to have the line connecting the two vertices intersecting an integer lattice point on at least one of the blue lines. Dependent on which blue line determines the index of the corresponding singularity, there are only finitely many red an blue lines. As $k$ increases the red lines increase in slope. Eventually these slopes become large enough that a given red lines intersect the line connecting $v$ to $(-a, n)$ at a point $(x,y)$ with $-1<y<0$. At this point there would be no way for this singularity to lie in a convex fan of index $n$.
+
+After fixing a value of $k$, we now discuss how to grow the fan, by adding vertices. Given a facet of a fan $\Sigma$ with vertices $v_1$, $v_2$. Every possible vertex $v_3$ such that the edge $v_2$ to $v_3$ corresponds to a singularity of index $k$ corresponds to a line, (the blue and red lines in the picture above), and the length of the edge connecting the two vertices. This gives us that the possibilities are parametrised by $\mb{N}^2$. Given the vertex $v_3$ corresponding to $(x,y)$ it easy to verify that if $x$ and $y$ are large enough there is no possible way to put in a vertex $v_4$ without the line connecting $v_3$ to $v_4$ intersecting the edge $v_1$, $v_2$. Hence this values can be excluded. Via a similar analysis if the vertex corresponding to $(x,y)$ has no valid options. Then the vertex corresponding to $(x+ak, y+bk)$ also has no valid options, so the algorithm terminates via induction.
 \end{algorithm}
+
+The algorithm in the case of complexity one is highly similar, we start by bounding an original singularity and then consider all possible to grow from there.
 
 \begin{algorithm}
 This algorithm constructs all complexity one log del Pezzo surfaces of index $n$.
