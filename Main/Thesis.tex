@@ -579,7 +579,48 @@ We finish by extending the definition of a fan to lie on tropical affine manifol
 We now sketch out the discrete Legendre transform. In \cite{GrossBook} this is defined with respect to a polarisation. For the sake of brevity we ignore this technicality, however for a complete definition see \cite{GrossBook} section 1.6. We define the discrete Legendre transform of a fan $\Sigma$ on a tropical affine manifold with singularities to be the integral tropical affine manifold with boundary such that the normal fan to each face is $\Sigma$.
 
 We finish by providing the following example: the del Pezzo surface of degree five. We can consider this by blowing up $\mb{P}^2$ twice torically giving a boundary of $[-1, -1, -1, 0,0]$ and then blowing up a non toric point on both the $0$-curves. This gives the following fan on an affine manifold:
+\[
+\resizebox{5cm}{5cm}{
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-0.25, 0.25) {};
+		\node [style=none] (1) at (0.25, -0.25) {};
+		\node [style=none] (2) at (-0.25, -0.25) {};
+		\node [style=none] (3) at (0.25, 0.25) {};
+		\node[style = Filled Basic] (20) at (0,0) {};
+		\node [style=none] (4) at (3, 0) {};
+		\node [style=none] (5) at (0, 3) {};
+		\node [style=none] (6) at (3, 3) {};
+		\node [style=none] (7) at (-3, -3) {};
+		\node [style=none] (8) at (-3, 0) {};
+		\node [style=none] (9) at (0, 0) {};
+		\node [style=none] (10) at (1.5, 0) {};
+		\node [style=none] (11) at (-1.5, -1.5) {};
+		\node [style=none] (12) at (-1.5, -1.25) {};
+		\node [style=none] (13) at (-1.75, -1.5) {};
+		\node [style=none] (14) at (-1.25, -1.5) {};
+		\node [style=none] (15) at (-1.5, -1.75) {};
+		\node [style=none] (16) at (1.25, 0.25) {};
+		\node [style=none] (17) at (1.75, -0.25) {};
+		\node [style=none] (18) at (1.25, -0.25) {};
+		\node [style=none] (19) at (1.75, 0.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (9.center) to (4.center);
+		\draw (9.center) to (6.center);
+		\draw (9.center) to (5.center);
+		\draw (9.center) to (8.center);
+		\draw (9.center) to (7.center);
+		\draw [style=Red] (16.center) to (17.center);
+		\draw [style=Red] (18.center) to (19.center);
+		\draw [style=Red] (13.center) to (14.center);
+		\draw [style=Red] (12.center) to (15.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+}
+\]
 
+Here the red crosses indicate singularities of the affine manifold with monodromy parallel to the rays that they lie on.
 
 \chapter{Small Discrepancy}
 
@@ -1380,7 +1421,7 @@ Now we explicitly state how the cascade structure occurs. We note that we can re
 		\node [style=none] (34) at (3, 9) {};
 		\node [style=none] (35) at (2.25, 7.75) {};
 		\node [style=none] (36) at (1.75, 6.75) {};
-		\node [style=none] (37) at (2.25, 1.25) {};
+		\node [style=none] (37) at (2, 1.5) {};
 		\node [style=none] (44) at (-3.75, 6.5) {};
 		\node [style=none] (45) at (-3.75, 5) {};
 		\node [style=none] (46) at (-3.75, 3.5) {};
@@ -1402,8 +1443,8 @@ Now we explicitly state how the cascade structure occurs. We note that we can re
 		\node [style=none] (65) at (12.25, -4.75) {};
 		\node [style=none] (66) at (4.5, -0.25) {};
 		\node [style=none] (67) at (5.25, -1.25) {};
-		\node [style=none] (68) at (4, -2.25) {};
-		\node [style=none] (69) at (2.5, -2.75) {};
+		\node [style=none] (68) at (4.75, -1.75) {};
+		\node [style=none] (69) at (2.25, -2.75) {};
 		\node [style=none] (70) at (1.25, -4.25) {};
 		\node [style=none] (71) at (-0.5, -4.75) {};
 		\node [style=none] (72) at (-0.75, -3.5) {};
@@ -1414,6 +1455,9 @@ Now we explicitly state how the cascade structure occurs. We note that we can re
 		\node [style=none] (77) at (5, -4.5) {};
 		\node [style=none] (78) at (5, -4.5) {$C_{s,\,t}$};
 		\node [style=none] (79) at (2.5, 3.25) {$C_{3, \, t}$};
+		\node [style=none] (80) at (7.25, -0.5) {};
+		\node [style=none] (81) at (4.75, -1.75) {};
+		\node [style=none] (83) at (3.25, 0.25) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [style=Filled Blue] (6) to (13);
@@ -1439,20 +1483,22 @@ Now we explicitly state how the cascade structure occurs. We note that we can re
 		\draw [style=Red, bend right=60, looseness=1.50] (7) to (34.center);
 		\draw [style=Red] (34.center) to (35.center);
 		\draw [style=Red, bend right, looseness=0.75] (36.center) to (37.center);
-		\draw [style=new edge style 0, bend left=15, looseness=0.50] (35.center) to (36.center);
 		\draw (12) to (65.center);
 		\draw [style=Red] (5) to (72.center);
 		\draw [style=Red] (71.center) to (70.center);
 		\draw [style=Red, in=-165, out=15, looseness=2.50] (70.center) to (69.center);
 		\draw [style=Red, bend right] (68.center) to (67.center);
 		\draw [style=Red, bend left=45] (66.center) to (67.center);
-		\draw [style=Red, bend left] (66.center) to (37.center);
 		\draw [style=new edge style 0, in=-180, out=-120, looseness=1.25] (72.center) to (71.center);
-		\draw [style=new edge style 0] (69.center) to (68.center);
+		\draw [style=Red] (35.center) to (36.center);
+		\draw [style=new edge style 0, bend right=15, looseness=0.75] (37.center) to (83.center);
+		\draw [style=Red, bend right=15, looseness=0.75] (83.center) to (66.center);
+		\draw [style=new edge style 0] (69.center) to (81.center);
 	\end{pgfonlayer}
 \end{tikzpicture}
+
 }
-\caption{This is currently not correct, fix the intersection}
+\caption{This is a diagram illustrating the intersections that occur on our bipartite graph. The curve $C_{1, \, s-1}$  has its intersections being shown with every curve intersecting $C_{s, \, t}$.}
 \label{CurveConfigFigure}
 \end{figure}
 Hence if we choose a floating $-1$-curve $C_{u, \, v}$ to contract the only remaining floating curves are $C_{u, \, \beta}$ and $C_{\alpha , \, v}$ where $\alpha \in \{ 1, \dots, s\}$ and $\beta \in \{1 , \dots , t \}$. When the second floating curve is contracted this uniquely defines whether we are iterating over $s$ or over $t$. So after two contractions the cascade is uniquely defined. To see where it ends up we note that a basic surface is uniquely defined by the number of $-1$-curves coming out of each curve on the boundary. Picking one of these chains of  leads to either $s$ blowdowns or $t$ blowdowns. These cases behave symmetrically, so focusing on the case of $s$ blowdowns we get a curve $S_1 = E_1 \subset Y$ with self intersection $-a_1$ and no $-1$-curves coming out of it. So it admits a map to $\mb{F}_{a_1}$. We note that in our notation the basic surface $Y^1_{n_1}$ which it blows down to has to have new value $k^{Y^1_{n_1}}_1 = 0$ as there is only one exceptional curve intersecting it. Hence there is only one non general fiber of the fibration. As we are doing $s$ blow downs the self intersection of the positive section is $1 + s = a_1 - k^{Y^1_{n_1}}_2  + 2$. This gives us $k^{Y^1_{n_1}}_2  = a_1 + 1 - s$. 

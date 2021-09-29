@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  27 SEP 2021 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  29 SEP 2021 14:38
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -902,7 +902,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.174 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.173 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? 
 )
@@ -1051,7 +1051,7 @@ colour-eps-converted-to.pdf>] (Thesis.tocpdfTeX warning (ext4): destination wit
 h the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.21 ...es and small discrepancy}{14}{section.3.4}
+l.21 ...es and small discrepancy}{15}{section.3.4}
                                                    [1
 
 ])
@@ -1172,52 +1172,56 @@ ne 564.
 Package natbib Warning: Citation `ReidSuzuki' on page 10 undefined on input lin
 e 564.
 
-[10] [11]
-Chapter 3.
-[12
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [13]
-Overfull \hbox (16.40723pt too wide) in paragraph at lines 654--654
+ [11]
+[12]
+Chapter 3.
+[13
+
+] [14]
+Overfull \hbox (16.40723pt too wide) in paragraph at lines 695--695
 []\OT1/cmr/bx/n/17.28 Log del Pezzo sur-faces and small dis-crep-ancy 
  []
 
-[14] [15] [16]
+[15] [16] [17]
 Underfull \vbox (badness 3815) has occurred while \output is active []
 
- [17]
+ [18]
 Underfull \vbox (badness 1057) has occurred while \output is active []
 
- [18]
-[19] [20]
+ [19]
+[20] [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [22]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] Excluding 'comment' comment.
+[23] Excluding 'comment' comment.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
+ [24]
 
-Package natbib Warning: Citation `ReidSuzuki' on page 24 undefined on input lin
-e 1040.
+Package natbib Warning: Citation `ReidSuzuki' on page 25 undefined on input lin
+e 1081.
 
 
-Package natbib Warning: Citation `CaveyPrince' on page 24 undefined on input li
-ne 1066.
+Package natbib Warning: Citation `CaveyPrince' on page 25 undefined on input li
+ne 1107.
 
-[24]
+[25]
 Underfull \vbox (badness 7944) has occurred while \output is active []
 
- [25]
+ [26]
 Missing character: There is no s in font nullfont!
 
-[26] [27]
+[27] [28]
 Underfull \vbox (badness 1173) has occurred while \output is active []
 
- [28]
-Overfull \hbox (1.8412pt too wide) in paragraph at lines 1213--1214
+ [29]
+Overfull \hbox (1.8412pt too wide) in paragraph at lines 1254--1255
 []\OT1/cmr/m/n/12 This struc-ture of these bi-ra-tional re-la-tion-ships can be
  put in more gen-eral terms. 
  []
@@ -1228,24 +1232,24 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (6.2293pt too wide) detected at line 1243
+Overfull \hbox (6.2293pt too wide) detected at line 1284
 []
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
 Missing character: There is no . in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (26.7433pt too wide) detected at line 1281
+Overfull \hbox (26.7433pt too wide) detected at line 1322
 []
  []
 
@@ -1255,170 +1259,160 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (26.7433pt too wide) detected at line 1297
+Overfull \hbox (26.7433pt too wide) detected at line 1338
 []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
+ [32]
 Underfull \vbox (badness 2828) has occurred while \output is active []
 
- [32]
-[33] [34]
+ [33]
+[34] [35]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 1173) has occurred while \output is active []
 
- [35]
-Underfull \vbox (badness 2478) has occurred while \output is active []
-
  [36]
-[37] [38]
+[37] [38] [39]
 
-Package natbib Warning: Citation `Polarised polyhedral divisors' on page 39 und
-efined on input line 1591.
+Package natbib Warning: Citation `Polarised polyhedral divisors' on page 40 und
+efined on input line 1637.
 
-
-Underfull \vbox (badness 2790) has occurred while \output is active []
-
- [39]
-[40]
+[40] [41]
 Chapter 4.
 
-Package natbib Warning: Citation `Huggenberger' on page 41 undefined on input l
-ine 1630.
+Package natbib Warning: Citation `Huggenberger' on page 42 undefined on input l
+ine 1676.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1633
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1633
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1679
 
  []
 
-[41
 
-] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1679
 
-Package natbib Warning: Citation `PS' on page 43 undefined on input line 1670.
+ []
+
+[42
+
+] [43]
+
+Package natbib Warning: Citation `PS' on page 44 undefined on input line 1716.
 
 
 Underfull \vbox (badness 1540) has occurred while \output is active []
 
- [43]
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 1703--1708
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1703--1708
-
- []
-
+ [44]
 [45]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 1719.
+Underfull \hbox (badness 10000) in paragraph at lines 1749--1754
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1749--1754
+
+ []
+
+[46]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 1765.
  ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
-[49] [50] Excluding 'comment' comment.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+[50] [51] Excluding 'comment' comment.
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 1902.
+d on input line 1948.
 
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 1909--1911
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1955--1957
 
  []
 
 
-Package natbib Warning: Citation `PS' on page 52 undefined on input line 1911.
-
-[52]
-
-Package natbib Warning: Citation `PS' on page 53 undefined on input line 1929.
-
-
-Package natbib Warning: Citation `PS' on page 53 undefined on input line 1935.
-
-
-Package natbib Warning: Citation `PS' on page 53 undefined on input line 1941.
+Package natbib Warning: Citation `PS' on page 53 undefined on input line 1957.
 
 [53]
 
-Package natbib Warning: Citation `PS' on page 54 undefined on input line 1943.
+Package natbib Warning: Citation `PS' on page 54 undefined on input line 1975.
 
 
-Package natbib Warning: Citation `PS' on page 54 undefined on input line 1951.
+Package natbib Warning: Citation `PS' on page 54 undefined on input line 1981.
 
 
-Package natbib Warning: Citation `PS' on page 54 undefined on input line 1960.
+Package natbib Warning: Citation `PS' on page 54 undefined on input line 1987.
+
+[54]
+
+Package natbib Warning: Citation `PS' on page 55 undefined on input line 1989.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1957--1962
+Package natbib Warning: Citation `PS' on page 55 undefined on input line 1997.
+
+
+Package natbib Warning: Citation `PS' on page 55 undefined on input line 2006.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2003--2008
 
  []
 
-[54] [55]
+[55] [56]
 
-Package natbib Warning: Citation `Br' on page 56 undefined on input line 1983.
+Package natbib Warning: Citation `Br' on page 57 undefined on input line 2029.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56]
-[57] [58] [59] Excluding 'comment' comment. [60]
-Underfull \hbox (badness 10000) in paragraph at lines 2188--2199
+ [57]
+[58] [59] [60] Excluding 'comment' comment. [61]
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2188--2199
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2188--2199
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2245
 
  []
 
 
-Overfull \hbox (2.19682pt too wide) in paragraph at lines 2188--2199
+Overfull \hbox (2.19682pt too wide) in paragraph at lines 2234--2245
 \OT1/cmr/m/n/12 Once again these slopes are bounded so we have a bound on the s
 lope of $\OML/cmm/m/it/12 h[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/
 12 )\OMS/cmsy/m/n/12 j[]$\OT1/cmr/m/n/12 .
  []
 
-[61]
+[62]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
-[63]
-Overfull \hbox (7.6257pt too wide) in paragraph at lines 2243--2245
+ [63]
+[64]
+Overfull \hbox (7.6257pt too wide) in paragraph at lines 2289--2291
 \OT1/cmr/m/n/12 We note that the point $\OML/cmm/m/it/12 P[]$ \OT1/cmr/m/n/12 i
 s in-volved, how-ever this does not con-tra-dict Lemma  as
  []
 
 
 Underfull \vbox (badness 1596) has occurred while \output is active []
-
- [64]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1430,24 +1424,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [68]
-[69] (Thesis.bbl [70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+[70] (Thesis.bbl [71]
 Underfull \hbox (badness 10000) in paragraph at lines 12--16
 []\OT1/cmr/m/n/12 Mohammad Akhtar and Alexan-der Kasprzyk.  Sin-gu-lar-ity con-
 tent.
  []
 
-[71
+[72
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[72]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2410.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2410.
+[73]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2456.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2456.
  (Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2410.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2410.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2456.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2456.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 92B44288120D8401A5CF3D93C3D98A97;2083.
@@ -1457,10 +1454,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24126 strings out of 492970
- 468224 string characters out of 3127037
- 550206 words of memory out of 3000000
- 27311 multiletter control sequences out of 15000+200000
+ 24145 strings out of 492970
+ 468449 string characters out of 3127037
+ 550405 words of memory out of 3000000
+ 27329 multiletter control sequences out of 15000+200000
  14693 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,82p,2071b,1603s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1484,9 +1481,9 @@ ser/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 /cmti12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmtt12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis.pdf (78 pages, 496415 bytes).
+Output written on Thesis.pdf (79 pages, 497577 bytes).
 PDF statistics:
- 789 PDF objects out of 1000 (max. 8388607)
- 211 named destinations out of 1000 (max. 500000)
+ 793 PDF objects out of 1000 (max. 8388607)
+ 212 named destinations out of 1000 (max. 500000)
  258 words of extra memory for PDF output out of 10000 (max. 10000000)
 
