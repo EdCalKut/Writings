@@ -303,7 +303,11 @@
 %a collection of macros for \TeX. \TeX{} is a trademark of the
 %American Mathematical Society. The style package {\em warwickthesis} was
 %used.} by \thesistypist.
+I am deeply grateful to my PhD supervisor Miles Reid, without whose encouragement this thesis would of been impossible. I would like to extend my thanks to my many colleagues at the University of Warwick, in particular DongSeon Hwang, Michel Van Garrel, Gavin Brown and Alice Cuzzocolli. 
 
+I would in addition like to thank my friends from outside of Warwick, in no particular order, Sam Colvin, Greg McElhinney, Eamonn Postlethwaite and Ai Guan. Without their support this PhD would of been infinitely harder. 
+
+I would like to finish with a thanks to my mother and brother who have supported me throughout.
 \end{thesisacknowledgments}
 
 \begin{thesisdeclaration}        %! Use this to declare the extent of
@@ -311,10 +315,9 @@
                  %! collaboration, other published
                                  %! material etc.it can be anything
                                  %% allowed in LaTeX2e par-mode.
-Replace this text with a declaration of the extent of the original work,
-collaboration, other published material etc. You can use any \LaTeX\
-constructs.
+I declare that, to the best of my knowledge, the material in this thesis is original and my own work unless otherwise indicated. 
 
+The material in this thesis has not been submitted for any other degree either at the University of Warwick or any other University.
 \end{thesisdeclaration}
 
 
@@ -327,7 +330,14 @@ constructs.
                                      %! single spacing and smaller
                                      %! font size
                                      %!  is allowed here.
+                        
 %!   \end{singlespace}
+
+We provide an explicit classification for a number of large classes of complex projective surfaces. In particular we classify all log del Pezzo surfaces whose singularities have small discrepancy, and in the process we make precise the notion of small discrepancy. We also provide an explicit description of the morphisms relating these surfaces.
+
+
+ In a different vein, we consider surfaces admitting an action by a torus, which does not necessarily have full dimension. We provide a terminating algorithm that classifies all such log del Pezzo surfaces whose singularities have bounded index.
+
 \end{thesisabstract}
 
 %\begin{thesisabbreviations}       %! Use this to give a list of
@@ -370,11 +380,11 @@ constructs.
 This thesis solves a range of classification problems for singular surfaces.
 
 
-Throughout this thesis we consider varieties $X$ with $-K_X$ ample and various restrictions on the singularities. These are particular instances of Fano varieties. A two dimensional Fano variety is called a \ldp\ surface, see ~\ref{beginnersdef}. Smooth log del Pezzo surfaces were described in work in the late 19th century and early 20th century. These surface are all of the form $\mb{P}^2$ blown up in $k$ points where $k <9 $, or the exceptional case $\mb{P}^1 \times \mb{P}^1$. Such an elegant classification does not exist in the case of \ldp\ surfaces with singularities; as represented by \cite{CH}, \cite{MR2053462}. A lot of work has been done on extending this classification to singular surfaces. In particular recent approaches have been interested in using of machinery of toric degeneration's. This technique involves constructing a family $\mathcal{X}$ over $\mb{A}^1$ such that the fiber over $0$ is a normal surface that contains $\C{2}$ as a dense subvariety for which the natural action of the torus extends to the variety.  
+Throughout this thesis we consider varieties $X$ with $-K_X$ ample and various restrictions on the singularities. These are particular instances of Fano varieties. A two dimensional Fano variety is called a \ldp\ surface, see ~\ref{beginnersdef}. Smooth log del Pezzo surfaces were described in work in the late 19th century and early 20th century. These surface are all of the form $\mb{P}^2$ blown up in $k$ points where $k <9 $, or the exceptional case $\mb{P}^1 \times \mb{P}^1$. Such an elegant classification does not exist in the case of \ldp\ surfaces with singularities; as represented by \cite{CH}, \cite{MR2053462}. A lot of work has been done on extending this classification to singular surfaces. In particular recent approaches have been interested in using of machinery of toric degeneration. This technique involves constructing a family $\mathcal{X}$ over $\mb{A}^1$ such that the fiber over $0$ is a normal surface that contains $\C{2}$ as a dense subvariety for which the natural action of the torus extends to the variety.  
 
 
 
- Work of \cite{CH} and \cite{AC} have established a one to one correspondence between \ldp\ surfaces with $h^0(-K_X) \neq 0$ and toric degenerations upto mutation subject to assumptions on the singularities of the surface. It has been conjectured that this one to one correspondence extends to other classes of singularities beyond those considered in the above papers. 
+ Work of \cite{CH} and \cite{Cuzz} have established a one to one correspondence between \ldp\ surfaces with $h^0(-K_X) \neq 0$ and toric degenerations up to mutation subject to assumptions on the singularities of the surface. It has been conjectured that this one to one correspondence extends to other classes of singularities beyond those considered in the above papers. 
  
  
  
@@ -398,14 +408,14 @@ Nevertheless, we can classify special cases as follows.
 The Gorenstein index of a singularity $S$ is the smallest value $n$ such that $n K_S$ is Cartier. We define the Gorenstein index of a surface $X$ to be the smallest value $n$ such that $nK_X$ is Cartier.
 For any given $i \in \mathbb{N}$, the set of deformation
 families of log del Pezzo surfaces $X$ with Gorenstein index $i_X=i$
-is finite \cite{f}.
+is finite.
 
 It is worth noting that the number of families increases enormously as the Gorenstein
 index of the surface increases. For example, only in the toric case, 
 the start of the classification is
 \[
 \begin{tabular}{| c | c |}
-\hline\\
+\hline
 \text{index $i$} & \text{number of toric surfaces}\\ \hline
 1 & 16 \\
 2 & 30 \\
@@ -423,8 +433,8 @@ the start of the classification is
 
 We consider these surfaces from three different and related points of view.
 
-In particular, we classify log del Pezzo surfaces that admit a $\mathbb{C}^\times$ action.
-In this thesis we give an algorithm to classify log del Pezzo surfaces that admit a $\mathbb{C}^\times$ action and which have only log terminal singularities. 
+In particular, we classify log del Pezzo surfaces that admit a $\mb{C}^*$ action.
+In this thesis we give an algorithm to classify log del Pezzo surfaces that admit a $\mb{C}^*$ action and which have only log terminal singularities with fixed Gorenstein index. 
 
 
 A normal variety $X$ of dimension $n$ equipped with an effective action of a torus of dimension $n-k$ is referred to as a variety of complexity $k$. To illustrate the notion, note first that a toric variety $X$ has an action of its $n$-dimensional `big torus' $T\subset X$, and equipped with this action $X$ is a variety of complexity~0.
@@ -434,7 +444,7 @@ subtorus $T'\subset T$, and then $X$ is a variety of complexity~$k$. (See \S\ref
 However, there are many varieties of complexity $k<n$ whose torus action does not extend to a toric variety. This is one of the main themes of this thesis: we study
 and classify surfaces of complexity~1 that are not toric.
 
-In this way, complexity provides a way of grading the difficulty of a classification problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting a $\mathbb{C}^\times$ action which have picard rank one and Gorenstein index less than~3. Huggenberger \cite{Huggenberger} classifies log del Pezzo surfaces of complexity~1 that have index 1 and arbitrary picard rank. Ilten, Mishna and Trainor \cite{IMT} recover the same classification and extend it into higher dimension. The methods and language used are broadly the same (though, analogous to the language of toric geometry, it varies whether papers work in the lattice $N$ or its dual lattice $M$), though Huggenberger exploits Hausen's anticanonical complex technology to describe the Cox ring in detail. 
+In this way, complexity provides a way of grading the difficulty of a classification problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting a $\mb{C}^*$ action which have Picard rank one and Gorenstein index less than~3. Huggenberger \cite{Huggenberger} classifies log del Pezzo surfaces of complexity~1 that have index 1 and arbitrary Picard rank. Ilten, Mishna and Trainor \cite{IMT} recover the same classification and extend it into higher dimension. The methods and language used are broadly the same (though, analogous to the language of toric geometry, it varies whether papers work in the lattice $N$ or its dual lattice $M$), though Huggenberger exploits Hausen's anticanonical complex technology to describe the Cox ring in detail. 
 
 We extend these results by presenting an algorithm that classifies
 log del Pezzo surfaces of complexity 1 with given index.
@@ -459,10 +469,10 @@ These conditions naturally arise as soon as you start to consider singularities 
 
 
 \begin{thm}[Theorem~\ref{ThmOnSing}]
-Let $X$ be a surface with singularities of only small discrepancy then $X$ has at most one singularity except for one sporadic family. All of these log del Pezzo surfaces admit a toric degeneration.
+Let $X$ be a surface with singularities of only small discrepancy. Then $X$ has at most one singularity except for one sporadic family. All of these log del Pezzo surfaces admit a toric degeneration.
 \end{thm}
 
-This reproves the results of \cite{CP} who classified log del Pezzo surfaces with only $\frac{1}{p}$ singularities and extends results in \cite{Cuzzo} who classified surfaces with $\frac{1}{5}(1,2)$  and $\frac{1}{p}(1,1)$ singularities.
+This reproves the results of \cite{CP} who classified log del Pezzo surfaces with only $\frac{1}{p}$ singularities and extends results in \cite{Cuzz} who classified surfaces with $\frac{1}{5}(1,2)$  and $\frac{1}{3}(1,1)$ singularities.
 
 We also consider how the cascade of these surfaces behaves. This notion was introduced in \cite{MR2053462} and is essentially asking for the birational relations between the surfaces. we prove that once our singularity is sufficiently complicated then you get a subset of the following series of birational relations
 
@@ -486,6 +496,8 @@ X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{a-k_1-k_2-1} \arrow[l] \arrow[d]
 
 
 In certain cases not all branches of this diagram may exist, and examples of this are provided in \ref{Cascade Theorem}. In addition we provide simple examples outside of small discrepancy where toric degeneration do not exist.
+
+This thesis is organised in the following way: Chapter 2 provides a technical background on toric varieties, quotient singularities, classification curves on surfaces. Chapter 3: This sets up the notions of small discrepancy and provides the associated proofs. Chapter 4: This introduces the technical description of complexity one varieties and then provides the algorithm to classify log del Pezzo surfaces with a torus action. An example of how the algorithm works is provided at the end of the chapter.
 
 \begin{comment}
 \subsection{Smoothings of log extremal extractions}
@@ -532,7 +544,8 @@ For $X$ a normal projective surface with quotient singularities, a $\mb{Q}$-Gore
 Singularity content is a concept introduced in \cite{SingContent} as a $\mb{Q}$-Gorenstein deformation invariant of a surface. Given a surface singularity $S$ we define the index one cover $S_1$ to be the quotient of $\mb{C}^2$  by the subgroup $H = G \cap SL_2(\mb{Z})$. This gives $\mb{C}^2 \ra S_1 \ra S$ where $S_1$ has a singularity of type $A_n$, and this has equation $xy = z^{n+1}$. The group $G/H$ acts on $S_1$ with quotient $S$. That is, this group acts on $xy = z^{n+1}$ with some weight $k$; this means $G/H \cong \frac{\mb{Z}}{\frac{r}{n}\mb{Z}}$ acts naturally by  some weights on the $x$, $y$, $z$ and the equation has weight $k$. This gives us the $\mb{Q}$-Gorenstein deformations  of $S$ are  the quotients of the equivariant deformations $xy = \sum a_i z^{k + i\frac{r}{n}}$. This is smooth if and only if $k=0$. On the other hand if $k\neq 0$ the deformation has a residual singularity $\frac{1}{r'}(a', b')$. We call the pair $(n, \, \frac{1}{r'}(a', b')) $ the singularity content. If $n=0$ we say the singularity is $\mb{Q}$-Gorenstein rigid. The value $n$ can be seen to be equal to the topological Euler number of the $\mb{Q}$-Gorenstein smoothing with the singular point removed, although this is not used in this thesis.
 
 
-Given a log del Pezzo surface $X$ with only $\mb{Q}$-Gorenstein rigid singularities, we define the singularity content $(n, \{S_1, \, \dots, S_n\})$ where $S_i$ are the singularities of $X$ and $n$ is once again the topological Euler number of $X^0 = X - \{\text{Singular locus of } X\}$. In \cite{Section 4} we show how the value $n$ fits into the language of affine manifolds.
+Given a log del Pezzo surface $X$ with only $\mb{Q}$-Gorenstein rigid singularities, we define the singularity content $(n, \{S_1, \, \dots, S_n\})$ where $S_i$ are the singularities of $X$ and $n$ is once again the topological Euler number of $X^0 = X - \{\text{Singular locus of } X\}$. 
+
 \section{Log del Pezzo background}
 
 \subsection{Definitions}
@@ -558,10 +571,10 @@ Given an orbifold log del Pezzo surface we frequently use the invariants
 ${-}K_X^2$ and $h^0({-}K_X)$. These can be via orbifold Riemann Roch as set out in \cite{Young}. For a rough sketch of how we do these calculations, given a singular $X$, with minimal resolution $Y$. Then ${-}K_Y^2$ and $h^0({-}K_Y)$. To account for these the contractions, there is a correction term which we calculate via toric geometry, in the case of case of ${-}K_X^2$ this corresponds to the area of lattice cones contained in $N$ corresponding to the singularities and in the case of $h^0({-}K_X)$ this corresponds to a count of lattice points in the dual of the cone inside the lattice $M$.  These are invariant under $\mb{Q}$-Gorenstein deformation. 
  
 \subsection{Hirzebruch Surfaces} % Park city, alternatively toric geometry. 
-We briefly state some basic results about Hirzebruch surfaces \cite{Park}. A Hirzebruch surface is a rational scroll defined as the quotient of $\mb{C}^4$ by $(\mb{C}^*)^2$ with weights $(1,-1,0,0)$ and $(n, 0, 1,1)$. Alternatively it is the minimal resolution of $\mb{P}(11n)$. From this we see that we have the picard group generated by $B$ and $F$, where $B^2 = -n$ and $F$ is a fiber of the map to $\mb{P}^1$. From this it is straight forwards to see the possible smooth rational curves on a Hirzebruch surface, let $A = B+ nF$ then every smooth reduced rational curve lies in one of the linear equivalence classes $|A|$, $|2A|$, $|A+F|$, $|A+2F|$, $|B|$, $|F|$ and $|2F|$. 
+We briefly state some basic results about Hirzebruch surfaces \cite{Park}. A Hirzebruch surface is a rational scroll defined as the quotient of $\mb{C}^4$ by $(\mb{C}^*)^2$ with weights $(1,-1,0,0)$ and $(n, 0, 1,1)$. Alternatively it is the minimal resolution of $\mb{P}(11n)$. From this we see that we have the Picard group generated by $B$ and $F$, where $B^2 = -n$ and $F$ is a fiber of the map to $\mb{P}^1$. From this it is straight forwards to see the possible smooth rational curves on a Hirzebruch surface, let $A = B+ nF$ then every smooth reduced rational curve lies in one of the linear equivalence classes $|A|$, $|2A|$, $|A+F|$, $|A+2F|$, $|B|$, $|F|$ and $|2F|$. 
 \subsection{Basic Surfaces}
 % Cascades are not needed. 
-We finish with a very brief overview of \cite{CortiHeu}, \cite{Cuzzucoli} and \cite{CaveyPrince} as some of the methods we employ are similar. Respectively these paper classify log del Pezzos with singularities with minimal resolution $[3]$ in \cite{CortiHeu}, $[3,2]$ and $[3]$ in \cite{Cuzzucoli}, and finally one singularity with resolution $[n]$ in \cite{CaveyPrince}. The structure is similar, classify the possible surfaces $X$ which admit no Mori contractions to another surface which could arise from these choices of singularities. These are called basic surfaces. Then study their blowups and their birational relations, often in the context of cascades as introduced by \cite{ReidSuzuki}. Via these explicit classifications they have been able to give explicit coordinate contstructions and their toric degenerations (when they exist). In Chapter 2 we classify log del Pezzo surfaces with singularities of the form $[a_1, \, \dots ,   \, a_n]$ with both $a_1$ and $a_n$ greater than two via similar although modified methods.
+We finish with a very brief overview of \cite{CH}, \cite{Cuzz} and \cite{CP} as some of the methods we employ are similar. Respectively these paper classify log del Pezzos with singularities with minimal resolution $[3]$ in \cite{CH}, $[3,2]$ and $[3]$ in \cite{Cuzz}, and finally one singularity with resolution $[n]$ in \cite{CP}. The structure is similar, classify the possible surfaces $X$ which admit no Mori contractions to another surface which could arise from these choices of singularities. These are called basic surfaces. Then study their blowups and their birational relations, often in the context of cascades as introduced by \cite{MR2053462}. Via these explicit classifications they have been able to give explicit coordinate contstructions and their toric degenerations (when they exist). In Chapter 2 we classify log del Pezzo surfaces with singularities of the form $[a_1, \, \dots ,   \, a_n]$ with both $a_1$ and $a_n$ greater than two via similar although modified methods.
 
 
 \section{Gross Siebert}\label{GrossSec}
@@ -620,7 +633,44 @@ We finish by providing the following example: the del Pezzo surface of degree fi
 }
 \]
 
-Here the red crosses indicate singularities of the affine manifold with monodromy parallel to the rays that they lie on.
+Here the red crosses indicate singularities of the affine manifold with monodromy parallel to the rays that they lie on. On the dual side, we have the following image of the moment map
+\[
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, -2) {};
+		\node [style=none] (1) at (2, -2) {};
+		\node [style=none] (2) at (2, 0) {};
+		\node [style=none] (3) at (-2, 0) {};
+		\node [style=none] (4) at (-2, 2) {};
+		\node [style=none] (5) at (-2, 4) {};
+		\node [style=none] (6) at (-1.25, 1.25) {};
+		\node [style=none] (7) at (-1.25, 1.5) {};
+		\node [style=none] (8) at (-1.5, 1.25) {};
+		\node [style=none] (9) at (-1, 1.25) {};
+		\node [style=none] (10) at (-1.25, 1) {};
+		\node [style=none] (16) at (0, 2) {};
+		\node [style=none] (17) at (0, -1) {};
+		\node [style=none] (18) at (-0.175, -0.825) {};
+		\node [style=none] (19) at (0.175, -1.175) {};
+		\node [style=none] (20) at (-0.175, -1.175) {};
+		\node [style=none] (21) at (0.175, -0.825) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (5.center) to (2.center);
+		\draw (2.center) to (1.center);
+		\draw (0.center) to (1.center);
+		\draw (0.center) to (3.center);
+		\draw (3.center) to (5.center);
+		\draw [style=Red] (10.center) to (7.center);
+		\draw [style=Red] (8.center) to (9.center);
+		\draw [style=Red] (20.center) to (21.center);
+		\draw [style=Red] (18.center) to (19.center);
+		\draw [style=new edge style 0] (6.center) to (4.center);
+		\draw [style=new edge style 0] (17.center) to (0.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+With once again the red crosses indicating points with singular fibers and the red dotted lines indicating lines of monodromy. Upon moving these singularities into the boundary, (correponding to a deformation), we  get the toric variety with ample divisor given by the polygon $P\subset M$ with vertices $(-1, 1),$ $(0,1)$, $(1,0)$, $(1, -1)$, $(0, -1)$. This corresponds to the toric variety with fan $\Sigma \subset N$ with rays $(0,1)$, $(2,1)$, $(0,-1)$, $(-1,-1)$, $(-1,0)$. This is indeed a toric degeneration of $DP_5$.
 
 \chapter{Small Discrepancy}
 
@@ -1350,7 +1400,7 @@ X_a^0 & X_a^1 \arrow[l ]  & \cdots \arrow[l]  & X_a^{a-1}  \arrow[l] &          
 X_b^0 & X_b^1 \arrow[l] & \cdots \arrow[l] & X_b^{b-1} \arrow[l] &                                                           &                       
 \end{tikzcd}
 \]
-\item finally case $s_1 = s_2 =0$ with one non general fiber, which has cascade 
+\item Finally case $s_1 = s_2 =0$ with one non general fiber, which has cascade 
 \[
 \begin{tikzcd}
 X = X_0 & X_1 \arrow[l] & \cdots \arrow[l] & X_{n-1} \arrow[l] & X_{n} \arrow[l]  &  \\
@@ -1662,7 +1712,7 @@ To do this we note that this surface has polyhedral divisor, as introduced in Ch
 \[ 
 \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_1 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_2 + \left[ 0, \, \frac{3}{2}, \, 3 \right] \otimes P_3 + \left[ -5, \, -4 \right] \otimes P_4
 \]
-Where $\lambda$ is a deformation parameter. This gives us equations for the surface, to obtain the weights we calculate the action of the picard torus via taking the smith normal form of the matrix representing relations on the class group. We do not provide this calculation as it is largely disjoint from the rest of this Thesis. We note that there are also surfaces which admit a toric degeneration with the same numerics.
+Where $\lambda$ is a deformation parameter. This gives us equations for the surface, to obtain the weights we calculate the action of the Picard torus via taking the smith normal form of the matrix representing relations on the class group. We do not provide this calculation as it is largely disjoint from the rest of this Thesis. We note that there are also surfaces which admit a toric degeneration with the same numerics.
 
 
 \chapter{Complexity One log Del Pezzo Surfaces}
@@ -1673,7 +1723,7 @@ In this chapter we introduce an algorithm which enables us to classify log del P
 
 \section{Introduction}
 
-All varieties we consider are normal and projective. Here we give an algorithm to classify log del Pezzo surfaces  with only log terminal singularities that admit a $\mathbb{C}^\times$ action. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is the study of purely toric varieties, and complexity $n$ is the study of varities with no possible torus action. This provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting said action with Picard rank one and index less than 3. Huggenberger \cite{Huggenberger} classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
+All varieties we consider are normal and projective. Here we give an algorithm to classify log del Pezzo surfaces  with only log terminal singularities that admit a $\mb{C}^*$ action. A variety $X$ of dimension $n$ which admits a torus action of dimension $n-k$ is referred to as complexity $k$. Here complexity 0 is the study of purely toric varieties, and complexity $n$ is the study of varities with no possible torus action. This provides essentailly a way of grading the difficulty of your problem. Significant progress has been made on this problem before: S\"{u}ss \cite{Suss} classifies log del Pezzo surfaces admitting said action with Picard rank one and index less than 3. Huggenberger \cite{Huggenberger} classifies the anticanonical complex of the Cox ring of log del Pezzo surfaces with index 1, this classification was later finished by Ilten, Mishna and Trainor \cite{IMT} with a view towards higher dimension. This was achieved by looking at polarised complexity one log del Pezzo surfaces. We will show their work fits into our algorithm. 
 \\
 \\
 \section{Polyhedral divisors}
@@ -1743,17 +1793,16 @@ Given a complexity one projective variety $X$ over a curve $C$ this corresponds 
 
 
 
-In the case of surfaces of complexity one we often use the notation of fansy divisors as set out in \cite{Suss}. This follows the key notion that in the case of $n=2$ and $k=1$ we have that every tail fan is either $0$, $\mathbb{Z}_{\geq 0 }$ or $\mathbb{Z}_{\leq 0}$ We have $n$ subdivisions of $N \cong \mathbb{Z}$, these should be viewed as the polyhedral divisors over these $n$ points. Note that if we have a closed interval in any of subdivisions this will have tail fan zero and these give rise to a cyclic quotient singularity, with a nice torus quotient, i.e the map to $\wt{X}$ is a contraction to a point. It is the intervals $[a_1, \infty )$ which provide difficulty, if as polyhedral divisors these are all of the form 
+In the case of surfaces of complexity one we often use the notation of fansy divisors as set out in \cite{Suss}, we have slightly modified it for brevity. This follows the key notion that in the case of $n=2$ and $k=1$ we have that every tail fan is either $0$, $\mathbb{Z}_{\geq 0 }$ or $\mathbb{Z}_{\leq 0}$ We have $n$ subdivisions of $N \cong \mathbb{Z}$, these should be viewed as the polyhedral divisors over these $n$ points. Note that if we have a closed interval in any of subdivisions this will have tail fan zero and these give rise to a cyclic quotient singularity, with a nice torus quotient, i.e the map to $\wt{X}$ is a contraction to a point. It is the intervals $[a_1, \infty )$ which provide difficulty, if as polyhedral divisors these are all of the form 
 \[
 \mathcal{D}_i = [a_i, \infty) \otimes P_i + \sum_{\substack{j = 1 \\ j \neq i}}^n \varnothing \otimes P_j
 \]
-\textbf{Change this paragraph}
-Then this gives rise to a nice quotient map down base curve with respect to the torus action, i.e  the map to $\wt{X}$ is a local isomorphism. If this is not the case however, then we are left with a bad quotient. In the surface case, there are the only two cases that can occur. In the language of fansy divisors we say if we mean the latter case we denote it with $\mathbb{Q}^+$, if we mean the other the earlier case, we do no denote it at all. In this way fansy divisor uniquely specify polyhedral fans.
+Then this gives rise to a well defined quotient map down base curve with respect to the torus action, i.e  the map to $\wt{X}$ is a local isomorphism. If $\varnothing$ is not the value at any point then the quotient map is undefined at a singe point. In the surface case, these are the only two cases that can occur. We describe the above case as being given by the fansy divisor $[a_1, \infty) \otimes P_1 + [a_2, \infty) \otimes P_2 + \dots + [a_k, \infty) \otimes P_k$. This enables us to give a correspondence between normal projective complexity one surfaces and a collection of $k$ subdivisoins of $\mb{N}\cup \{ \infty \} \cup \{-\infty \}$, $k$ points on a base curve $C$ with the standard conditions of polyhedral divisors and the condition if $\infty$ or $-\infty$ occur over one point then they occur over every singe one. 
 \\
 \\
 \section{Examples}
 
-\begin{ex}[\label{ToricDowngrade}]
+\begin{ex}\label{ToricDowngrade}
 The first is the polyhedral divisor given by the unmarked polyhedral divisor $[0, 1] \otimes P_0$ over $Y = \mb{P}^1$. 
 The tail cone $\delta$ is equal to $0$. We will show how we can construct from this an affine variety $X$. We denote the polyhedral divisor by $\mathcal{D}$. So the dual of the tail cone $\hat{\delta}$ is the lattice $M$ itself. Given an element $ m >0$ of $M$ we have $\mathcal{D}(m) = -mP_0$ as the minimum value is obtained on $-1$. If $m <0$ we get $\mathcal{D}(m) = mP_0$  as the minimum is attained on 1. Finally if $n=0$ we get $\mathcal{D}(m) = 0$ as a divisor on $\mathbb{A}^1$ as the function is 0 everywhere. 
 
@@ -1904,7 +1953,7 @@ We finish by discussing the unmarked polyhedral divisors
 \item The unmarked cone $-\frac{1}{2} \otimes P_2$
 \end{enumerate}
 
-In all case the tail cone $\delta$ is equal to 0. In case $A$ have the following ring graded by $M$
+In all case the tail cone $\delta$ is equal to 0. In case $A$ we have the following ring graded by $M$
 
 \[
 \bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-mP) \cong \mathbb{C}[x,\, y, \, z]/(yz = 1)
@@ -1914,24 +1963,27 @@ Here $x$ is of degree 0, $y$ is of degree 1 and $z$ is of degree $-1$. Case $B$ 
 Cases $C$ and $D$ are also symmetrical, and give rise to the rings $\mathbb{C}[x, y_1, y_2, z_1, z_2]$ with relations induced by the second veronese embedding of $C[x, \, y, \, z]/(yz = 1)$. 
 
 
-We explicitly describe the maps $1)$ and $2)$. To see map $1)$ the base is 
+We also briefly describe the inclusion maps. We note that
 \[
 \bigoplus_{m \in M|_{\leq 0}} \mathcal{O}_{\mathbb{P}^1} \left(-mP_0 +\frac{-m}{2} P_1 + \frac{m}{2}P_2 \right) 
 \]
-and the image is 
+is trivially contained inside 
 \[
 \bigoplus_{m \in M} \mathcal{O}_{\mathbb{A}^1}(-mP_0)
 \]
-There is clearly an inclusion of rings on each level of the negative grading, and this induces the entire map
+Hence we get an associated map of affine patches.
 \end{ex}
 
+\begin{comment}
 We also provide a quick example of when a polyhedral divisor is unmarked but has unmarked subcones cones as the boundary. 
+
 
 \begin{ex}\rm
 Let $N$ be $\mb{Q}^2$. Consider the polyhedral divisor defined by $\delta \otimes P_0 + ((1, 1) + \delta) \otimes P_1$ over $\mathbb{P}^1$ where $\delta = \langle (1,0) , \, (0, 1) \rangle$. We now insist that two dimensional cone is marked. However if we pick a ray of the tail fan, and calculate the dual we see that this does not satisfy of being semiample on the boundary, if the base curve was non affine.
 
 Upon calculation of the affine ring this can be seen as a toric downgrade of the Atiyah flop, with the quotient corresponding to one of the two natural maps to $\mathbb{P}^1$. To see the two flops the first is by unmarking the two dimensional cone and the other is given by the same polyhedral coefficients but now the tail cone is a tail fan with the ray $(1,1)$ bisecting it. This corresponds to only one of the resolutions resolving the quotient down to the $\mathbb{P}^1$.
 \end{ex}
+\end{comment}
 
 \begin{comment}
 \begin{dfn}
@@ -1954,7 +2006,7 @@ It is easy to see that Hyperbolic points correspond to a subdivision with $\delt
 
 We now limit ourselves strictly to complexity one, and the chow quotient $Y$ will now be $\mathbb{P}^1$. In the torus setting we know that divisors correspond to rays of the associated fan. Almost exactly the same is true in complexity one: divisors  occur as torus invariant divisor, these correspond the codimension 1 polyhedral divisors or they are premimages of the $\mathbb{P}^1$. These correspond to a polyhedral divisor $\mathcal{D}$  going of to infinity in a direction, with dim$(\delta) = \infty$ which forall $P \in \mathbb{P}^1$ we do not have $\mathcal{D}  |_P = \varnothing$. Note that this also holds for higer dimensions, with a little bit of extra work. From this it is easy to derive the following theorem
 \\
-\begin{thm}[\cite{PS}]
+\begin{thm}\cite{Suss}
 The Picard rank of a complexity one surface defined by a polyhedral fan $\mathcal{S}$ is 
 \[
 \rho_X =  \text{ \# Number of parabolic lines } + \sum_{P \in Y} (\# \mathcal{S}_P^{(0)} - 1) 
@@ -1972,21 +2024,21 @@ A divisorial support function $h$ on a divisorial fan $\mathcal{S}$ is a piecewi
 \end{itemize}
 \end{dfn}
 We call a support function principal if it is of the form $h(v) = \langle u, v \rangle + D$, this corresponds to a principal Cartier divisor. We call a support function Cartier, if on every component with complete locus the support function is principal. In the case of Fansy divisors, this just correspond to the edge with a marking. We denote $h$ restricted to a component by $h_P$.  We refer to a piecewise linear function with rational slope and rational translation as a $\mathbb{Q}$ support function.
-\begin{thm}[\cite{PS}]
-Let $X$ be the variety associated with the divisorial fan $\mathcal{S}$. There exists a one to correspondence between support functions support function quotiented by principal support functions and Cartier divisors on the complexity one variety. In addition there exists 
+\begin{thm}\cite{Suss}
+Let $X$ be the variety associated with the divisorial fan $\mathcal{S}$. There exists a one to correspondence between support functions quotiented by principal support functions and Cartier divisors on the complexity one variety. In addition there exists 
 a one to correspondence between $\mathbb{Q}$ support functions support function quotiented by principal support functions and $\mathbb{Q}$ Cartier divisors on the complexity one variety
 
 \end{thm}
 Using the above languages we represent the canonical divisor as a Weil divisor, it has the following form
-\begin{thm}[\cite{PS}]
+\begin{thm}\cite{Suss}
 The canonical divisor of a complexity one surface can be represented in the following form
 \[
 K_X = \sum_{(P, v)} ( \mu (v) K_Y (P) + \mu (v) - 1) \cdot D_{(P,v)} - \sum_\rho D_\rho
 \]
 \end{thm}
-Here $K_Y(P)$ is the degree of $K_Y$ at $P$, and $\mu (v)$ is the smallest value $k$ such that $k \cdot v \in \mathbb{N}$.  While I have not stated the conditions for linear equivalence these can be seen in \cite{PS}, and using these you can show that it does not depend on the choice of representative of $K_Y$. Note that given the singularities and varieties we are working with we know that our $K_X$ will be $\mathbb{Q}$-Cartier. The fano index is clear and easy to derive from the singularities we have, so all that remains is to check on the conditions for a complexity one divisor to be ample.
+Here $K_Y(P)$ is the degree of $K_Y$ at $P$, and $\mu (v)$ is the smallest value $k$ such that $k \cdot v \in \mathbb{N}$.  While I have not stated the conditions for linear equivalence these can be seen in \cite{Suss}, and using these you can show that it does not depend on the choice of representative of $K_Y$. Note that given the singularities and varieties we are working with we know that our $K_X$ will be $\mathbb{Q}$-Cartier. The fano index is clear and easy to derive from the singularities we have, so all that remains is to check on the conditions for a complexity one divisor to be ample.
 
-\begin{thm}[\cite{PS}]
+\begin{thm}\cite{Suss}
 A suppport function $h$ is ample iff for all $P$ we have $h_P$ is strictly concave, and for all polyhedral divisors $\mathcal{D}$ defined on an affine curve we have
 \[
 - \sum_{P \in \mathbb{P}^1} h_P |_\mathcal{D} (0) \in \text{Weil}_\mathbb{Q} (Y)
@@ -2003,14 +2055,14 @@ Let $h = \sum_P h_P$ be a Cartier divisor on $\mathcal{S}$ then the correspondin
 Here $n_\rho$ is the generator of the ray inside the tail fan and $\mu(v)$ is as before. Note that is easy to see why we need this $\mu$ function. If you start with a closed subinterval $[a, b]$ and try to work out what the corresponding affine variety is, we see that it just the toric variety defined by the cone $(a,1), \, (b,1)$, and then all you calculations can be done in the realm of toric varieties, however there you use the generator of your rays in the lattice, so you need the $\mu$ function.
 \\
 \\
-We use the above note to easily calulate the minimal resolution of a complexity one surface. Note that we can split this across affine charts, in the first case if we have the affine chart corresponding to the polyhedral divisor $[a,b]$ then using the above point we can can calculate this by the toric methods. In case two where we have a non marked edge going to infinity, we can split this into affine charts $[a_i, \infty)$ this is also a toric chart corresponding to the cone $(a,1), \, (1,0)$, so once again the resolution is toric. The final case is with a marked edge, however we can take a weighted blowup to resolve the ellitic point, then resolve the resulting singularities by the above methods. To calculate the intersection numbers on the resolution you can either use \cite[Tim], \cite{PS} or you can note that the only part that is not toric is the parbolic line, this is defined by glueing together charts coming from $[a_i', \infty)$, here by smootheness $a_i' \in \mathbb{Z}$, this is isomorphic to the charts defined by $[\sum(a_i'), \infty)$ at $P_1$ and $[0, \infty)$ for all other $P_i$. Hence we see that the parabolic line is define torically as the fan  
+We use the above note to easily calulate the minimal resolution of a complexity one surface. Note that we can split this across affine charts, in the first case if we have the affine chart corresponding to the polyhedral divisor $[a,b]$ then using the above point we can can calculate this by the toric methods. In case two where we have a non marked edge going to infinity, we can split this into affine charts $[a_i, \infty)$ this is also a toric chart corresponding to the cone $(a,1), \, (1,0)$, so once again the resolution is toric. The final case is with a marked edge, however we can take a weighted blowup to resolve the elliptic point, then resolve the resulting singularities by the above methods. To calculate the intersection numbers on the resolution you can either use \cite{Suss} or you can note that the only part that is not toric is the parabolic line, this is defined by glueing together charts coming from $[a_i', \infty)$, here by smoothness $a_i' \in \mathbb{Z}$, this is isomorphic to the charts defined by $[\sum(a_i'), \infty)$ at $P_1$ and $[0, \infty)$ for all other $P_i$. Hence we see that the parabolic line is define torically as the fan  
 $(\sum(a_i'), 1), \, (1, 0), \,(0, -1)$ from this an easy derivation of the intersection number follows.
 
 
 \section{Algorithm}
 We begin with the following lemma:
 \begin{lem}{\cite{Suss}}
-Let $S$ be a non cyclic complexity one log terminal surface singularity. Then $S$ has, upto isomorphism, a fan over $\mathbb{P}^1$ with coefficients
+Let $S$ be a non cyclic complexity one log terminal surface singularity. Then $S$ has, up to isomorphism, a fan over $\mathbb{P}^1$ with coefficients
 \[
 \left[\frac{p_1}{q_1}, \infty \right) \otimes P_1 + \left[ \frac{p_2}{q_2}, \infty \right) \otimes P_2 + \left[ \frac{p_3}{q_3}, \infty \right) \otimes P_3
 \]

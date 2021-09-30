@@ -5,27 +5,27 @@
 \contentsline {chapter}{Chapter{} \numberline {1}Introduction}{1}{chapter.1}
 \contentsline {subsection}{\numberline {1.0.1}Log del Pezzo surfaces of complexity 1}{2}{subsection.1.0.1}
 \contentsline {subsection}{\numberline {1.0.2}Bounded singularity content of log del Pezzo surfaces}{4}{subsection.1.0.2}
-\contentsline {chapter}{Chapter{} \numberline {2}Technical details}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Toric Geometry}{6}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Cox rings}{7}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Cyclic quotient singularities and singularity content}{7}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Log del Pezzo background}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Definitions}{8}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Hirzebruch Surfaces}{9}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Basic Surfaces}{10}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Gross Siebert}{10}{section.2.3}
-\contentsline {chapter}{Chapter{} \numberline {3}Small Discrepancy}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Context}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}Standard notions and notation for quotient singularities}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Singularities with small discrepancy}{14}{section.3.3}
-\contentsline {section}{\numberline {3.4}Log del Pezzo surfaces and small discrepancy}{15}{section.3.4}
-\contentsline {section}{\numberline {3.5}Examples}{25}{section.3.5}
-\contentsline {section}{\numberline {3.6}Web of maps}{30}{section.3.6}
-\contentsline {section}{\numberline {3.7}Outside of the small discrepancy}{39}{section.3.7}
-\contentsline {chapter}{Chapter{} \numberline {4}Complexity One log Del Pezzo Surfaces}{42}{chapter.4}
-\contentsline {section}{\numberline {4.1}Abstract}{42}{section.4.1}
-\contentsline {section}{\numberline {4.2}Introduction}{42}{section.4.2}
-\contentsline {section}{\numberline {4.3}Polyhedral divisors}{43}{section.4.3}
-\contentsline {section}{\numberline {4.4}Examples}{46}{section.4.4}
+\contentsline {chapter}{Chapter{} \numberline {2}Technical details}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Toric Geometry}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Cox rings}{8}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Cyclic quotient singularities and singularity content}{8}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Log del Pezzo background}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Definitions}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Hirzebruch Surfaces}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Basic Surfaces}{11}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Gross Siebert}{11}{section.2.3}
+\contentsline {chapter}{Chapter{} \numberline {3}Small Discrepancy}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Context}{14}{section.3.1}
+\contentsline {section}{\numberline {3.2}Standard notions and notation for quotient singularities}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}Singularities with small discrepancy}{15}{section.3.3}
+\contentsline {section}{\numberline {3.4}Log del Pezzo surfaces and small discrepancy}{16}{section.3.4}
+\contentsline {section}{\numberline {3.5}Examples}{26}{section.3.5}
+\contentsline {section}{\numberline {3.6}Web of maps}{31}{section.3.6}
+\contentsline {section}{\numberline {3.7}Outside of the small discrepancy}{40}{section.3.7}
+\contentsline {chapter}{Chapter{} \numberline {4}Complexity One log Del Pezzo Surfaces}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Abstract}{43}{section.4.1}
+\contentsline {section}{\numberline {4.2}Introduction}{43}{section.4.2}
+\contentsline {section}{\numberline {4.3}Polyhedral divisors}{44}{section.4.3}
+\contentsline {section}{\numberline {4.4}Examples}{48}{section.4.4}
 \contentsline {section}{\numberline {4.5}Divisors in complexity one}{53}{section.4.5}
-\contentsline {section}{\numberline {4.6}Algorithm}{56}{section.4.6}
+\contentsline {section}{\numberline {4.6}Algorithm}{57}{section.4.6}
