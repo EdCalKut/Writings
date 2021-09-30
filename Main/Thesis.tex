@@ -317,6 +317,8 @@ I would like to finish with a thanks to my mother and brother who have supported
                                  %% allowed in LaTeX2e par-mode.
 I declare that, to the best of my knowledge, the material in this thesis is original and my own work unless otherwise indicated. 
 
+We explicitly state here that chapters one and two are purely expository and contain no original work.
+
 The material in this thesis has not been submitted for any other degree either at the University of Warwick or any other University.
 \end{thesisdeclaration}
 
@@ -393,12 +395,10 @@ Throughout this thesis we consider varieties $X$ with $-K_X$ ample and various r
 
 In the case of surfaces it is interesting to study the log del Pezzos with log terminal singularities. In the full generality, a log terminal surface singularity is a group quotient by a subgroup of $\gl$. The case when the subgroup is cyclic is particularly important, and we refer to these as cyclic quotients. In the case of cyclic quotient singularities it has been conjectured that these admit toric degeneration.
 
-
 This thesis is about log del Pezzo surfaces. The formal definition is:
 \begin{dfn}\label{beginnersdef}
 A log del Pezzo surface is a normal two dimensional variety over $\mb{C}$ which has only log terminal singularities and has $-K_X$ ample.
 \end{dfn}
-
 
 Our motivating aim is the classification of such surfaces.
 This is an absolutely hopeless task in full generality.
@@ -474,7 +474,7 @@ Let $X$ be a surface with singularities of only small discrepancy. Then $X$ has 
 
 This reproves the results of \cite{CP} who classified log del Pezzo surfaces with only $\frac{1}{p}$ singularities and extends results in \cite{Cuzz} who classified surfaces with $\frac{1}{5}(1,2)$  and $\frac{1}{3}(1,1)$ singularities.
 
-We also consider how the cascade of these surfaces behaves. This notion was introduced in \cite{MR2053462} and is essentially asking for the birational relations between the surfaces. we prove that once our singularity is sufficiently complicated then you get a subset of the following series of birational relations
+We also consider how the cascade of these surfaces behaves. This notion was introduced in \cite{MR2053462} and is essentially asking for the birational relations between the surfaces. We prove that once our singularity is sufficiently complicated then you get a subset of the following series of birational relations
 
 \[
 \begin{tikzpicture}[baseline= (a).base]
@@ -577,7 +577,7 @@ We briefly state some basic results about Hirzebruch surfaces \cite{Park}. A Hir
 We finish with a very brief overview of \cite{CH}, \cite{Cuzz} and \cite{CP} as some of the methods we employ are similar. Respectively these paper classify log del Pezzos with singularities with minimal resolution $[3]$ in \cite{CH}, $[3,2]$ and $[3]$ in \cite{Cuzz}, and finally one singularity with resolution $[n]$ in \cite{CP}. The structure is similar, classify the possible surfaces $X$ which admit no Mori contractions to another surface which could arise from these choices of singularities. These are called basic surfaces. Then study their blowups and their birational relations, often in the context of cascades as introduced by \cite{MR2053462}. Via these explicit classifications they have been able to give explicit coordinate contstructions and their toric degenerations (when they exist). In Chapter 2 we classify log del Pezzo surfaces with singularities of the form $[a_1, \, \dots ,   \, a_n]$ with both $a_1$ and $a_n$ greater than two via similar although modified methods.
 
 
-\section{Gross Siebert}\label{GrossSec}
+\section{The Gross-Siebert program}\label{GrossSec}
 
 In this section we do not use or even refer to the full power of the Gross-Siebert program, we are mainly using results referencing how certain SYZ fibrations are constructed and how these give rise to toric degenerations. Our main reference throughout is \cite{GrossBook}, mainly chapters 1.4 and 1.5. We have made a variety of small changes to notation, namely our fans lie inside $N$ instead of $M$ to be consistent with the rest of the notation within the thesis and we do not consider fans on non compact affine manifolds.
 
@@ -585,7 +585,7 @@ We start with the definition of a tropical affine manifold
 \begin{dfn}[\cite{GrossBook} 1.22]
 A tropical affine manifold is a real topological manifold (possibly with boundary) with an atlas of coordinate charts such that every transition function lies in $N_\mb{R} \rtimes GL(N)$.
 \end{dfn}
-and then we allow singularities on a tropical manifold is a manifold $B$ by taking a codimension two or more locus $\Delta$ such that $B-\Delta$ is a tropical affine manifold.
+and then we allow singularities on a tropical manifold is a manifold $B$ by taking a codimension two or more locus $\delta$ such that $B-\delta$ is a tropical affine manifold.
 
 We finish by extending the definition of a fan to lie on tropical affine manifolds with singularities. We say a collection of cones $\Sigma$ on a tropical affine manifold $B$ is a fan, if it satisfies the usual condition of a fan in a lattice $N$ and the condition that locally around every cone $\sigma \in \Sigma$ there is embedding of $\sigma$ into a lattice. For the full technical definition see \cite{GrossBook}[1.4]. Now given a surface $X$ such that the minimal resolution $Y$ can be constructed from a toric variety $Z_\Sigma$ by blowing up points on the boundary we show how this related to a fan on a tropical affine manifold. Denote by $C_i$ a curve in the boundary of $Z_\Sigma$, and $\rho_i \in N$ the corresponding  ray in $\Sigma$. If we blow up $C_i$ $k$ times then we introduce $k$ singular points along the ray $\rho_i$ each with monodromy $\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$ in a basis $u_i$, $v_i$, with $u_i$ being the primitive generator of $\rho_i$. This gives a fan $\Sigma'$ on a singular integral tropical manifold, such that when we look at the self intersection of the divisors $D_i$ corresponding to rays we have exactly the same values as on the boundary of $Y$. % This needs to be edited.
 
@@ -633,7 +633,7 @@ We finish by providing the following example: the del Pezzo surface of degree fi
 }
 \]
 
-Here the red crosses indicate singularities of the affine manifold with monodromy parallel to the rays that they lie on. On the dual side, we have the following image of the moment map
+Here the red crosses indicate singularities of the affine manifold with monodromy parallel to the rays that they lie on. On the dual side the discrete Legendre transform gives us the following dual affine manifold:
 \[
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
@@ -675,6 +675,7 @@ With once again the red crosses indicating points with singular fibers and the r
 \chapter{Small Discrepancy}
 
 \section{Context}
+\begin{comment}
 The main result of this chapter is 
 \begin{thm}*\label{ThmOnSing}
 Let $X$ be a non-smooth \ldp\ with only singularities of small discrepancy. Then 
@@ -686,6 +687,8 @@ If $X$ admits no floating $-1$-curves then $X$ admits a toric degeneration. %In 
 \end{enumerate}
 \end{thm}
 and how we birationally classify the resulting surfaces.
+\end{comment}
+We aim to classify all possible log del Pezzo surface whose singularities have discrepancies sufficiently small. 
 
 \section{Standard notions and notation for quotient singularities}
 We reference back to chapter 2 for a lot of the notation. We use the following definitions liberally throughout the chapter.
@@ -748,13 +751,9 @@ quotient singularity with small discrepancy.
 \begin{lem}\label{lem!badcurve}
 Let $X$ be a surface having cyclic quotient singularities of small discrepancy, and let  $f \colon Y \rightarrow X$ be the minimal resolution of $X$. Let $C \subset X$ be a rational curve whose 
 strict transform $\widetilde C \subset Y$ is smooth. Let $\{ E_i \}$ be the exceptional locus of $f$. Suppose in addition that 
-$\widetilde C \cdot \sum E_i \geq 2$.
-Then $\widetilde C^2 = -1$ implies $-K_X \cdot C \leq 0$.
-
-In particular, $\widetilde C$ is smooth and
+$\widetilde C \cdot \sum E_i \geq 2$. In particular if $\wt{C} \cdot \sum E_i \geq 2$ then $\widetilde C$ is smooth and
 $C$ either meets at least two singularities of $X$ or meets one singularity
-with at least branches or has a singular point of $C$ at a singularity of $X$,
-then the hypotheses on $C$ are satisfied.
+with at least 2 branches or has a singular point of $C$ at a singularity of $X$. Then $\widetilde C^2 = -1$ implies $-K_X \cdot C \leq 0$.
 \end{lem}
 \begin{proof}
 %Let $f \colon : Y \rightarrow X$ be the minimal resolution of $X$, $\widetilde C \subset Y$ the strict transform of $C$. 
@@ -795,7 +794,7 @@ X &                                                                & Z
 \]
 $f$ is the minimal resolution of $X$ and $g$ is a birational morphism to a smooth surface $Z$.
 Let $E\subset Y$ be an $f$-exceptional curve. Then either $E$ is contracted to a smooth point
-of $Z$ by $g$, or $g(E)$ is a smooth curve and $g_E$ is an isomorphism.
+of $Z$ by $g$, or the restriction $g|_E$ is an isomorphism of curves.
 \end{prop}
 
 \begin{proof}
@@ -1132,8 +1131,7 @@ We start by specifying how we deviate from the previous literature. In \cite{Rei
 
 
 \begin{cor}\label{LengthOne}
-Let $X$ be a log del Pezzo surface with small discrepancy and
-basket  $\{ \{ \frac{1}{p_1}(1,1), \, \dots \, \frac{1}{p_n}(1,1) \}, \, m \}$
+Let $X$ be a log del Pezzo surface with small discrepancy and singularities  $\{ \frac{1}{p_1}(1,1), \, \dots, \, \frac{1}{p_n}(1,1) \}$
 for $n\ge0$ and $m\ge0$. Then $n\le2$ and moreover
 \begin{enumerate}
 \item\label{dp11i}
@@ -1715,7 +1713,7 @@ To do this we note that this surface has polyhedral divisor, as introduced in Ch
 Where $\lambda$ is a deformation parameter. This gives us equations for the surface, to obtain the weights we calculate the action of the Picard torus via taking the smith normal form of the matrix representing relations on the class group. We do not provide this calculation as it is largely disjoint from the rest of this Thesis. We note that there are also surfaces which admit a toric degeneration with the same numerics.
 
 
-\chapter{Complexity One log Del Pezzo Surfaces}
+\chapter{Complexity One log del Pezzo Surfaces}
 
 \section{Abstract}
 
@@ -2017,7 +2015,7 @@ where $n$ is the dimension and $\# \mathcal{S}_P^{(0)}$ is the number of points 
 A divisorial support function $h$ on a divisorial fan $\mathcal{S}$ is a piecewise linear function on each component of the fan such that
 
 \begin{itemize}
-\item On every polyhedron $\Delta \in \mathcal{S}_{P_i}$ it is a linear function
+\item On every polyhedron $\delta \in \mathcal{S}_{P_i}$ it is a linear function
 \item $h$ is continuous
 \item at all points $h$ has integer slope and integer translation
 \item if $\mathcal{D}_1$ and $\mathcal{D}_2$ have the same tail cone, then the linear part of $h$ restricted to them is equal
@@ -2055,7 +2053,7 @@ Let $h = \sum_P h_P$ be a Cartier divisor on $\mathcal{S}$ then the correspondin
 Here $n_\rho$ is the generator of the ray inside the tail fan and $\mu(v)$ is as before. Note that is easy to see why we need this $\mu$ function. If you start with a closed subinterval $[a, b]$ and try to work out what the corresponding affine variety is, we see that it just the toric variety defined by the cone $(a,1), \, (b,1)$, and then all you calculations can be done in the realm of toric varieties, however there you use the generator of your rays in the lattice, so you need the $\mu$ function.
 \\
 \\
-We use the above note to easily calulate the minimal resolution of a complexity one surface. Note that we can split this across affine charts, in the first case if we have the affine chart corresponding to the polyhedral divisor $[a,b]$ then using the above point we can can calculate this by the toric methods. In case two where we have a non marked edge going to infinity, we can split this into affine charts $[a_i, \infty)$ this is also a toric chart corresponding to the cone $(a,1), \, (1,0)$, so once again the resolution is toric. The final case is with a marked edge, however we can take a weighted blowup to resolve the elliptic point, then resolve the resulting singularities by the above methods. To calculate the intersection numbers on the resolution you can either use \cite{Suss} or you can note that the only part that is not toric is the parabolic line, this is defined by glueing together charts coming from $[a_i', \infty)$, here by smoothness $a_i' \in \mathbb{Z}$, this is isomorphic to the charts defined by $[\sum(a_i'), \infty)$ at $P_1$ and $[0, \infty)$ for all other $P_i$. Hence we see that the parabolic line is define torically as the fan  
+We use the above note to easily calulate the minimal resolution of a complexity one surface. Note that we can split this across affine charts, in the first case if we have the affine chart corresponding to the polyhedral divisor $[a,b]$ then using the above point we can can calculate this by the toric methods. In case two where we have a non marked edge going to infinity, we can split this into affine charts $[a_i, \infty)$ this is also a toric chart corresponding to the cone $(a,1), \, (1,0)$, so once again the resolution is toric. The final case is with a marked edge, however we can take a weighted blowup to resolve the elliptic point, then resolve the resulting singularities by the above methods. To calculate the intersection numbers on the resolution you can either use \cite{Suss} or you can note that the only part that is not toric is the parabolic line, this is defined by glueing together charts coming from $[a_i', \infty)$ Now by smoothness we know all the  $a_i' \in \mathbb{Z}$, hence we get an isomorphism of local charts to the charts defined by $[\sum(a_i'), \infty)$ at $P_1$ and $[0, \infty)$ for all other $P_i$. Hence we see that the parabolic line is define torically as the fan  
 $(\sum(a_i'), 1), \, (1, 0), \,(0, -1)$ from this an easy derivation of the intersection number follows.
 
 
