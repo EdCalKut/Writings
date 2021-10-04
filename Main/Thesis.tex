@@ -98,12 +98,12 @@
 %! use \\ where you want a new line
 
 \renewcommand{\thesisauthor} {Edwin Kutas}    %% Your official name.
-\renewcommand{\thesisauthorno}{........}  %! your university number, used on the library copyright page.
+\renewcommand{\thesisauthorno}{u1663003}  %! your university number, used on the library copyright page.
 
 
-\renewcommand{\thesismonth}{....}     %% Your month of graduation.
+\renewcommand{\thesismonth}{September}     %% Your month of graduation.
 
-\renewcommand{\thesisyear}{....}      %% Your year of graduation.
+\renewcommand{\thesisyear}{2021}      %% Your year of graduation.
 
 \renewcommand{\thesistitle}{Log del Pezzo Surfaces, Degenerations and Torus Actions}     %% The title of your thesis; use
                                      %% mixed-case.
@@ -303,7 +303,7 @@
 %a collection of macros for \TeX. \TeX{} is a trademark of the
 %American Mathematical Society. The style package {\em warwickthesis} was
 %used.} by \thesistypist.
-I am deeply grateful to my PhD supervisor Miles Reid, without whose encouragement this thesis would of been impossible. I would like to extend my thanks to my many colleagues at the University of Warwick, in particular DongSeon Hwang, Michel Van Garrel, Gavin Brown and Alice Cuzzocolli. 
+I am deeply grateful to my PhD supervisor Miles Reid, without whose encouragement this thesis would of been impossible. I would like to extend my thanks to my many colleagues at the University of Warwick, in particular DongSeon Hwang, Michel Van Garrel, Gavin Brown and Alice Cuzzocoli. 
 
 I would in addition like to thank my friends from outside of Warwick, in no particular order, Sam Colvin, Greg McElhinney, Eamonn Postlethwaite and Ai Guan. Without their support this PhD would of been infinitely harder. 
 
@@ -1127,7 +1127,7 @@ We use these results to classify \ldp\ surfaces with certain singularities. This
  
 \section{Examples}
  
-We start by specifying how we deviate from the previous literature. In \cite{ReidSuzuki} they construct cascades as explicit maps between \ldp\ surfaces, mirroring the classical constructions. We do not do this, however we explicitly state when the map exists and give good embeddings. If a variety admits no floating $-1$-curves, so a basic surface, we call it the root of a cascade. If a surface $X$ cannot be blown up at any point while preserving ${-}K_X$ ample we call it the head of a cascade. 
+We start by specifying how we deviate from the previous literature. In \cite{MR2053462} they construct cascades as explicit maps between \ldp\ surfaces, mirroring the classical constructions. We do not do this, however we explicitly state when the map exists and give good embeddings. If a variety admits no floating $-1$-curves, so a basic surface, we call it the root of a cascade. If a surface $X$ cannot be blown up at any point while preserving ${-}K_X$ ample we call it the head of a cascade. 
 
 
 \begin{cor}\label{LengthOne}
@@ -1682,7 +1682,7 @@ However this surface has six $\frac{1}{3}(1,1)$ singularities and two $\frac{1}{
 \item $-K_X^2 = \frac{2}{5}$
 \item $h^0(-K_X) = 1$
 \end{itemize}
-This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{Polarised polyhedral divisors}. 
+This is a complexity one surface, and the calculations can be done via polyhedral divisors as set out in \cite{AltHau}. 
 Alternatively we know this is constructed by 13 blowups of a Hirzebruch surface and then 8 subsequent contractions. This gives $-K_X^2 = 8 - 13 + 6 v_{\frac{1}{3}(1,1)} + 2 v_{\frac{1}{5}(1,1)}$ where the $v_i$ are correction terms in orbifold Riemann-Roch \cite{Young}. We calculate them to be $v_{\frac{1}{3}(1,1)}  = \frac{5}{3}$ and $v_{\frac{1}{5}(1,1)}  = \frac{1}{5}$. This gives $-K_X^2 = \frac{2}{5}$. We see once again via \cite{Young} that we can calculate $h^0(-K_X)$ from this and get $h^0(-K_X) = 1$.
 
 
@@ -1761,7 +1761,7 @@ This defines a divisor on a subset of $C$. We insist that $\mathcal{D}$ satisfie
 \item $\mathcal{D}(u)$ is semiample for all $u \in \delta^\vee$
 \item $\mathcal{D}(u)$ is big for all $u$ in the relative interior of $\delta^\vee$
 \end{enumerate}
-This is to ensure that it gives an $n$-dimensional variety, and to ensure that it is separated \cite{PS}.
+This is to ensure that it gives an $n$-dimensional variety, and to ensure that it is separated \cite{AltHau}.
 
 
 We can now calculate the associated affine varieties $X$ and $\tilde{X}$ by taking respectively Spec/ RelSpec${_C}$ of the graded ring
@@ -1958,7 +1958,7 @@ In all case the tail cone $\delta$ is equal to 0. In case $A$ we have the follow
 \]
 Here $x$ is of degree 0, $y$ is of degree 1 and $z$ is of degree $-1$. Case $B$ is symmetrical to case $A$. 
 
-Cases $C$ and $D$ are also symmetrical, and give rise to the rings $\mathbb{C}[x, y_1, y_2, z_1, z_2]$ with relations induced by the second veronese embedding of $C[x, \, y, \, z]/(yz = 1)$. 
+Cases $C$ and $D$ are also symmetrical, and give rise to the rings $\mathbb{C}[x, y_1, y_2, z_1, z_2]$ with relations induced by the second Veronese embedding of $C[x, \, y, \, z]/(yz = 1)$. 
 
 
 We also briefly describe the inclusion maps. We note that
@@ -1999,10 +1999,10 @@ In toric varieties full dimensional cones give rise to torus fixed point. Analog
 \item $\bold{Parabolic}$ - These always arise as blowups of elliptic points, these occur when in local coordinates, one of the coordinates is acted trivially upon by the torus. These points lie on a section of the map to $Y$
 \item $\bold{Hyperbolic}$ - These are where the the local coordinates are acted in positive and negative degree.
 \end{itemize}
-It is easy to see that Hyperbolic points correspond to a subdivision with $\delta = 0$, Parabolic correspond to an unmarked edge going to infinity and Elliptic to a marked point going to infinity.
+It is easy to see that hyperbolic points correspond to a subdivision with $\delta = 0$, parabolic correspond to an unmarked edge going to infinity and elliptic to a marked point going to infinity.
 \section{Divisors in complexity one}
 
-We now limit ourselves strictly to complexity one, and the chow quotient $Y$ will now be $\mathbb{P}^1$. In the torus setting we know that divisors correspond to rays of the associated fan. Almost exactly the same is true in complexity one: divisors  occur as torus invariant divisor, these correspond the codimension 1 polyhedral divisors or they are premimages of the $\mathbb{P}^1$. These correspond to a polyhedral divisor $\mathcal{D}$  going of to infinity in a direction, with dim$(\delta) = \infty$ which forall $P \in \mathbb{P}^1$ we do not have $\mathcal{D}  |_P = \varnothing$. Note that this also holds for higer dimensions, with a little bit of extra work. From this it is easy to derive the following theorem
+We now limit ourselves strictly to complexity one, and the Chow quotient $Y$ will now be $\mathbb{P}^1$. In the torus setting we know that divisors correspond to rays of the associated fan. Almost exactly the same is true in complexity one: divisors  occur as torus invariant divisor, these correspond the codimension 1 polyhedral divisors or they are premimages of the $\mathbb{P}^1$. These correspond to a polyhedral divisor $\mathcal{D}$  going of to infinity in a direction, with dim$(\delta) = \infty$ which forall $P \in \mathbb{P}^1$ we do not have $\mathcal{D}  |_P = \varnothing$. Note that this also holds for higer dimensions, with a little bit of extra work. From this it is easy to derive the following theorem
 \\
 \begin{thm}\cite{Suss}
 The Picard rank of a complexity one surface defined by a polyhedral fan $\mathcal{S}$ is 
@@ -2024,7 +2024,7 @@ A divisorial support function $h$ on a divisorial fan $\mathcal{S}$ is a piecewi
 We call a support function principal if it is of the form $h(v) = \langle u, v \rangle + D$, this corresponds to a principal Cartier divisor. We call a support function Cartier, if on every component with complete locus the support function is principal. In the case of Fansy divisors, this just correspond to the edge with a marking. We denote $h$ restricted to a component by $h_P$.  We refer to a piecewise linear function with rational slope and rational translation as a $\mathbb{Q}$ support function.
 \begin{thm}\cite{Suss}
 Let $X$ be the variety associated with the divisorial fan $\mathcal{S}$. There exists a one to correspondence between support functions quotiented by principal support functions and Cartier divisors on the complexity one variety. In addition there exists 
-a one to correspondence between $\mathbb{Q}$ support functions support function quotiented by principal support functions and $\mathbb{Q}$ Cartier divisors on the complexity one variety
+a one to correspondence between $\mathbb{Q}$ support functions support function quotiented by principal support functions and $\mathbb{Q}$-Cartier divisors on the complexity one variety
 
 \end{thm}
 Using the above languages we represent the canonical divisor as a Weil divisor, it has the following form
@@ -2041,10 +2041,10 @@ A suppport function $h$ is ample iff for all $P$ we have $h_P$ is strictly conca
 \[
 - \sum_{P \in \mathbb{P}^1} h_P |_\mathcal{D} (0) \in \text{Weil}_\mathbb{Q} (Y)
 \]
- is an ample $\mathbb{Q}$ Cartier divisor.
+ is an ample $\mathbb{Q}$-Cartier divisor.
 \end{thm}
 Note that in reality $h_P |_\mathcal{D}$ may not be defined at $0$ but we can extend the affine function to $0$. We finish this recap on divisors by describing the Weil divisor corresponding to a Cartier divisor
-\begin{thm}[\cite{PS}]
+\begin{thm}\cite{Suss}
 Let $h = \sum_P h_P$ be a Cartier divisor on $\mathcal{S}$ then the corresponding Weil divisor is 
 \[
 - \sum_\rho h_t ( n_\rho) D_\rho - \sum_{(P, v)} \mu(v) h_P(v) D_{(P,v)}
@@ -2076,12 +2076,12 @@ We now state the following  lemma
 Let $S$ be a log terminal surface singularity of Gorenstein index $l$. Let $E$ be an exceptional curve in the minimal resolution. Then $E^2 \geq -2l$ if it is not a trivalent curve and $E^2 \geq -3l$ if it is trivalent.
 \end{lem}
 \begin{proof}
-Via the classification of log terminal singularities \cite{Br} we have that $E$ intersects at most three other exceptional curves. Denote the discrepancies of these curves $d_1, d_2, d_3$, note that any $d_i$ could be equal to zero. Also note that $0 \geq d_i \geq -1$. Denote the discrepancy of $E$ by $d$. Then we have the formula $dE^2 + \sum d_i = 0$.   This rearranges to $d = \frac{(\sum d_i)}{E^2} \leq \frac{-3}{E^2}$ as the singularity is log terminal. As $d \in \frac{1}{l} \mathbb{Z}$ we get $E^2 \geq -3l$. In the case of a non trivalent curve, we can assume $d_3 = 0$ and we see that $E^2 \geq -2l$.
+Via the classification of log terminal singularities we have that $E$ intersects at most three other exceptional curves. Denote the discrepancies of these curves $d_1, d_2, d_3$, note that any $d_i$ could be equal to zero. Also note that $0 \geq d_i \geq -1$. Denote the discrepancy of $E$ by $d$. Then we have the formula $dE^2 + \sum d_i = 0$.   This rearranges to $d = \frac{(\sum d_i)}{E^2} \leq \frac{-3}{E^2}$ as the singularity is log terminal. As $d \in \frac{1}{l} \mathbb{Z}$ we get $E^2 \geq -3l$. In the case of a non trivalent curve, we can assume $d_3 = 0$ and we see that $E^2 \geq -2l$.
 \end{proof}
 
 
 
-\begin{lem}
+\begin{lem}\label{bound}
 Given a complexity one log del Pezzo surface of index $l$ then there cannot be more than $6l$ points where the polyhedral fan is not the tail fan
 \end{lem}
 \begin{proof}
@@ -2120,7 +2120,11 @@ A singularity of index $n$ which is non toric log terminal singularities can be 
 
 \item Corresponding to $D_n$ singularities we have $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{n}{m}, \infty \right) \otimes P_3$ if $m$ is odd.  If $m$ is divisible by 4 we have $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{1}{2}, \infty \right) \otimes P_2 + \left[ \frac{2n}{m}, \infty \right) \otimes P_3$ and if $m$ is even but not divisible by four this case does not occur.
 
-\item Corresponding to $E_6$ singularity we have $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{p}{3}, \infty \right) \otimes P_2 + \left[ \frac{q}{3}, \infty \right) \otimes P_3$ where $p=q$ mod 3 and $2(p+q) = n+3$, or $p \neq q$ and $6(p+q) - 9 = n$
+\item Corresponding to $E_6$ singularity we have $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{p}{3}, \infty \right) \otimes P_2 + \left[ \frac{q}{3}, \infty \right) \otimes P_3$ where either $p=q$ mod 3 and $2(p+q) = n+3$, or $p \neq q$ and $6(p+q) - 9 = n$
+
+\item Corresponding to $E_7$ singularity we have $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{p}{3}, \infty \right) \otimes P_2 + \left[ \frac{q}{4}, \infty \right) \otimes P_3$ where either $q$ is even and $2(4p + 3q-6) = n$ or $q$ is odd and $(4p + 3q -6)=n$.
+
+\item Corresponding to $E_8$ singularity we have $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{p}{3}, \infty \right) \otimes P_2 + \left[ \frac{q}{5}, \infty \right) \otimes P_3$ where $10p+6q-15= n$.
 \end{enumerate}
 \end{lem}
 
@@ -2131,11 +2135,13 @@ For the $E_6$ case consider the following divisor $\left[-\frac{1}{2}, \infty \r
 
 
 
-For the $E_7$ case consider the following divisor $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{p}{3}, \infty \right) \otimes P_2 + \left[ \frac{q}{4}, \infty \right) \otimes P_3$. Then the slope is  
+For the $E_7$ case consider the following divisor $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{p}{3}, \infty \right) \otimes P_2 + \left[ \frac{q}{4}, \infty \right) \otimes P_3$. Then the slope is  $\frac{1}{4p+3q-6}$. We have the following calculations $h_{P_1}(0) = \frac{1}{2} \frac{4p+3q-7}{4p+3q-6}$, $h_{P_2}(0) =\frac{1}{3} \frac{6-3p-3q}{4p+3q-6} = \frac{2-p-q}{4p+3q-6}$ and $h_{P_3}(0) = \frac{1}{4} \frac{6-4p-2q}{4p+3q-6} = \frac{1}{2} \frac{3-2p-q}{4p+3q-6}$. Hence this has index $2(4p+3q-6)$ if $q$ is even and index $(4p+3q-6)$ otherwise.
+
+We finish with $E_8$ case. Consider the following divisor $\left[-\frac{1}{2}, \infty \right) \otimes P_1 + \left[ \frac{p}{3}, \infty \right) \otimes P_2 + \left[ \frac{q}{5}, \infty \right) \otimes P_3$. Then the slope is  $\frac{1}{10p+6q-15}$. We have the following calculations $h_{P_1}(0) = \frac{1}{2} \frac{10p+6q-16}{10p+6q-15} = \frac{5p + 3q-8}{10p+6q-15}  $, $h_{P_2}(0) =\frac{5-3p-2q}{10p+6q-15}$ and $h_{P_3}(0) = \frac{3-2p-q}{10p+6q-15}$. Hence this has index $10p+6q-15$.
 \end{proof}
 
 \begin{rem}
-This imposes stricter bounds on the number of non generic fibers a complexity one surface of index $n$ can have than Lemma~\ref{basic bound} and enables you to put bounds on per the singularity. 
+This imposes stricter bounds on the number of non generic fibers a complexity one surface of index $n$ can have than Lemma~\ref{basic bound} and enables you to put individual bounds given a singularity. 
 \end{rem}
 
 We also need a bound on what possible toric singularities can occur and the possible actions on them.
@@ -2272,7 +2278,7 @@ This algorithm can be re purposed to work in the toric case. To see this we star
 \end{figure}
 Any vertex $v$ adjacent to $(-a, n)$ has to have the line connecting the two vertices intersecting an integer lattice point on at least one of the blue lines. Dependent on which blue line determines the index of the corresponding singularity, there are only finitely many red an blue lines. As $k$ increases the red lines increase in slope. Eventually these slopes become large enough that a given red lines intersect the line connecting $v$ to $(-a, n)$ at a point $(x,y)$ with $-1<y<0$. At this point there would be no way for this singularity to lie in a convex fan of index $n$.
 
-After fixing a value of $k$, we now discuss how to grow the fan, by adding vertices. Given a facet of a fan $\Sigma$ with vertices $v_1$, $v_2$. Every possible vertex $v_3$ such that the edge $v_2$ to $v_3$ corresponds to a singularity of index $k$ corresponds to a line, (the blue and red lines in the picture above), and the length of the edge connecting the two vertices. This gives us that the possibilities are parametrised by $\mb{N}^2$. Given the vertex $v_3$ corresponding to $(x,y)$ it easy to verify that if $x$ and $y$ are large enough there is no possible way to put in a vertex $v_4$ without the line connecting $v_3$ to $v_4$ intersecting the edge $v_1$, $v_2$. Hence this values can be excluded. Via a similar analysis if the vertex corresponding to $(x,y)$ has no valid options. Then the vertex corresponding to $(x+ak, y+bk)$ also has no valid options, so the algorithm terminates via induction.
+After fixing a value of $k$, we now discuss how to grow the fan, by adding vertices. Given a facet of a fan $\Sigma$ with vertices $v_1$, $v_2$. Every possible vertex $v_3$ such that the edge $v_2$ to $v_3$ which gives rise to a singularity of index $k$ corresponds to a point on the line $L_k$, (one of the blue or red lines in the picture above), and the length of the edge connecting the two vertices. This gives us that the possibilities for $v_3$ are parametrised by $\mb{N}^2$. Given the vertex $v_3$ corresponding to $(x,y)$ it easy to verify that if $x$ and $y$ are large enough there is no possible way to put in a vertex $v_4$ without the line connecting $v_3$ to $v_4$ intersecting the edge $v_1$, $v_2$. Hence this values can be excluded. Via a similar analysis if the vertex corresponding to $(x,y)$ has no valid options. Then the vertex corresponding to $(x+ak, y+bk)$ also has no valid options, so the algorithm terminates via induction.
 \end{algorithm}
 
 The algorithm in the case of complexity one is highly similar, we start by bounding an original singularity and then consider all possible to grow from there.
@@ -2281,35 +2287,32 @@ The algorithm in the case of complexity one is highly similar, we start by bound
 This algorithm constructs all complexity one log del Pezzo surfaces of index $n$.
 We start with a singularity given by $a \otimes P_1  + b \otimes P_2 + c \otimes P_3$, such that the minimal resolution contains a parabolic line, (note we allow some of these values to be 0) as can be assumed via Lemma~\ref{Structure}. 
 
-We wish to bound theses values, if the singularity is of type $E$ then there are already only finitely many. If it is of type $A_n$ then we can assume $c = 0$ and $a = \frac{k}{u}$ and $b = \frac{k}{v}$ where $k$ divides $n$. Assume that the fan on $P_1$ and $P_2$ both have only one point then they are both vertices of the polyhedral divisor with tail cone $(-\infty, 0]$. Hence there are only finitely many options as, as $u$ and $v$ increase $-k$ modulo $u$ and $v$ also increase and this would increase the index of the singularity corresponding to the tail cone $[-\infty, 0)$. Hence this case is bounded. Alternatively assume there is another point $c = \frac{p}{q}$ on the fan of $P_1$. As $u$ and $v$ increase in value eventually there will be only be $k$ possible values of $c$ all of these are greater than 0 and additionally, via looking at the local toric picture we can see as $u$ gets larger there can only be one other point on this divisorial fan. Let  $D^1_{c}$ be the divisor corresponding to the value $c$ on the polyhedral fan over $P_1$. Now if the fans end in $-\infty$, then we have following locally toric fan $(k, u),$ $(p, q),$ $(-1, 0)$ as $u$ tends toward infinity it is easy to verify that $-K_X \cdot D^1_{c}$ will eventually become negative contradicting being a log del Pezzo. Hence there are only finitely many options. If the fan does not end in $-\infty$ then once again asymptotically we will only have $k$ possible values for other points on a fiber. If the value $c$ is not an integer then it will asymptotically get larger as $u$ increases, once again if $u$ is large enough there can only be two point on the fan over $P_1$. If the tail cone $(-\infty, 0]$ gives rise to a non cylic quotient then as $c$ gets larger the index increases. Alternatively if the singularity is a cylic quotient then we can consider the fibers $P_1$ and $P_i$ which have smallest values on the fan being a non integer. If $i = 2$ then we can consider this to be a problem in toric geometry by considering all fans of the following form:
-\\
-\\
- A similar argument holds if $k \neq 2$ and you have non complete fans of the following form:
- \\
- \\
- Finally in the case that $c$ is an integer. Then the tail fan $(\infty, 0]$ defines a singularity. Once again if the singularity is a non cyclic quotient then the slope associated with $h_{-K_X}|_{(-\infty, 0]}$ is $\frac{1}{k}$ where $k$ divides $n$. So this slope is bounded however 
-as $v$ gets larger the slope associated to $h_{-K_X}(P_1)|_{[c, \frac{k}{v}]}$ decreases as $v$ increases so eventually this will stop being convex contradicting ampleness. If this is a  cyclic quotient cyclic singularity then there are two values $i$ and $j$ with $i<j$ such that the smallest value on $P_i$ and $P_j$ are non integers. If $i = 2$ then this fits into the above analysis with $P_1$ replaced with $P_2$ and if $i \neq 2$ then then there are only finitely many possibilities as the toric picture of $P_i$ and $P_j$ would non complete fans with index $n$ of the form:
-\\
-\\
-Once again these slopes are bounded so we have a bound on the slope of $h_{-K_X}(P_1)|_{[c, \frac{k}{v}]}$. So the possible values of $u$ and $v$ are bounded.
+We wish to bound theses values, if the singularity is of type $E$ then there are already only finitely many. If it is of type $A_n$ then we can assume $c = 0$ and $a = \frac{k_1}{u}$ and $b = \frac{k_2}{v}$. Assume that the fan on $P_1$ and $P_2$ both have only one point then they are both vertices of the polyhedral divisor with tail cone $(-\infty, 0]$. Hence there are only finitely many options as, as $u$ and $v$ increase $-k$ modulo $u$ and $v$ also increase and this would increase the index of the singularity corresponding to the tail cone $[-\infty, 0)$. Hence this case is bounded. Alternatively assume there is another point $c = \frac{p}{q}$ on the fan of $P_1$. As $u$ and $v$ increase in value eventually there will be only be $k$ possible values of $c$ all of these are greater than 0 and additionally, via looking at the local toric picture we can see as $u$ gets larger there can only be one other point on this divisorial fan. Let  $D^1_{c}$ be the divisor corresponding to the value $c$ on the polyhedral fan over $P_1$. Now if the fans end in $-\infty$, then we have following locally toric fan $(k, u),$ $(p, q),$ $(-1, 0)$ as $u$ tends toward infinity it is easy to verify that $-K_X \cdot D^1_{c}$ will eventually become negative contradicting being a log del Pezzo. Hence there are only finitely many options. If the fan does not end in $-\infty$ then once again asymptotically we will only have $k$ possible values for other points on a fiber. If the value $c$ is not an integer then it will asymptotically get larger as $u$ increases, once again if $u$ is large enough there can only be two point on the fan over $P_1$. If the tail cone $(-\infty, 0]$ gives rise to a non cylic quotient then as $c$ gets larger the index increases. Alternatively if the singularity is a cylic quotient then we can consider the fibers $P_1$ and $P_i$ which have smallest values on the fan being a non integer. If $i = 2$ then we can consider this to be a problem in toric geometry by 
+considering all convex fans of the form: $(k_1, u),$ $(p, q)$, $(a_1, b_1)$, $(a_2, b_2)$, $\dots$, $(a_m, b_m)$, $(k_2-\alpha v, -v)$ for $\alpha \in \{1, \, \dots , \, 6n\}$. This bound follows via Lemma~\ref{MaxLength}.
+
+ A similar argument holds if $i \neq 2$ and you have non complete fans of the form $(k_1, u),$ $(p, q)$, $(a_1, b_1)$, $(a_2, b_2)$, $\dots$, $(a_m, b_m)$, $( -\alpha , -1)$ 
+
+ Finally in the case that $c$ is an integer. Then the tail fan $(- \infty, 0]$ defines a singularity. Once again if the singularity is a non cyclic quotient then the slope associated with $h_{-K_X}|_{(-\infty, 0]}$ is $\frac{1}{k}$ where $k$ divides $n$. So this slope is bounded however 
+as $v$ gets larger the slope associated to $h_{-K_X}(P_1)|_{[c, \frac{k}{v}]}$ decreases as $v$ increases so eventually this will stop being convex contradicting ampleness. If this is a  cyclic quotient singularity then there are two values $i$ and $j$ with $i<j$ such that the smallest value on $P_i$ and $P_j$ are non integers. If $i = 2$ then this fits into the above analysis with $P_1$ replaced with $P_2$ and if $i \neq 2$ then then there are only finitely many possibilities as the toric picture of $P_i$ and $P_j$ would non complete fans with index $n$ of the form $(0, 1),$ $(p, q)$, $(a_1, b_1)$, $(a_2, b_2)$, $\dots$, $(a_m, b_m)$, $(-\alpha v, -1)$.
+Once again there are finitely many outputs so there are only finitely values for the slopes so we have a bound on the slope of $h_{-K_X}(P_1)|_{[c, \frac{k}{v}]}$. So the possible values of $u$ and $v$ are bounded.
 
 The case of $D_n$ is analogous to the $A_n$ singularity and we do not explicitly describe it. 
 
-We now describe how to explicitly grow a polyhedral fan from a given starting point. Given a polyhedral fan of the form $[a^1_1, \, \dots a^1_{n_1}] \otimes P_1 + [a^2_1, \, \dots a^2_{m_2}] \otimes P_2 + \, \dots \, + [a^n_1, \, \dots a^n_{m_n}] \otimes P_n$ with tail fan $[0, \infty)$ we ask how can we extend this so that it is nearer a compact log del Pezzo surface of index $n$. The first stage is checking whether the same fan with tail fan the whoel of $\mb{Q}$ is well defined and a log del Pezzo surface of index $n$, and then checking whether $[\infty , \, a^1_1, \, \dots a^1_{n_1}] \otimes P_1 + [\infty, \, a^2_1, \, \dots a^2_{m_2}] \otimes P_2 + \, \dots \, + [\infty , \, a^n_1, \, \dots a^n_{m_n}] \otimes P_n$ is a log del Pezzo surface of index $n$. Finally the case of extending the fan over a given point, corresponds exactly to the toric algorithm~\ref{ToricAlg}. 
+We now describe how to explicitly grow a polyhedral fan from a given starting point. Given a polyhedral fan of the form $[a^1_1, \, \dots a^1_{n_1}] \otimes P_1 + [a^2_1, \, \dots a^2_{m_2}] \otimes P_2 + \, \dots \, + [a^n_1, \, \dots a^n_{m_n}] \otimes P_n$ with tail fan $[0, \infty)$ we ask how can we extend this so that it is nearer a compact log del Pezzo surface of index $n$. The first stage is checking whether the same fan with tail fan the whole of $\mb{Q}$ is well defined and a log del Pezzo surface of index $n$, and then checking whether $[\infty , \, a^1_1, \, \dots a^1_{n_1}] \otimes P_1 + [\infty, \, a^2_1, \, \dots a^2_{m_2}] \otimes P_2 + \, \dots \, + [\infty , \, a^n_1, \, \dots a^n_{m_n}] \otimes P_n$ is a log del Pezzo surface of index $n$. Finally the case of extending the fan over a given point, corresponds exactly to the toric algorithm~\ref{ToricAlg}. 
 \end{algorithm}
 
 
 
-As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one and only cyclic quotient singularities.
+As an example we illustrate how this can classify Gorenstein log del Pezzo surfaces which have complexity one and only cyclic quotient singularities. This is a simpler task than the general algorithm as the possible fibers are so restricted a lot of the analysis can be done via Lemma~\ref{MaxLength} instead of using the full algorithm.
 
 \begin{ex}\rm
 
-We start with the Gorenstein index $k = 1$, i.e the only singularities are Du Val. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution via Lemma~\ref{Structure}. We iterate over all possible singularities and all possible actions until we can show they do not exist. We illustrate this in the case that the singularity with which the action corresponds with a ray in the minimal resolution is an $A_n$ singularity, and there is no non cylic quotient singularities. We assume that this singularity has polyhedral divisor with tail cone $[ 0, \, \infty)$. From now on we assume this without stating it.
+As the Gorenstein index $k = 1$, i.e the only singularities are Du Val, and we are restricting to the case of $A_n$ singularities. We know there is a singularity which has an action which corresponds to a curve on the minimal resolution via Lemma~\ref{Structure}. We iterate over all possible singularities and all possible actions until we can show they do not exist on a projective log del Pezzo surface. We assume that this singularity has polyhedral divisor with tail cone $[ 0, \, \infty)$. From now on we assume this without stating it.
 
 To make this easier we make two observations. The first is that if a fiber over a point $P_i$ is $[a_1 = \frac{p_1}{q_1} , \dots, a_n = \frac{p_n}{q_n}, \, 0]$ then $q_i = 1$. This follows via the above remarks, first, we know we get an $A_m$ singularity given by $(0, 1), \, (p_n,  \, q_n)$. Then, via the stated properties of our singularity, we have the slope of $h_P|_{[0, \, \infty)}$ is $-1$. So we need $\frac{q_n-1}{q_n} < \frac{-p_n}{q_n}$ which implies $p_n + q_n < 1$, hence if $q_n > 1$ then $p_n < -1$. Now every point on the line connecting $(p_n, \, q_n)$ to $(0, \, 1)$ has to satisfy this inequality. In particular there is a point $(-1, a)$ on this line, with $a  \in \mb{Z}$, satisfying the inequality, hence $ a \leq 1$. As $ a>0$ for $q_n>0$ we have the only possible value of $a$ is one. This corresponds to $q_n = 1$.
 
 
-The second observation is, let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{v} \otimes P_2$ be a polyhedral divisor with tail cone $[ 0 , \, \infty)$. We can assume without loss of generality that $u \geq v$. Then if $u>v+2$ and $v \geq 2$ then there are no complexity one Gorenstein log del Pezzo surfaces which contain $\mathcal{D}$ as a polyhedral cone. We note as $u,  v \geq 2$ we have the only possible poyhedral fans over $P1$ are $[0, \, \frac{1}{u}
+The second observation is, let $\mathcal{D} = \frac{1}{u} \otimes P_1 + \frac{1}{v} \otimes P_2$ be a polyhedral divisor with tail cone $[ 0 , \, \infty)$. We can assume without loss of generality that $u \geq v$. Then if $u>v+2$ and $v \geq 2$ then there are no complexity one Gorenstein log del Pezzo surfaces which contain $\mathcal{D}$ as a polyhedral cone. We note as $u,  v \geq 2$ we have the only possible polyhedral fans over $P_1$ are $[0, \, \frac{1}{u}
 ]$ and $[\frac{1}{u}]$, similarly for $P_2$. Viewing this from a toric perspective the only points that can be connected to $(1,u)$ or $(0,1)$ while preserving the necessary convexity are less than $-v$. This implies as a complexity one surface this would need a denominator on another fiber less than $v$, but this cannot happen. 
 
 \begin{itemize}
@@ -2325,7 +2328,7 @@ P_3 & \left[c_1, \, \dots, \, c_o, 0\right] \\
 P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
 \end{array}
 \]
-This has gives rise to the following surfaces 
+This gives rise to the following surfaces 
 \[
 \left[1 \right] \otimes P_1 + \left[ 0, \,1 \right] \otimes P_2 + [-1, \, 0] \otimes P_3 + [-1, \, 0] \otimes P_4 
 \]
@@ -2337,7 +2340,7 @@ and finally
 \[
 \left[1 \right] \otimes P_1 + \left[ 0, \,1 \right] \otimes P_2 + [-1, \, 0] \otimes P_3 + [-1, \, 0] \otimes P_4  +  [-1, \, 0] \otimes P_5
 \]
-We note that the point $P_5$ is involved, however this does not contradict Lemma~ as the fiber over $P_1$ is the general fiber. So the number of non general fibers is still four.
+We note that the point $P_5$ is involved, however this does not contradict Lemma~\ref{bound} as the fiber over $P_1$ is the general fiber. So the number of non general fibers is still four.
 \item \begin{bf} $A_2$ Singularity \end{bf} 
 
 The only case is $u = v+1$ this corresponds to the polyhedral divisor
@@ -2391,15 +2394,15 @@ P_4 & \left[d_1, \, \dots, \, d_p, 0\right]  \\
 \]
 There are two cases for $P_1$, $[0, \frac{1}{2}]$ and $[\frac{1}{2}]$. The first case gives rise to one surface with the following polyhedral divisor
 \[
-\left[0, \frac{1}{2} \right] \otimes P_1 + \left[\frac{1}{2} \right] \otimes P_2 + [0, \,- 1] \otimes P_3
+\left[-\infty, \, 0, \frac{1}{2} \right] \otimes P_1 + \left[-\infty, \, \frac{1}{2} \right] \otimes P_2 + [-\infty, \, 0, \,- 1] \otimes P_3
 \]
-With a marking $-$, to indicate a line of parabolic singularities.
+
 
 In the second case we have the following, we get the following three surfaces:
 \[
-\left[\frac{1}{2} \right] \otimes P_1 + \left[\frac{1}{2} \right] \otimes P_2 + [-1, \, 0] \otimes P_3
+\left[ -\infty, \, \frac{1}{2} \right] \otimes P_1 + \left[-\infty, \, \frac{1}{2} \right] \otimes P_2 + [-\infty, \, -1, \, 0] \otimes P_3
 \]
-once again with marking $-$ and the surface
+and
 \[
 \left[\frac{1}{2} \right] \otimes P_1 + \left[\frac{1}{2} \right] \otimes P_2 +  [-2, \, 0] \otimes P_3
 \]

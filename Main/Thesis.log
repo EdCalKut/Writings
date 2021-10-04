@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  30 SEP 2021 10:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  30 SEP 2021 22:46
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -893,7 +893,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.168 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.169 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? 
 )
@@ -1067,10 +1067,6 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 442.
 
-
-Package natbib Warning: Citation `Huggenberger' on page 3 undefined on input li
-ne 447.
-
 [3]
 Overfull \hbox (15.93993pt too wide) in paragraph at lines 457--457
 []\OT1/cmr/bx/n/14.4 Bounded sin-gu-lar-ity con-tent of log del Pezzo sur-faces
@@ -1121,12 +1117,7 @@ Overfull \hbox (16.40723pt too wide) in paragraph at lines 748--748
 Underfull \vbox (badness 7433) has occurred while \output is active []
 
  [25]
-Excluding 'comment' comment.
-
-Package natbib Warning: Citation `ReidSuzuki' on page 26 undefined on input lin
-e 1130.
-
-[26]
+Excluding 'comment' comment. [26]
 
 Package natbib Warning: Citation `CaveyPrince' on page 27 undefined on input li
 ne 1155.
@@ -1205,20 +1196,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
 [41]
-
-Package natbib Warning: Citation `Polarised polyhedral divisors' on page 42 und
-efined on input line 1685.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
 [43]
 Chapter 4.
-
-Package natbib Warning: Citation `Huggenberger' on page 44 undefined on input l
-ine 1724.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 1724--1727
 
@@ -1232,10 +1214,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1724--1727
 [44
 
 ] [45]
-
-Package natbib Warning: Citation `PS' on page 46 undefined on input line 1764.
-
-
 Underfull \vbox (badness 1540) has occurred while \output is active []
 
  [46]
@@ -1279,10 +1257,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 2005--2007
  []
 
 [54] [55] [56]
-
-Package natbib Warning: Citation `PS' on page 57 undefined on input line 2047.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 2053--2058
 
  []
@@ -1291,88 +1265,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 2053--2058
 Underfull \vbox (badness 7704) has occurred while \output is active []
 
  [57]
+[58] [59] [60]
+Underfull \vbox (badness 4569) has occurred while \output is active []
 
-Package natbib Warning: Citation `Br' on page 58 undefined on input line 2079.
+ [61]
+[62] Excluding 'comment' comment. [63] [64]
+Underfull \vbox (badness 1173) has occurred while \output is active []
 
-[58] [59] [60] [61] Excluding 'comment' comment.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[62]
-Underfull \vbox (badness 5274) has occurred while \output is active []
-
- [63]
-Underfull \hbox (badness 10000) in paragraph at lines 2284--2295
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2284--2295
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2284--2295
-
- []
-
-
-Overfull \hbox (2.19682pt too wide) in paragraph at lines 2284--2295
-\OT1/cmr/m/n/12 Once again these slopes are bounded so we have a bound on the s
-lope of $\OML/cmm/m/it/12 h[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/
-12 )\OMS/cmsy/m/n/12 j[]$\OT1/cmr/m/n/12 .
- []
-
-[64] [65]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [66]
-Overfull \hbox (7.6257pt too wide) in paragraph at lines 2339--2341
+ [65]
+[66]
+Overfull \hbox (18.65753pt too wide) in paragraph at lines 2342--2344
 \OT1/cmr/m/n/12 We note that the point $\OML/cmm/m/it/12 P[]$ \OT1/cmr/m/n/12 i
-s in-volved, how-ever this does not con-tra-dict Lemma  as
+s in-volved, how-ever this does not con-tra-dict Lemma [][]4.6.3[][]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1596) has occurred while \output is active []
 
  [67]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [68]
-[69] [70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71]
-(Thesis.bbl [72]
+[72] (Thesis.bbl [73]
 Underfull \hbox (badness 10000) in paragraph at lines 12--16
 []\OT1/cmr/m/n/12 Mohammad Akhtar and Alexan-der Kasprzyk.  Sin-gu-lar-ity con-
 tent.
  []
 
-[73
 
-])
+Underfull \hbox (badness 1953) in paragraph at lines 24--27
+\OT1/cmr/m/n/12 sin-gu-lar-ity.  J. Math. Soc. Japan 72(2): 465-505 (April, 202
+0). DOI:
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 62--66
+[]\OT1/cmr/m/n/12 Elaine Huggen-berger.  Fano Va-ri-eties with Torus Ac-tion of
+ Com-plex-ity
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 62--66
+\OT1/cmr/m/n/12 One.  Phd The-sis, Uni-ver-sity of Tue-bin-gen.  https://publik
+ationen.uni-
+ []
+
+[74
+
+]
+Underfull \hbox (badness 1496) in paragraph at lines 69--72
+[]\OT1/cmr/m/n/12 Nathan Il-ten, Marni Mishna and Char-lotte Trainor.  Clas-si-
+fy-ing Fano
+ []
+
+)
 
 Package natbib Warning: There were undefined citations.
 
-[74]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2506.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2506.
+[75]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2509.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2509.
  (Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2506.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2506.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2509.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2509.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 23D7D7E5A8A320E47D5A0246C2EBB07E;2095.
  ) 
 Here is how much of TeX's memory you used:
- 24138 strings out of 492970
- 468359 string characters out of 3127037
- 554199 words of memory out of 3000000
- 27335 multiletter control sequences out of 15000+200000
+ 24146 strings out of 492970
+ 468464 string characters out of 3127037
+ 553175 words of memory out of 3000000
+ 27339 multiletter control sequences out of 15000+200000
  14693 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,82p,2071b,1603s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,19n,82p,2010b,1603s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bb
 m12.pk><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
@@ -1393,9 +1369,9 @@ ser/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 /cmti12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmtt12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis.pdf (80 pages, 513073 bytes).
+Output written on Thesis.pdf (81 pages, 516603 bytes).
 PDF statistics:
- 804 PDF objects out of 1000 (max. 8388607)
- 210 named destinations out of 1000 (max. 500000)
+ 818 PDF objects out of 1000 (max. 8388607)
+ 214 named destinations out of 1000 (max. 500000)
  258 words of extra memory for PDF output out of 10000 (max. 10000000)
 
